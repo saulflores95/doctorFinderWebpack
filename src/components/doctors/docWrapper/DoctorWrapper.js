@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import DoctorList from '../docList/DoctorList'
+import DoctorList from './docList/DoctorList'
 
 const DoctorWrapper = ({doctors}) => (
   <div>

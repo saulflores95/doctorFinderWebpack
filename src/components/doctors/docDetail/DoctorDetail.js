@@ -10,7 +10,6 @@ const DoctorDetail = (doctor) => (
     <DoctorDescription doctor={doctor.doctor} />
     <DoctorContactForm {...doctor.doctor} />
     <DoctorMap {...doctor.doctor} />
-
   </div>
 )
 

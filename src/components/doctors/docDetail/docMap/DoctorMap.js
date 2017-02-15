@@ -12,16 +12,16 @@ var DoctorMapIcon = L.icon({
 const DoctorMap = (doctor) => (
   <div className={styles.map}>
     <Map center={position} zoom={15}>
-        <TileLayer
-          attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-        />
-        <Marker icon={DoctorMapIcon} position={position}>
-          <Popup>
-            <span>{doctor.name}</span>
-          </Popup>
-        </Marker>
-      </Map>
+      <TileLayer
+        attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+      />
+      <Marker icon={DoctorMapIcon} position={position}>
+        <Popup>
+          <span>{doctor.name}</span>
+        </Popup>
+      </Marker>
+    </Map>
   </div>
 )
 
