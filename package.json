@@ -1,0 +1,70 @@
+{
+  "name": "pwa",
+  "version": "1.0.0",
+  "description": "My first attempt at PWA",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config=webpack/webpack.prod.js -p",
+    "test": "jest",
+    "start": "webpack-dev-server --config=webpack/webpack.dev.js",
+    "predeploy": "webpack --config=webpack/webpack.prod.js -p",
+    "deploy": "surge --project dist --domain https://saulpwatest.surge.sh"
+  },
+  "private": true,
+  "author": "Saul Flores",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "clean-webpack-plugin": "^0.1.15",
+    "css-loader": "^0.26.1",
+    "enzyme": "^2.7.1",
+    "enzyme-to-json": "^1.4.5",
+    "extract-text-webpack-plugin": "2.0.0-rc.2",
+    "html-webpack-plugin": "^2.26.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^18.1.0",
+    "leaflet": "1.0.0-rc.2",
+    "material-ui": "^0.17.0",
+    "normalize.css": "^5.0.0",
+    "offline-plugin": "^4.6.1",
+    "open": "^0.0.5",
+    "preact": "^7.2.0",
+    "preact-compat": "^3.13.1",
+    "preact-shallow-compare": "^1.2.0",
+    "preact-tap-event-plugin": "^0.1.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-grid-system": "^2.4.1",
+    "react-icons": "^2.2.3",
+    "react-leaflet": "next",
+    "react-router-dom": "next",
+    "standard": "^8.6.0",
+    "standard-loader": "^5.0.0",
+    "style-loader": "^0.13.1",
+    "surge": "^0.18.0",
+    "uglify-js": "https://github.com/mishoo/UglifyJS2/tarball/harmony",
+    "uglifyjs-webpack-plugin": "^0.1.4",
+    "webpack": "2.2.1",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {}
+}

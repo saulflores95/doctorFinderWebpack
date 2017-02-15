@@ -1,0 +1,21 @@
+.doctorHeaderContainer{
+  height:200;
+  padding-top: 75;
+  padding-bottom:75;
+  color:white;
+}
+
+.img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.specialtyText {
+  font-weight: 100;
+  font-size: larger;
+}
+
+.divider {
+  padding-top: 25;
+}

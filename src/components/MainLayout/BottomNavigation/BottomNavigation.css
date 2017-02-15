@@ -1,0 +1,26 @@
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  z-index: 10000;
+}
+
+.icon: {
+  text-align: 'center';
+  font-size: '72px';
+}
+
+.img: {
+  height: '72px';
+}
+
+.bottom: {
+  height: '120px';
+}
+
+.bottom-nav-item: {
+  max-width: '96dp';
+  min-width: '56dp';
+}

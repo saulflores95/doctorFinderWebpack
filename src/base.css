@@ -1,0 +1,27 @@
+:root {
+  --site-width:98rem;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(0, 188, 212);
+  font-family: 'Roboto'
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}

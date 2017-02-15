@@ -1,0 +1,33 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.icon {
+  margin-top: 11px;
+}
+
+.appbar {
+  background-color: white !important;
+  height: 50;
+}
+
+.iconMenu {
+  color: rgb(0; 188; 212);
+}
+
+.img {
+  height: 100px
+}
+
+.leftIcon {
+  height: 72px;
+  width: 72px
+}
+
+.iconMenu {
+  left: 0px !important;
+}
