@@ -6,12 +6,7 @@ import L from 'leaflet'
 
 var DoctorMapIcon = L.icon({
   iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
-//iconSize: [80, 80],
-// iconAnchor: [38, 38],
-popupAnchor: [18, 0],
-//  shadowUrl: '',
-//  shadowSize: [68, 95],
-//  shadowAnchor: [22, 94]
+  popupAnchor: [18, 0]
 })
 
 const DoctorMap = (doctor) => (

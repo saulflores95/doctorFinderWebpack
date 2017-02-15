@@ -33,6 +33,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaUserMd className='icon-pixel' />}
               onClick={() => this.select(0)}
               className={styles.bottomNavItem}
+              href='/'
             />
             <BottomNavigationItem
               icon={<FaHeartbeat className='icon-pixel' />}
