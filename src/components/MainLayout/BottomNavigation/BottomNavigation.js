@@ -33,7 +33,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaUserMd className='icon-pixel' />}
               onClick={() => this.select(0)}
               className={styles.bottomNavItem}
-              href='/'
+              href='/doctors'
             />
             <BottomNavigationItem
               icon={<FaHeartbeat className='icon-pixel' />}
@@ -44,6 +44,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaPlusSquare className='icon-pixel' />}
               onClick={() => this.select(2)}
               className={styles.bottomNavItem}
+              href='/pharmacies'
             />
             <BottomNavigationItem
               icon={<FaHospitalO className='icon-pixel' />}

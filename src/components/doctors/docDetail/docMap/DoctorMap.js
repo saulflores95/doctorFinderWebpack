@@ -16,7 +16,7 @@ const DoctorMap = (doctor) => (
         attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
       />
-      <Marker icon={DoctorMapIcon} position={position}>
+      <Marker icon={DoctorMapIcon} position={[doctor.longitude, doctor.latitude]}>
         <Popup>
           <span>{doctor.name}</span>
         </Popup>
