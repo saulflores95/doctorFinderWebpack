@@ -33,26 +33,29 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaUserMd className={styles.icon} />}
               onClick={() => this.select(0)}
               className={styles.bottomNavItem}
-              href='/doctors'
             />
             <BottomNavigationItem
+              icon={<FaHeartbeat className={styles.icon} />}
               onClick={() => this.select(1)}
               className={styles.bottomNavItem}
             />
             <BottomNavigationItem
+              icon={<FaPlusSquare className={styles.icon} />}
               onClick={() => this.select(2)}
               className={styles.bottomNavItem}
-              href='/pharmacies'
             />
             <BottomNavigationItem
+              icon={<FaHospitalO className={styles.icon} />}
               onClick={() => this.select(3)}
               className={styles.bottomNavItem}
             />
             <BottomNavigationItem
+              icon={<FaFlask className={styles.icon} />}
               onClick={() => this.select(4)}
               className={styles.bottomNavItem}
             />
             <BottomNavigationItem
+              icon={<IconLocationOn className={styles.icon} />}
               onClick={() => this.select(5)}
               className={styles.bottomNavItem}
             />
