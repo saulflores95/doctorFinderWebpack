@@ -14,20 +14,18 @@ const UpperNavigation = () => (
       <AppBar
         title=''
         className={styles.appbar}
-        iconElementLeft={<a href='/'><img className='img-logo' src={imgUrl} /></a>}
+        iconElementLeft={<a href='/'><img src={imgUrl} /></a>}
         iconElementRight={
           <IconMenu
-            iconButtonElement={<MoreVertIcon className='left-icon' />}
+            iconButtonElement={<MoreVertIcon className={styles.icon} />}
             anchorOrigin={{horizontal: 'right', vertical: 'top'}}
             targetOrigin={{horizontal: 'right', vertical: 'top'}}
-            className={styles.iconMenu}
           >
             <MenuItem className='menu-item' href='/registermd' primaryText='Add Doctor' />
             <MenuItem className='menu-item' href='/pharmaciesRegistration' primaryText='Add Pharmacie' />
             <MenuItem className='menu-item' href='/registerClinic' primaryText='Add Clinic' />
             <MenuItem className='menu-item' href='/HospitalRegistration' primaryText='Add Hospital' />
             <MenuItem className='menu-item' href='/laboratoriesRegistration' primaryText='Add Laboratory' />
-
           </IconMenu>
         }
       />

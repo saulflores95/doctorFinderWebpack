@@ -6,6 +6,7 @@ import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import injectTapEventPlugin from 'preact-tap-event-plugin'
+import styles from './DoctorList.css'
 injectTapEventPlugin()
 const DoctorList = (props) => (
   <div>
@@ -15,8 +16,8 @@ const DoctorList = (props) => (
           <ListItem
             leftAvatar={<Avatar className='img-doctor' src={props.img} />}
             rightIcon={<ActionInfo className='img-svg' />}
-            secondaryText={<div className='secondaryText'>{props.specialty}</div>}
-            primaryText={<div className='primaryText'>{props.name}</div>}
+            secondaryText={<div className={styles.label}>{props.specialty}</div>}
+            primaryText={<div className={styles.label}>{props.name}</div>}
             className='img-item'
           />
         </Link>

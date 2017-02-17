@@ -1,12 +1,8 @@
-
 .paper {
   padding: 5px 0 10px 0;
   margin-bottom: 20px;
-}
-
-.text {
   text-align: center;
-};
+}
 
 p {
   line-height: 20px;
@@ -17,4 +13,14 @@ p {
 
 .divider{
   padding-top:75;
+}
+
+.doctorDescription {
+  font-size: 16px;
+  overflow: hidden;
+  height: 80px;
+}
+
+.doctorDescriptionDialog {
+  height: auto;
 }
