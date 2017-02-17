@@ -4,12 +4,12 @@ import {Container, Row, Col} from 'react-grid-system'
 import PharmacieHeader from './phaHeader/PharmacieHeader'
 import PharmacieMap from '../phaMap/PharmacieMap'
 
-const PharmacieDetail = (pharmacie) => (
+const PharmacieDetail = ({pharmacie}) => (
   <MuiThemeProvider>
     <Container>
       <Row>
-        <Col xs={12} sm={12} md={12} lg={6}><PharmacieHeader pharmacie={pharmacie.pharmacie} /></Col>
-        <Col xs={12} sm={12} md={12} lg={6}><PharmacieMap pharmacie={pharmacie.pharmacie} /></Col>
+        <Col xs={12} sm={12} md={12} lg={6}><PharmacieHeader pharmacie={pharmacie[0]} /></Col>
+        <Col xs={12} sm={12} md={12} lg={6}><PharmacieMap pharmacie={pharmacie[0]} /></Col>
       </Row>
     </Container>
   </MuiThemeProvider>

@@ -9,16 +9,16 @@ var PharmacieMapIcon = L.icon({
   popupAnchor: [18, 0]
 })
 
-const PharmacieMap = (pharmacie) => (
+const PharmacieMap = ({pharmacie}) => (
   <div className='map-pharmacie'>
-    <Map center={position} zoom={10}>
+    <Map center={position} zoom={5}>
       <TileLayer
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
       />
       <div>
-        <Marker icon={PharmacieMapIcon} position={[pharmacie.pharmacie.latitude, pharmacie.pharmacie.longitude]}>
+        <Marker icon={PharmacieMapIcon} position={[pharmacie.latitude, pharmacie.longitude]}>
           <Popup>
-            <span>{pharmacie.pharmacie.name}</span>
+            <span>{pharmacie.name}</span>
           </Popup>
         </Marker>
       </div>
