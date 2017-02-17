@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation'
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on'
 import FaHospitalO from 'react-icons/lib/fa/hospital-o'
@@ -9,6 +8,7 @@ import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 import FaFlask from 'react-icons/lib/fa/flask'
 import FaUserMd from 'react-icons/lib/fa/user-md'
 import styles from './BottomNavigation.css'
+import { Link } from 'react-router-dom'
 
 export default class ButtomNavigationComponet extends Component {
   constructor () {
@@ -25,7 +25,6 @@ export default class ButtomNavigationComponet extends Component {
 
   render () {
     return (
-
       <div className={styles.footer}>
         <MuiThemeProvider>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
