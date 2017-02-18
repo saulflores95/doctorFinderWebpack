@@ -18,6 +18,10 @@ import LabsWrapper from '../labs/labsWrapper/LabsWrapper'
 import LabsGeneralMap from '../labs/labsMap/LabsGeneralMap'
 import LabsDetail from '../labs/labsDetail/LabsDetail'
 
+import clinics from '../../../static_db/clinics.json'
+import ClinicWrapper from '../clinics/cliWrapper/ClinicWrapper'
+import ClinicDetail from '../clinics/cliDetail/ClinicDetail'
+
 const Routes = () => (
   <Switch>
     <Route exact path='/' component={() => <DoctorWrapper doctors={doctors} />} />
@@ -25,6 +29,12 @@ const Routes = () => (
     <Route exact path='/doctors/:id' component={props => {
       const doctor = doctors.filter(doctor => props.match.params.id === doctor._id)
       return <DoctorDetail doctor={doctor[0]} />
+    }} />
+
+    <Route exact path='/clinics' component={() => <ClinicWrapper clinics={clinics} />} />
+    <Route exact path='/clinics/:id' component={props => {
+      const clinic = clinics.filter(clinic => props.match.params.id === clinic._id)
+      return <ClinicDetail clinic={clinic[0]} />
     }} />
 
     <Route exact path='/pharmacies' component={() => <PharmacieWrapper pharmacies={pharmacies} />} />
