@@ -17,17 +17,17 @@ const imageChooser = (props) => {
 const LabsMainList = ({lab}) => (
   <Col xs={12} sm={12} md={12} lg={4}>
     <div className={styles.back}>
+      <h1 className={styles.h1}>
+        <Link className={styles.link} to={`/laboratories/${lab}`}>
+          {lab}
+        </Link>
+      </h1>
       <a href={`/laboratories/${lab}`}>
         <img
           className={styles.img}
           src={imageChooser(lab)}
         />
       </a>
-      <h1 className={styles.h1}>
-        <Link className='link' to={`/laboratories/${lab}`}>
-          {lab}
-        </Link>
-      </h1>
     </div>
   </Col>
 )
