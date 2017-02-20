@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
+import styles from './DoctorContactForm.css'
 
 const addDoctor = (event) => {
   event.preventDefault()
@@ -30,22 +31,22 @@ const DoctorContactForm = (doctor) => (
     <MuiThemeProvider>
       <form className='new-doctor' onSubmit={addDoctor}>
         <TextField
-          hintText={<span className='label-text'>First Name</span>}
+          hintText={<span className={styles.label}>First Name</span>}
           ref='firstName'
           fullWidth
         />
         <TextField
-          hintText={<span className='label-text'>Last Name</span>}
+          hintText={<span className={styles.label}>Last Name</span>}
           ref='lastName'
           fullWidth
         />
         <TextField
-          hintText={<span className='label-text'>Email</span>}
+          hintText={<span className={styles.label}>Email</span>}
           ref='email'
           fullWidth
         />
         <TextField
-          hintText={<span className='label-text'>Messege</span>}
+          hintText={<span className={styles.label}>Messege</span>}
           ref='message'
           fullWidth
           multiLine
