@@ -16,14 +16,14 @@
   top: 100px;
   left: 0px;
   color: white;
-  textAlign: center;
-  marginLeft: 10%;
+  text-align: center;
+  margin-left: 10%;
   height: 15%;
 }
 .back {
   overflow: hidden;
   height: 250px;
   width: 100%;
-  marginTop: 30px;
+  margin-top: 20px;
   padding: 5 5 5 5;
 }

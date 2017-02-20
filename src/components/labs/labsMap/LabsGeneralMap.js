@@ -8,6 +8,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from './labsListWrapper/LabsListWrapper'
 import L from 'leaflet'
+import styles from './LabsGeneralMap.css'
 
 export default class LabsGeneralMap extends Component {
 
@@ -33,60 +34,51 @@ export default class LabsGeneralMap extends Component {
 
   render () {
     const positionState = [this.state.lat, this.state.lng]
-    const styles = {
-      leafletContainer: {
-        width: '100%',
-        height: 600
-      }
-    }
     var LabMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
       popupAnchor: [18, 0]
     })
-
     return (
-      <div>
-        <div className={styles.mapcontainer}>
-          <Map center={positionState} zoom={this.state.zoom}>
-            <TileLayer
-              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-            />
-            <Control position='topleft'>
-              <MuiThemeProvider>
-                <FloatingActionButton mini onClick={this.handleToggle}>
-                  <ContentAdd />
-                </FloatingActionButton>
-              </MuiThemeProvider>
-            </Control>
+      <div className={styles.mapcontainer}>
+        <Map center={positionState} zoom={this.state.zoom}>
+          <TileLayer
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <Control position='topleft'>
+            <MuiThemeProvider>
+              <FloatingActionButton mini onClick={this.handleToggle}>
+                <ContentAdd />
+              </FloatingActionButton>
+            </MuiThemeProvider>
+          </Control>
+          <div>
             <div>
-              <div>
-                {this.props.labs.map((lab) => {
-                  return (
-                    <Marker icon={LabMapIcon} position={[lab.latitude, lab.longitude]}>
-                      <Popup>
-                        <span>{lab.name}</span>
-                      </Popup>
-                    </Marker>
-                  )
-                })}
-              </div>
+              {this.props.labs.map((lab) => {
+                return (
+                  <Marker icon={LabMapIcon} position={[lab.latitude, lab.longitude]}>
+                    <Popup>
+                      <span>{lab.name}</span>
+                    </Popup>
+                  </Marker>
+                )
+              })}
             </div>
-          </Map>
-          <MuiThemeProvider>
-            <div style={styles.sideNav}>
-              <Drawer
-                open={this.state.open}
-                docked={false}
-                className='sidenav'
-                onRequestChange={(open) => this.setState({open})}>
-                <LabsListWrapper labs={this.props.labs} />
-                <MenuItem onClick={this.handleClose}>
-                  Close
-                </MenuItem>
-              </Drawer>
-            </div>
-          </MuiThemeProvider>
-        </div>
+          </div>
+        </Map>
+        <MuiThemeProvider>
+          <div style={styles.sideNav}>
+            <Drawer
+              open={this.state.open}
+              docked={false}
+              className='sidenav'
+              onRequestChange={(open) => this.setState({open})}>
+              <LabsListWrapper labs={this.props.labs} />
+              <MenuItem onClick={this.handleClose}>
+                Close
+              </MenuItem>
+            </Drawer>
+          </div>
+        </MuiThemeProvider>
       </div>
     )
   }
