@@ -4,6 +4,12 @@
 	"img": "https://upload.wikimedia.org/wikipedia/commons/f/f4/IMSS.jpg",
 	"latitude": "33",
 	"longitude": "-110",
+	"specificOne":"0",
+	"specificTwo":"0",
+	"specificThree":"0",
+	"specificFour":"0",
+	"specificFive":"0",
+	"specificSix":"0",
 	"phone": "",
 	"createdAt": {
 		"$date": "2017-02-02T23:54:20.675Z"

@@ -32,7 +32,6 @@ export default class ButtomNavigationComponet extends Component {
               onClick={() => this.select(0)}
               href='/doctors'
               className={styles.bottomNavItem}
-              href='/'
             />
             <BottomNavigationItem
               icon={<FaHeartbeat className={styles.icon} />}
@@ -45,12 +44,11 @@ export default class ButtomNavigationComponet extends Component {
               onClick={() => this.select(2)}
               href='/pharmacies'
               className={styles.bottomNavItem}
-              href='/pharmacies'
             />
             <BottomNavigationItem
               icon={<FaHospitalO className={styles.icon} />}
               onClick={() => this.select(3)}
-              href='/hospital'
+              href='/hospitals'
               className={styles.bottomNavItem}
             />
             <BottomNavigationItem
@@ -58,7 +56,6 @@ export default class ButtomNavigationComponet extends Component {
               onClick={() => this.select(4)}
               href='/laboratories'
               className={styles.bottomNavItem}
-              href='/laboratories'
             />
             <BottomNavigationItem
               icon={<IconLocationOn className={styles.icon} />}
