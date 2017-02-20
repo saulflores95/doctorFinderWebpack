@@ -5,7 +5,6 @@
   filter: brightness(40%);
   transition: 0.2s;
 }
-
 .img:hover {
      border-radius: 50%;
      transition: 0.2s;
@@ -16,18 +15,14 @@
   top: 100px;
   left: 0px;
   color: white;
-  textAlign: center;
-  marginLeft: 10%;
+  text-align: center;
+  margin-left: 10%;
   height: 15%;
 }
 .back {
   overflow: hidden;
   height: 250px;
   width: 100%;
-  marginTop: 30px;
+  margin-bottom: 20px;
   padding: 5 5 5 5;
-}
-
-.pharmacieWrapper {
-  margin-top: 100px;
 }

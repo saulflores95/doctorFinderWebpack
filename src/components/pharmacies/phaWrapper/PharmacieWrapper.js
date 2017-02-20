@@ -1,5 +1,6 @@
 import React from 'react'
 import PharmacieMainList from './phaMainList/PharmacieMainList'
+import styles from './PharmacieWrapper.css'
 
 const pharmaciesList = (props) => {
   console.log(props)
@@ -15,7 +16,7 @@ const pharmaciesList = (props) => {
 }
 
 const PharmacieWrapper = ({pharmacies}) => (
-  <div>
+  <div className={styles.pharmacieWrapper}>
     {pharmaciesList(pharmacies).map(pharmacie => <PharmacieMainList pharmacie={pharmacie} />)}
   </div>
 )

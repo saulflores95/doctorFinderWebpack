@@ -15,7 +15,7 @@ const imageChooser = (props) => {
 }
 
 const PharmacieMainList = ({pharmacie}) => (
-  <div className={styles.pharmacieWrapper}>
+  <div className={styles.test2}>
     <Col xs={12} sm={12} md={12} lg={4}>
       <div className={styles.back}>
         <a href={`/pharmacies/${pharmacie}`}>
