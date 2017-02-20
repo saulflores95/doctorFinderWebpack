@@ -8,7 +8,6 @@ import FaPlusSquare from 'react-icons/lib/fa/plus-square'
 import FaFlask from 'react-icons/lib/fa/flask'
 import FaUserMd from 'react-icons/lib/fa/user-md'
 import styles from './BottomNavigation.css'
-import { Link } from 'react-router-dom'
 
 export default class ButtomNavigationComponet extends Component {
   constructor () {
@@ -32,6 +31,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaUserMd className={styles.icon} />}
               onClick={() => this.select(0)}
               className={styles.bottomNavItem}
+              href='/'
             />
             <BottomNavigationItem
               icon={<FaHeartbeat className={styles.icon} />}
@@ -42,6 +42,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaPlusSquare className={styles.icon} />}
               onClick={() => this.select(2)}
               className={styles.bottomNavItem}
+              href='/pharmacies'
             />
             <BottomNavigationItem
               icon={<FaHospitalO className={styles.icon} />}
@@ -52,6 +53,7 @@ export default class ButtomNavigationComponet extends Component {
               icon={<FaFlask className={styles.icon} />}
               onClick={() => this.select(4)}
               className={styles.bottomNavItem}
+              href='/laboratories'
             />
             <BottomNavigationItem
               icon={<IconLocationOn className={styles.icon} />}

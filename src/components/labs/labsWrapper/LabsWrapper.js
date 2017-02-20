@@ -1,5 +1,6 @@
 import React from 'react'
 import LabsMainList from './labsMainList/LabsMainList'
+import styles from './LabsWrapper.css'
 
 const labsList = (props) => {
   console.log(props)
@@ -15,7 +16,7 @@ const labsList = (props) => {
 }
 
 const LabsWrapper = ({labs}) => (
-  <div>
+  <div className={styles.labWrapper}>
     {labsList(labs).map(lab => <LabsMainList lab={lab} />)}
   </div>
 )

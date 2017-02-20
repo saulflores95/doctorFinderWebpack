@@ -2,7 +2,6 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Switch } from 'react-router'
 
-import About from '../about/About'
 import NotFound from '../notfound/NotFound'
 
 import doctors from '../../../static_db/doctors.json'
@@ -48,7 +47,6 @@ const Routes = () => (
       return <LabsDetail lab={labFiltered} />
     }} />
 
-    <Route exact path='/about' component={About} />
     <Route component={NotFound} />
   </Switch>
 )

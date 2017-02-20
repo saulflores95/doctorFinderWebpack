@@ -1,6 +1,7 @@
 import React from 'react'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import L from 'leaflet'
+import styles from './PharmacieMap.css'
 
 const position = [32.5194358, -117.0101997]
 
@@ -10,7 +11,7 @@ var PharmacieMapIcon = L.icon({
 })
 
 const PharmacieMap = ({pharmacie}) => (
-  <div className='map-pharmacie'>
+  <div className={styles.map}>
     <Map center={position} zoom={5}>
       <TileLayer
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'

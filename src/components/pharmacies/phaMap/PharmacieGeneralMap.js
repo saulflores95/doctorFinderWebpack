@@ -8,6 +8,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import PharmacieListWrapper from './phaListWrapper/PharmacieListWrapper'
 import L from 'leaflet'
+import styles from './PharmacieGeneralMap.css'
 
 export default class PharmacieGeneralMap extends Component {
 
@@ -33,60 +34,52 @@ export default class PharmacieGeneralMap extends Component {
 
   render () {
     const positionState = [this.state.lat, this.state.lng]
-    const styles = {
-      leafletContainer: {
-        width: '100%',
-        height: 600
-      }
-    }
     var PharmacieMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
       popupAnchor: [18, 0]
     })
 
     return (
-      <div>
-        <div className={styles.mapcontainer}>
-          <Map center={positionState} zoom={this.state.zoom}>
-            <TileLayer
-              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-            />
-            <Control position='topleft'>
-              <MuiThemeProvider>
-                <FloatingActionButton mini onClick={this.handleToggle}>
-                  <ContentAdd />
-                </FloatingActionButton>
-              </MuiThemeProvider>
-            </Control>
+      <div className={styles.mapcontainer}>
+        <Map center={positionState} zoom={this.state.zoom}>
+          <TileLayer
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <Control position='topleft'>
+            <MuiThemeProvider>
+              <FloatingActionButton mini onClick={this.handleToggle}>
+                <ContentAdd />
+              </FloatingActionButton>
+            </MuiThemeProvider>
+          </Control>
+          <div>
             <div>
-              <div>
-                {this.props.pharmacies.map((pharmacie) => {
-                  return (
-                    <Marker icon={PharmacieMapIcon} position={[pharmacie.latitude, pharmacie.longitude]}>
-                      <Popup>
-                        <span>{pharmacie.name}</span>
-                      </Popup>
-                    </Marker>
-                  )
-                })}
-              </div>
+              {this.props.pharmacies.map((pharmacie) => {
+                return (
+                  <Marker icon={PharmacieMapIcon} position={[pharmacie.latitude, pharmacie.longitude]}>
+                    <Popup>
+                      <span>{pharmacie.name}</span>
+                    </Popup>
+                  </Marker>
+                )
+              })}
             </div>
-          </Map>
-          <MuiThemeProvider>
-            <div style={styles.sideNav}>
-              <Drawer
-                open={this.state.open}
-                docked={false}
-                className='sidenav'
-                onRequestChange={(open) => this.setState({open})}>
-                <PharmacieListWrapper pharmacies={this.props.pharmacies} />
-                <MenuItem onClick={this.handleClose}>
-                  Close
-                </MenuItem>
-              </Drawer>
-            </div>
-          </MuiThemeProvider>
-        </div>
+          </div>
+        </Map>
+        <MuiThemeProvider>
+          <div style={styles.sideNav}>
+            <Drawer
+              open={this.state.open}
+              docked={false}
+              className='sidenav'
+              onRequestChange={(open) => this.setState({open})}>
+              <PharmacieListWrapper pharmacies={this.props.pharmacies} />
+              <MenuItem onClick={this.handleClose}>
+                Close
+              </MenuItem>
+            </Drawer>
+          </div>
+        </MuiThemeProvider>
       </div>
     )
   }
