@@ -14,10 +14,10 @@ const DoctorList = (props) => (
       <List>
         <Link to={`/doctors/${props._id}`}>
           <ListItem
-            leftAvatar={<Avatar src={props.img} />}
+            leftAvatar={<Avatar className={styles.doctor} src={props.img} />}
             rightIcon={<ActionInfo />}
             secondaryText={<div className={styles.label}>{props.specialty}</div>}
-            primaryText={<div className={styles.label}>{props.name}</div>}
+            primaryText={<div className={styles.label2}>{props.name}</div>}
           />
         </Link>
         <Divider inset />

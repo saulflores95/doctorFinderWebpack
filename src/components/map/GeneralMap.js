@@ -250,69 +250,71 @@ export default class GeneralMap extends Component {
     })
     var mapCenter = [this.state.latitude, this.state.longitude]
     return (
-      <div className={styles.map}>
-        <Map center={mapCenter} zoom={this.state.zoom}>
-          <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
-          <Control position='topleft'>
-            <MuiThemeProvider>
-              <FloatingActionButton mini onClick={this.handleToggle}>
-                <ContentAdd />
-              </FloatingActionButton>
-            </MuiThemeProvider>
-          </Control>
-          <div>
-            {handlePharmacies}
-          </div>
-          <div>
-            {handleClinics}
-          </div>
-          <div>
-            {handleHospitals}
-          </div>
-          <div>
-            {handleLabs}
-          </div>
-          <div>
-            {handleDoctors}
-          </div>
-          <div>
-            <Marker icon={UserIcon} position={userPosition}>
-              <Popup>
-                <span> <br />This is you</span>
-              </Popup>
-            </Marker>
-          </div>
-        </Map>
-        <MuiThemeProvider>
-          <div>
-            <Drawer
-              open={this.state.open}
-              docked={false}
-              className='sidenav'
-              onRequestChange={(open) => this.setState({open})}>
-              <MenuItem onClick={() => this.toogle('all')} >
-                <h3>Show All </h3>
-              </MenuItem>
-              <MenuItem onClick={() => this.toogle('doctors')} >
-                <h3>Doctors </h3>
-              </MenuItem>
-              <MenuItem onClick={() => this.toogle('pharmacies')} >
-                <h3>Pharmacies </h3>
-              </MenuItem>
-              <MenuItem onClick={() => this.toogle('clinics')} >
-                <h3>Clinics </h3>
-              </MenuItem>
-              <MenuItem onClick={() => this.toogle('labs')} >
-                <h3>Laboratories </h3>
-              </MenuItem>
-              <MenuItem onClick={() => this.toogle('hospitals')} >
-                <h3>Hospitals </h3>
-              </MenuItem>
-            </Drawer>
-          </div>
-        </MuiThemeProvider>
+      <div className={styles.container}>
+        <div className={styles.map}>
+          <Map center={mapCenter} zoom={this.state.zoom}>
+            <TileLayer
+              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            />
+            <Control position='topleft'>
+              <MuiThemeProvider>
+                <FloatingActionButton mini onClick={this.handleToggle}>
+                  <ContentAdd />
+                </FloatingActionButton>
+              </MuiThemeProvider>
+            </Control>
+            <div>
+              {handlePharmacies}
+            </div>
+            <div>
+              {handleClinics}
+            </div>
+            <div>
+              {handleHospitals}
+            </div>
+            <div>
+              {handleLabs}
+            </div>
+            <div>
+              {handleDoctors}
+            </div>
+            <div>
+              <Marker icon={UserIcon} position={userPosition}>
+                <Popup>
+                  <span> <br />This is you</span>
+                </Popup>
+              </Marker>
+            </div>
+          </Map>
+          <MuiThemeProvider>
+            <div>
+              <Drawer
+                open={this.state.open}
+                docked={false}
+                className='sidenav'
+                onRequestChange={(open) => this.setState({open})}>
+                <MenuItem onClick={() => this.toogle('all')} >
+                  <h3>Show All </h3>
+                </MenuItem>
+                <MenuItem onClick={() => this.toogle('doctors')} >
+                  <h3>Doctors </h3>
+                </MenuItem>
+                <MenuItem onClick={() => this.toogle('pharmacies')} >
+                  <h3>Pharmacies </h3>
+                </MenuItem>
+                <MenuItem onClick={() => this.toogle('clinics')} >
+                  <h3>Clinics </h3>
+                </MenuItem>
+                <MenuItem onClick={() => this.toogle('labs')} >
+                  <h3>Laboratories </h3>
+                </MenuItem>
+                <MenuItem onClick={() => this.toogle('hospitals')} >
+                  <h3>Hospitals </h3>
+                </MenuItem>
+              </Drawer>
+            </div>
+          </MuiThemeProvider>
+        </div>
       </div>
     )
   }
