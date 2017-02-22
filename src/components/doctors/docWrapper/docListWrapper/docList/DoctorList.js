@@ -10,7 +10,6 @@ import styles from './DoctorList.css'
 injectTapEventPlugin()
 const DoctorList = ({doctor}) => (
   <div>
-    {console.log(doctor)}
     <MuiThemeProvider>
       <List>
         <Link to={`/doctors/${doctor.specialty}/${doctor._id}`}>
