@@ -1,8 +1,9 @@
 import React from 'react'
 import DoctorList from './docList/DoctorList'
+import styles from '../DoctorWrapper.css'
 
 const DoctorWrapper = ({doctor}) => (
-  <div>
+  <div className={styles.wrapper}>
     {doctor.length
     ? doctor.map(doctor => <DoctorList doctor={doctor} />) : <p>Awaiting Doctors</p>
     }
