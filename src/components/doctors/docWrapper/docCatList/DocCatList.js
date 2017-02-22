@@ -3,21 +3,18 @@ import { Link } from 'react-router-dom'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
-import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import injectTapEventPlugin from 'preact-tap-event-plugin'
-import styles from './DoctorList.css'
+import styles from '../docListWrapper/docList/DoctorList.css'
 injectTapEventPlugin()
-const DoctorList = (props) => (
+const DocCatList = ({specialty}) => (
   <div>
     <MuiThemeProvider>
       <List>
-        <Link to={`/doctors/${props._id}`}>
+        <Link to={`/doctors/${specialty}`}>
           <ListItem
-            leftAvatar={<Avatar className={styles.doctor} src={props.img} />}
             rightIcon={<ActionInfo />}
-            secondaryText={<div className={styles.label}>{props.specialty}</div>}
-            primaryText={<div className={styles.label2}>{props.name}</div>}
+            secondaryText={<div className={styles.label}>{specialty}</div>}
           />
         </Link>
         <Divider inset />
@@ -26,4 +23,4 @@ const DoctorList = (props) => (
   </div>
 )
 
-export default DoctorList
+export default DocCatList

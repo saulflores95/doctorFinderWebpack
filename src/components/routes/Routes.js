@@ -7,7 +7,7 @@ import NotFound from '../notfound/NotFound'
 import doctors from '../../../static_db/doctors.json'
 import DoctorWrapper from '../doctors/docWrapper/DoctorWrapper'
 import DoctorDetail from '../doctors/docDetail/DoctorDetail'
-
+import DocListWrapper from '../doctors/docWrapper/docListWrapper/DocListWrapper'
 import pharmacies from '../../../static_db/pharmacies.json'
 import PharmacieWrapper from '../pharmacies/phaWrapper/PharmacieWrapper'
 import PharmacieGeneralMap from '../pharmacies/phaMap/PharmacieGeneralMap'
@@ -34,7 +34,11 @@ const Routes = () => (
   <Switch>
     <Route exact path='/' component={() => <DoctorWrapper doctors={doctors} />} />
     <Route exact path='/doctors' component={() => <DoctorWrapper doctors={doctors} />} />
-    <Route exact path='/doctors/:id' component={props => {
+    <Route exact path='/doctors/:specialty' component={props => {
+      const doctor = doctors.filter(doctor => props.match.params.specialty === doctor.specialty)
+      return <DocListWrapper doctor={doctor} />
+    }} />
+    <Route exact path='/doctors/:specialty/:id' component={props => {
       const doctor = doctors.filter(doctor => props.match.params.id === doctor._id)
       return <DoctorDetail doctor={doctor[0]} />
     }} />

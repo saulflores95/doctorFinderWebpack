@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './DoctorHeader.css'
-import DoctorAppointment from './docAppointment/DoctorAppointment'
 import DoctorExp from './docExp/DoctorExp'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Row, Col} from 'react-grid-system'
