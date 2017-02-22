@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const imageChooser = (props) => {
   if (props === 'Roma') {
-    return 'http://zetatijuana.com/wp-content/uploads/2016/02/farmacias-roma-1.jpg'
+    return 'http://www.lacronica.com/Edicionenlinea/Fotos/Noticias/1138343-N.JPG'
   }
   if (props === 'farmacia') {
     return 'http://toma-control.com/wp-content/themes/cronadyn/images/puntos-de-venta/benavides.png'
@@ -22,12 +22,12 @@ const PharmacieMainList = ({pharmacie}) => (
           {pharmacie}
         </Link>
       </h1>
-      <a href={`/pharmacies/${pharmacie}`}>
+      <Link to={`/pharmacies/${pharmacie}`}>
         <img
           className={styles.img}
           src={imageChooser(pharmacie)}
         />
-      </a>
+      </Link>
     </div>
   </Col>
 )

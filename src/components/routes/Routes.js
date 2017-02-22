@@ -26,6 +26,8 @@ import hospitals from '../../../static_db/hospitals.json'
 import HospitalWrapper from '../hospital/hosWrapper/HospitalWrapper'
 import HospitalDetail from '../hospital/hosDetail/HospialDetail'
 
+import CatMenu from '../categorymenu/CatMenu'
+
 import GeneralMap from '../map/GeneralMap'
 
 const Routes = () => (
@@ -70,6 +72,8 @@ const Routes = () => (
     }} />
 
     <Route exact path='/map' component={() => <GeneralMap doctors={doctors} hospitals={hospitals} clinics={clinics} pharmacies={pharmacies} labs={labs} />} />
+
+    <Route exact path='/categories' component={() => <CatMenu />} />
 
     <Route component={NotFound} />
   </Switch>

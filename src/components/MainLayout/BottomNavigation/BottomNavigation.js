@@ -35,7 +35,7 @@ export default class ButtomNavigationComponet extends Component {
                 className={styles.bottomNavItem}
               />
             </Link>
-            <Link to='/hospitals'>
+            <Link to='/categories'>
               <BottomNavigationItem
                 icon={<FaHospitalO className={styles.icon} />}
                 onClick={() => this.select(1)}

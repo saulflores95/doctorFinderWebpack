@@ -22,12 +22,12 @@ const LabsMainList = ({lab}) => (
           {lab}
         </Link>
       </h1>
-      <a href={`/laboratories/${lab}`}>
+      <Link to={`/laboratories/${lab}`}>
         <img
           className={styles.img}
           src={imageChooser(lab)}
         />
-      </a>
+      </Link>
     </div>
   </Col>
 )
