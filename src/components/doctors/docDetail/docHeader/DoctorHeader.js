@@ -17,7 +17,6 @@ const DoctorHeader = (doctor) => (
           <Col sm={6} md={6} lg={5}>
             <h1>{doctor.name}</h1>
             <span className={styles.label}>{doctor.specialty}</span>
-            <DoctorAppointment />
           </Col>
           <Col sm={12} md={12} lg={5}>
             <DoctorExp {...doctor} />
