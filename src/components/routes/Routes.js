@@ -26,6 +26,8 @@ import hospitals from '../../../static_db/hospitals.json'
 import HospitalWrapper from '../hospital/hosWrapper/HospitalWrapper'
 import HospitalDetail from '../hospital/hosDetail/HospialDetail'
 
+import GeneralMap from '../map/GeneralMap'
+
 const Routes = () => (
   <Switch>
     <Route exact path='/' component={() => <DoctorWrapper doctors={doctors} />} />
@@ -66,6 +68,8 @@ const Routes = () => (
       const hospital = hospitals.filter(hospital => props.match.params.id === hospital._id)
       return <HospitalDetail hospital={hospital[0]} />
     }} />
+
+    <Route exact path='/map' component={() => <GeneralMap doctors={doctors} hospitals={hospitals} clinics={clinics} pharmacies={pharmacies} labs={labs} />} />
 
     <Route component={NotFound} />
   </Switch>

@@ -11,13 +11,15 @@ const App = () => (
       <UpperNavigation />
     </header>
     <Router>
-      <div className={styles.container}>
-        <Routes />
+      <div>
+        <div className={styles.container}>
+          <Routes />
+        </div>
+        <footer>
+          <BottomNavigationComponent />
+        </footer>
       </div>
     </Router>
-    <footer>
-      <BottomNavigationComponent />
-    </footer>
   </div>
 
 )

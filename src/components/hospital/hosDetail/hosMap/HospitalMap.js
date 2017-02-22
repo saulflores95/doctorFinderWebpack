@@ -16,7 +16,7 @@ const HospitalMap = ({hospital}) => (
       />
       <Marker icon={hospitalMapIcon} position={position}>
         <Popup>
-          <span>{hospital.name}</span>
+          <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude} > <br />{hospital.name}</a></span>
         </Popup>
       </Marker>
     </Map>

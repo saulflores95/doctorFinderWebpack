@@ -58,7 +58,7 @@ export default class PharmacieGeneralMap extends Component {
                 return (
                   <Marker icon={PharmacieMapIcon} position={[pharmacie.latitude, pharmacie.longitude]}>
                     <Popup>
-                      <span>{pharmacie.name}</span>
+                      <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
                     </Popup>
                   </Marker>
                 )

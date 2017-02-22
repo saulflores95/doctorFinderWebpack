@@ -19,7 +19,7 @@ const LabsMap = ({lab}) => (
       <div>
         <Marker icon={LabMapIcon} position={[lab.latitude, lab.longitude]}>
           <Popup>
-            <span>{lab.name}</span>
+            <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude} > <br />{lab.name}</a></span>
           </Popup>
         </Marker>
       </div>

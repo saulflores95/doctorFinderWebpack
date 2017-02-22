@@ -3,11 +3,12 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigation'
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on'
 import FaHospitalO from 'react-icons/lib/fa/hospital-o'
-import FaHeartbeat from 'react-icons/lib/fa/heartbeat'
-import FaPlusSquare from 'react-icons/lib/fa/plus-square'
-import FaFlask from 'react-icons/lib/fa/flask'
 import FaUserMd from 'react-icons/lib/fa/user-md'
+import FaPlus from 'react-icons/lib/fa/plus'
 import styles from './BottomNavigation.css'
+import injectTapEventPlugin from 'preact-tap-event-plugin'
+import {Link} from 'react-router-dom'
+injectTapEventPlugin()
 
 export default class ButtomNavigationComponet extends Component {
   constructor () {
@@ -27,42 +28,34 @@ export default class ButtomNavigationComponet extends Component {
       <div className={styles.footer}>
         <MuiThemeProvider>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
-            <BottomNavigationItem
-              icon={<FaUserMd className={styles.icon} />}
-              onClick={() => this.select(0)}
-              href='/doctors'
-              className={styles.bottomNavItem}
-            />
-            <BottomNavigationItem
-              icon={<FaHeartbeat className={styles.icon} />}
-              onClick={() => this.select(1)}
-              href='/clinics'
-              className={styles.bottomNavItem}
-            />
-            <BottomNavigationItem
-              icon={<FaPlusSquare className={styles.icon} />}
-              onClick={() => this.select(2)}
-              href='/pharmacies'
-              className={styles.bottomNavItem}
-            />
-            <BottomNavigationItem
-              icon={<FaHospitalO className={styles.icon} />}
-              onClick={() => this.select(3)}
-              href='/hospitals'
-              className={styles.bottomNavItem}
-            />
-            <BottomNavigationItem
-              icon={<FaFlask className={styles.icon} />}
-              onClick={() => this.select(4)}
-              href='/laboratories'
-              className={styles.bottomNavItem}
-            />
-            <BottomNavigationItem
-              icon={<IconLocationOn className={styles.icon} />}
-              onClick={() => this.select(5)}
-              href='/map'
-              className={styles.bottomNavItem}
-            />
+            <Link to='/doctors'>
+              <BottomNavigationItem
+                icon={<FaUserMd className={styles.icon} />}
+                onTouchTap={() => this.select(0)}
+                className={styles.bottomNavItem}
+              />
+            </Link>
+            <Link to='/hospitals'>
+              <BottomNavigationItem
+                icon={<FaHospitalO className={styles.icon} />}
+                onClick={() => this.select(1)}
+                className={styles.bottomNavItem}
+              />
+            </Link>
+            <Link to='map'>
+              <BottomNavigationItem
+                icon={<IconLocationOn className={styles.icon} />}
+                onClick={() => this.select(2)}
+                className={styles.bottomNavItem}
+              />
+            </Link>
+            <Link to='info'>
+              <BottomNavigationItem
+                icon={<FaPlus className={styles.icon} />}
+                onClick={() => this.select(3)}
+                className={styles.bottomNavItem}
+              />
+            </Link>
           </BottomNavigation>
         </MuiThemeProvider>
       </div>

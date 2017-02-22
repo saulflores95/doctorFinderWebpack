@@ -2,8 +2,8 @@
 	"_id": "cBXq6jGPkmpoCe6Xa",
 	"name": "IMSS",
 	"img": "http://clipart-finder.com/data/mini/15-hospital_lineart.png",
-	"latitude": "",
-	"longitude": "",
+	"latitude": "33",
+	"longitude": "-120",
 	"phone": "",
 	"createdAt": {
 		"$date": "2017-02-02T23:54:20.675Z"
@@ -13,8 +13,8 @@
 	"_id": "cKKKq6jGPkmLordTrump",
 	"name": "Los Angeles",
 	"img": "http://clipart-finder.com/data/mini/15-hospital_lineart.png",
-	"latitude": "",
-	"longitude": "",
+	"latitude": "32",
+	"longitude": "-100",
 	"phone": "",
 	"createdAt": {
 		"$date": "2017-02-02T23:54:20.675Z"

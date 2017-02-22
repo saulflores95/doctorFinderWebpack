@@ -46,7 +46,7 @@ const DoctorContactForm = (doctor) => (
           fullWidth
         />
         <TextField
-          hintText={<span className={styles.label}>Messege</span>}
+          hintText={<span className={styles.label}>Message</span>}
           ref='message'
           fullWidth
           multiLine

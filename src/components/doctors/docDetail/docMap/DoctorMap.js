@@ -13,12 +13,11 @@ const DoctorMap = (doctor) => (
   <div className={styles.map}>
     <Map center={position} zoom={15}>
       <TileLayer
-        attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
       />
-      <Marker icon={DoctorMapIcon} position={[doctor.longitude, doctor.latitude]}>
+      <Marker icon={DoctorMapIcon} position={[doctor.latitude, doctor.longitude]}>
         <Popup>
-          <span>{doctor.name}</span>
+          <span><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude} > <br />{doctor.name}</a></span>
         </Popup>
       </Marker>
     </Map>
