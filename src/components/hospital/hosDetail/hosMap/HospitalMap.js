@@ -2,6 +2,7 @@ import React from 'react'
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet'
 const position = [32.5194358, -117.0101997]
 import L from 'leaflet'
+import styles from './HospitalMap.css'
 
 const hospitalMapIcon = L.icon({
   iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
@@ -9,7 +10,7 @@ const hospitalMapIcon = L.icon({
 })
 
 const HospitalMap = ({hospital}) => (
-  <div className='map-pharmacie'>
+  <div className={styles.map}>
     <Map center={position} zoom={5}>
       <TileLayer
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'

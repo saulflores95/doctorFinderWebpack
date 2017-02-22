@@ -1,7 +1,5 @@
 .map {
-  height: 100%;
-}
-
-.container {
-  height: 90vh;
+  height: 100vh;
+  margin-top: 60px;
+  margin-bottom: -60px;
 }

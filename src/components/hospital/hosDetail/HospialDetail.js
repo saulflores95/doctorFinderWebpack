@@ -3,9 +3,10 @@ import HospitalHeader from './hosHeader/HospitalHeader'
 import HospitalMap from './hosMap/HospitalMap'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Col, Container, Row} from 'react-grid-system'
+import styles from './HospitalDetail.css'
 
 const HospitalDetail = ({hospital}) => (
-  <div className='component-detail'>
+  <div className={styles.wrapper}>
     <MuiThemeProvider>
       <Container>
         <Row>

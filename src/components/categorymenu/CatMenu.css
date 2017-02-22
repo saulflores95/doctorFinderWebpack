@@ -20,10 +20,18 @@
   position: relative;
   height: 250px;
   width: 100%;
-  margin-top: 20px;
-  padding: 5 5 5 5;
+  margin-bottom: 30px;
 }
 .link {
   color: white;
   font-size: 30px;
+}
+
+.wrapperList {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.wrapper {
+  margin-top: 100px;
 }

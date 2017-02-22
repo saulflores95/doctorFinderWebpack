@@ -1,9 +1,10 @@
 import React from 'react'
 import {Container, Row} from 'react-grid-system'
 import ClinicList from './cliList/ClinicList'
+import styles from './ClinicWrapper.css'
 
 const ClinicWrapper = ({clinics}) => (
-  <div>
+  <div className={styles.wrapper}>
     <Container>
       <Row>
         {clinics.length
