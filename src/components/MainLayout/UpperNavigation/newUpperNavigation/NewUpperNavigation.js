@@ -5,7 +5,7 @@ injectTapEventPlugin()
 
 const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
 const NewUpperNavigation = () => (
-  <div>
+  <div className={styles.uppernavigation}>
     <ul className={styles.ul}>
       <li className={styles.li}><img src={imgUrl} /></li>
       <li className={styles.liRight}>
