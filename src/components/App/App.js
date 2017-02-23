@@ -7,9 +7,11 @@ import styles from './App.css'
 
 const App = () => (
   <div>
-    <header>
-      <NewUpperNavigation />
-    </header>
+    <div>
+      <header>
+        <NewUpperNavigation />
+      </header>
+    </div>
     <Router>
       <div>
         <div className={styles.container}>
