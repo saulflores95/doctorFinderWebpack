@@ -82,7 +82,7 @@ input[type="text"]:focus:hover {
 }
 
 input[type="text"]:focus {
-  width: 380px;
+  width: 50vw;
   z-index: 1;
   border-bottom: 1px solid #BBB;
   cursor: text;

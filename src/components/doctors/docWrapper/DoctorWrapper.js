@@ -13,7 +13,7 @@ const doctorCategory = (props) => {
 }
 
 const DoctorWrapper = ({doctors}) => (
-  <div className={styles.doctorContainer}>
+  <div className={styles.wrapper}>
     {doctors.length
     ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <p>Awaiting Doctors</p>
     }

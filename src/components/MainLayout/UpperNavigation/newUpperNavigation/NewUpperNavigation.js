@@ -11,7 +11,7 @@ const NewUpperNavigation = () => (
       <li className={styles.liRight}>
         <div className={styles.wrap}>
           <form action='' autocomplete='on'>
-            <input className={styles.search} name='search' type='text' placeholder='What are we looking for ?' />
+            <input className={styles.search} name='search' type='text' placeholder='Search...' />
             <input className={styles.search_submit} value='Rechercher' type='submit' />
           </form>
         </div>
