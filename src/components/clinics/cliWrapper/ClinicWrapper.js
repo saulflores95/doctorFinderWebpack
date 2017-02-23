@@ -5,13 +5,13 @@ import styles from './ClinicWrapper.css'
 
 const ClinicWrapper = ({clinics}) => (
   <div className={styles.wrapper}>
-    <Container>
+    <div className={styles.wrapperList}>
       <Row>
         {clinics.length
           ? clinics.map(clinic => <ClinicList key={clinic._id} clinic={clinic} />) : <p>Awaiting clinics</p>
         }
       </Row>
-    </Container>
+    </div>
   </div>
 )
 

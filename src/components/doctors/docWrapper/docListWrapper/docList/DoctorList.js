@@ -16,7 +16,7 @@ const DoctorList = ({doctor}) => (
           <ListItem
             leftAvatar={<Avatar className={styles.doctor} src={doctor.img} />}
             rightIcon={<ActionInfo />}
-            secondaryText={<div className={styles.label}>{doctor.specialty}</div>}
+            secondaryText={<div className={styles.label2}>{doctor.specialty}</div>}
             primaryText={<div className={styles.label}>{doctor.name}</div>}
           />
         </Link>

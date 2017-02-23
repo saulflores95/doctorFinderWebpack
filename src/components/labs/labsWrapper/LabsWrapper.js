@@ -16,8 +16,10 @@ const labsList = (props) => {
 }
 
 const LabsWrapper = ({labs}) => (
-  <div className={styles.labWrapper}>
-    {labsList(labs).map(lab => <LabsMainList lab={lab} />)}
+  <div className={styles.wrapper}>
+    <div className={styles.wrapperList}>
+      {labsList(labs).map(lab => <LabsMainList lab={lab} />)}
+    </div>
   </div>
 )
 
