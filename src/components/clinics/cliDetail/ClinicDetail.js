@@ -4,17 +4,20 @@ import {Container, Row, Col} from 'react-grid-system'
 import ClinicHeader from './cliHeader/ClinicHeader'
 import ClinicMap from '../cliMap/ClinicMap'
 import ClinicSpeciality from './cliSpeciality/ClinicSpeciality'
+import styles from './ClinicDetail.css'
 
 const ClinicDetail = ({clinic}) => (
-  <MuiThemeProvider>
-    <Container>
-      <Row>
-        <Col xs={12} sm={12} md={12} lg={6}><ClinicHeader clinic={clinic} /></Col>
-        <Col xs={12} sm={12} md={12} lg={6}><ClinicSpeciality clinic={clinic} /></Col>
-        <Col xs={12} sm={12} md={12} lg={6}><ClinicMap clinic={clinic} /></Col>
-      </Row>
-    </Container>
-  </MuiThemeProvider>
+  <div className={styles.wrapper}>
+    <MuiThemeProvider>
+      <Container>
+        <Row>
+          <Col xs={12} sm={12} md={12} lg={6}><ClinicHeader clinic={clinic} /></Col>
+          <Col xs={12} sm={12} md={12} lg={6}><ClinicSpeciality clinic={clinic} /></Col>
+          <Col xs={12} sm={12} md={12} lg={12}><ClinicMap clinic={clinic} /></Col>
+        </Row>
+      </Container>
+    </MuiThemeProvider>
+  </div>
 )
 
 export default ClinicDetail

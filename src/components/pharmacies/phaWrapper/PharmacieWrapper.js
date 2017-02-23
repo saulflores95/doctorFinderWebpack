@@ -16,8 +16,10 @@ const pharmaciesList = (props) => {
 }
 
 const PharmacieWrapper = ({pharmacies}) => (
-  <div className={styles.pharmacieWrapper}>
-    {pharmaciesList(pharmacies).map(pharmacie => <PharmacieMainList pharmacie={pharmacie} />)}
+  <div className={styles.wrapper}>
+    <div className={styles.wrapperList}>
+      {pharmaciesList(pharmacies).map(pharmacie => <PharmacieMainList pharmacie={pharmacie} />)}
+    </div>
   </div>
 )
 

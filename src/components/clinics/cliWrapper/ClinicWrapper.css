@@ -1,3 +1,8 @@
 .wrapper {
   margin-top: 100px;
 }
+
+.wrapperList {
+  margin-left: 25px;
+  margin-right: 25px;
+}
