@@ -2,13 +2,14 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from '../routes/Routes'
 import UpperNavigation from '../MainLayout/UpperNavigation/UpperNavigation'
+import NewUpperNavigation from '../MainLayout/UpperNavigation/newUpperNavigation/NewUpperNavigation'
 import BottomNavigationComponent from '../MainLayout/BottomNavigation/BottomNavigation'
 import styles from './App.css'
 
 const App = () => (
   <div>
     <header>
-      <UpperNavigation />
+      <NewUpperNavigation />
     </header>
     <Router>
       <div>
