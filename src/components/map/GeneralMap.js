@@ -118,14 +118,6 @@ export default class GeneralMap extends Component {
     }
   }
 
-  screenCheck () {
-    var screenSize = {
-      height: window.screen.availWidth,
-      width: window.screen.availHeight
-    }
-    return screenSize
-  }
-
   handleLabs () {
     var labMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
@@ -251,24 +243,6 @@ export default class GeneralMap extends Component {
     var handleHospitals = this.handleHospitals()
     var handleClinics = this.handleClinics()
     var handleLabs = this.handleLabs()
-    var screenSize = this.screenCheck()
-    var newHeight = null
-    if (screenSize.height < 1000) {
-      var screenHeightCalulation = screenSize.height * 0.40
-      newHeight = screenSize.height + screenHeightCalulation
-    } else {
-      var screenHeightCalulationBig = screenSize.height * 0.589
-      newHeight = screenSize.height - screenHeightCalulationBig
-    }
-    var style = {
-      map: {
-        width: '100%',
-        height: newHeight
-      }
-    }
-    console.log('Screen Size:', screenHeightCalulation)
-    console.log('Map Size', style.map)
-
     var UserIcon = L.icon({
       iconUrl: 'https://unpkg.com/leaflet@1.0.1/dist/images/marker-icon-2x.png',
       popupAnchor: [0, -18],
@@ -276,71 +250,69 @@ export default class GeneralMap extends Component {
     })
     var mapCenter = [this.state.latitude, this.state.longitude]
     return (
-      <div style={style.map}>
-        <div className={styles.map}>
-          <Map center={mapCenter} zoom={this.state.zoom}>
-            <TileLayer
-              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-            />
-            <Control position='topleft'>
-              <MuiThemeProvider>
-                <FloatingActionButton mini onClick={this.handleToggle}>
-                  <ContentAdd />
-                </FloatingActionButton>
-              </MuiThemeProvider>
-            </Control>
-            <div>
-              {handlePharmacies}
-            </div>
-            <div>
-              {handleClinics}
-            </div>
-            <div>
-              {handleHospitals}
-            </div>
-            <div>
-              {handleLabs}
-            </div>
-            <div>
-              {handleDoctors}
-            </div>
-            <div>
-              <Marker icon={UserIcon} position={userPosition}>
-                <Popup>
-                  <span> <br />This is you</span>
-                </Popup>
-              </Marker>
-            </div>
-          </Map>
-          <MuiThemeProvider>
-            <div>
-              <Drawer
-                open={this.state.open}
-                docked={false}
-                className='sidenav'
-                onRequestChange={(open) => this.setState({open})}>
-                <MenuItem onClick={() => this.toogle('all')} >
-                  <h3>Show All </h3>
-                </MenuItem>
-                <MenuItem onClick={() => this.toogle('doctors')} >
-                  <h3>Doctors </h3>
-                </MenuItem>
-                <MenuItem onClick={() => this.toogle('pharmacies')} >
-                  <h3>Pharmacies </h3>
-                </MenuItem>
-                <MenuItem onClick={() => this.toogle('clinics')} >
-                  <h3>Clinics </h3>
-                </MenuItem>
-                <MenuItem onClick={() => this.toogle('labs')} >
-                  <h3>Laboratories </h3>
-                </MenuItem>
-                <MenuItem onClick={() => this.toogle('hospitals')} >
-                  <h3>Hospitals </h3>
-                </MenuItem>
-              </Drawer>
-            </div>
-          </MuiThemeProvider>
-        </div>
+      <div className={styles.map}>
+        <Map center={mapCenter} zoom={this.state.zoom}>
+          <TileLayer
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <Control position='topleft'>
+            <MuiThemeProvider>
+              <FloatingActionButton mini onClick={this.handleToggle}>
+                <ContentAdd />
+              </FloatingActionButton>
+            </MuiThemeProvider>
+          </Control>
+          <div>
+            {handlePharmacies}
+          </div>
+          <div>
+            {handleClinics}
+          </div>
+          <div>
+            {handleHospitals}
+          </div>
+          <div>
+            {handleLabs}
+          </div>
+          <div>
+            {handleDoctors}
+          </div>
+          <div>
+            <Marker icon={UserIcon} position={userPosition}>
+              <Popup>
+                <span> <br />This is you</span>
+              </Popup>
+            </Marker>
+          </div>
+        </Map>
+        <MuiThemeProvider>
+          <div>
+            <Drawer
+              open={this.state.open}
+              docked={false}
+              className='sidenav'
+              onRequestChange={(open) => this.setState({open})}>
+              <MenuItem onClick={() => this.toogle('all')} >
+                <h3>Show All </h3>
+              </MenuItem>
+              <MenuItem onClick={() => this.toogle('doctors')} >
+                <h3>Doctors </h3>
+              </MenuItem>
+              <MenuItem onClick={() => this.toogle('pharmacies')} >
+                <h3>Pharmacies </h3>
+              </MenuItem>
+              <MenuItem onClick={() => this.toogle('clinics')} >
+                <h3>Clinics </h3>
+              </MenuItem>
+              <MenuItem onClick={() => this.toogle('labs')} >
+                <h3>Laboratories </h3>
+              </MenuItem>
+              <MenuItem onClick={() => this.toogle('hospitals')} >
+                <h3>Hospitals </h3>
+              </MenuItem>
+            </Drawer>
+          </div>
+        </MuiThemeProvider>
       </div>
     )
   }
