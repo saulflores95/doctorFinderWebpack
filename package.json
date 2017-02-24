@@ -42,6 +42,7 @@
     "react-leaflet": "next",
     "react-leaflet-control": "^1.3.0",
     "react-router-dom": "next",
+    "react-router-page-transition": "^3.0.2",
     "standard": "^8.6.0",
     "standard-loader": "^5.0.0",
     "style-loader": "^0.13.1",
