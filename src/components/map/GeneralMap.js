@@ -123,15 +123,7 @@ export default class GeneralMap extends Component {
       height: window.screen.availWidth,
       width: window.screen.availHeight
     }
-    var newHeight = null
-    if (screenSize.height < 1000) {
-      var screenHeightCalulation = screenSize.height * 0.40
-      newHeight = screenSize.height + screenHeightCalulation
-    } else {
-      var screenHeightCalulationBig = screenSize.height * 0.580
-      newHeight = screenSize.height - screenHeightCalulationBig
-    }
-    return newHeight
+    return screenSize
   }
 
   handleLabs () {
@@ -259,14 +251,25 @@ export default class GeneralMap extends Component {
     var handleHospitals = this.handleHospitals()
     var handleClinics = this.handleClinics()
     var handleLabs = this.handleLabs()
-    var mapHeight = this.screenCheck()
+    var screenSize = this.screenCheck()
+    var newHeight = null
+    if (screenSize.height < 1000) {
+      var screenHeightCalulation = screenSize.height * 0.40
+      newHeight = screenSize.height + screenHeightCalulation
+    } else {
+      var screenHeightCalulationBig = screenSize.height * 0.580
+      newHeight = screenSize.height - screenHeightCalulationBig
+    }
     var style = {
       map: {
         width: '100%',
-        height: mapHeight,
+        height: newHeight,
         position: 'absolute'
       }
     }
+    console.log('Screen Size:', screenHeightCalulation)
+    console.log('Map Size', style.map)
+
     var UserIcon = L.icon({
       iconUrl: 'https://unpkg.com/leaflet@1.0.1/dist/images/marker-icon-2x.png',
       popupAnchor: [0, -18],
