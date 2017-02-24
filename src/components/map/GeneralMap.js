@@ -316,5 +316,4 @@ export default class GeneralMap extends Component {
       </div>
     )
   }
-
 }

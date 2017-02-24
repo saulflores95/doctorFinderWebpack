@@ -38,7 +38,7 @@ export default class DoctorDescription extends Component {
       <div>
         <MuiThemeProvider>
           <Paper zDepth={1} className={styles.paper}>
-            <div className={styles.test2}>
+            <div>
               <Container>
                 <p className={styles.doctorDescription}>{this.props.doctor.description}</p>
                 <RaisedButton label='Read more' onClick={this.handleOpen.bind(this)} />
@@ -54,9 +54,8 @@ export default class DoctorDescription extends Component {
               modal={false}
               open={this.state.open}
               onRequestClose={this.handleClose.bind(this)}
-              className={styles.test1}
              >
-              <div className={styles.prueba}>
+              <div>
                 <p className={styles.doctorDescriptionDialog}>{this.props.doctor.description}</p>
               </div>
             </Dialog>
