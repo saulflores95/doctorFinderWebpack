@@ -257,14 +257,13 @@ export default class GeneralMap extends Component {
       var screenHeightCalulation = screenSize.height * 0.40
       newHeight = screenSize.height + screenHeightCalulation
     } else {
-      var screenHeightCalulationBig = screenSize.height * 0.580
+      var screenHeightCalulationBig = screenSize.height * 0.589
       newHeight = screenSize.height - screenHeightCalulationBig
     }
     var style = {
       map: {
         width: '100%',
-        height: newHeight,
-        position: 'absolute'
+        height: newHeight
       }
     }
     console.log('Screen Size:', screenHeightCalulation)
