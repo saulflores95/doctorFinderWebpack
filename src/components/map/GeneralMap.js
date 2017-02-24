@@ -28,6 +28,16 @@ export default class GeneralMap extends Component {
     }
   }
 
+  handleCoordinates (latitude, longitude) {
+    latitude = parseFloat(latitude)
+    longitude = parseFloat(longitude)
+    var coordinate = {
+      latitude: latitude,
+      longitude: longitude
+    }
+    return coordinate
+  }
+
   handlePharmacies () {
     if (this.state.showPharmacies === true) {
       var PharmacieMapIcon = L.icon({
@@ -37,9 +47,9 @@ export default class GeneralMap extends Component {
       return (
         <div>
           {this.props.pharmacies.map((pharmacie) => {
-            var position = [pharmacie.latitude, pharmacie.longitude]
+            var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
             return (
-              <Marker icon={PharmacieMapIcon} position={position}>
+              <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
                 </Popup>
@@ -60,9 +70,9 @@ export default class GeneralMap extends Component {
       return (
         <div>
           {this.props.hospitals.map((hospital) => {
-            var position = [hospital.latitude, hospital.longitude]
+            var cordinates = this.handleCoordinates(hospital.latitude, hospital.longitude)
             return (
-              <Marker icon={hospitalMapIcon} position={position}>
+              <Marker icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude}><br />{hospital.name}</a></span>
                 </Popup>
@@ -83,8 +93,9 @@ export default class GeneralMap extends Component {
       return (
         <div>
           {this.props.doctors.map((doctor) => {
+            var cordinates = this.handleCoordinates(doctor.latitude, doctor.longitude)
             return (
-              <Marker icon={DoctorMapIcon} position={[doctor.latitude, doctor.longitude]}>
+              <Marker icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><br /><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude}>{doctor.name}</a></span>
                 </Popup>
@@ -105,8 +116,9 @@ export default class GeneralMap extends Component {
       return (
         <div>
           {this.props.clinics.map((clinic) => {
+            var cordinates = this.handleCoordinates(clinic.latitude, clinic.longitude)
             return (
-              <Marker icon={clinicMapIcon} position={[clinic.latitude, clinic.longitude]}>
+              <Marker icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + clinic.latitude + ',' + clinic.longitude}> <br />{clinic.name}</a></span>
                 </Popup>
@@ -127,8 +139,9 @@ export default class GeneralMap extends Component {
       return (
         <div>
           {this.props.labs.map((lab) => {
+            var cordinates = this.handleCoordinates(lab.latitude, lab.longitude)
             return (
-              <Marker icon={labMapIcon} position={[lab.latitude, lab.longitude]}>
+              <Marker icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
                 </Popup>
