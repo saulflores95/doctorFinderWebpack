@@ -83,7 +83,7 @@ const DocCatList = ({specialty}) => (
       <List>
         <Link to={`/doctors/${specialty}`}>
           <ListItem
-            leftAvatar={<Avatar className={styles.doctor} src={imageChooser(specialty)}/>}
+            leftAvatar={<Avatar className={styles.doctor} src={imageChooser(specialty)} />}
             rightIcon={<ActionInfo />}
             secondaryText={<div className={styles.label}>{specialty}</div>}
           />
