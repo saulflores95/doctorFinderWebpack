@@ -41,6 +41,8 @@ module.exports = {
       react: 'preact-compat',
       'react-dom': 'preact-compat',
       'react-addons-shallow-compare': 'preact-shallow-compare',
+      'react-tap-event-plugin':'preact-tap-event-plugin',
+      'react-addons-css-transition-group': 'rc-css-transition-group',
       leaflet_css: __dirname + "/node_modules/leaflet/dist/leaflet.css",
 
     }

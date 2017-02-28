@@ -4,11 +4,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
 import styles from '../docListWrapper/docList/DoctorList.css'
 import Avatar from 'material-ui/Avatar'
-
+import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
+
 
 const imageChooser = (props) => {
   switch (props) {
@@ -79,18 +79,18 @@ const imageChooser = (props) => {
 
 const DocCatList = ({specialty}) => (
   <div>
-    <MuiThemeProvider>
-      <List>
-        <Link to={`/doctors/${specialty}`}>
+    <Link to={`/doctors/${specialty}`}>
+      <MuiThemeProvider>
+        <List>
           <ListItem
             leftAvatar={<Avatar className={styles.doctor} src={imageChooser(specialty)} />}
             rightIcon={<ActionInfo />}
             secondaryText={<div className={styles.label}>{specialty}</div>}
           />
-        </Link>
-        <Divider inset />
-      </List>
-    </MuiThemeProvider>
+          <Divider inset />
+        </List>
+      </MuiThemeProvider>
+    </Link>
   </div>
 )
 

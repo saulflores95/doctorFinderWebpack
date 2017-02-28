@@ -35,6 +35,7 @@
     "preact-compat": "^3.13.1",
     "preact-shallow-compare": "^1.2.0",
     "preact-tap-event-plugin": "^0.1.2",
+    "rc-css-transition-group": "^2.1.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-grid-system": "^2.4.1",

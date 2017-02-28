@@ -5,7 +5,8 @@ import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import { Link } from 'react-router-dom'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+
 injectTapEventPlugin()
 
 const PharmacieListItem = (pharmacie) => (

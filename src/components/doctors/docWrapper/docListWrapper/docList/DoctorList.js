@@ -5,7 +5,7 @@ import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 import styles from './DoctorList.css'
 injectTapEventPlugin()
 const DoctorList = ({doctor}) => (

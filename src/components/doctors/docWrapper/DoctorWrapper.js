@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './DoctorWrapper.css'
 import DocCatList from './docCatList/DocCatList'
-
+import LoadingComponent from '../../MainLayout/loadingComponent/LoadingComponent'
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
     return doctor.specialty
@@ -15,7 +15,7 @@ const doctorCategory = (props) => {
 const DoctorWrapper = ({doctors}) => (
   <div className={styles.wrapper}>
     {doctors.length
-    ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <p>Awaiting Doctors</p>
+    ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <LoadingComponent />
     }
   </div>
 )
