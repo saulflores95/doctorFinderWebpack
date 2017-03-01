@@ -9,7 +9,6 @@ import Avatar from 'material-ui/Avatar'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 injectTapEventPlugin()
 
-
 const imageChooser = (props) => {
   switch (props) {
     case 'Allergist':

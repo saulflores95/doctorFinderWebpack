@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './DoctorWrapper.css'
 import DocCatList from './docCatList/DocCatList'
 import LoadingComponent from '../../MainLayout/loadingComponent/LoadingComponent'
+
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
     return doctor.specialty

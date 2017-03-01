@@ -18,7 +18,16 @@ module.exports = {
       test: /\.js$/,
       loader: 'standard-loader',
       exclude: /node_modules/
-    }, {
+    },{
+      test: /manifest.json$/,
+      loader: 'file-loader?name=manifest.json!web-app-manifest-loader'
+    },{
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+            'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+    },{
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/
@@ -42,7 +51,6 @@ module.exports = {
       'react-dom': 'preact-compat',
       'react-addons-shallow-compare': 'preact-shallow-compare',
       'react-tap-event-plugin':'preact-tap-event-plugin',
-      'react-addons-css-transition-group': 'rc-css-transition-group',
       leaflet_css: __dirname + "/node_modules/leaflet/dist/leaflet.css",
 
     }
