@@ -5,8 +5,7 @@ import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import styles from './UpperNavigation.css'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
-injectTapEventPlugin()
+
 const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
 const UpperNavigation = () => (
   <div>

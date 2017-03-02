@@ -6,8 +6,6 @@ import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import styles from '../docListWrapper/docList/DoctorList.css'
 import Avatar from 'material-ui/Avatar'
-import injectTapEventPlugin from 'react-tap-event-plugin'
-injectTapEventPlugin()
 
 const imageChooser = (props) => {
   switch (props) {

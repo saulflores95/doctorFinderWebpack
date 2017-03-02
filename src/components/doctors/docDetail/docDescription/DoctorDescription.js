@@ -3,11 +3,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Paper from 'material-ui/Paper'
 import Dialog from 'material-ui/Dialog'
 import RaisedButton from 'material-ui/RaisedButton'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
 import FlatButton from 'material-ui/FlatButton'
 import {Container} from 'react-grid-system'
 import styles from './DoctorDescription.css'
-injectTapEventPlugin()
 
 export default class DoctorDescription extends Component {
 
@@ -31,7 +29,7 @@ export default class DoctorDescription extends Component {
       <FlatButton
         label={<span className='label-text'>Close</span>}
         primary
-        onTouchTap={this.handleClose.bind(this)}
+        onClick={this.handleClose.bind(this)}
       />
     ]
     return (

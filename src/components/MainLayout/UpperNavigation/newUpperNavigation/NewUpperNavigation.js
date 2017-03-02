@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './NewUpperNavigation.css'
 import { Link } from 'react-router-dom'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
-injectTapEventPlugin()
 
 const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
 const NewUpperNavigation = () => (

@@ -18,10 +18,10 @@ const DoctorWrapper = ({doctors}) => (
   <div className={styles.wrapper}>
     <RouteTransition
       pathname={`/doctors`}
-      atEnter={{ translateX: 35, opacity: 0, 'animation-duration': '10s' }}
-      atLeave={{ translateX: -35, opacity: 0, 'animation-duration': '10s' }}
-      atActive={{ translateX: 0, opacity: 1, 'animation-duration': '10s' }}
-      mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity, 'animation-duration': styles.transition })}
+      atEnter={{ translateX: 35, opacity: 0 }}
+      atLeave={{ translateX: -35, opacity: 0 }}
+      atActive={{ translateX: 0, opacity: 1 }}
+      mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity })}
       >
       {doctors.length
       ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <LoadingComponent />

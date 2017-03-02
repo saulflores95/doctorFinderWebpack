@@ -6,9 +6,7 @@ import FaHospitalO from 'react-icons/lib/fa/hospital-o'
 import FaUserMd from 'react-icons/lib/fa/user-md'
 import FaPlus from 'react-icons/lib/fa/plus'
 import styles from './BottomNavigation.css'
-import injectTapEventPlugin from 'preact-tap-event-plugin'
 import {Link} from 'react-router-dom'
-injectTapEventPlugin()
 
 export default class ButtomNavigationComponet extends Component {
   constructor () {
@@ -31,7 +29,7 @@ export default class ButtomNavigationComponet extends Component {
             <Link to='/doctors'>
               <BottomNavigationItem
                 icon={<FaUserMd className={styles.icon} />}
-                onTouchTap={() => this.select(0)}
+                onClick={() => this.select(0)}
                 className={styles.bottomNavItem}
               />
             </Link>
