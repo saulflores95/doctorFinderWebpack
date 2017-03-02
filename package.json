@@ -70,5 +70,7 @@
       "\\.css$": "identity-obj-proxy"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-router-transition": "0.0.6"
+  }
 }
