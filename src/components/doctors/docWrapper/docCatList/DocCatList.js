@@ -82,7 +82,7 @@ const DocCatList = ({specialty}) => (
           <ListItem
             leftAvatar={<Avatar className={styles.doctor} src={imageChooser(specialty)} />}
             rightIcon={<ActionInfo />}
-            secondaryText={<div className={styles.label}>{specialty}</div>}
+            primaryText={<div className={styles.label}>{specialty}</div>}
           />
           <Divider inset />
         </List>

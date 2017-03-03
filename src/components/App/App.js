@@ -9,11 +9,13 @@ const App = () => (
   <div>
     <Router>
       <div>
-        <header>
-          <NewUpperNavigation />
-        </header>
         <div className={styles.container}>
-          <Routes />
+          <header>
+            <NewUpperNavigation />
+          </header>
+          <div>
+            <Routes />
+          </div>
         </div>
         <footer>
           <BottomNavigationComponent />
