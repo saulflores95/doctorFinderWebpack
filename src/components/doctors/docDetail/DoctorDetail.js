@@ -11,10 +11,10 @@ const DoctorDetail = (doctor) => (
   <div className={styles.doctorDetailWrapper}>
     <RouteTransition
       pathname={`/doctors`}
-      atEnter={{ translateY: 35, opacity: 0 }}
-      atLeave={{ translateY: -35, opacity: 0 }}
-      atActive={{ translateY: 0, opacity: 1 }}
-      mapStyles={styles => ({ transform: `translateY(${styles.translateY}%)`, opacity: styles.opacity })}
+      atEnter={{ translateY: 35 }}
+      atLeave={{ translateY: -35 }}
+      atActive={{ translateY: 0 }}
+      mapStyles={styles => ({ transform: `translateY(${styles.translateY}%)` })}
       >
       <Container>
         <DoctorHeader {...doctor.doctor} />
