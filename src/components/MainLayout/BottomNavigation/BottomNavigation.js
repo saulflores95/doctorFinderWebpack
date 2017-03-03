@@ -47,7 +47,7 @@ export default class ButtomNavigationComponet extends Component {
                 className={styles.bottomNavItem}
               />
             </Link>
-            <Link to='/info'>
+            <Link to='/contact'>
               <BottomNavigationItem
                 icon={<FaPlus className={styles.icon} />}
                 onClick={() => this.select(3)}

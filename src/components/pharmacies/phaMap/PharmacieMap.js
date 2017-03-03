@@ -7,7 +7,8 @@ const position = [32.5194358, -117.0101997]
 
 var PharmacieMapIcon = L.icon({
   iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
-  popupAnchor: [18, 0]
+  popupAnchor: [0, -18],
+  iconSize: [25, 41]
 })
 
 const PharmacieMap = ({pharmacie}) => (

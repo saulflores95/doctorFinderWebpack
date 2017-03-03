@@ -7,7 +7,8 @@ const position = [32.5194358, -117.0101997]
 
 var LabMapIcon = L.icon({
   iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
-  popupAnchor: [18, 0]
+  popupAnchor: [0, -18],
+  iconSize: [25, 41]
 })
 
 const LabsMap = ({lab}) => (

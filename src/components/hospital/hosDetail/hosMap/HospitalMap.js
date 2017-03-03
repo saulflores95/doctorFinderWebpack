@@ -6,7 +6,8 @@ import styles from './HospitalMap.css'
 
 const hospitalMapIcon = L.icon({
   iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
-  popupAnchor: [18, 0]
+  popupAnchor: [0, -18],
+  iconSize: [25, 41]
 })
 
 const HospitalMap = ({hospital}) => (

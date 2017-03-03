@@ -30,6 +30,8 @@ import CatMenu from '../categorymenu/CatMenu'
 
 import GeneralMap from '../map/GeneralMap'
 
+import ContactForm from '../contact/ContactForm'
+
 const Routes = () => (
   <Switch>
     <Route exact path='/' component={() => <DoctorWrapper doctors={doctors} />} />
@@ -78,6 +80,8 @@ const Routes = () => (
     <Route exact path='/map' component={() => <GeneralMap doctors={doctors} hospitals={hospitals} clinics={clinics} pharmacies={pharmacies} labs={labs} />} />
 
     <Route exact path='/categories' component={() => <CatMenu />} />
+
+    <Route exact path='/contact' component={() => <ContactForm />} />
 
     <Route component={NotFound} />
   </Switch>

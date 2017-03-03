@@ -36,7 +36,8 @@ export default class PharmacieGeneralMap extends Component {
     const positionState = [this.state.lat, this.state.lng]
     var PharmacieMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [25, 41]
     })
 
     return (
@@ -67,18 +68,18 @@ export default class PharmacieGeneralMap extends Component {
           </div>
         </Map>
         <MuiThemeProvider>
-          <div style={styles.sideNav}>
-            <Drawer
-              open={this.state.open}
-              docked={false}
-              className='sidenav'
-              onRequestChange={(open) => this.setState({open})}>
+          <Drawer
+            open={this.state.open}
+            docked={false}
+            className='sidenav'
+            onRequestChange={(open) => this.setState({open})}>
+            <div className={styles.sidenav}>
               <PharmacieListWrapper pharmacies={this.props.pharmacies} />
-              <MenuItem onClick={this.handleClose}>
-                Close
-              </MenuItem>
-            </Drawer>
-          </div>
+            </div>
+            <MenuItem onClick={this.handleClose}>
+              Close
+            </MenuItem>
+          </Drawer>
         </MuiThemeProvider>
       </div>
     )

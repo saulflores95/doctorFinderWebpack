@@ -42,7 +42,7 @@ module.exports = {
     alias: {
       react: 'preact-compat',
       'react-dom': 'preact-compat',
-      'react-addons-shallow-compare': 'preact-shallow-compare',
+      'react-addons-shallow-compare': 'shallow-compare',
       'react-tap-event-plugin':'preact-tap-event-plugin',
     }
   },

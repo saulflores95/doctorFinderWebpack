@@ -36,7 +36,8 @@ export default class LabsGeneralMap extends Component {
     const positionState = [this.state.lat, this.state.lng]
     var LabMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [25, 41]
     })
     return (
       <div className={styles.mapcontainer}>

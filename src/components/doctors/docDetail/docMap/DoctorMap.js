@@ -6,12 +6,13 @@ import L from 'leaflet'
 
 var DoctorMapIcon = L.icon({
   iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
-  popupAnchor: [18, 0]
+  popupAnchor: [0, -18],
+  iconSize: [25, 41]
 })
 
 const DoctorMap = (doctor) => (
   <div className={styles.map}>
-    <Map center={position} zoom={15}>
+    <Map center={position} zoom={0}>
       <TileLayer
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
       />
