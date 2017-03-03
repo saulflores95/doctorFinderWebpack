@@ -42,12 +42,14 @@ export default class GeneralMap extends Component {
     if (this.state.showPharmacies === true) {
       var PharmacieMapIcon = L.icon({
         iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
-        popupAnchor: [18, 0]
+        popupAnchor: [0, -18],
+        iconSize: [30, 41]
       })
       return (
         <div>
           {this.props.pharmacies.map((pharmacie) => {
             var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
+            console.log(cordinates)
             return (
               <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
@@ -64,7 +66,9 @@ export default class GeneralMap extends Component {
   handleHospitals () {
     var hospitalMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [30, 41]
+
     })
     if (this.state.showHospitals === true) {
       return (
@@ -87,7 +91,8 @@ export default class GeneralMap extends Component {
   handleDoctors () {
     var DoctorMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [30, 41]
     })
     if (this.state.showDoctors === true) {
       return (
@@ -110,7 +115,8 @@ export default class GeneralMap extends Component {
   handleClinics () {
     var clinicMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/gb1zjlqz1/clinic.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [30, 41]
     })
     if (this.state.showClinics === true) {
       return (
@@ -133,7 +139,8 @@ export default class GeneralMap extends Component {
   handleLabs () {
     var labMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
-      popupAnchor: [18, 0]
+      popupAnchor: [0, -18],
+      iconSize: [30, 41]
     })
     if (this.state.showClinics === true) {
       return (
