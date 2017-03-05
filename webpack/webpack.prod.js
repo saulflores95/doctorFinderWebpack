@@ -3,13 +3,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OfflinePlugin = require('offline-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack')
 
 module.exports = {
   context: resolve(__dirname, '../src'),
   entry: {
     app: `./index.js`,
-    vendor: ['react', 'react-dom', 'react-router']
+    vendor: ['react', 'react-dom', 'react-router', 'material-ui']
   },
   output: {
     path: resolve(__dirname, '../dist'),
@@ -21,15 +22,6 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/
-    },{
-      test: /manifest.json$/,
-      loader: 'file-loader?name=manifest.json!web-app-manifest-loader'
-    },{
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?bypassOnDebug'
-        ]
     },{
       test: /\.css$/,
       use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
@@ -55,6 +47,10 @@ module.exports = {
       filename: 'index.html',
       template: `./index.html`
     }),
+    new CopyWebpackPlugin([{
+      from: resolve(__dirname, '../src/icons/'),
+      to: resolve(__dirname, '../dist/')
+    }]),
     new OfflinePlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'

@@ -19,6 +19,7 @@
     "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "clean-webpack-plugin": "^0.1.15",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
     "enzyme": "^2.7.1",
     "enzyme-to-json": "^1.4.5",
@@ -26,7 +27,6 @@
     "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.26.0",
     "identity-obj-proxy": "^3.0.0",
-    "image-webpack-loader": "^3.2.0",
     "jest": "^18.1.0",
     "leaflet": "^1.0.3",
     "material-ui": "^0.17.0",
@@ -50,7 +50,6 @@
     "surge": "^0.18.0",
     "uglify-js": "https://github.com/mishoo/UglifyJS2/tarball/harmony",
     "uglifyjs-webpack-plugin": "^0.1.4",
-    "web-app-manifest-loader": "^0.1.1",
     "webpack": "2.2.1",
     "webpack-dev-server": "^1.16.2"
   },
