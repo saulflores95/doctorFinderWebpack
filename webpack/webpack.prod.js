@@ -24,7 +24,16 @@ module.exports = {
       exclude: /node_modules/
     },{
       test: /\.css$/,
-      use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+          localIdentName: '[name]-[local]-[hash:base64:6]',
+          camelCase: true
+        }
+      }]
     }]
   },
   devtool: 'source-map',
@@ -42,10 +51,14 @@ module.exports = {
     new CleanWebpackPlugin(['dist'], {
       root: resolve(__dirname, '..')
     }),
-    new ExtractTextPlugin('styles.[chunkhash:6].css'),
+    new ExtractTextPlugin({
+      filename:'styles.[chunkhash:6].css',
+      allChunks: true
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: `./index.html`
+      template: './index.html'
+
     }),
     new CopyWebpackPlugin([{
       from: resolve(__dirname, '../src/icons/'),

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './DoctorWrapper.css'
 import DocCatList from './docCatList/DocCatList'
-import LoadingComponent from '../../MainLayout/loadingComponent/LoadingComponent'
 import { RouteTransition } from 'react-router-transition'
 
 const doctorCategory = (props) => {
@@ -22,9 +21,9 @@ const DoctorWrapper = ({doctors}) => (
       atLeave={{ translateX: -35, opacity: 0 }}
       atActive={{ translateX: 0, opacity: 1 }}
       mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity })}
-      >
+    >
       {doctors.length
-      ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <LoadingComponent />
+      ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
       }
     </RouteTransition>
   </div>

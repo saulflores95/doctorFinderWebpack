@@ -1,481 +1,483 @@
-[{
-	"_id": "9FXE6HLAokSLBiJWi",
-	"name": "Dr. Ricardo Vega Montiel",
-	"img": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAMCAAAAJDA0YzI0OWJiLTNhYWEtNGQ3Ny05NTdhLTZlNTE5M2U1MWNiNg.jpg",
-	"description": "",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Plastic Surgeon",
-	"email": "",
-	"latitude": 32.513699,
-	"longitude": -122.2985,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T21:41:22.645Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "iv5ti4gfPmPNQPK2G",
-	"name": "Dr. Alejando L. Gaxiola",
-	"img": "http://www.plasticsurgerymx.com/images/projects1.jpg",
-	"description": "En la clínica del Dr. Alejandro L. Gaxiola se ofrece la atención más especializada respecto a cualquier procedimiento de cirugía plástica, reconstructiva y estética. El médico está certificado y posee más de 20 años de experiencia, además de contar con Diploma de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva. Al acudir a sus instalaciones, recibirás una atención oportuna y un servicio inigualable de parte del personal que está debidamente capacitado para velar por tu salud. Realiza una cita, lucirás con una mejor imagen, gozando de una mayor autoestima y bienestar. Consulta su página web para más detalles. Es sin lugar a dudas la mejor Clínica de Cirugía Plástica en la región.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Plastic Surgeon",
-	"email": "info@gaxiolaclinic.com",
-	"latitude": 32.528607,
-	"longitude": -117.025821,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T21:48:52.834Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "mtXqmZTde3BWnZBcr",
-	"name": "Dr. Carlos Buenrostro",
-	"img": "https://pbs.twimg.com/profile_images/613494426862620672/4jwrmw_a.jpg",
-	"description": "Clínica de Cirugía Plástica, Estética y  Reconstructiva con mas de veinte años de experiencia ofreciendo calidad, garantía y satisfacción a nuestros pacientes aquí en Tijuana. Hoy en día la cirugía estética esta al alcance de todos, es por eso que nos preocupamos por brindarle lo mejor y sobre todo la confianza de estar en manos de profesionales; contamos con la mas avanzada tecnología dentro de la medicina, nuestro primordial objetivo es su seguridad.\n\nEs muy importante estar en manos de un profesional certificado, usted podrá constatar por medio de la Asociación Nacional de Cirugía Plástica Estética y Reconstructiva que el doctor es miembro activo y además fundador de la Asociación de Cirugía Plástica Estética Y Reconstructiva de Baja California, esto le dará la confianza de estar en manos de un cirujano con gran experiencia.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Plastic Surgeon",
-	"email": "info@clinicaleda.com",
-	"latitude": 32.525386,
-	"longitude": -117.021859,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T21:58:11.275Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "qbZnCC9DuZyD3d8Wh",
-	"name": "Dr. Cesáreo Chavez García",
-	"img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQSEeoR2u9kkO-qSKD1IOk0W04FqRGpoC-YlVbuyTfjAtO4xA2A",
-	"description": "En la consulta especializada del Dr. Cesáreo Chávez García usted es atendido por un reconocido Médico Cirujano Gastroenterólogo en Tijuana, Baja California, especialista en enfermedades gastrointestinales y problemas de obesidad. Es médico general egresado de la UABC con subespecialidad en endoscopia diagnóstica y terapéutica gastrointestinal, certificado por el Consejo Mexicano de Cirugía General y el Consejo Mexicano de gastroenterología. Pone a su disposición una atención integral para determinar con precisión el tipo de Tratamiento de Obesidad o procedimiento médico para ayudarle a recuperar su salud, a través de una consulta especializada para la intervención de problemas Contamos con equipo de última generación e instalaciones perfectamente adecuadas para atender a nuestros pacientes bajo la premisa de respeto, humanismo, cordialidad, profesionalismo y discreción, brindándoles la mejor atención posible para mejorar su salud con consultas y tratamientos a costos accesibles. No permita que su salud siga en riesgo. Llámenos y permita que le brindemos el mejor Tratamiento de Obesidad o para erradicar su enfermedad o problemas de obesidad de forma integral, siempre pensando en su bienestar y calidad de vida.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Audiologist",
-	"email": "",
-	"latitude": 32.520722,
-	"longitude": -117.011544,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:07:06.625Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "R4dRAnQBwY7fwTMGA",
-	"name": "Dr. Harry S. Miller Fogel",
-	"img": "http://drharrysmillercirugiageneral.com/images/dr_harry_miller.jpg",
-	"description": "Soy el Dr. Harry S. Miller Fogel, especialista en cirugía en general, gastroenterología y endoscopía, con más de 25 años de trayectoria. Trabajo con equipo médico de última generación, el cual me permite brindar diagnósticos oportunos y confiables, así como tratamientos vanguardistas que garantizan su funcionalidad y resultados óptimos para su salud. Cuento con la infraestructura adecuada y la ayuda de profesionales para apoyar a recuperar su calidad de vida. Tengo reconocimientos y certificaciones por parte de la AMCG, AMCL, AMG, ALACE, SAGES, EAES y el IMSS; además del Consejo Mexicano de Cirugía General. Contácteme y agende una cita de valoración, le garantizo profesionalismo y honestidad en mi trabajo como Doctor Gastroenterólogo especializado.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Allergist",
-	"email": "mmiller778@aol.com",
-	"latitude": 0,
-	"longitude": 0,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:09:46.353Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "gfSKyxniMToRMnaQm",
-	"name": "Dra. Maribel Reyes Benito",
-	"img": "https://image.freepik.com/foto-gratis/doctora-morena-con-gafas-y-estetoscopio_1098-2520.jpg",
-	"description": "En Enfermedades Digestivas UNAM  lo atenderá un equipo de médicos gastroenterólogos con la mayor seriedad y responsabilidad, para que ya no sufra esos dolores en su estómago.\n\nContamos con los mejores tratamientos y atención en problemas del esófago, el intestino, colón, recto, ano, hernia hiatal.\n\nSus problemas de agruras, reflujo, gastritis, colitis, estreñimiento, diarrea, divertículos, gases, mala digestión, quedarán resueltos con nuestros tratamientos.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Podiatrist",
-	"email": "MaribelReyes@gmail.com",
-	"latitude": 32.533405,
-	"longitude": -117.044131,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:13:57.790Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "4jxpB6X2sHDb3byBG",
-	"name": "Dr. Orlando Duriez Casco",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "El Dr. Orlando Duriez Casco es médico Especialista Gastroenterólogo con experiencia como laparascopista de más de 20 años de trayectoria. Ha realizado cirugías en general, laparoscopias, aplicación de banda gástrica by-pass gástrico, utilizando la mejor tecnología. Cuenta con la infraestructura adecuada y la ayuda de profesionales, quienes lo apoyan para brindar un tratamiento integral a sus pacientes con el objetivo de que recuperen su salud  y calidad de vida. Contáctelo por los números telefónicos que aparecen en esta página, o bien, consulte su página de Facebook para conocer más sobre los servicios que ofrece.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Audiologist",
-	"email": "orlandoduries@prodigy.net.mx",
-	"latitude": 32.493926,
-	"longitude": -116.917203,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:18:38.522Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "6eGeHA9aaf3fBQ8bq",
-	"name": "Dr. David Antonio Nava Muñoz",
-	"img": "data:image/jpeg;base64,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",
-	"description": "El ginecólogo, Dr. David Antonio Nava Muñoz, especialista en fertilidad y esterilidad ofrece atención personalizada y garantía en sus servicios. Cuenta con más de 30 años de experiencia en técnicas de reproducción asistida. La infertilidad es frecuente entre el 8 y 15% de parejas en edad reproductiva, este trastorno tiene distintas implicaciones psicológicas, biológicas o sociales por parte de las parejas afectadas. Por esto, el doctor brinda métodos que te ayudarán a tener éxito reproductivo. Es especialista en problemas de infertilidad y ginecología. El 80% de sus pacientes buscan sus servicios garantizados por la calidez, costos y éxitos reproductivos. Llama y pregunta por todos los servicios, encontrarás el tratamiento ideal que tanto buscas, además cuenta con la promoción del 50% de descuento en la primera consulta. Acude a consulta con este especialista en Problemas de Infertilidad y ginecología, descubre si tú y tu pareja son candidatos a estudio y manejo especializado para lograr un embarazo.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Gynecologist",
-	"email": "DavidAntonio@gmail.com",
-	"latitude": 32.518519,
-	"longitude": -117.007411,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:37:45.912Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "9hmAASdKCowhRXdgh",
-	"name": "Dr. Jesús Roberto Rubio Armenta",
-	"img": "https://i.ytimg.com/vi/NVB8yzrKa2k/hqdefault.jpg",
-	"description": "Es un médico ginecólogo con más de quince años de experiencia, caracterizado por su amplio profesionalismo y ética en la atención de la salud de la mujer.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Gynecologist",
-	"email": "JesusRoberto@gmail.com",
-	"latitude": 32.522067,
-	"longitude": -117.029192,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:44:35.258Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "nkzzXQn9d2qmidSDX",
-	"name": "Dr. Vilchis Galindo German",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Gynecologist",
-	"email": "VilchisGalindo@gmail.com",
-	"latitude": 32.532481,
-	"longitude": -117.045337,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T22:51:35.150Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "96Bbmrm8EbTNyHW8G",
-	"name": "Dr. Ernesto L. Rodriguera O",
-	"img": "data:image/jpeg;base64,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",
-	"description": "Te ofrece consultas de cardiología en Tijuana El Dr. Ernesto L. Rodriguera O es Médico Cardiólogo y te ofrece sus consultas especializadas para revisiones, diagnóstico y tratamiento de enfermedades del corazón y vasos sanguíneos. Se encuentra certificado por parte del American Borrad Internal Medicine of Cardiovascular Diseases, así como por el Fellow American Collage of Cardiology. Cuenta con más de 30 años de experiencia en toda clase de operaciones y tratamientos y te ofrece un trato digno y ayuda efectiva. Llámalo y con mucho gusto te brindará más información sobre sus consultas.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Cardiologist",
-	"email": "cardiologosentijuana@yahoo.com",
-	"latitude": 32.521611,
-	"longitude": -117.015923,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T23:23:14.761Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "vpZpBGfAfYvkfmRgm",
-	"name": "Dr. Jaime García Bedoy Rocha",
-	"img": "http://www.afnbc.com/imagenes/jaime_garcia_bedoy_rocha_18814.jpg",
-	"description": "El Dr Jaime García Bedoy Rocha  es un Médico Cardiólogo Intervencionista y reconocido pediatra en Tijuana, Baja California y el país. Cuenta con una sólida formación y amplia experiencia en cardiopatías congénitas. Es egresado del Instituto Nacional de Cardiología Dr. Ignacio Chávez, en la Cd. de México, de la especialidad de Cardiología Pediátrica y de la especialidad de Cardiología Intervencionista de Niños. Egresado desde 1996 cuenta con  20 años de experiencia en la especialidad y en la subespecialidad, por lo que es un experto en el ámbito.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Cardiologist",
-	"email": "jaimegarciabedoyrocha@yahoo.com.mx",
-	"latitude": 32.523516,
-	"longitude": -117.012467,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T23:29:27.566Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "QeuSJ6E5pau4eDrA8",
-	"name": "Dr. Arturo Guerra López",
-	"img": "http://www.topdoctors.mx/images_site_doctor_view/arturo-guerra-lopez.png",
-	"description": "Dr. Arturo Guerra López es un médico especializado en cardiología, ayudando a los pacientes a identificar y tratar problemas del corazón, servicio realizado de la mano de tecnología de vanguardia. ",
-	"curriculumOne": "01",
-	"curriculumTwo": "01",
-	"curriculumThree": "03",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Podiatrist",
-	"email": "ArturoGuerra@gmail.com",
-	"latitude": 32.521903,
-	"longitude": -117.01228,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T23:41:46.305Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "XezPTARHi5ptunudg",
-	"name": "Dr. Mario Zúñiga Ceballos",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "El Dr. Mario Zúñiga Ceballos es el mejor cardiólogo porque se dedica desde hace más de 20 años a procurar y tratar a pacientes que presentan complicaciones en uno de los órganos principales del cuerpo humano. La Cardiología es la rama de la Medicina Interna encargada de las enfermedades del corazón y el aparato circulatorio, se incluye dentro de las especialidades médicas intervencionistas, es medicina, pero no cirugía. El médico clínico cardiólogo puede su especializarse en diferentes áreas y el Dr. Mario Zúñiga Ceballos puede proporcionarle un diagnóstico preciso y oportuno, además de un tratamiento que se adecue al problema que usted padezca.  Acuda a su consultorio para recibir la atención de los especialistas en el abordaje CLÍNICO E INTERVENCIONISTA del corazón y cuerpo humano con ética y profesionalismo.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Cardiologist",
-	"email": "MarioZuniga@gmail.com",
-	"latitude": 32.469958,
-	"longitude": -116.974389,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T23:50:07.120Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "ZNrmbxmyYJTZNRiyE",
-	"name": "Dr. Rafael Muñoz Muñoz",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "En la Dr. Rafael Muñoz Muñoz contamos con el Médico Cardiólogo que le ayudará a cuidar y a prevenir cualquier tipo de enfermedad del corazón, cuenta con amplia experiencia, más de 30 años respaldan su trayectoria en el sector de la medicina especializada en el corazón. El Dr. Rafael Muñoz Muñoz brinda el mejor cuidado a todo lo relacionado con insuficiencia cardíaca, presión alta, cateterismo cardíaco, entre otros. ",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Cardiologist",
-	"email": "RafelMunoz@gmail.com",
-	"latitude": 32.523734,
-	"longitude": -117.013649,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-09T23:54:59.503Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "5M76RxWyXQvE9iwBC",
-	"name": "Dr. Ricardo Castillo Ramírez",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "El Dr. Ricardo Castillo Ramírez es un cardiólogo y un destacado cirujano cardiovascular que se encarga de tratar todo lo relacionado con el corazón, ya sea que requiera una operación o cualquier otro tratamiento.\n\nAl contar con el reconocimiento de la Sociedad Mexicana de Cirugía Cardiaca, el especialista se encarga de realizar operación a corazón abierto, estudios y cardiocirugía de la mano del equipo más avanzado.\nEl cardiólogo intervencionista tiene 16 años de experiencia\n",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Cardiologist",
-	"email": "RicardoCastillo@gmail.com",
-	"latitude": 32.518121,
-	"longitude": -117.006278,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-10T00:00:03.148Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "jvwqs3J3KLoq6BpC7",
-	"name": "Dr. Aurelio Rojas Navarro",
-	"img": "http://www.mexdoctors.com/otorrinomaxilofacial/images/rojas5.jpg",
-	"description": "Es especialista en enfermedades de los oídos, nariz y garganta desde hace 25 años. El DR. AURELIO ROJAS NAVARRO es cirujano otorrinolaringólogo con amplia experiencia en este ramo de la medicina, está comprometido con mejorar la salud de sus pacientes.\n\nSu objetivo es devolverle un estado óptimo de salud a través de tratamientos adecuados a las necesidades de cada persona, para lograrlo lleva un control puntual de las consultas que le permiten crear una solución eficaz en torno a su padecimiento.\n\nCuenta con certificación de la Universidad Nacional Autónoma de México, Facultad de Medicina. Atiende infecciones y supuraciones de oídos, garganta y nariz, agudas y crónicas, así como la pérdida auditiva, obstrucción nasal entre otros.\n",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Obstetrician",
-	"email": "AurelioRojas@gmail.com",
-	"latitude": 32.532761,
-	"longitude": -117.044871,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-10T00:17:09.846Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "cwcDdB8PZpbf72yaq",
-	"name": "Dr. Francisco Loranca Olguín",
-	"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
-	"description": "Soy el Dr. Francisco Loranca Olguín, un Médico Otorrinolaringólogo con 30 años de experiencia en el tratamiento de enfermedades de oído, nariz, garganta y cuello. Sí usted tiene alguna enfermedad en dichas partes del cuerpo, no dude en comunicarse a mi consultorio para agendar una cita; le brindaré un estudio y diagnóstico sobre el problema que le aqueja. Tengo los conocimientos para llevar a cabo cirugía estética y funcional de nariz, microcirugía de oídos, la adaptación para atender la sordera, exploración con instrumentos avanzados y diversos tratamientos que permiten mejorar la calidad de vida de las personas. ",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Obstetrician",
-	"email": "otorrinoloranca@gmail.com",
-	"latitude": 32.534208,
-	"longitude": -117.050821,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-10T00:22:17.801Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "ysMvRDgbMYkQjxgzJ",
-	"name": "Dr. Jaime Lumban",
-	"img": "data:image/jpeg;base64,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",
-	"description": "El Dr. Jaime Lumban Gutiérrez es un otorrinolaringólogo en Zona Río Tijuana. Ofrece una amplia gama de servicios médicos especializados en nariz, oídos y garganta. ¡Nos ubicamos en el Hospital Nova! Si busca médicos otorrinolaringólogos en Zona Río Tijuana, acuda con los expertos. El Dr. Jaime Lumban Gutiérrez le brindará la mejor atención y cuidado en enfermedades como laringitis, otitis y sinusitis. Además, realizamos cirugías cosméticas de nariz, cirugías láser y endoscopías. Damos atención tanto a niños como a adultos en enfermedades y padecimientos de oídos, nariz y garganta. Nuestro trabajo es que usted recupere su salud con la mejor atención médica y un trato amable. Estamos altamente capacitados y listos para atenderle. El Dr. Jaime Lumban Gutiérrez tiene su formación en el Centro Médico Nacional y es miembro del American Academy of Otolaryngology. Además está certificado por el Consejo Mexicano de Otorrinolaringología.",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Obstetrician",
-	"email": "JaimeLumban@gmail.com",
-	"latitude": 32.528608,
-	"longitude": -117.025821,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-10T00:32:47.423Z"
-	},
-	"user": "zMjd3QzpxoocaZDzT"
-}, {
-	"_id": "LgAvDNhbuDxSoFa2r",
-	"name": "Dr. Antonio García",
-	"img": "http://drrezamia.com/wp-content/uploads/2015/05/Dr-Reza-Mia.jpg",
-	"description": "",
-	"curriculumOne": "Exp01",
-	"curriculumTwo": "Exp02",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Dentist",
-	"email": "",
-	"latitude": 32.508232,
-	"longitude": -116.99111730000001,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-18T01:22:19.392Z"
-	},
-	"user": "ZNezZ62m7RyPB8dnX"
-}, {
-	"_id": "yNzsttXJcjGj7j49q",
-	"name": "Dr Miguel Duarte",
-	"img": "http://www.rescuepost.com/.a/6a00d8357f3f2969e201b7c6d721e0970b-pi",
-	"description": "Best Dr",
-	"curriculumOne": "01",
-	"curriculumTwo": "01",
-	"curriculumThree": "01",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Dermatologist",
-	"email": "asasda@gmail.com",
-	"latitude": 32.508232,
-	"longitude": -116.99111730000001,
-	"insurance": true,
-	"createdAt": {
-		"$date": "2017-01-18T01:28:05.699Z"
-	},
-	"user": "ZNezZ62m7RyPB8dnX"
-}, {
-	"_id": "J6BngnxB8sqSxgNJc",
-	"name": "",
-	"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/The View.jpg",
-	"description": "",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Podiatrist",
-	"email": "",
-	"latitude": 0,
-	"longitude": 0,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-26T02:03:14.192Z"
-	},
-	"user": "ZNezZ62m7RyPB8dnX"
-}, {
-	"_id": "ckXeXjwKcnJe2g6jW",
-	"name": "Dr Saul",
-	"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/WIN_20170126_13_11_45_Pro.jpg",
-	"description": "",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Podiatrist",
-	"email": "",
-	"latitude": 0,
-	"longitude": 0,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-26T21:11:56.852Z"
-	},
-	"user": "Q9YZo63XyPrpRtPgX"
-}, {
-	"_id": "NRZAP59X9SNeHjfn4",
-	"name": "",
-	"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/WIN_20170126_13_11_45_Pro.jpg",
-	"description": "",
-	"curriculumOne": "",
-	"curriculumTwo": "",
-	"curriculumThree": "",
-	"curriculumFour": "",
-	"curriculumFive": "",
-	"curriculumSix": "",
-	"specialty": "Podiatrist",
-	"email": "",
-	"latitude": 0,
-	"longitude": 0,
-	"insurance": false,
-	"createdAt": {
-		"$date": "2017-01-26T23:39:43.339Z"
-	},
-	"user": "Q9YZo63XyPrpRtPgX"
-}]
+{
+	"doctors":[{
+			"_id": "9FXE6HLAokSLBiJWi",
+			"name": "Dr. Ricardo Vega Montiel",
+			"img": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAMCAAAAJDA0YzI0OWJiLTNhYWEtNGQ3Ny05NTdhLTZlNTE5M2U1MWNiNg.jpg",
+			"description": "",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Plastic Surgeon",
+			"email": "",
+			"latitude": 32.513699,
+			"longitude": -122.2985,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T21:41:22.645Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "iv5ti4gfPmPNQPK2G",
+			"name": "Dr. Alejando L. Gaxiola",
+			"img": "http://www.plasticsurgerymx.com/images/projects1.jpg",
+			"description": "En la clínica del Dr. Alejandro L. Gaxiola se ofrece la atención más especializada respecto a cualquier procedimiento de cirugía plástica, reconstructiva y estética. El médico está certificado y posee más de 20 años de experiencia, además de contar con Diploma de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva. Al acudir a sus instalaciones, recibirás una atención oportuna y un servicio inigualable de parte del personal que está debidamente capacitado para velar por tu salud. Realiza una cita, lucirás con una mejor imagen, gozando de una mayor autoestima y bienestar. Consulta su página web para más detalles. Es sin lugar a dudas la mejor Clínica de Cirugía Plástica en la región.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Plastic Surgeon",
+			"email": "info@gaxiolaclinic.com",
+			"latitude": 32.528607,
+			"longitude": -117.025821,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T21:48:52.834Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "mtXqmZTde3BWnZBcr",
+			"name": "Dr. Carlos Buenrostro",
+			"img": "https://pbs.twimg.com/profile_images/613494426862620672/4jwrmw_a.jpg",
+			"description": "Clínica de Cirugía Plástica, Estética y  Reconstructiva con mas de veinte años de experiencia ofreciendo calidad, garantía y satisfacción a nuestros pacientes aquí en Tijuana. Hoy en día la cirugía estética esta al alcance de todos, es por eso que nos preocupamos por brindarle lo mejor y sobre todo la confianza de estar en manos de profesionales; contamos con la mas avanzada tecnología dentro de la medicina, nuestro primordial objetivo es su seguridad.\n\nEs muy importante estar en manos de un profesional certificado, usted podrá constatar por medio de la Asociación Nacional de Cirugía Plástica Estética y Reconstructiva que el doctor es miembro activo y además fundador de la Asociación de Cirugía Plástica Estética Y Reconstructiva de Baja California, esto le dará la confianza de estar en manos de un cirujano con gran experiencia.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Plastic Surgeon",
+			"email": "info@clinicaleda.com",
+			"latitude": 32.525386,
+			"longitude": -117.021859,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T21:58:11.275Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "qbZnCC9DuZyD3d8Wh",
+			"name": "Dr. Cesáreo Chavez García",
+			"img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQSEeoR2u9kkO-qSKD1IOk0W04FqRGpoC-YlVbuyTfjAtO4xA2A",
+			"description": "En la consulta especializada del Dr. Cesáreo Chávez García usted es atendido por un reconocido Médico Cirujano Gastroenterólogo en Tijuana, Baja California, especialista en enfermedades gastrointestinales y problemas de obesidad. Es médico general egresado de la UABC con subespecialidad en endoscopia diagnóstica y terapéutica gastrointestinal, certificado por el Consejo Mexicano de Cirugía General y el Consejo Mexicano de gastroenterología. Pone a su disposición una atención integral para determinar con precisión el tipo de Tratamiento de Obesidad o procedimiento médico para ayudarle a recuperar su salud, a través de una consulta especializada para la intervención de problemas Contamos con equipo de última generación e instalaciones perfectamente adecuadas para atender a nuestros pacientes bajo la premisa de respeto, humanismo, cordialidad, profesionalismo y discreción, brindándoles la mejor atención posible para mejorar su salud con consultas y tratamientos a costos accesibles. No permita que su salud siga en riesgo. Llámenos y permita que le brindemos el mejor Tratamiento de Obesidad o para erradicar su enfermedad o problemas de obesidad de forma integral, siempre pensando en su bienestar y calidad de vida.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Audiologist",
+			"email": "",
+			"latitude": 32.520722,
+			"longitude": -117.011544,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:07:06.625Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "R4dRAnQBwY7fwTMGA",
+			"name": "Dr. Harry S. Miller Fogel",
+			"img": "http://drharrysmillercirugiageneral.com/images/dr_harry_miller.jpg",
+			"description": "Soy el Dr. Harry S. Miller Fogel, especialista en cirugía en general, gastroenterología y endoscopía, con más de 25 años de trayectoria. Trabajo con equipo médico de última generación, el cual me permite brindar diagnósticos oportunos y confiables, así como tratamientos vanguardistas que garantizan su funcionalidad y resultados óptimos para su salud. Cuento con la infraestructura adecuada y la ayuda de profesionales para apoyar a recuperar su calidad de vida. Tengo reconocimientos y certificaciones por parte de la AMCG, AMCL, AMG, ALACE, SAGES, EAES y el IMSS; además del Consejo Mexicano de Cirugía General. Contácteme y agende una cita de valoración, le garantizo profesionalismo y honestidad en mi trabajo como Doctor Gastroenterólogo especializado.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Allergist",
+			"email": "mmiller778@aol.com",
+			"latitude": 0,
+			"longitude": 0,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:09:46.353Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "gfSKyxniMToRMnaQm",
+			"name": "Dra. Maribel Reyes Benito",
+			"img": "https://image.freepik.com/foto-gratis/doctora-morena-con-gafas-y-estetoscopio_1098-2520.jpg",
+			"description": "En Enfermedades Digestivas UNAM  lo atenderá un equipo de médicos gastroenterólogos con la mayor seriedad y responsabilidad, para que ya no sufra esos dolores en su estómago.\n\nContamos con los mejores tratamientos y atención en problemas del esófago, el intestino, colón, recto, ano, hernia hiatal.\n\nSus problemas de agruras, reflujo, gastritis, colitis, estreñimiento, diarrea, divertículos, gases, mala digestión, quedarán resueltos con nuestros tratamientos.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Podiatrist",
+			"email": "MaribelReyes@gmail.com",
+			"latitude": 32.533405,
+			"longitude": -117.044131,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:13:57.790Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "4jxpB6X2sHDb3byBG",
+			"name": "Dr. Orlando Duriez Casco",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "El Dr. Orlando Duriez Casco es médico Especialista Gastroenterólogo con experiencia como laparascopista de más de 20 años de trayectoria. Ha realizado cirugías en general, laparoscopias, aplicación de banda gástrica by-pass gástrico, utilizando la mejor tecnología. Cuenta con la infraestructura adecuada y la ayuda de profesionales, quienes lo apoyan para brindar un tratamiento integral a sus pacientes con el objetivo de que recuperen su salud  y calidad de vida. Contáctelo por los números telefónicos que aparecen en esta página, o bien, consulte su página de Facebook para conocer más sobre los servicios que ofrece.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Audiologist",
+			"email": "orlandoduries@prodigy.net.mx",
+			"latitude": 32.493926,
+			"longitude": -116.917203,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:18:38.522Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "6eGeHA9aaf3fBQ8bq",
+			"name": "Dr. David Antonio Nava Muñoz",
+			"img": "data:image/jpeg;base64,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",
+			"description": "El ginecólogo, Dr. David Antonio Nava Muñoz, especialista en fertilidad y esterilidad ofrece atención personalizada y garantía en sus servicios. Cuenta con más de 30 años de experiencia en técnicas de reproducción asistida. La infertilidad es frecuente entre el 8 y 15% de parejas en edad reproductiva, este trastorno tiene distintas implicaciones psicológicas, biológicas o sociales por parte de las parejas afectadas. Por esto, el doctor brinda métodos que te ayudarán a tener éxito reproductivo. Es especialista en problemas de infertilidad y ginecología. El 80% de sus pacientes buscan sus servicios garantizados por la calidez, costos y éxitos reproductivos. Llama y pregunta por todos los servicios, encontrarás el tratamiento ideal que tanto buscas, además cuenta con la promoción del 50% de descuento en la primera consulta. Acude a consulta con este especialista en Problemas de Infertilidad y ginecología, descubre si tú y tu pareja son candidatos a estudio y manejo especializado para lograr un embarazo.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Gynecologist",
+			"email": "DavidAntonio@gmail.com",
+			"latitude": 32.518519,
+			"longitude": -117.007411,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:37:45.912Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "9hmAASdKCowhRXdgh",
+			"name": "Dr. Jesús Roberto Rubio Armenta",
+			"img": "https://i.ytimg.com/vi/NVB8yzrKa2k/hqdefault.jpg",
+			"description": "Es un médico ginecólogo con más de quince años de experiencia, caracterizado por su amplio profesionalismo y ética en la atención de la salud de la mujer.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Gynecologist",
+			"email": "JesusRoberto@gmail.com",
+			"latitude": 32.522067,
+			"longitude": -117.029192,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:44:35.258Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "nkzzXQn9d2qmidSDX",
+			"name": "Dr. Vilchis Galindo German",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Gynecologist",
+			"email": "VilchisGalindo@gmail.com",
+			"latitude": 32.532481,
+			"longitude": -117.045337,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T22:51:35.150Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "96Bbmrm8EbTNyHW8G",
+			"name": "Dr. Ernesto L. Rodriguera O",
+			"img": "data:image/jpeg;base64,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",
+			"description": "Te ofrece consultas de cardiología en Tijuana El Dr. Ernesto L. Rodriguera O es Médico Cardiólogo y te ofrece sus consultas especializadas para revisiones, diagnóstico y tratamiento de enfermedades del corazón y vasos sanguíneos. Se encuentra certificado por parte del American Borrad Internal Medicine of Cardiovascular Diseases, así como por el Fellow American Collage of Cardiology. Cuenta con más de 30 años de experiencia en toda clase de operaciones y tratamientos y te ofrece un trato digno y ayuda efectiva. Llámalo y con mucho gusto te brindará más información sobre sus consultas.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Cardiologist",
+			"email": "cardiologosentijuana@yahoo.com",
+			"latitude": 32.521611,
+			"longitude": -117.015923,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T23:23:14.761Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "vpZpBGfAfYvkfmRgm",
+			"name": "Dr. Jaime García Bedoy Rocha",
+			"img": "http://www.afnbc.com/imagenes/jaime_garcia_bedoy_rocha_18814.jpg",
+			"description": "El Dr Jaime García Bedoy Rocha  es un Médico Cardiólogo Intervencionista y reconocido pediatra en Tijuana, Baja California y el país. Cuenta con una sólida formación y amplia experiencia en cardiopatías congénitas. Es egresado del Instituto Nacional de Cardiología Dr. Ignacio Chávez, en la Cd. de México, de la especialidad de Cardiología Pediátrica y de la especialidad de Cardiología Intervencionista de Niños. Egresado desde 1996 cuenta con  20 años de experiencia en la especialidad y en la subespecialidad, por lo que es un experto en el ámbito.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Cardiologist",
+			"email": "jaimegarciabedoyrocha@yahoo.com.mx",
+			"latitude": 32.523516,
+			"longitude": -117.012467,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T23:29:27.566Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "QeuSJ6E5pau4eDrA8",
+			"name": "Dr. Arturo Guerra López",
+			"img": "http://www.topdoctors.mx/images_site_doctor_view/arturo-guerra-lopez.png",
+			"description": "Dr. Arturo Guerra López es un médico especializado en cardiología, ayudando a los pacientes a identificar y tratar problemas del corazón, servicio realizado de la mano de tecnología de vanguardia. ",
+			"curriculumOne": "01",
+			"curriculumTwo": "01",
+			"curriculumThree": "03",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Podiatrist",
+			"email": "ArturoGuerra@gmail.com",
+			"latitude": 32.521903,
+			"longitude": -117.01228,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T23:41:46.305Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "XezPTARHi5ptunudg",
+			"name": "Dr. Mario Zúñiga Ceballos",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "El Dr. Mario Zúñiga Ceballos es el mejor cardiólogo porque se dedica desde hace más de 20 años a procurar y tratar a pacientes que presentan complicaciones en uno de los órganos principales del cuerpo humano. La Cardiología es la rama de la Medicina Interna encargada de las enfermedades del corazón y el aparato circulatorio, se incluye dentro de las especialidades médicas intervencionistas, es medicina, pero no cirugía. El médico clínico cardiólogo puede su especializarse en diferentes áreas y el Dr. Mario Zúñiga Ceballos puede proporcionarle un diagnóstico preciso y oportuno, además de un tratamiento que se adecue al problema que usted padezca.  Acuda a su consultorio para recibir la atención de los especialistas en el abordaje CLÍNICO E INTERVENCIONISTA del corazón y cuerpo humano con ética y profesionalismo.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Cardiologist",
+			"email": "MarioZuniga@gmail.com",
+			"latitude": 32.469958,
+			"longitude": -116.974389,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T23:50:07.120Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "ZNrmbxmyYJTZNRiyE",
+			"name": "Dr. Rafael Muñoz Muñoz",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "En la Dr. Rafael Muñoz Muñoz contamos con el Médico Cardiólogo que le ayudará a cuidar y a prevenir cualquier tipo de enfermedad del corazón, cuenta con amplia experiencia, más de 30 años respaldan su trayectoria en el sector de la medicina especializada en el corazón. El Dr. Rafael Muñoz Muñoz brinda el mejor cuidado a todo lo relacionado con insuficiencia cardíaca, presión alta, cateterismo cardíaco, entre otros. ",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Cardiologist",
+			"email": "RafelMunoz@gmail.com",
+			"latitude": 32.523734,
+			"longitude": -117.013649,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-09T23:54:59.503Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "5M76RxWyXQvE9iwBC",
+			"name": "Dr. Ricardo Castillo Ramírez",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "El Dr. Ricardo Castillo Ramírez es un cardiólogo y un destacado cirujano cardiovascular que se encarga de tratar todo lo relacionado con el corazón, ya sea que requiera una operación o cualquier otro tratamiento.\n\nAl contar con el reconocimiento de la Sociedad Mexicana de Cirugía Cardiaca, el especialista se encarga de realizar operación a corazón abierto, estudios y cardiocirugía de la mano del equipo más avanzado.\nEl cardiólogo intervencionista tiene 16 años de experiencia\n",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Cardiologist",
+			"email": "RicardoCastillo@gmail.com",
+			"latitude": 32.518121,
+			"longitude": -117.006278,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-10T00:00:03.148Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "jvwqs3J3KLoq6BpC7",
+			"name": "Dr. Aurelio Rojas Navarro",
+			"img": "http://www.mexdoctors.com/otorrinomaxilofacial/images/rojas5.jpg",
+			"description": "Es especialista en enfermedades de los oídos, nariz y garganta desde hace 25 años. El DR. AURELIO ROJAS NAVARRO es cirujano otorrinolaringólogo con amplia experiencia en este ramo de la medicina, está comprometido con mejorar la salud de sus pacientes.\n\nSu objetivo es devolverle un estado óptimo de salud a través de tratamientos adecuados a las necesidades de cada persona, para lograrlo lleva un control puntual de las consultas que le permiten crear una solución eficaz en torno a su padecimiento.\n\nCuenta con certificación de la Universidad Nacional Autónoma de México, Facultad de Medicina. Atiende infecciones y supuraciones de oídos, garganta y nariz, agudas y crónicas, así como la pérdida auditiva, obstrucción nasal entre otros.\n",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Obstetrician",
+			"email": "AurelioRojas@gmail.com",
+			"latitude": 32.532761,
+			"longitude": -117.044871,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-10T00:17:09.846Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "cwcDdB8PZpbf72yaq",
+			"name": "Dr. Francisco Loranca Olguín",
+			"img": "http://www.800doctor.com/wp-content/uploads/2015/11/Doctor-Consultation.png",
+			"description": "Soy el Dr. Francisco Loranca Olguín, un Médico Otorrinolaringólogo con 30 años de experiencia en el tratamiento de enfermedades de oído, nariz, garganta y cuello. Sí usted tiene alguna enfermedad en dichas partes del cuerpo, no dude en comunicarse a mi consultorio para agendar una cita; le brindaré un estudio y diagnóstico sobre el problema que le aqueja. Tengo los conocimientos para llevar a cabo cirugía estética y funcional de nariz, microcirugía de oídos, la adaptación para atender la sordera, exploración con instrumentos avanzados y diversos tratamientos que permiten mejorar la calidad de vida de las personas. ",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Obstetrician",
+			"email": "otorrinoloranca@gmail.com",
+			"latitude": 32.534208,
+			"longitude": -117.050821,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-10T00:22:17.801Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "ysMvRDgbMYkQjxgzJ",
+			"name": "Dr. Jaime Lumban",
+			"img": "data:image/jpeg;base64,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",
+			"description": "El Dr. Jaime Lumban Gutiérrez es un otorrinolaringólogo en Zona Río Tijuana. Ofrece una amplia gama de servicios médicos especializados en nariz, oídos y garganta. ¡Nos ubicamos en el Hospital Nova! Si busca médicos otorrinolaringólogos en Zona Río Tijuana, acuda con los expertos. El Dr. Jaime Lumban Gutiérrez le brindará la mejor atención y cuidado en enfermedades como laringitis, otitis y sinusitis. Además, realizamos cirugías cosméticas de nariz, cirugías láser y endoscopías. Damos atención tanto a niños como a adultos en enfermedades y padecimientos de oídos, nariz y garganta. Nuestro trabajo es que usted recupere su salud con la mejor atención médica y un trato amable. Estamos altamente capacitados y listos para atenderle. El Dr. Jaime Lumban Gutiérrez tiene su formación en el Centro Médico Nacional y es miembro del American Academy of Otolaryngology. Además está certificado por el Consejo Mexicano de Otorrinolaringología.",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Obstetrician",
+			"email": "JaimeLumban@gmail.com",
+			"latitude": 32.528608,
+			"longitude": -117.025821,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-10T00:32:47.423Z"
+			},
+			"user": "zMjd3QzpxoocaZDzT"
+		}, {
+			"_id": "LgAvDNhbuDxSoFa2r",
+			"name": "Dr. Antonio García",
+			"img": "http://drrezamia.com/wp-content/uploads/2015/05/Dr-Reza-Mia.jpg",
+			"description": "",
+			"curriculumOne": "Exp01",
+			"curriculumTwo": "Exp02",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Dentist",
+			"email": "",
+			"latitude": 32.508232,
+			"longitude": -116.99111730000001,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-18T01:22:19.392Z"
+			},
+			"user": "ZNezZ62m7RyPB8dnX"
+		}, {
+			"_id": "yNzsttXJcjGj7j49q",
+			"name": "Dr Miguel Duarte",
+			"img": "http://www.rescuepost.com/.a/6a00d8357f3f2969e201b7c6d721e0970b-pi",
+			"description": "Best Dr",
+			"curriculumOne": "01",
+			"curriculumTwo": "01",
+			"curriculumThree": "01",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Dermatologist",
+			"email": "asasda@gmail.com",
+			"latitude": 32.508232,
+			"longitude": -116.99111730000001,
+			"insurance": true,
+			"createdAt": {
+				"$date": "2017-01-18T01:28:05.699Z"
+			},
+			"user": "ZNezZ62m7RyPB8dnX"
+		}, {
+			"_id": "J6BngnxB8sqSxgNJc",
+			"name": "",
+			"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/The View.jpg",
+			"description": "",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Podiatrist",
+			"email": "",
+			"latitude": 0,
+			"longitude": 0,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-26T02:03:14.192Z"
+			},
+			"user": "ZNezZ62m7RyPB8dnX"
+		}, {
+			"_id": "ckXeXjwKcnJe2g6jW",
+			"name": "Dr Saul",
+			"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/WIN_20170126_13_11_45_Pro.jpg",
+			"description": "",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Podiatrist",
+			"email": "",
+			"latitude": 0,
+			"longitude": 0,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-26T21:11:56.852Z"
+			},
+			"user": "Q9YZo63XyPrpRtPgX"
+		}, {
+			"_id": "NRZAP59X9SNeHjfn4",
+			"name": "",
+			"img": "https://healthcarebaja.s3-us-west-1.amazonaws.com/undefined/WIN_20170126_13_11_45_Pro.jpg",
+			"description": "",
+			"curriculumOne": "",
+			"curriculumTwo": "",
+			"curriculumThree": "",
+			"curriculumFour": "",
+			"curriculumFive": "",
+			"curriculumSix": "",
+			"specialty": "Podiatrist",
+			"email": "",
+			"latitude": 0,
+			"longitude": 0,
+			"insurance": false,
+			"createdAt": {
+				"$date": "2017-01-26T23:39:43.339Z"
+			},
+			"user": "Q9YZo63XyPrpRtPgX"
+		}]
+}

@@ -2,12 +2,9 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import { Switch } from 'react-router'
 
-import NotFound from '../notfound/NotFound'
+import AsyncRoute from '../AsyncRoute/AsyncRoute'
 
 import doctors from '../../../static_db/doctors.json'
-import DoctorWrapper from '../doctors/docWrapper/DoctorWrapper'
-import DoctorDetail from '../doctors/docDetail/DoctorDetail'
-import DocListWrapper from '../doctors/docWrapper/docListWrapper/DocListWrapper'
 import pharmacies from '../../../static_db/pharmacies.json'
 import PharmacieWrapper from '../pharmacies/phaWrapper/PharmacieWrapper'
 import PharmacieGeneralMap from '../pharmacies/phaMap/PharmacieGeneralMap'
@@ -19,36 +16,27 @@ import LabsGeneralMap from '../labs/labsMap/LabsGeneralMap'
 import LabsDetail from '../labs/labsDetail/LabsDetail'
 
 import clinics from '../../../static_db/clinics.json'
-import ClinicWrapper from '../clinics/cliWrapper/ClinicWrapper'
-import ClinicDetail from '../clinics/cliDetail/ClinicDetail'
 
 import hospitals from '../../../static_db/hospitals.json'
-import HospitalWrapper from '../hospital/hosWrapper/HospitalWrapper'
-import HospitalDetail from '../hospital/hosDetail/HospialDetail'
-
-import CatMenu from '../categorymenu/CatMenu'
-
 import GeneralMap from '../map/GeneralMap'
-
-import ContactForm from '../contact/ContactForm'
 
 const Routes = () => (
   <Switch>
-    <Route exact path='/' component={() => <DoctorWrapper doctors={doctors} />} />
-    <Route exact path='/doctors' component={() => <DoctorWrapper doctors={doctors} />} />
+    <Route exact path='/' component={props => <AsyncRoute props={Object.assign({}, props, doctors)} loading={System.import('../doctors/docWrapper/DoctorWrapper')} />} />
+    <Route exact path='/doctors' component={props => <AsyncRoute props={Object.assign({}, props, doctors)} loading={System.import('../doctors/docWrapper/DoctorWrapper')} />} />
     <Route exact path='/doctors/:specialty' component={props => {
-      const doctor = doctors.filter(doctor => props.match.params.specialty === doctor.specialty)
-      return <DocListWrapper doctor={doctor} />
+      const doctor = doctors.doctors.filter(doctor => props.match.params.specialty === doctor.specialty)
+      return <AsyncRoute props={Object.assign({}, props, {doctor: doctor})} loading={System.import('../doctors/docWrapper/docListWrapper/DocListWrapper')} />
     }} />
     <Route exact path='/doctors/:specialty/:id' component={props => {
-      const doctor = doctors.filter(doctor => props.match.params.id === doctor._id)
-      return <DoctorDetail doctor={doctor[0]} />
+      const doctor = doctors.doctors.filter(doctor => props.match.params.id === doctor._id)
+      return <AsyncRoute props={Object.assign({}, props, {doctor: doctor[0]})} loading={System.import('../doctors/docDetail/DoctorDetail')} />
     }} />
 
-    <Route exact path='/clinics' component={() => <ClinicWrapper clinics={clinics} />} />
+    <Route exact path='/clinics' component={props => <AsyncRoute props={Object.assign({}, props, clinics)} loading={System.import('../clinics/cliWrapper/ClinicWrapper')} />} />
     <Route exact path='/clinics/:id' component={props => {
-      const clinic = clinics.filter(clinic => props.match.params.id === clinic._id)
-      return <ClinicDetail clinic={clinic[0]} />
+      const clinic = clinics.clinics.filter(clinic => props.match.params.id === clinic._id)
+      return <AsyncRoute props={Object.assign({}, props, {clinic: clinic[0]})} loading={System.import('../clinics/cliDetail/ClinicDetail')} />
     }} />
 
     <Route exact path='/pharmacies' component={() => <PharmacieWrapper pharmacies={pharmacies} />} />
@@ -71,19 +59,18 @@ const Routes = () => (
       return <LabsDetail lab={labFiltered} />
     }} />
 
-    <Route exact path='/hospitals' component={() => <HospitalWrapper hospitals={hospitals} />} />
+    <Route exact path='/hospitals' component={props => <AsyncRoute props={Object.assign({}, props, hospitals)} loading={System.import('../hospital/hosWrapper/HospitalWrapper')} />} />
     <Route exact path='/hospitals/:id' component={props => {
-      const hospital = hospitals.filter(hospital => props.match.params.id === hospital._id)
-      return <HospitalDetail hospital={hospital[0]} />
+      const hospital = hospitals.hospitals.filter(hospital => props.match.params.id === hospital._id)
+      return <AsyncRoute props={Object.assign({}, props, {hospital: hospital[0]})} loading={System.import('../hospital/hosDetail/HospialDetail')} />
     }} />
 
     <Route exact path='/map' component={() => <GeneralMap doctors={doctors} hospitals={hospitals} clinics={clinics} pharmacies={pharmacies} labs={labs} />} />
+    <Route path='/categories' component={props => <AsyncRoute props={props} loading={System.import('../categorymenu/CatMenu')} />} />
+    <Route path='/contact' component={props => <AsyncRoute props={props} loading={System.import('../contact/ContactForm')} />} />
+    <Route path='/contact' component={props => <AsyncRoute props={props} loading={System.import('../contact/ContactForm')} />} />
+    <Route component={props => <AsyncRoute props={props} loading={System.import('../notfound/NotFound')} />} />
 
-    <Route exact path='/categories' component={() => <CatMenu />} />
-
-    <Route exact path='/contact' component={() => <ContactForm />} />
-
-    <Route component={NotFound} />
   </Switch>
 )
 
