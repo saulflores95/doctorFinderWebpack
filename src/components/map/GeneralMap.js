@@ -47,7 +47,7 @@ export default class GeneralMap extends Component {
       })
       return (
         <div>
-          {this.props.pharmacies.map((pharmacie) => {
+          {this.props.pharmacies.pharmacies.map((pharmacie) => {
             var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
             console.log(cordinates)
             return (
@@ -73,7 +73,7 @@ export default class GeneralMap extends Component {
     if (this.state.showHospitals === true) {
       return (
         <div>
-          {this.props.hospitals.map((hospital) => {
+          {this.props.hospitals.hospitals.map((hospital) => {
             var cordinates = this.handleCoordinates(hospital.latitude, hospital.longitude)
             return (
               <Marker icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
@@ -97,7 +97,7 @@ export default class GeneralMap extends Component {
     if (this.state.showDoctors === true) {
       return (
         <div>
-          {this.props.doctors.map((doctor) => {
+          {this.props.doctors.doctors.map((doctor) => {
             var cordinates = this.handleCoordinates(doctor.latitude, doctor.longitude)
             return (
               <Marker icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
@@ -121,7 +121,7 @@ export default class GeneralMap extends Component {
     if (this.state.showClinics === true) {
       return (
         <div>
-          {this.props.clinics.map((clinic) => {
+          {this.props.clinics.clinics.map((clinic) => {
             var cordinates = this.handleCoordinates(clinic.latitude, clinic.longitude)
             return (
               <Marker icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
@@ -145,7 +145,7 @@ export default class GeneralMap extends Component {
     if (this.state.showClinics === true) {
       return (
         <div>
-          {this.props.labs.map((lab) => {
+          {this.props.labs.labs.map((lab) => {
             var cordinates = this.handleCoordinates(lab.latitude, lab.longitude)
             return (
               <Marker icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>

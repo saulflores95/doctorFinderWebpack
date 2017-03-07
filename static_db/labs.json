@@ -1,4 +1,5 @@
-[{
+{
+	"labs":[{
 	"_id": "md2BoSjsdNQyKmX9g",
 	"name": "Certus",
 	"img": "https://minicity.mx/wp-content/uploads/2016/10/certus.png",
@@ -47,3 +48,4 @@
 	},
 	"user": "ZNezZ62m7RyPB8dnX"
 }]
+}
