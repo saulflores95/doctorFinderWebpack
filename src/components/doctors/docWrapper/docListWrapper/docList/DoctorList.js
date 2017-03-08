@@ -13,7 +13,7 @@ const DoctorList = ({doctor}) => (
       <List>
         <Link to={`/doctors/${doctor.specialty}/${doctor._id}`}>
           <ListItem
-            leftAvatar={<Avatar className={styles.doctor} src={doctor.img} />}
+            leftAvatar={<Avatar className={styles.doctor} alt={doctor.name} src={doctor.img} />}
             rightIcon={<ActionInfo />}
             secondaryText={<div className={styles.label2}>{doctor.specialty}</div>}
             primaryText={<div className={styles.label}>{doctor.name}</div>}

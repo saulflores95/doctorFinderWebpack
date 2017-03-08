@@ -80,7 +80,7 @@ const DocCatList = ({specialty}) => (
       <MuiThemeProvider>
         <List>
           <ListItem
-            leftAvatar={<Avatar className={styles.doctor} src={imageChooser(specialty)} />}
+            leftAvatar={<Avatar className={styles.doctor} alt={specialty} src={imageChooser(specialty)} />}
             rightIcon={<ActionInfo />}
             primaryText={<div className={styles.label}>{specialty}</div>}
           />

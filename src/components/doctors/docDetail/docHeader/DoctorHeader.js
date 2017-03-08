@@ -11,7 +11,7 @@ const DoctorHeader = (doctor) => (
       <div className={styles.doctorHeaderContainer}>
         <Row>
           <Col sm={6} md={6} lg={2}>
-            <img className={styles.img} src={doctor.img} />
+            <img alt={doctor.name} className={styles.img} src={doctor.img} />
           </Col>
           <Col sm={6} md={6} lg={5}>
             <h1>{doctor.name}</h1>
