@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
-class AsyncRoute extends Component {
-  getInitialState () {
-    return {
+export default class AsyncRoute extends Component {
+  constructor () {
+    super()
+    this.state = {
       loading: false
     }
   }
@@ -20,5 +21,3 @@ class AsyncRoute extends Component {
     }
   }
 }
-
-export default AsyncRoute
