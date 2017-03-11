@@ -19,18 +19,6 @@ module.exports = {
       loader: 'standard-loader',
       exclude: /node_modules/
     },{
-      test: /manifest.json$/,
-      loaders: [
-        'file-loader?name=manifest.json',
-        'web-app-manifest-loader'
-      ]
-    },{
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-            'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack-loader?bypassOnDebug'
-        ]
-    },{
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/

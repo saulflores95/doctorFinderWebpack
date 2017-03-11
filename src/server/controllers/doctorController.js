@@ -7,7 +7,7 @@ doctorController.post = (req, res) => {
     name,
     img,
     description,
-    curriculumOne
+    curriculumOne,
     curriculumTwo,
     curriculumThree,
     curriculumFour,
@@ -25,7 +25,7 @@ doctorController.post = (req, res) => {
     name,
     img,
     description,
-    curriculumOne
+    curriculumOne,
     curriculumTwo,
     curriculumThree,
     curriculumFour,

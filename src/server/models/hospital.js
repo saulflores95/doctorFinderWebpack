@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const {Schema} = mongoose;
 mongoose.Promise = global.Promise
-const labSchema = new Schema({
+const hospitalSchema = new Schema({
     name: {type: String, reqired: true},
     img: {type: String, reqired: true},
     latitude: {type:Number, default: 0},
@@ -10,9 +10,10 @@ const labSchema = new Schema({
     phone:String,
     createdAt: {type: Date, default: Date.now},
     _creator: {type: Schema.ObjectId, ref: 'User'},
-    isDeleted:{type: Boolean, default: true},
+    isDeleted:{type: Boolean, default: false},
+
 })
 
-const Lab = mongoose.model('Lab', labSchema)
+const Hospital = mongoose.model('Hospital', hospitalSchema)
 
-export default Lab
+export default Hospital

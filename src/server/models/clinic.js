@@ -15,7 +15,7 @@ const clinicSchema = new Schema({
     insurance: {type: Boolean, default:false},
     createdAt: {type: Date, default: Date.now},
     _creator: {type: Schema.ObjectId, ref: 'User'},
-    isDeleted:{type: Boolean, default: true},
+    isDeleted:{type: Boolean, default: false},
 })
 
 const Clinic = mongoose.model('Clinic', clinicSchema)
