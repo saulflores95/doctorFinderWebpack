@@ -1,12 +1,10 @@
 import React from 'react'
-import DoctorList from './docList/DoctorList'
 import styles from '../DoctorWrapper.css'
+import SearchBar from '../../../MainLayout/searchBar/SearchBar'
 
 const DoctorWrapper = ({doctor}) => (
   <div className={styles.wrapper}>
-    {doctor.length
-    ? doctor.map(doctor => <DoctorList doctor={doctor} />) : <p>Awaiting Doctors</p>
-    }
+    <SearchBar props={doctor} identifier='doctor' />
   </div>
 )
 

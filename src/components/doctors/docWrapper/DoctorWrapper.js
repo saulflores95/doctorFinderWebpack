@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './DoctorWrapper.css'
+import DocCatList from './docCatList/DocCatList'
 import { RouteTransition } from 'react-router-transition'
-import SearchBar from './SearchBar'
 
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
@@ -22,7 +22,9 @@ const DoctorWrapper = ({doctors}) => (
       atActive={{ translateX: 0, opacity: 1 }}
       mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity })}
     >
-      <SearchBar doctors={doctors} />
+      {doctors.length
+      ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+      }
     </RouteTransition>
   </div>
 )

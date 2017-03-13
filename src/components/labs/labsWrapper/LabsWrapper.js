@@ -1,24 +1,25 @@
+
+import SearchBar from '../../MainLayout/searchBar/SearchBar'
 import React from 'react'
-import LabsMainList from './labsMainList/LabsMainList'
 import styles from './LabsWrapper.css'
 
 const labsList = (props) => {
-  console.log(props)
+  //  console.log(props)
   var arr = props.map((lab) => {
     return lab.tag
   })
-  console.log(arr)
+  //  console.log(arr)
   var uniqueArr = arr.filter(function (elem, index, self) {
     return index === self.indexOf(elem)
   })
-  console.log(uniqueArr)
+  //  console.log(uniqueArr)
   return uniqueArr
 }
 
 const LabsWrapper = ({labs}) => (
   <div className={styles.wrapper}>
     <div className={styles.wrapperList}>
-      {labsList(labs).map(lab => <LabsMainList lab={lab} />)}
+      <SearchBar props={labsList(labs)} identifier='lab' />)
     </div>
   </div>
 )
