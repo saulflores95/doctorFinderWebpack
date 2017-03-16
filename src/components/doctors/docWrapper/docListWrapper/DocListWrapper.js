@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from '../DoctorWrapper.css'
-import SearchBar from '../../../MainLayout/searchBar/SearchBar'
+import SearchNav from '../../../MainLayout/UpperNavigation/searchNav/SearchNav'
 
 const DoctorWrapper = ({doctor}) => (
   <div className={styles.wrapper}>
-    <SearchBar props={doctor} identifier='doctor' />
+    <SearchNav props={doctor} identifier='doctor' />
   </div>
 )
 

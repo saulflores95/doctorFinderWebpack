@@ -4,31 +4,24 @@ import DoctorDescription from './docDescription/DoctorDescription'
 import DoctorContactForm from './docContact/DoctorContactForm'
 import DoctorMap from './docMap/DoctorMap'
 import {Container, Row, Col} from 'react-grid-system'
-import { RouteTransition } from 'react-router-transition'
 import styles from './DoctorDetail.css'
+import NewUpperNavigation from '../../MainLayout/UpperNavigation/newUpperNavigation/NewUpperNavigation'
 
 const DoctorDetail = (doctor) => (
   <div className={styles.doctorDetailWrapper}>
-    <RouteTransition
-      pathname={`/doctors`}
-      atEnter={{ translateY: 35 }}
-      atLeave={{ translateY: -35 }}
-      atActive={{ translateY: 0 }}
-      mapStyles={styles => ({ transform: `translateY(${styles.translateY}%)` })}
-      >
-      <Container>
-        <DoctorHeader {...doctor.doctor} />
-        <DoctorDescription doctor={doctor.doctor} />
-        <Row>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <DoctorContactForm {...doctor.doctor} />
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <DoctorMap {...doctor.doctor} />
-          </Col>
-        </Row>
-      </Container>
-    </RouteTransition>
+    <NewUpperNavigation />
+    <Container>
+      <DoctorHeader {...doctor.doctor} />
+      <DoctorDescription doctor={doctor.doctor} />
+      <Row>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <DoctorContactForm {...doctor.doctor} />
+        </Col>
+        <Col xs={12} sm={12} md={6} lg={6}>
+          <DoctorMap {...doctor.doctor} />
+        </Col>
+      </Row>
+    </Container>
   </div>
 )
 

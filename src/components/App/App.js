@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom'
 import Routes from '../routes/Routes'
-//  import SearchBar from '../MainLayout/UpperNavigation/newUpperNavigation/SearchBar'
+import UpperNavigationFilter from '../MainLayout/UpperNavigation/UpperNavigationFilter'
 import BottomNavigationComponent from '../MainLayout/BottomNavigation/BottomNavigation'
 import styles from './App.css'
 
@@ -10,6 +10,9 @@ const App = () => (
     <Router>
       <div>
         <div className={styles.container}>
+          <header>
+            <UpperNavigationFilter />
+          </header>
           <div>
             <Routes />
           </div>

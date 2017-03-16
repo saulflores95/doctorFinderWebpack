@@ -1,5 +1,5 @@
 
-import SearchBar from '../../MainLayout/searchBar/SearchBar'
+import SearchNav from '../../MainLayout/UpperNavigation/searchNav/SearchNav'
 import React from 'react'
 import styles from './LabsWrapper.css'
 
@@ -19,7 +19,7 @@ const labsList = (props) => {
 const LabsWrapper = ({labs}) => (
   <div className={styles.wrapper}>
     <div className={styles.wrapperList}>
-      <SearchBar props={labsList(labs)} identifier='lab' />)
+      <SearchNav props={labsList(labs)} identifier='lab' />
     </div>
   </div>
 )

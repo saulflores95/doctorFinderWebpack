@@ -10,6 +10,7 @@
 
 .label {
   color: white !important;
+  background-image: none !important;
 }
 
 .imgcontainer{
