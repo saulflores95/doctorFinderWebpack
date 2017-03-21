@@ -1,5 +1,4 @@
-{
-	"doctors":[{
+[{
 			"_id": "9FXE6HLAokSLBiJWi",
 			"name": "Dr. Ricardo Vega Montiel",
 			"img": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAMCAAAAJDA0YzI0OWJiLTNhYWEtNGQ3Ny05NTdhLTZlNTE5M2U1MWNiNg.jpg",
@@ -479,5 +478,4 @@
 				"$date": "2017-01-26T23:39:43.339Z"
 			},
 			"user": "Q9YZo63XyPrpRtPgX"
-		}]
-}
+}]

@@ -76,6 +76,7 @@ const imageChooser = (props) => {
 
 const DocCatList = ({specialty}) => (
   <div>
+    <div><Link to='/doctor-registration'>Hello World</Link></div>
     <Link to={`/doctors/${specialty}`}>
       <MuiThemeProvider>
         <List>

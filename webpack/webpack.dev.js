@@ -38,10 +38,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat',
       'react-addons-shallow-compare': 'shallow-compare',
-      'react-tap-event-plugin':'preact-tap-event-plugin',
       leaflet_css: __dirname + "/node_modules/leaflet/dist/leaflet.css",
 
     }

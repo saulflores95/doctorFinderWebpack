@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
-class AsyncRoute extends Component {
-  getInitialState () {
-    return {
+export default class AsyncRoute extends Component {
+  constructor () {
+    super()
+    this.state = {
       loading: false
     }
   }
+
   componentDidMount () {
     this.props.loading.then(module => {
       this.component = module.default
@@ -20,5 +22,3 @@ class AsyncRoute extends Component {
     }
   }
 }
-
-export default AsyncRoute
