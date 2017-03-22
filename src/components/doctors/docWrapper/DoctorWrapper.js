@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './DoctorWrapper.css'
 import DocCatList from './docCatList/DocCatList'
-import { RouteTransition } from 'react-router-transition'
 
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
@@ -15,17 +14,9 @@ const doctorCategory = (props) => {
 
 const DoctorWrapper = ({doctors}) => (
   <div className={styles.wrapper}>
-    <RouteTransition
-      pathname={`/doctors`}
-      atEnter={{ translateX: 35, opacity: 0 }}
-      atLeave={{ translateX: -35, opacity: 0 }}
-      atActive={{ translateX: 0, opacity: 1 }}
-      mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity })}
-    >
-      {doctors.length
-      ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
-      }
-    </RouteTransition>
+    {doctors.length
+    ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+    }
   </div>
 )
 
