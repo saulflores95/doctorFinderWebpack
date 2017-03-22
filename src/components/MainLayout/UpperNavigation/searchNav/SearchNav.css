@@ -2,6 +2,10 @@
   margin-bottom: 67px;
 }
 
+.search {
+  text-transform: lowercase; 
+}
+
 .labelSearch {
     display: none;
 }
