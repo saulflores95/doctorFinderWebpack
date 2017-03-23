@@ -16,7 +16,7 @@ const App = () => (
             <NewUpperNavigation />
           </header>
           <div>
-            <Routes />
+            <Routes location={location} />
           </div>
         </div>
         <footer>

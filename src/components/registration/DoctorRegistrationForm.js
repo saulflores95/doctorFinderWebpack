@@ -156,7 +156,7 @@ export default class DoctorRegistrationForm extends Component {
                         <img style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader />
+                        <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
                     </Row>
                     <Row>

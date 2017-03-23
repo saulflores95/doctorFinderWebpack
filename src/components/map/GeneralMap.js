@@ -273,7 +273,7 @@ export default class GeneralMap extends Component {
       <div className={styles.map}>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
           <Control position='topleft'>
             <MuiThemeProvider>

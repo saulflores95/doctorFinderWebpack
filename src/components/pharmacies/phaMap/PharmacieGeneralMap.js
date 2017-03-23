@@ -54,17 +54,15 @@ export default class PharmacieGeneralMap extends Component {
             </MuiThemeProvider>
           </Control>
           <div>
-            <div>
               {this.props.pharmacies.map((pharmacie) => {
                 return (
-                  <Marker icon={PharmacieMapIcon} position={[pharmacie.latitude, pharmacie.longitude]}>
+                  <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[Number(pharmacie.latitude), Number(pharmacie.longitude)]}>
                     <Popup>
                       <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
                     </Popup>
                   </Marker>
                 )
               })}
-            </div>
           </div>
         </Map>
         <MuiThemeProvider>

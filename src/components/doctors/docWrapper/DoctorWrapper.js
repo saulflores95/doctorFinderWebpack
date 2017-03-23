@@ -23,7 +23,7 @@ const DoctorWrapper = ({doctors}) => (
       mapStyles={styles => ({ transform: `translateX(${styles.translateX}%)`, opacity: styles.opacity })}
     >
       {doctors.length
-      ? doctorCategory(doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+      ? doctorCategory(doctors).map(specialty => <DocCatList key={specialty} specialty={specialty} />) : <div>Loading</div>
       }
     </RouteTransition>
   </div>

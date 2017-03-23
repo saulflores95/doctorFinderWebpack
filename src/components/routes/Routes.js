@@ -5,6 +5,7 @@ import axios from 'axios'
 import AsyncRoute from '../AsyncRoute/AsyncRoute'
 import GeneralMap from '../map/GeneralMap'
 
+import doctors from '../../../static_db/doctors.json'
 import pharmacies from '../../../static_db/pharmacies.json'
 import clinics from '../../../static_db/clinics.json'
 import hospitals from '../../../static_db/hospitals.json'
@@ -39,12 +40,12 @@ export default class Routes extends React.Component {
   }
 
   render () {
-    const doctors = {
-      'doctors': Object.values(this.state.doctors)
-    }
-    const pharmacies = {
-      'pharmacies': Object.values(this.state.pharmacies)
-    }
+    //  const doctors = {
+    //  'doctors': Object.values(this.state.doctors)
+    //  }
+    //  const pharmacies = {
+      //  'pharmacies': Object.values(this.state.pharmacies)
+    //  }
     return (
       <Switch>
         <Route exact path='/' component={props => <AsyncRoute props={Object.assign({}, props, doctors)} loading={System.import('../doctors/docWrapper/DoctorWrapper')} />} />
@@ -72,7 +73,10 @@ export default class Routes extends React.Component {
         }} />
         <Route exact path='/pharmacies/:tag/:id' component={props => {
           const pharmaciesFiltered = pharmacies.pharmacies.filter(pharmacie => props.match.params.id === pharmacie._id)
-          return <AsyncRoute props={Object.assign({}, props, {pharmacie: pharmaciesFiltered})} loading={System.import('../pharmacies/phaDetail/PharmacieDetail')} />
+          const pharmacie = {
+            'pharmacie': pharmaciesFiltered[0]
+          }
+          return <AsyncRoute props={Object.assign({}, props, {pharmacie: pharmacie})} loading={System.import('../pharmacies/phaDetail/PharmacieDetail')} />
         }} />
 
         <Route exact path='/laboratories' component={props => <AsyncRoute props={Object.assign({}, props, labs)} loading={System.import('../labs/labsWrapper/LabsWrapper')} />} />
@@ -82,7 +86,10 @@ export default class Routes extends React.Component {
         }} />
         <Route exact path='/laboratories/:tag/:id' component={props => {
           const labFiltered = labs.labs.filter(lab => props.match.params.id === lab._id)
-          return <AsyncRoute props={Object.assign({}, props, {labs: labFiltered})} loading={System.import('../labs/labsDetail/LabsDetail')} />
+          const lab = {
+            'lab': labFiltered[0]
+          }
+          return <AsyncRoute props={Object.assign({}, props, {lab: lab})} loading={System.import('../labs/labsDetail/LabsDetail')} />
         }} />
 
         <Route exact path='/hospitals' component={props => <AsyncRoute props={Object.assign({}, props, hospitals)} loading={System.import('../hospital/hosWrapper/HospitalWrapper')} />} />

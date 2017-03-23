@@ -5,7 +5,7 @@ import styles from '../DoctorWrapper.css'
 const DoctorWrapper = ({doctor}) => (
   <div className={styles.wrapper}>
     {doctor.length
-    ? doctor.map(doctor => <DoctorList doctor={doctor} />) : <p>Awaiting Doctors</p>
+    ? doctor.map(doctor => <DoctorList key={doctor._id} doctor={doctor} />) : <p>Awaiting Doctors</p>
     }
   </div>
 )

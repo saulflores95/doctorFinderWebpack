@@ -2,7 +2,7 @@ import React from 'react'
 import DoctorHeader from './docHeader/DoctorHeader'
 import DoctorDescription from './docDescription/DoctorDescription'
 import DoctorContactForm from './docContact/DoctorContactForm'
-import DoctorMap from './docMap/DoctorMap'
+import DetailMap from '../../map/DetailMap'
 import {Container, Row, Col} from 'react-grid-system'
 import { RouteTransition } from 'react-router-transition'
 import styles from './DoctorDetail.css'
@@ -24,7 +24,7 @@ const DoctorDetail = (doctor) => (
             <DoctorContactForm {...doctor.doctor} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <DoctorMap {...doctor.doctor} />
+            <DetailMap props={doctor.doctor} />
           </Col>
         </Row>
       </Container>

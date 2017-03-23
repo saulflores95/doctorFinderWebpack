@@ -18,7 +18,7 @@ const labsList = (props) => {
 const LabsWrapper = ({labs}) => (
   <div className={styles.wrapper}>
     <div className={styles.wrapperList}>
-      {labsList(labs).map(lab => <LabsMainList lab={lab} />)}
+      {labsList(labs).map(lab => <LabsMainList key={lab._id} lab={lab} />)}
     </div>
   </div>
 )

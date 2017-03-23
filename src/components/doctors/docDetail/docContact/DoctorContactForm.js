@@ -32,23 +32,23 @@ const DoctorContactForm = (doctor) => (
       <form className='new-doctor' onSubmit={addDoctor}>
         <TextField
           hintText={<span className={styles.label}>First Name</span>}
-          ref='firstName'
+          //  ref='firstName'
           fullWidth
         />
         <TextField
           hintText={<span className={styles.label}>Last Name</span>}
-          ref='lastName'
+          //  ref='lastName'
           fullWidth
         />
         <TextField
           hintText={<span className={styles.label}>Email</span>}
-          ref='email'
+          //  ref='email'
           fullWidth
         />
         <TextField
           hintText={<span className={styles.label}>Message</span>}
-          ref='message'
           fullWidth
+          //  ref='message'
           multiLine
           rows={2}
           rowsMax={4}

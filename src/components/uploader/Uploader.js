@@ -7,17 +7,15 @@ export default class Uploader extends React.Component {
     this.upload = this.upload.bind(this)
   }
 
-  componentWillMount () {
-  }
-
   getFile () {
     document.getElementById('file').click()
   }
 
   upload () {
+    const self = this
     const formData = new window.FormData()
-    const url = '/api/image-upload'
     const file = document.getElementById('file').files[0]
+    const url = '/api/image-upload'
     const name = 'file'
     formData.append(name, file)
     const config = {
@@ -25,10 +23,11 @@ export default class Uploader extends React.Component {
         'content-type': 'multipart/form-data'
       }
     }
-    console.log('URL:', url, ' Form Data: ', formData)
+    const downloadUrl = 'https://s3-us-west-1.amazonaws.com/healthcarebaja/' + file.name
     axios.post(url, formData, config)
     .then((res) => {
       console.log(res)
+      self.props.handle(downloadUrl)
     }).catch((err) => {
       console.log(err)
     })
