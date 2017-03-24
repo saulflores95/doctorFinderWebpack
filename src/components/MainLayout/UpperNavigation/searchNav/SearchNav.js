@@ -1,8 +1,11 @@
 import React, {Component} from 'react'
 import DoctorList from '../../../doctors/docWrapper/docListWrapper/docList/DoctorList'
 import LabsMainList from '../../../labs/labsWrapper/labsMainList/LabsMainList'
+import PharmacaieMainList from '../../../pharmacies/phaWrapper/phaMainList/PharmacieMainList'
 import styles from './SearchNav.css'
 import { Link } from 'react-router-dom'
+import Transition from 'react-motion-ui-pack'
+import {spring} from 'react-motion'
 
 export default class SearchNav extends Component {
   constructor () {
@@ -17,19 +20,19 @@ export default class SearchNav extends Component {
   }
 
   updateProp (props, identifier) {
-    //  console.log(identifier)
     switch (identifier) {
       case 'doctor':
         return <DoctorList doctor={props} />
       case 'lab':
         return <LabsMainList lab={props} />
+      case 'pharmacie':
+        return <PharmacaieMainList pharmacie={props} />
       default:
         null
     }
   }
 
   updateFilter (props, identifier) {
-    //  console.log(identifier)
     switch (identifier) {
       case 'doctor':
         return this.props.props.filter(
@@ -38,6 +41,7 @@ export default class SearchNav extends Component {
          }
         )
       case 'lab':
+      case 'pharmacie':
         return this.props.props.filter(
          (props) => {
            return props.toLowerCase().indexOf(this.state.search) !== -1
@@ -77,11 +81,23 @@ export default class SearchNav extends Component {
           </ul>
         </div>
         <div>
-          <ul className={styles.list}>
-            {filterArregelo.map((props) => {
-              return this.updateProp(props, identifier)
-            })}
-          </ul>
+          <Transition
+            component={false}
+            enter={{
+              translateX: spring(0, {stiffness: 400, damping: 25}),
+              opacity: 1
+            }}
+            leave={{
+              translateX: 350,
+              opacity: 0
+            }}
+            >
+            <div className={styles.wrapper}>
+              {filterArregelo.map((props) => {
+                return this.updateProp(props, identifier)
+              })}
+            </div>
+          </Transition>
         </div>
       </div>
     )

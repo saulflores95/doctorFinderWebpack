@@ -4,7 +4,7 @@ import NewUpperNavigation from './newUpperNavigation/NewUpperNavigation'
 const UpperNavigationFilter = () => {
   var doctorString = '/doctors/'
   var path = location.pathname
-  if (path === '/laboratories') {
+  if (path === '/laboratories' || path === '/pharmacies') {
     return null
   } else if (path.indexOf(doctorString) > -1) {
     return null

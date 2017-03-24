@@ -3,7 +3,7 @@
 }
 
 .search {
-  text-transform: lowercase; 
+  text-transform: lowercase;
 }
 
 .labelSearch {
@@ -133,4 +133,8 @@ img{
 
 .list {
   padding-left: 0px !important;
+}
+
+.wrapper {
+  margin-left: 10px;
 }

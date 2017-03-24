@@ -85,18 +85,17 @@ const DocCatList = ({specialty}) => (
             component={false}
             enter={{
               opacity: 1,
-              translateX: spring(0, {stiffness: 400, damping: 15})
+              translateX: spring(0, {stiffness: 400, damping: 25})
             }}
             leave={{
               opacity: 0,
-              translateX: 250
+              translateX: 350
             }}
             >
             <ListItem
               leftAvatar={<Avatar className={styles.doctor} alt={specialty} src={imageChooser(specialty)} />}
               rightIcon={<ActionInfo />}
               primaryText={<div className={styles.label}>{specialty}</div>}
-              key='list-item'
             />
           </Transition>
           <Divider inset />
