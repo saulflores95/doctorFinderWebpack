@@ -16,21 +16,35 @@ app.use(bodyParser.json())
   res.sendFile(path.join(__dirname + '/../dist/index.html'))
 })*/
 import React from 'react'
-import {renderToString} from 'react-dom/server'
-import { ServerRouter, createServerRenderContext } from 'react-router'
+import ReactDOMServer, { renderToStringfrom } from 'react-dom/server'
+import { StaticRouter } from 'react-router'
 import Routes from '../src/components/routes/Routes'
+import App from '../src/components/App/App'
 
 app.get('*', (req, res, next) => {
-  const context = createServerRenderContext();
+  const context = {}
   const html = renderToString(
-      <ServerRouter
-        location={req.url}
-        context={context}
-      >
-        {({ location }) => <Layout location={location} />}
-      </ServerRouter>
+    <StaticRouter
+      location={req.url}
+      context={context}
+    >
+      <App />
+    </StaticRouter>
     )
-  res.render('index', {html});
+
+    if (context.url) {
+      res.writeHead(301, {
+        Location: context.url
+      })
+      res.end()
+    } else {
+      res.write(`
+        <!doctype html>
+        <div id="app">${html}</div>
+      `)
+      res.end()
+    }
+
 });
 
 export default app

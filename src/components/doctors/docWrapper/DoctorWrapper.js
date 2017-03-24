@@ -16,7 +16,7 @@ const doctorCategory = (props) => {
 const DoctorWrapper = ({doctors}) => (
   <div className={styles.wrapper}>
     <RouteTransition
-      pathname={`/doctors`}
+      pathname={'/doctors'}
       atEnter={{ translateX: 35, opacity: 0 }}
       atLeave={{ translateX: -35, opacity: 0 }}
       atActive={{ translateX: 0, opacity: 1 }}

@@ -1,13 +1,10 @@
 import React, {Component} from 'react'
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet'
-import Control from 'react-leaflet-control'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from './labsListWrapper/LabsListWrapper'
-import L from 'leaflet'
 import styles from './LabsGeneralMap.css'
 
 export default class LabsGeneralMap extends Component {
@@ -33,6 +30,10 @@ export default class LabsGeneralMap extends Component {
   }
 
   render () {
+    var {Map, Marker, Popup, TileLayer} = require('react-leaflet')
+    var L = require('leaflet')
+    var Control = require('react-leaflet-control')
+
     const positionState = [this.state.lat, this.state.lng]
     var LabMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',

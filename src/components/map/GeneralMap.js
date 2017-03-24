@@ -1,12 +1,9 @@
 import React, {Component} from 'react'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
-import Control from 'react-leaflet-control'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import L from 'leaflet'
 import styles from './GeneralMap.css'
 
 export default class GeneralMap extends Component {
@@ -39,6 +36,7 @@ export default class GeneralMap extends Component {
   }
 
   handlePharmacies () {
+    var { Marker, Popup } = require('react-leaflet')
     if (this.state.showPharmacies === true) {
       var PharmacieMapIcon = L.icon({
         iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
@@ -51,7 +49,7 @@ export default class GeneralMap extends Component {
             var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
             console.log(cordinates)
             return (
-              <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+              <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
                 </Popup>
@@ -64,6 +62,7 @@ export default class GeneralMap extends Component {
   }
 
   handleHospitals () {
+    var { Marker, Popup } = require('react-leaflet')
     var hospitalMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
       popupAnchor: [0, -18],
@@ -76,7 +75,7 @@ export default class GeneralMap extends Component {
           {this.props.hospitals.hospitals.map((hospital) => {
             var cordinates = this.handleCoordinates(hospital.latitude, hospital.longitude)
             return (
-              <Marker icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+              <Marker key={hospital._id} icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude}><br />{hospital.name}</a></span>
                 </Popup>
@@ -89,6 +88,7 @@ export default class GeneralMap extends Component {
   }
 
   handleDoctors () {
+    var { Marker, Popup } = require('react-leaflet')
     var DoctorMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
       popupAnchor: [0, -18],
@@ -100,7 +100,7 @@ export default class GeneralMap extends Component {
           {this.props.doctors.doctors.map((doctor) => {
             var cordinates = this.handleCoordinates(doctor.latitude, doctor.longitude)
             return (
-              <Marker icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+              <Marker key={doctor._id} icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><br /><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude}>{doctor.name}</a></span>
                 </Popup>
@@ -113,6 +113,7 @@ export default class GeneralMap extends Component {
   }
 
   handleClinics () {
+    var { Marker, Popup } = require('react-leaflet')
     var clinicMapIcon = L.icon({
       iconUrl: 'https://s28.postimg.org/gb1zjlqz1/clinic.png',
       popupAnchor: [0, -18],
@@ -124,7 +125,7 @@ export default class GeneralMap extends Component {
           {this.props.clinics.clinics.map((clinic) => {
             var cordinates = this.handleCoordinates(clinic.latitude, clinic.longitude)
             return (
-              <Marker icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+              <Marker key={clinic._id} icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + clinic.latitude + ',' + clinic.longitude}> <br />{clinic.name}</a></span>
                 </Popup>
@@ -137,6 +138,7 @@ export default class GeneralMap extends Component {
   }
 
   handleLabs () {
+    var { Marker, Popup } = require('react-leaflet')
     var labMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
       popupAnchor: [0, -18],
@@ -148,7 +150,7 @@ export default class GeneralMap extends Component {
           {this.props.labs.labs.map((lab) => {
             var cordinates = this.handleCoordinates(lab.latitude, lab.longitude)
             return (
-              <Marker icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+              <Marker key={lab._id} icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
                 </Popup>
@@ -257,6 +259,9 @@ export default class GeneralMap extends Component {
   }
 
   render () {
+    var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
+    var Control = require('react-leaflet-control')
+
     const userPosition = [this.state.latitude, this.state.longitude]
     var handlePharmacies = this.handlePharmacies()
     var handleDoctors = this.handleDoctors()
@@ -270,10 +275,10 @@ export default class GeneralMap extends Component {
     })
     var mapCenter = [this.state.latitude, this.state.longitude]
     return (
-      <div className={styles.map}>
+      <div>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
-            url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
           <Control position='topleft'>
             <MuiThemeProvider>

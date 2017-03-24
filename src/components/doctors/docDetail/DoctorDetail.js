@@ -10,7 +10,7 @@ import styles from './DoctorDetail.css'
 const DoctorDetail = (doctor) => (
   <div className={styles.doctorDetailWrapper}>
     <RouteTransition
-      pathname={`/doctors`}
+      pathname={'/doctors'}
       atEnter={{ translateY: 35 }}
       atLeave={{ translateY: -35 }}
       atActive={{ translateY: 0 }}

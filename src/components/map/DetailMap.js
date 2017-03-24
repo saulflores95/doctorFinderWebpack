@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
 import styles from './DetailMap.css'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 
 export default class DetailMap extends Component {
 
-  /*
-    componentDidMount () {
-    // Only runs on Client, not on server render
-      Map = require('react-leaflet').Map
-      Marker = require('react-leaflet').Marker
-      Popup = require('react-leaflet').Popup
-      TileLayer = require('react-leaflet').TileLayer
-      this.forceUpdate()
-    }
-  */
+  componentDidMount () {
+  // Only runs on Client, not on server render
+  }
 
   render () {
+    var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
+
     const position = [32.5194358, -117.0101997]
     const propPoistion = [Number(this.props.props.latitude), Number(this.props.props.longitude)]
     console.log(this.props.props)
