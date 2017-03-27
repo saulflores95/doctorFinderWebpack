@@ -12,6 +12,7 @@ const App = () => (
         <header>
           <UpperNavigationFilter />
         </header>
+        <div className={styles.wrapperHeight2}>
           <Routes />
         </div>
         <footer className={styles.footer}>
