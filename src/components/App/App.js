@@ -17,7 +17,7 @@ const App = () => (
             <Routes />
           </div>
         </div>
-        <footer>
+        <footer className={styles.footer}>
           <BottomNavigationComponent />
         </footer>
       </div>

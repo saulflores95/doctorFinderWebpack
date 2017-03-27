@@ -59,7 +59,7 @@ export default class SearchNav extends Component {
     let filterArregelo = this.updateFilter(props, identifier)
     return (
       <div>
-        <div className={styles.container}>
+        <div>
           <ul className={styles.ul}>
             <li className={styles.li}><Link to='/'><img alt='Healthcare Baja' src={imgUrl} /></Link></li>
             <li className={styles.liRight}>
