@@ -6,16 +6,13 @@ import BottomNavigationComponent from '../MainLayout/BottomNavigation/BottomNavi
 import styles from './App.css'
 
 const App = () => (
-  <div>
+  <div className={styles.wrapperHeight}>
     <Router>
-      <div>
-        <div className={styles.container}>
-          <header>
-            <UpperNavigationFilter />
-          </header>
-          <div>
-            <Routes />
-          </div>
+      <div className={styles.container}>
+        <header>
+          <UpperNavigationFilter />
+        </header>
+          <Routes />
         </div>
         <footer className={styles.footer}>
           <BottomNavigationComponent />

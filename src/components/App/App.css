@@ -1,10 +1,10 @@
 .container {
   max-width: var(--site-width);
   margin:0 auto;
-  overflow:scroll;
-  overflow-x: hidden;
   overflow-y: hidden;
+  overflow-x: hidden;
   padding-bottom: 56px;
+  height: 100%;
 }
 
 .footer {
@@ -15,4 +15,14 @@
   position: fixed;
   z-index: 10000;
   margin-top: -56px;
+}
+
+.wrapperHeight {
+  height: 100%;
+}
+
+.wrapperHeight2 {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
