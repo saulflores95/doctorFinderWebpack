@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import { Switch } from 'react-router'
-import axios from 'axios'
+//  import axios from 'axios'
 import AsyncRoute from '../AsyncRoute/AsyncRoute'
 import GeneralMap from '../map/GeneralMap'
 
@@ -21,6 +21,7 @@ export default class Routes extends React.Component {
     }
   }
 
+  /*
   componentDidMount () {
     var self = this
     axios.get('/api/doctors')
@@ -38,6 +39,7 @@ export default class Routes extends React.Component {
         })
       })
   }
+*/
 
   render () {
     //  const doctors = {
@@ -46,6 +48,13 @@ export default class Routes extends React.Component {
     //  const pharmacies = {
       //  'pharmacies': Object.values(this.state.pharmacies)
     //  }
+    if (typeof System === 'undefined') {
+      var System = {
+        import: function (path) {
+          return Promise.resolve(require(path))
+        }
+      }
+    }
     return (
       <Switch>
         <Route exact path='/' component={props => <AsyncRoute props={Object.assign({}, props, doctors)} loading={System.import('../doctors/docWrapper/DoctorWrapper')} />} />

@@ -18,7 +18,7 @@ export default class AsyncRoute extends Component {
     if (this.state.loading) {
       return <this.component {...this.props.props} />
     } else {
-      return (<div>Loading</div>)
+      return (<div>Loading from Async Route</div>)
     }
   }
 }
