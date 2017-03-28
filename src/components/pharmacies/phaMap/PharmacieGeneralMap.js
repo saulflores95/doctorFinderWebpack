@@ -5,8 +5,10 @@ import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import PharmacieListWrapper from './phaListWrapper/PharmacieListWrapper'
-import styles from './PharmacieGeneralMap.css'
-
+if (process.env.BROWSER) {
+  var styles = require('./PharmacieGeneralMap.css')
+  var L = require('leaflet')
+}
 export default class PharmacieGeneralMap extends Component {
 
   constructor () {
@@ -31,7 +33,6 @@ export default class PharmacieGeneralMap extends Component {
 
   render () {
     var {Map, Marker, Popup, TileLayer} = require('react-leaflet')
-    var L = require('leaflet')
     var Control = require('react-leaflet-control')
 
     const positionState = [this.state.lat, this.state.lng]
@@ -55,15 +56,15 @@ export default class PharmacieGeneralMap extends Component {
             </MuiThemeProvider>
           </Control>
           <div>
-              {this.props.pharmacies.map((pharmacie) => {
-                return (
-                  <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[Number(pharmacie.latitude), Number(pharmacie.longitude)]}>
-                    <Popup>
-                      <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
-                    </Popup>
-                  </Marker>
-                )
-              })}
+            {this.props.pharmacies.map((pharmacie) => {
+              return (
+                <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[Number(pharmacie.latitude), Number(pharmacie.longitude)]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
           </div>
         </Map>
         <MuiThemeProvider>

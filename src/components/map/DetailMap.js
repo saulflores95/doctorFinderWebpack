@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import styles from './DetailMap.css'
 
 export default class DetailMap extends Component {
 
@@ -9,7 +8,9 @@ export default class DetailMap extends Component {
 
   render () {
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
-
+    if (process.env.BROWSER) {
+      var styles = require('./DetailMap.css')
+    }
     const position = [32.5194358, -117.0101997]
     const propPoistion = [Number(this.props.props.latitude), Number(this.props.props.longitude)]
     console.log(this.props.props)

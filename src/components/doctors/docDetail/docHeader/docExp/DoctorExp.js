@@ -1,5 +1,7 @@
 import React from 'react'
-import styles from './DoctorExp.css'
+if (process.env.BROWSER) {
+  var styles = require('./DoctorExp.css')
+}
 import {Row, Col} from 'react-grid-system'
 
 const DoctorExp = (doctor) => (

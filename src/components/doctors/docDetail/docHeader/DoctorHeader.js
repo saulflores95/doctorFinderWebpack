@@ -1,5 +1,7 @@
 import React from 'react'
-import styles from './DoctorHeader.css'
+if (process.env.BROWSER) {
+  var styles = require('./DoctorHeader.css')
+}
 import DoctorExp from './docExp/DoctorExp'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Row, Col} from 'react-grid-system'

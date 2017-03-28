@@ -4,7 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
-import styles from '../docListWrapper/docList/DoctorList.css'
+if (process.env.BROWSER) {
+  var styles = require('./../docListWrapper/docList/DoctorList.css')
+}
 import Avatar from 'material-ui/Avatar'
 
 const imageChooser = (props) => {
@@ -76,7 +78,6 @@ const imageChooser = (props) => {
 
 const DocCatList = ({specialty}) => (
   <div>
-    <div><Link to='/doctor-registration'>Hello World</Link></div>
     <Link to={`/doctors/${specialty}`}>
       <MuiThemeProvider>
         <List>

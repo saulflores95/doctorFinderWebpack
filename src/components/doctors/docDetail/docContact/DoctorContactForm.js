@@ -3,8 +3,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
-import styles from './DoctorContactForm.css'
-
+if (process.env.BROWSER) {
+  var styles = require('./DoctorContactForm.css')
+}
 const addDoctor = (event) => {
   event.preventDefault()
   var firstName = this.refs.firstName.getValue()

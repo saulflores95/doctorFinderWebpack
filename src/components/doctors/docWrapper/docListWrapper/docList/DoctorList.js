@@ -5,8 +5,9 @@ import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
-import styles from './DoctorList.css'
-
+if (process.env.BROWSER) {
+  var styles = require('./DoctorList.css')
+}
 const DoctorList = ({doctor}) => (
   <div>
     <MuiThemeProvider>

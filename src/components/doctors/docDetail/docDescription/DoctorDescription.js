@@ -5,8 +5,9 @@ import Dialog from 'material-ui/Dialog'
 import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import {Container} from 'react-grid-system'
-import styles from './DoctorDescription.css'
-
+if (process.env.BROWSER) {
+  var styles = require('./DoctorDescription.css')
+}
 export default class DoctorDescription extends Component {
 
   constructor () {

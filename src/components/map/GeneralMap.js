@@ -4,8 +4,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import styles from './GeneralMap.css'
-
+if (process.env.BROWSER) {
+  var L = require('leaflet')
+}
 export default class GeneralMap extends Component {
 
   constructor () {

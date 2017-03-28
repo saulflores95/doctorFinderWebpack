@@ -1,10 +1,25 @@
 const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+var webpack = require('webpack');
 
 const srcDir = resolve(__dirname, '../src')
 
 module.exports = {
-  entry: `${srcDir}/index.js`,
+  entry: [
+  'react-hot-loader/patch',
+  // activate HMR for React
+
+  'webpack-dev-server/client?http://localhost:8080',
+  // bundle the client for webpack-dev-server
+  // and connect to the provided endpoint
+
+  'webpack/hot/only-dev-server',
+  // bundle the client for hot reloading
+  // only- means to only hot reload for successful updates
+
+  `${srcDir}/index.js`,
+  // the entry point of our app
+  ],
   output: {
     filename: 'bundle.js',
     publicPath: '/'
@@ -46,6 +61,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: `${srcDir}/index.html`
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+         BROWSER: JSON.stringify(true)
+      }
+    }),
   ]
 }

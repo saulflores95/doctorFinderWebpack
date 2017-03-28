@@ -57,6 +57,11 @@ module.exports = {
       template: './index.html'
 
     }),
+    new webpack.DefinePlugin({
+      "process.env": {
+         BROWSER: JSON.stringify(true)
+      }
+    }),
     new CopyWebpackPlugin([{
       from: resolve(__dirname, '../src/icons/'),
       to: resolve(__dirname, '../dist/')

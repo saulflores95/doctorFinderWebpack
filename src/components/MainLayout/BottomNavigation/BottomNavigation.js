@@ -5,7 +5,9 @@ import IconLocationOn from 'material-ui/svg-icons/communication/location-on'
 import FaHospitalO from 'react-icons/lib/fa/hospital-o'
 import FaUserMd from 'react-icons/lib/fa/user-md'
 import FaPlus from 'react-icons/lib/fa/plus'
-import styles from './BottomNavigation.css'
+if (process.env.BROWSER) {
+  var styles = require('./BottomNavigation.css')
+}
 import {Link} from 'react-router-dom'
 
 export default class ButtomNavigationComponet extends Component {

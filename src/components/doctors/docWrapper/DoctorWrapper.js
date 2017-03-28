@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from './DoctorWrapper.css'
 import DocCatList from './docCatList/DocCatList'
 import { RouteTransition } from 'react-router-transition'
-
+if (process.env.BROWSER) {
+  var styles = require('./DoctorWrapper.css')
+}
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
     return doctor.specialty

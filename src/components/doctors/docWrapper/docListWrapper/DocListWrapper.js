@@ -1,7 +1,8 @@
 import React from 'react'
 import DoctorList from './docList/DoctorList'
-import styles from '../DoctorWrapper.css'
-
+if (process.env.BROWSER) {
+  var styles = require('../DoctorWrapper.css')
+}
 const DoctorWrapper = ({doctor}) => (
   <div className={styles.wrapper}>
     {doctor.length

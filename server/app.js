@@ -4,47 +4,46 @@ import routes from './routes.js'
 import bodyParser from 'body-parser'
 import path from 'path'
 
+import React from 'react'
+import {renderToString} from 'react-dom/server'
+import ReactDOMServer from 'react-dom/server'
+import { StaticRouter } from 'react-router'
+import Routes from '../src/components/routes/Routes'
+
 mongoose.connect('mongodb://localhost:27017/healthcare', () => {
   console.log('Connected to mongodb HCB')
 })
 
 const app = express()
 app.use(bodyParser.json())
-//app.use('/api', routes)
-//app.get('/', express.static(path.join(__dirname, '../dist')))
-/*app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/../dist/index.html'))
-})*/
-import React from 'react'
-import ReactDOMServer, { renderToStringfrom } from 'react-dom/server'
-import { StaticRouter } from 'react-router'
-import Routes from '../src/components/routes/Routes'
-import App from '../src/components/App/App'
+app.use(express.static(path.join(__dirname, '../dist')))
 
-app.get('*', (req, res, next) => {
+app.use('/api', routes)
+
+app.use((req, res) => {
   const context = {}
-  const html = renderToString(
+  const html = ReactDOMServer.renderToString(
     <StaticRouter
       location={req.url}
       context={context}
     >
-      <App />
+      <Routes />
     </StaticRouter>
-    )
+  )
 
-    if (context.url) {
-      res.writeHead(301, {
-        Location: context.url
-      })
-      res.end()
-    } else {
-      res.write(`
-        <!doctype html>
-        <div id="app">${html}</div>
-      `)
-      res.end()
-    }
+  if (context.url) {
+    res.writeHead(301, {
+      Location: context.url
+    })
+    res.end()
+  } else {
+    res.write(`
+      <!DOCTYPE html>
+      <div id="app">${html} click <a href='/'>here</></div>
+    `)
+    res.end()
+  }
 
-});
+})
 
 export default app

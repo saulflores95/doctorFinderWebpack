@@ -5,8 +5,9 @@ import DoctorContactForm from './docContact/DoctorContactForm'
 import DetailMap from '../../map/DetailMap'
 import {Container, Row, Col} from 'react-grid-system'
 import { RouteTransition } from 'react-router-transition'
-import styles from './DoctorDetail.css'
-
+if (process.env.BROWSER) {
+  var styles = require('./DoctorDetail.css')
+}
 const DoctorDetail = (doctor) => (
   <div className={styles.doctorDetailWrapper}>
     <RouteTransition
