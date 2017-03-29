@@ -5,12 +5,10 @@ import DoctorContactForm from './docContact/DoctorContactForm'
 import DoctorMap from './docMap/DoctorMap'
 import {Container, Row, Col} from 'react-grid-system'
 import styles from './DoctorDetail.css'
-import NewUpperNavigation from '../../MainLayout/UpperNavigation/newUpperNavigation/NewUpperNavigation'
 import Transition from 'react-motion-ui-pack'
 
 const DoctorDetail = (doctor) => (
   <div className={styles.doctorDetailWrapper}>
-    <NewUpperNavigation />
     <Container>
       <Transition
         component={false}

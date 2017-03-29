@@ -311,7 +311,7 @@ export default class GeneralMap extends Component {
               open={this.state.open}
               docked={false}
               className='sidenav'
-              onChange={console.log('abcdefg')}>
+              onRequestChange={this.handleClose}>
               <MenuItem onClick={() => this.toogle('all')} >
                 <h3>Show All </h3>
               </MenuItem>

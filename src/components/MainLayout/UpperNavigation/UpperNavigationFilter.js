@@ -2,11 +2,8 @@ import React from 'react'
 import NewUpperNavigation from './newUpperNavigation/NewUpperNavigation'
 
 const UpperNavigationFilter = () => {
-  var doctorString = '/doctors/'
   var path = location.pathname
-  if (path === '/laboratories' || path === '/pharmacies') {
-    return null
-  } else if (path.indexOf(doctorString) > -1) {
+  if (path === '/laboratories' || path === '/pharmacies' || path === '/doctors/') {
     return null
   } else {
     return <NewUpperNavigation />
