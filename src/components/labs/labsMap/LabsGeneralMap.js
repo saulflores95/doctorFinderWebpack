@@ -67,12 +67,11 @@ export default class LabsGeneralMap extends Component {
           </div>
         </Map>
         <MuiThemeProvider>
-          <div style={styles.sideNav}>
+          <div>
             <Drawer
               open={this.state.open}
               docked={false}
-              className='sidenav'
-              onRequestChange={(open) => this.setState({open})}>
+              onRequestChange={this.handleClose}>
               <LabsListWrapper labs={this.props.labs} />
               <MenuItem onClick={this.handleClose}>
                 Close

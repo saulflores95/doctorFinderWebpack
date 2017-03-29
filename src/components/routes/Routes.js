@@ -47,7 +47,7 @@ const Routes = () => (
     }} />
     <Route exact path='/laboratories/:tag/:id' component={props => {
       const labFiltered = labs.labs.filter(lab => props.match.params.id === lab._id)
-      return <AsyncRoute props={Object.assign({}, props, {labs: labFiltered})} loading={System.import('../labs/labsDetail/LabsDetail')} />
+      return <AsyncRoute props={Object.assign({}, props, {lab: labFiltered})} loading={System.import('../labs/labsDetail/LabsDetail')} />
     }} />
 
     <Route exact path='/hospitals' component={props => <AsyncRoute props={Object.assign({}, props, hospitals)} loading={System.import('../hospital/hosWrapper/HospitalWrapper')} />} />
