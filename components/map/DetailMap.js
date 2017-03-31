@@ -24,7 +24,7 @@ export default class DetailMap extends Component {
         <style jsx>
           {`
             .map {
-              height:500px;
+              height:250px;
               width:100%;
               background-color:red;
             }
