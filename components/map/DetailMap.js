@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import NoSSR from 'react-no-ssr'
 
 export default class DetailMap extends Component {
 
@@ -10,7 +9,6 @@ export default class DetailMap extends Component {
     console.log(propPoistion)
     return (
       <div>
-        <NoSSR onSSR={<div>Map Loading...</div>}>
           <div className='map'>
             <Map center={position} zoom={12}>
               <TileLayer
@@ -23,7 +21,6 @@ export default class DetailMap extends Component {
               </Marker>
             </Map>
           </div>
-        </NoSSR>
         <style jsx>
           {`
             .map {

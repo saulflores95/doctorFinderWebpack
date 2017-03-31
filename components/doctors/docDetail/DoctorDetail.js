@@ -5,6 +5,7 @@ import DoctorContactForm from './docContact/DoctorContactForm'
 import {Container, Row, Col} from 'react-grid-system'
 import { RouteTransition } from 'react-router-transition'
 import DetailMap from '../../map/DetailMap'
+import NoSSR from 'react-no-ssr'
 
 const DoctorDetail = (doctor) => (
   <div className='doctorDetailWrapper'>
@@ -23,7 +24,9 @@ const DoctorDetail = (doctor) => (
             <DoctorContactForm {...doctor.doctor[0]} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <DetailMap props={doctor.doctor[0]} />
+            <NoSSR onSSR={<div>Map Loading...</div>} >
+              <DetailMap props={doctor.doctor[0]} />
+            </NoSSR>
           </Col>
         </Row>
       </Container>
@@ -36,7 +39,8 @@ const DoctorDetail = (doctor) => (
           height: 100%;
           width: 100%;
         }
-        .leaflet-container {
+        .leaflet-container {import NoSSR from 'react-no-ssr'
+
           height:50px;
           width:50px;
         }
