@@ -84,7 +84,7 @@ export default class SearchNav extends Component {
           <Transition
             component={false}
             enter={{
-              translateX: spring(0, {stiffness: 400, damping: 25}),
+              translateX: spring(0, {stiffness: 200, damping: 25}),
               opacity: 1
             }}
             leave={{

@@ -6,8 +6,6 @@ import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import styles from '../docListWrapper/docList/DoctorList.css'
 import Avatar from 'material-ui/Avatar'
-import Transition from 'react-motion-ui-pack'
-import {spring} from 'react-motion'
 
 const imageChooser = (props) => {
   switch (props) {
@@ -81,23 +79,11 @@ const DocCatList = ({specialty}) => (
     <Link to={`/doctors/${specialty}`}>
       <MuiThemeProvider>
         <List>
-          <Transition
-            component={false}
-            enter={{
-              opacity: 1,
-              translateX: spring(0, {stiffness: 400, damping: 25})
-            }}
-            leave={{
-              opacity: 0,
-              translateX: 350
-            }}
-            >
-            <ListItem
-              leftAvatar={<Avatar className={styles.doctor} alt={specialty} src={imageChooser(specialty)} />}
-              rightIcon={<ActionInfo />}
-              primaryText={<div className={styles.label}>{specialty}</div>}
-            />
-          </Transition>
+          <ListItem
+            leftAvatar={<Avatar className={styles.doctor} alt={specialty} src={imageChooser(specialty)} />}
+            rightIcon={<ActionInfo />}
+            primaryText={<div className={styles.label}>{specialty}</div>}
+          />
           <Divider inset />
         </List>
       </MuiThemeProvider>
