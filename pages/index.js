@@ -3,7 +3,7 @@ import Layout from '../components/MyLayout'
 
 const Index = () => (
   <Layout>
-    <p>Hello Next.js</p>
+    <p>for the pekubianos by the pekubianos</p>
   </Layout>
 )
 

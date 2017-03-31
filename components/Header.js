@@ -6,11 +6,9 @@ const linkStyle = {
 
 const Header = () => (
     <div>
-        <Link href="/">
-          <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/about">
-          <a style={linkStyle}>About</a>
+        <h1>Hello Welcome To HBC DEV interface</h1>
+        <Link href="/api/doctors">
+          <a style={linkStyle}>API</a>
         </Link>
         <Link href="/doctors">
           <a style={linkStyle}>App</a>
