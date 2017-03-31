@@ -25,28 +25,28 @@ export default class ButtomNavigationComponet extends Component {
       <div className='footer'>
         <MuiThemeProvider>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
-            <Link to='/doctors'>
+            <Link href='/doctors'>
               <BottomNavigationItem
                 icon={<FaUserMd className='icon' />}
                 onClick={() => this.select(0)}
                 className='bottomNavItem'
               />
             </Link>
-            <Link to='/categories'>
+            <Link href='/categories'>
               <BottomNavigationItem
                 icon={<FaHospitalO className='icon' />}
                 onClick={() => this.select(1)}
                 className='bottomNavItem'
               />
             </Link>
-            <Link to='/map'>
+            <Link href='/map'>
               <BottomNavigationItem
                 icon={<IconLocationOn className='icon' />}
                 onClick={() => this.select(2)}
                 className='bottomNavItem'
               />
             </Link>
-            <Link to='/contact'>
+            <Link href='/contact'>
               <BottomNavigationItem
                 icon={<FaPlus className='icon' />}
                 onClick={() => this.select(3)}
