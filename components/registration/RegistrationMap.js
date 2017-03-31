@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import NoSSR from 'react-no-ssr'
 
 export default class RegistrationMap extends Component {
 
@@ -23,21 +22,17 @@ export default class RegistrationMap extends Component {
 
     return (
       <div style={styles.leafletContainer}>
-        <NoSSR onSSR={<div>Map Loading...</div>}>
-          <div>
-            <Map center={[this.state.lat, this.state.lng]} zoom={this.state.zoom} onClick={this.props.mapClick}>
-              <TileLayer
-                attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-              />
-              <Marker position={this.props.position}>
-                <Popup>
-                  <span>Is there where?</span>
-                </Popup>
-              </Marker>
-            </Map>
-          </div>
-        </NoSSR>
+        <Map center={[this.state.lat, this.state.lng]} zoom={this.state.zoom} onClick={this.props.mapClick}>
+          <TileLayer
+            attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <Marker position={this.props.position}>
+            <Popup>
+              <span>Is there where?</span>
+            </Popup>
+          </Marker>
+        </Map>
       </div>
     )
   }

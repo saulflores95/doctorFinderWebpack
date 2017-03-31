@@ -10,6 +10,7 @@ import MenuItem from 'material-ui/MenuItem'
 import RegistrationMap from './RegistrationMap'
 import Uploader from '../uploader/Uploader'
 import axios from 'axios'
+import NoSSR from 'react-no-ssr'
 
 export default class DoctorRegistrationForm extends Component {
 
@@ -258,7 +259,9 @@ export default class DoctorRegistrationForm extends Component {
                   </div>
                   <Row>
                     <Col sm={12} md={12} lg={12}>
-                      <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                      <NoSSR onSSR={<div>Map Loading...</div>} >
+                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                      </NoSSR>
                     </Col>
                     <Col sm={12} md={12} lg={12}>
                       <TextField
