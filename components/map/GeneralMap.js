@@ -1,20 +1,14 @@
 import React, {Component} from 'react'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
-import Control from 'react-leaflet-control'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
-import L from 'leaflet'
-import styles from './GeneralMap.css'
 
 export default class GeneralMap extends Component {
 
   constructor () {
     super()
-    this.handleToggle = this.handleToggle.bind(this)
-    this.handleClose = this.handleClose.bind(this)
     this.state = {
       latitude: 32.50504,
       longitude: -116.99056,
@@ -36,128 +30,6 @@ export default class GeneralMap extends Component {
       longitude: longitude
     }
     return coordinate
-  }
-
-  handlePharmacies () {
-    if (this.state.showPharmacies === true) {
-      var PharmacieMapIcon = L.icon({
-        iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
-        popupAnchor: [0, -18],
-        iconSize: [30, 41]
-      })
-      return (
-        <div>
-          {this.props.pharmacies.pharmacies.map((pharmacie) => {
-            var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
-            console.log(cordinates)
-            return (
-              <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
-                <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
-  handleHospitals () {
-    var hospitalMapIcon = L.icon({
-      iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
-      popupAnchor: [0, -18],
-      iconSize: [30, 41]
-
-    })
-    if (this.state.showHospitals === true) {
-      return (
-        <div>
-          {this.props.hospitals.hospitals.map((hospital) => {
-            var cordinates = this.handleCoordinates(hospital.latitude, hospital.longitude)
-            return (
-              <Marker icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
-                <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude}><br />{hospital.name}</a></span>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
-  handleDoctors () {
-    var DoctorMapIcon = L.icon({
-      iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
-      popupAnchor: [0, -18],
-      iconSize: [30, 41]
-    })
-    if (this.state.showDoctors === true) {
-      return (
-        <div>
-          {this.props.doctors.doctors.map((doctor) => {
-            var cordinates = this.handleCoordinates(doctor.latitude, doctor.longitude)
-            return (
-              <Marker icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
-                <Popup>
-                  <span><br /><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude}>{doctor.name}</a></span>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
-  handleClinics () {
-    var clinicMapIcon = L.icon({
-      iconUrl: 'https://s28.postimg.org/gb1zjlqz1/clinic.png',
-      popupAnchor: [0, -18],
-      iconSize: [30, 41]
-    })
-    if (this.state.showClinics === true) {
-      return (
-        <div>
-          {this.props.clinics.clinics.map((clinic) => {
-            var cordinates = this.handleCoordinates(clinic.latitude, clinic.longitude)
-            return (
-              <Marker icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
-                <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + clinic.latitude + ',' + clinic.longitude}> <br />{clinic.name}</a></span>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </div>
-      )
-    }
-  }
-
-  handleLabs () {
-    var labMapIcon = L.icon({
-      iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
-      popupAnchor: [0, -18],
-      iconSize: [30, 41]
-    })
-    if (this.state.showClinics === true) {
-      return (
-        <div>
-          {this.props.labs.labs.map((lab) => {
-            var cordinates = this.handleCoordinates(lab.latitude, lab.longitude)
-            return (
-              <Marker icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
-                <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
-                </Popup>
-              </Marker>
-            )
-          })}
-        </div>
-      )
-    }
   }
 
   handleToggle () {
@@ -258,47 +130,155 @@ export default class GeneralMap extends Component {
 
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
-    var handlePharmacies = this.handlePharmacies()
-    var handleDoctors = this.handleDoctors()
-    var handleHospitals = this.handleHospitals()
-    var handleClinics = this.handleClinics()
-    var handleLabs = this.handleLabs()
-    var UserIcon = L.icon({
-      iconUrl: 'https://unpkg.com/leaflet@1.0.1/dist/images/marker-icon-2x.png',
-      popupAnchor: [0, -18],
-      iconSize: [25, 41]
-    })
+    var L = require('leaflet')
+    var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
+    var handlePharmacies = () => {
+      if (this.state.showPharmacies === true) {
+        var PharmacieMapIcon = L.icon({
+          iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
+          popupAnchor: [0, -18],
+          iconSize: [30, 41]
+        })
+        return (
+          <div>
+            {this.props.pharmacies.map((pharmacie) => {
+              var cordinates = this.handleCoordinates(pharmacie.latitude, pharmacie.longitude)
+              console.log(cordinates)
+              return (
+                <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+        )
+      }
+    }
+
+    var handleHospitals = () => {
+      var hospitalMapIcon = L.icon({
+        iconUrl: 'https://s28.postimg.org/d819g8c0d/Hospitals.png',
+        popupAnchor: [0, -18],
+        iconSize: [30, 41]
+
+      })
+      if (this.state.showHospitals === true) {
+        return (
+          <div>
+            {this.props.hospitals.map((hospital) => {
+              var cordinates = this.handleCoordinates(hospital.latitude, hospital.longitude)
+              return (
+                <Marker key={hospital._id} icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude}><br />{hospital.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+        )
+      }
+    }
+
+    var handleDoctors = () => {
+      var DoctorMapIcon = L.icon({
+        iconUrl: 'https://s28.postimg.org/ohtzb6h1p/Doctores.png',
+        popupAnchor: [0, -18],
+        iconSize: [30, 41]
+      })
+      if (this.state.showDoctors === true) {
+        return (
+          <div>
+            {this.props.doctors.map((doctor) => {
+              var cordinates = this.handleCoordinates(doctor.latitude, doctor.longitude)
+              return (
+                <Marker key={doctor._id} icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                  <Popup>
+                    <span><br /><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude}>{doctor.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+        )
+      }
+    }
+
+    var handleClinics = () => {
+      var clinicMapIcon = L.icon({
+        iconUrl: 'https://s28.postimg.org/gb1zjlqz1/clinic.png',
+        popupAnchor: [0, -18],
+        iconSize: [30, 41]
+      })
+      if (this.state.showClinics === true) {
+        return (
+          <div>
+            {this.props.clinics.map((clinic) => {
+              var cordinates = this.handleCoordinates(clinic.latitude, clinic.longitude)
+              return (
+                <Marker key={clinic._id} icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + clinic.latitude + ',' + clinic.longitude}> <br />{clinic.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+        )
+      }
+    }
+
+    var handleLabs = () => {
+      var labMapIcon = L.icon({
+        iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
+        popupAnchor: [0, -18],
+        iconSize: [30, 41]
+      })
+      if (this.state.showClinics === true) {
+        return (
+          <div>
+            {this.props.labs.map((lab) => {
+              var cordinates = this.handleCoordinates(lab.latitude, lab.longitude)
+              return (
+                <Marker key={lab._id} icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+        )
+      }
+    }
+
     var mapCenter = [this.state.latitude, this.state.longitude]
+
     return (
-      <div className={styles.map}>
+      <div className='map'>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          <Control position='topleft'>
-            <MuiThemeProvider>
-              <FloatingActionButton mini onClick={this.handleToggle}>
-                <ContentAdd />
-              </FloatingActionButton>
-            </MuiThemeProvider>
-          </Control>
           <div>
-            {handlePharmacies}
+            {handlePharmacies()}
           </div>
           <div>
-            {handleClinics}
+            {handleClinics()}
           </div>
           <div>
-            {handleHospitals}
+            {handleHospitals()}
           </div>
           <div>
-            {handleLabs}
+            {handleLabs()}
           </div>
           <div>
-            {handleDoctors}
+            {handleDoctors()}
           </div>
           <div>
-            <Marker icon={UserIcon} position={userPosition}>
+            <Marker position={userPosition}>
               <Popup>
                 <span> <br />This is you</span>
               </Popup>
@@ -330,9 +310,22 @@ export default class GeneralMap extends Component {
               <MenuItem onClick={() => this.toogle('hospitals')} >
                 <h3>Hospitals </h3>
               </MenuItem>
+              <MenuItem onClick={() => this.handleClose()} >
+                <h3>Close </h3>
+              </MenuItem>
             </Drawer>
           </div>
         </MuiThemeProvider>
+        <button onClick={this.handleToggle.bind(this)}></button>
+
+        <style jsx>
+          {`
+            .map {
+              height: 300px;
+            }
+
+          `}
+        </style>
       </div>
     )
   }

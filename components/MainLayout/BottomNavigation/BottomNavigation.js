@@ -57,19 +57,9 @@ export default class ButtomNavigationComponet extends Component {
         </MuiThemeProvider>
         <style jsx>
           {`
-            .footer {
-              left: 0;
-              right: 0;
-              bottom: 0;
-            }
-
             .icon {
               text-align: center;
               font-size: 24px;
-            }
-
-            .prueba {
-              width: 40px;
             }
 
             .bottomNavItem {

@@ -21,6 +21,7 @@ $RECYCLE.BIN/
 node_modules/
 coverage/
 dist/
+.next/
 
 # =========================
 # Operating System Files

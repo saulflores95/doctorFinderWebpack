@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 import DoctorList from '../../../doctors/docWrapper/docListWrapper/docList/DoctorList'
 //import LabsMainList from '../../../labs/labsWrapper/labsMainList/LabsMainList'
-//import PharmacaieMainList from '../../../pharmacies/phaWrapper/phaMainList/PharmacieMainList'
+import PharmacieMainList from '../../../pharmacies/phaWrapper/phaMainList/PharmacieMainList'
 const LabsMainList = null;
-const PharmacieMainList = null;
 import Link from 'next/link'
 import Transition from 'react-motion-ui-pack'
 import {spring} from 'react-motion'
@@ -27,7 +26,7 @@ export default class SearchNav extends Component {
       case 'lab':
         return <LabsMainList lab={props} />
       case 'pharmacie':
-        return <PharmacaieMainList pharmacie={props} />
+        return <PharmacieMainList pharmacie={props} />
       default:
         null
     }

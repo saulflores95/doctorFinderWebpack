@@ -27,9 +27,9 @@ const App = (props) => (
         <div className='wrapperHeight2'>
           {props.children}
         </div>
-        <footer className='footer'>
+        <div className='footerF'>
           <BottomNavigationComponent />
-        </footer>
+        </div>
       </div>
     <style jsx>
       {`
@@ -43,7 +43,7 @@ const App = (props) => (
           height: 100%;
         }
 
-        .footer {
+        .footerF {
           height: 56px;
           width: 100%;
           bottom: 0px;
