@@ -2,19 +2,25 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Container, Row, Col} from 'react-grid-system'
 import LabsHeader from './labsHeader/LabsHeader'
-import LabsMap from '../labsMap/LabsMap'
-import styles from './LabsDetail.css'
+import DetailMap from '../../map/DetailMap'
+import NoSSR from 'react-no-ssr'
 
 const LabsDetail = ({lab}) => (
-  <div className={styles.labDetailContainer}>
+  <div className='labDetailContainer'>
     <MuiThemeProvider>
       <Container>
         <Row>
           <Col xs={12} sm={12} md={12} lg={12}><LabsHeader lab={lab[0]} /></Col>
-          <Col xs={12} sm={12} md={12} lg={12}><LabsMap lab={lab[0]} /></Col>
+          <Col xs={12} sm={12} md={12} lg={12}><NoSSR onSSR={<div>loading</div>}><DetailMap props={lab[0]} /></NoSSR></Col>
         </Row>
       </Container>
     </MuiThemeProvider>
+    <style jsx>{`
+      .labDetailContainer {
+        padding-top: 15px;
+        padding-bottom: 30px;
+      }
+    `}</style>
   </div>
 )
 

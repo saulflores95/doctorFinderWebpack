@@ -1,21 +1,15 @@
 import React, {Component} from 'react'
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet'
-import Control from 'react-leaflet-control'
 import FloatingActionButton from 'material-ui/FloatingActionButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from './labsListWrapper/LabsListWrapper'
-import L from 'leaflet'
-import styles from './LabsGeneralMap.css'
 
 export default class LabsGeneralMap extends Component {
 
   constructor () {
     super()
-    this.handleToggle = this.handleToggle.bind(this)
-    this.handleClose = this.handleClose.bind(this)
     this.state = {
       lat: 32.5194358,
       lng: -117.0101997,
@@ -32,31 +26,38 @@ export default class LabsGeneralMap extends Component {
     this.setState({open: false})
   }
 
+  handleCoordinates (latitude, longitude) {
+    latitude = parseFloat(latitude)
+    longitude = parseFloat(longitude)
+    var coordinate = {
+      latitude: latitude,
+      longitude: longitude
+    }
+    return coordinate
+  }
+
   render () {
     const positionState = [this.state.lat, this.state.lng]
+    var L = require('leaflet')
+    var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
     var LabMapIcon = L.icon({
       iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
       popupAnchor: [0, -18],
       iconSize: [25, 41]
     })
     return (
-      <div className={styles.mapcontainer}>
+      <div className='mapcontainer'>
+        <button onClick={this.handleToggle.bind(this)}>Hey You I am button</button>
         <Map center={positionState} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
-          <Control position='topleft'>
-            <MuiThemeProvider>
-              <FloatingActionButton mini onClick={this.handleToggle}>
-                <ContentAdd />
-              </FloatingActionButton>
-            </MuiThemeProvider>
-          </Control>
           <div>
             <div>
               {this.props.labs.map((lab) => {
+                {console.log('From props: ', lab);}
                 return (
-                  <Marker icon={LabMapIcon} position={[lab.latitude, lab.longitude]}>
+                  <Marker icon={LabMapIcon} key={lab._id} position={[lab.latitude, lab.longitude]}>
                     <Popup>
                       <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude} > <br />{lab.name}</a></span>
                     </Popup>
@@ -71,14 +72,28 @@ export default class LabsGeneralMap extends Component {
             <Drawer
               open={this.state.open}
               docked={false}
-              onRequestChange={this.handleClose}>
-              <LabsListWrapper labs={this.props.labs} />
-              <MenuItem onClick={this.handleClose}>
+              onRequestChange={this.handleClose.bind(this)}>
+                <LabsListWrapper labs={this.props.labs} />
+              <MenuItem onClick={() => this.handleClose.bind(this)} >
                 Close
               </MenuItem>
             </Drawer>
           </div>
         </MuiThemeProvider>
+        <style jsx>
+          {`
+            .mapcontainer{
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              height: 89vh;
+            }
+
+            .sidenav {
+              z-index: 9999 !important;
+            }
+          `}
+        </style>
       </div>
     )
   }
