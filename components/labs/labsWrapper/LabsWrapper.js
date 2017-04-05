@@ -1,6 +1,5 @@
 import SearchNav from '../../MainLayout/UpperNavigation/searchNav/SearchNav'
 import React from 'react'
-import styles from './LabsWrapper.css'
 
 const labsList = (props) => {
   var arr = props.map((lab) => {
@@ -13,10 +12,22 @@ const labsList = (props) => {
 }
 
 const LabsWrapper = ({labs}) => (
-  <div className={styles.wrapper}>
-    <div className={styles.wrapperList}>
+  <div className='wrapper'>
+    <div className='wrapperList'>
       <SearchNav props={labsList(labs)} identifier='lab' />
     </div>
+    <style jsx>
+      {`
+        .wrapper {
+          padding-top: 15px;
+          margin-bottom: 70px;
+        }
+
+        .wrapperList {
+          margin-right: 25px;
+        }
+      `}
+    </style>
   </div>
 )
 

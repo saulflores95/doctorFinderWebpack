@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import DoctorList from '../../../doctors/docWrapper/docListWrapper/docList/DoctorList'
-//import LabsMainList from '../../../labs/labsWrapper/labsMainList/LabsMainList'
+import LabsMainList from '../../../labs/labsWrapper/labsMainList/LabsMainList'
 import PharmacieMainList from '../../../pharmacies/phaWrapper/phaMainList/PharmacieMainList'
-const LabsMainList = null;
 import Link from 'next/link'
 import Transition from 'react-motion-ui-pack'
 import {spring} from 'react-motion'

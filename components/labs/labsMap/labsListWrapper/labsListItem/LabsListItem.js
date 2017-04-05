@@ -4,12 +4,12 @@ import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
 import ActionInfo from 'material-ui/svg-icons/action/info'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const LabsListItem = (lab) => (
   <div>
     <MuiThemeProvider>
-      <Link to={`/laboratories/${lab.tag}/${lab._id}`}>
+      <Link href={`/laboratories-detail?id=${lab._id}`}>
         <List>
           <ListItem
             leftAvatar={<Avatar className='img-pharmacieSingle' src={lab.img} />}

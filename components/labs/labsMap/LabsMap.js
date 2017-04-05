@@ -1,31 +1,111 @@
-import React from 'react'
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
-import L from 'leaflet'
-import styles from './LabsMap.css'
+import React, {Component} from 'react'
+import FloatingActionButton from 'material-ui/FloatingActionButton'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import ContentAdd from 'material-ui/svg-icons/content/add'
+import Drawer from 'material-ui/Drawer'
+import MenuItem from 'material-ui/MenuItem'
+import LabsListWrapper from '../components/labs/labsMap/labsListWrapper/LabsListWrapper'
 
-const position = [32.5194358, -117.0101997]
+export default class LabsMap extends Component {
 
-var LabMapIcon = L.icon({
-  iconUrl: 'https://s29.postimg.org/6p57i16k7/lab.png',
-  popupAnchor: [0, -18],
-  iconSize: [25, 41]
-})
+  constructor () {
+    super()
+    this.state = {
+      latitude: 32.50504,
+      longitude: -116.99056,
+      zoom: 5,
+      open: false,
+    }
+  }
 
-const LabsMap = ({lab}) => (
-  <div className={styles.map}>
-    <Map center={position} zoom={5}>
-      <TileLayer
-        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-      />
-      <div>
-        <Marker icon={LabMapIcon} position={[lab.latitude, lab.longitude]}>
-          <Popup>
-            <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude} > <br />{lab.name}</a></span>
-          </Popup>
-        </Marker>
+  handleCoordinates (latitude, longitude) {
+    latitude = parseFloat(latitude)
+    longitude = parseFloat(longitude)
+    var coordinate = {
+      latitude: latitude,
+      longitude: longitude
+    }
+    return coordinate
+  }
+
+  handleToggle () {
+    this.setState({open: !this.state.open})
+  }
+
+  handleClose () {
+    this.setState({open: false})
+  }
+
+  render () {
+    const userPosition = [this.state.latitude, this.state.longitude]
+    var L = require('leaflet')
+    var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
+    var PharmacieMapIcon = L.icon({
+      iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
+      popupAnchor: [0, -18],
+      iconSize: [25, 41]
+    })
+
+    var mapCenter = [this.state.latitude, this.state.longitude]
+
+    return (
+      <div className='map'>
+        <button onClick={this.handleToggle.bind(this)}>Hey You I am button</button>
+        <Map center={mapCenter} zoom={this.state.zoom}>
+          <TileLayer
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <div>
+            {this.props.labs.map((lab) => {
+              return (
+                <Marker position={[lab.latitude, lab.longitude]}>
+                  <Popup>
+                    <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
+                  </Popup>
+                </Marker>
+              )
+            })}
+          </div>
+          <div>
+            <Marker position={userPosition}>
+              <Popup>
+                <span> <br />This is you</span>
+              </Popup>
+            </Marker>
+          </div>
+        </Map>
+        <MuiThemeProvider>
+          <div>
+            <Drawer
+              open={this.state.open}
+              docked={false}
+              className='sidenav'
+              onRequestChange={(open) => this.setState({open})}>
+              <div className='sidenav'>
+                <LabsListWrapper labs={this.props.labs} />
+              </div>
+              <MenuItem onClick={() => this.handleClose()} >
+                <h3>Close </h3>
+              </MenuItem>
+            </Drawer>
+          </div>
+        </MuiThemeProvider>
+        <style jsx>
+          {`
+            .map {
+              height: 300px;
+            }
+
+            .sidenav {
+              margin-top: 67px;
+            }
+            button {
+              padding-top: 100px;
+              z-index:10000;
+            }
+          `}
+        </style>
       </div>
-    </Map>
-  </div>
-)
-
-export default LabsMap
+    )
+  }
+}
