@@ -19,11 +19,6 @@ const DoctorHeader = (doctor) => (
           <Col sm={12} md={12} lg={5}>
             <DoctorExp {...doctor} />
           </Col>
-          <Col sm={12} md={12} lg={12}>
-            <div className='divider'>
-              <Divider />
-            </div>
-          </Col>
         </Row>
       </div>
     </MuiThemeProvider>

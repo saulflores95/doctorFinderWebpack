@@ -24,6 +24,12 @@ export default class DoctorDescription extends Component {
   }
 
   render () {
+    var styles = {
+      textCenter: {
+        textAlign: 'center',
+        paddingBottom: 15
+      },
+    }
     const actions = [
       <FlatButton
         label={<span className='label-text'>Close</span>}
@@ -36,9 +42,9 @@ export default class DoctorDescription extends Component {
         <MuiThemeProvider>
           <Paper zDepth={1} className='paper'>
             <div>
-              <Container>
+              <Container style={styles.textCenter}>
                 <p className='doctorDescription'>{this.props.doctor[0].description}</p>
-                <RaisedButton label='Read more' onClick={this.handleOpen.bind(this)} />
+                <RaisedButton label='Read more' style={styles.label} onClick={this.handleOpen.bind(this)} />
               </Container>
             </div>
           </Paper>

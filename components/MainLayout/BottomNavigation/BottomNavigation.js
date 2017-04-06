@@ -29,6 +29,8 @@ export default class ButtomNavigationComponet extends Component {
       bottomNavItem: {
         marginLeft: 'auto',
         marginRight: 'auto',
+        minWidth: 80,
+        maxWidth: 80,
         display: 'block'
       }
     }

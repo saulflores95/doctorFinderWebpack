@@ -3,22 +3,31 @@ import DoctorHeader from './docHeader/DoctorHeader'
 import DoctorDescription from './docDescription/DoctorDescription'
 import DoctorContactForm from './docContact/DoctorContactForm'
 import {Container, Row, Col} from 'react-grid-system'
-import { RouteTransition } from 'react-router-transition'
 import DetailMap from '../../map/DetailMap'
 import NoSSR from 'react-no-ssr'
+import Transition from 'react-motion-ui-pack'
+import {spring} from 'react-motion'
 
 const DoctorDetail = (doctor) => (
   <div className='doctorDetailWrapper'>
-    <RouteTransition
-      pathname={'/doctors'}
-      atEnter={{ translateY: 35 }}
-      atLeave={{ translateY: -35 }}
-      atActive={{ translateY: 0 }}
-      mapStyles={styles => ({ transform: `translateY($'translateY}%)` })}
+    <Transition
+      component={false}
+      enter={{
+        opacity: 1,
+        scale: 1
+      }}
+      leave={{
+        opacity: 0,
+        scale: 0
+      }}
       >
       <Container>
-        <DoctorHeader {...doctor.doctor} />
-        <DoctorDescription doctor={doctor.doctor} />
+        <div className='doctor-header'>
+          <DoctorHeader {...doctor.doctor}/>
+        </div>
+        <div className='doctor-description'>
+          <DoctorDescription doctor={doctor.doctor} />
+        </div>
         <Row>
           <Col xs={12} sm={12} md={6} lg={6}>
             <DoctorContactForm {...doctor.doctor[0]} />
@@ -30,7 +39,7 @@ const DoctorDetail = (doctor) => (
           </Col>
         </Row>
       </Container>
-    </RouteTransition>
+    </Transition>
     <style jsx>
       {`
         .doctorDetailWrapper {
@@ -39,10 +48,15 @@ const DoctorDetail = (doctor) => (
           height: 100%;
           width: 100%;
         }
-        .leaflet-container {import NoSSR from 'react-no-ssr'
-
+        .leaflet-container {
           height:50px;
           width:50px;
+        }
+        .doctorHeader {
+          margin-bottom: 20px;
+        }
+        .doctor-description {
+          margin-bottom: 10px;
         }
       `}
     </style>

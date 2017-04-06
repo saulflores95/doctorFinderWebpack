@@ -16,6 +16,17 @@ const App = (props) => (
 
           body{
             background-color: rgb(0, 188, 212);
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            top: 0;
+            overflow-x: hidden;
+          }
+          html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            top: 0;
           }
           `}
         </style>
