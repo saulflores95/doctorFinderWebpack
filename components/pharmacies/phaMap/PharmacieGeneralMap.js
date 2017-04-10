@@ -50,7 +50,6 @@ export default class PharmacieGeneralMap extends Component {
 
     return (
       <div className='map'>
-        <button onClick={this.handleToggle.bind(this)}>Hey You I am button</button>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -93,7 +92,7 @@ export default class PharmacieGeneralMap extends Component {
         <style jsx>
           {`
             .map {
-              height: 300px;
+              height: 100%;
             }
 
             .sidenav {

@@ -231,11 +231,11 @@ export default class SearchNav extends Component {
             }
 
             .list {
-              padding-left: 0px !important;
+              padding-left: px !important;
             }
 
             .wrapper {
-              margin-left: 0px;
+              margin-left: 10px;
             }
 
           `}

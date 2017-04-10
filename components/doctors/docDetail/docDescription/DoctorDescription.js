@@ -91,7 +91,8 @@ export default class DoctorDescription extends Component {
 
             .doctorDescriptionDialog {
               height: 40vh;
-              overflow: scroll;
+              overflow-y: scroll;
+              overflow-x: hidden;
             }
 
           `}

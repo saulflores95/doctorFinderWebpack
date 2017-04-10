@@ -13,14 +13,21 @@ export default class extends React.Component {
     const lab = labs.labs.filter(lab => this.props.id === lab.tag)
     console.log(lab);
     return(
-      <div>
-        <App>
+      <div className='container'>
+        <App className='container'>
           <div className='container'>
             <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...'</div>}>
               <LabsGeneralMap labs={lab} />
             </NoSSR>
           </div>
         </App>
+        <style jsx>
+          {`
+          .container {
+            height: 100%;
+          }
+          `}
+        </style>
       </div>
     )
   }

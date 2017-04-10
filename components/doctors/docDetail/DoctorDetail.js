@@ -21,7 +21,7 @@ const DoctorDetail = (doctor) => (
         scale: 0
       }}
       >
-      <Container>
+      <Container className='doc-Container'>
         <div className='doctor-header'>
           <DoctorHeader {...doctor.doctor}/>
         </div>
@@ -33,9 +33,11 @@ const DoctorDetail = (doctor) => (
             <DoctorContactForm {...doctor.doctor[0]} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <NoSSR onSSR={<div>Map Loading...</div>} >
-              <DetailMap props={doctor.doctor[0]} />
-            </NoSSR>
+            <div className='doctor-map'>
+              <NoSSR onSSR={<div>Map Loading...</div>} >
+                <DetailMap props={doctor.doctor[0]} />
+              </NoSSR>
+            </div>
           </Col>
         </Row>
       </Container>
@@ -57,6 +59,9 @@ const DoctorDetail = (doctor) => (
         }
         .doctor-description {
           margin-bottom: 10px;
+        }
+        .doctor-map {
+          margin-bottom: 90px;
         }
       `}
     </style>

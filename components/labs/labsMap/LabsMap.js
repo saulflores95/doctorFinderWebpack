@@ -50,7 +50,6 @@ export default class LabsMap extends Component {
 
     return (
       <div className='map'>
-        <button onClick={this.handleToggle.bind(this)}>Hey You I am button</button>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -60,7 +59,7 @@ export default class LabsMap extends Component {
               return (
                 <Marker position={[lab.latitude, lab.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
+                    <span><a href={'http://maps.google.com/?q= + lab.latitude + ',' + pharmacie.longitude'} > <br />{pharmacie.name}</a></span>
                   </Popup>
                 </Marker>
               )

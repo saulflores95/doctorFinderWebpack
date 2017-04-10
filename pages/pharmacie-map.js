@@ -12,14 +12,21 @@ export default class extends React.Component {
     const pharmacie = pharmacies.pharmacies.filter(pharmacie => this.props.id === pharmacie.tag)
     console.log(pharmacie);
     return(
-      <div>
-        <App>
+      <div className='container'>
+        <App className='container'>
           <div className='container'>
             <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...'</div>}>
               <PharmacieGeneralMap pharmacies={pharmacie} />
             </NoSSR>
           </div>
         </App>
+        <style jsx>
+          {`
+          .container {
+            height: 100%;
+          }
+          `}
+        </style>
       </div>
     )
   }

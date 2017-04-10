@@ -6,7 +6,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from './labsListWrapper/LabsListWrapper'
 
-export default class LabsGeneralMap extends Component {
+export default class LabsGeneralMap extends Component  {
 
   constructor () {
     super()
@@ -47,7 +47,6 @@ export default class LabsGeneralMap extends Component {
     })
     return (
       <div className='mapcontainer'>
-        <button onClick={this.handleToggle.bind(this)}>Hey You I am button</button>
         <Map center={positionState} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -86,7 +85,7 @@ export default class LabsGeneralMap extends Component {
               margin: 0;
               padding: 0;
               width: 100%;
-              height: 89vh;
+              height: 100%;
             }
 
             .sidenav {
