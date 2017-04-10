@@ -321,7 +321,7 @@ export default class GeneralMap extends Component {
         <style jsx>
           {`
             .map {
-              height: 300px;
+              height: 100%;
             }
 
           `}

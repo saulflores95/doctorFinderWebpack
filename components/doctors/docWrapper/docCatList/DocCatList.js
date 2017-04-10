@@ -76,7 +76,7 @@ const imageChooser = (props) => {
 }
 
 const DocCatList = ({specialty}) => (
-  <div>
+  <div className='prueba'>
     <Link href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
       <div>
         <MuiThemeProvider>
@@ -129,6 +129,9 @@ const DocCatList = ({specialty}) => (
         .pageSlider-enter.pageSlider-enter-active {
           transform: translate3d(0, 0, 0);
           transition: all 600ms;
+        }
+        .prueba {
+          height: 100;
         }
       `}
     </style>

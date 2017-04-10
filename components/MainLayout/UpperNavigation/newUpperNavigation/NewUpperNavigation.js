@@ -26,7 +26,7 @@ const NewUpperNavigation = () => (
         .li {
             float: left;
         }
-        
+
         .li a {
             display: block;
             color: white;
@@ -120,6 +120,10 @@ const NewUpperNavigation = () => (
 
         img{
           width: 100%;
+          height: 100%;
+        }
+
+        .container {
           height: 100%;
         }
       `}

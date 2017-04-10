@@ -2,12 +2,19 @@ import Layout from '../components/MyLayout'
 import DoctorWrapper from  '../components/doctors/docWrapper/DoctorWrapper'
 import App from '../components/App/App'
 const doctors = () => (
-  <div>
+  <div className='container'>
     <App>
-      <div className='container'>
+      <div>
         <DoctorWrapper />
       </div>
     </App>
+    <style jsx>
+      {`
+      .container {
+        height: 100%;
+      }
+      `}
+    </style>
   </div>
 )
 

@@ -16,12 +16,12 @@ const App = (props) => (
 
           body{
             background-color: rgb(0, 188, 212);
-            height: 100%;
             width: 100%;
+            height: 100%;
             margin: 0;
             top: 0;
-            padding-top: 67px;
             overflow-x: hidden;
+            overflow-y: hidden;
 
           }
           html {
@@ -30,6 +30,7 @@ const App = (props) => (
             margin: 0;
             top: 0;
             box-sizing: border-box;
+            overflow-y: hidden;
           }
           #__next {
             height: 100%;
@@ -41,15 +42,17 @@ const App = (props) => (
         </style>
       </Head>
       <div className='container'>
-        <header>
-          <UpperNavigationFilter />
-        </header>
-        <div className='wrapperHeight2'>
-          {props.children}
+        <div>
+          <header id='header'>
+            <UpperNavigationFilter />
+          </header>
+          <div className='content'>
+            {props.children}
+          </div>
         </div>
-        <div className='footerF'>
+        <footer className='footerF'>
           <BottomNavigationComponent />
-        </div>
+        </footer>
       </div>
     <style jsx>
       {`
@@ -59,7 +62,6 @@ const App = (props) => (
           margin:0 auto;
           overflow-y: hidden;
           overflow-x: hidden;
-          padding-bottom: 56px;
           height: 100%;
         }
 
@@ -77,10 +79,23 @@ const App = (props) => (
           height: 100%;
         }
 
-        .wrapperHeight2 {
-          height: 100%;
+        .content {
+          flex: 1;
+          position: absolute;
+          top: 69px;
+          width: 100%;
+          bottom: 0;
+          padding-bottom: 56px;
           overflow-x: hidden;
           overflow-y: auto;
+        }
+
+        #header {
+          height: 69px;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 999;
         }
 
       `}
