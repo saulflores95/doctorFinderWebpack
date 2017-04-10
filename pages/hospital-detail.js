@@ -19,13 +19,6 @@ export default class extends React.Component {
             <HospitalDetail hospital={hospital}/>
           </div>
         </App>
-        <style jsx>
-          {`
-            .container {
-              padding-top:65px;
-            }
-          `}
-        </style>
       </div>
     )
   }

@@ -11,13 +11,6 @@ export default class extends React.Component {
             <DoctorRegistrationForm />
           </div>
         </App>
-        <style jsx>
-          {`
-            .container {
-              padding-top:65px;
-            }
-          `}
-        </style>
       </div>
     )
   }

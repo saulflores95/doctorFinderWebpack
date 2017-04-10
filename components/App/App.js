@@ -20,13 +20,22 @@ const App = (props) => (
             width: 100%;
             margin: 0;
             top: 0;
+            padding-top: 67px;
             overflow-x: hidden;
+
           }
           html {
             height: 100%;
             width: 100%;
             margin: 0;
             top: 0;
+            box-sizing: border-box;
+          }
+          #__next {
+            height: 100%;
+          }
+          [data-reactroot],[data-reactid='2'] {
+            height: 100%;
           }
           `}
         </style>

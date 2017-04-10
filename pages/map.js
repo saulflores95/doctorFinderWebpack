@@ -18,13 +18,6 @@ const map = () => (
         </NoSSR>
       </div>
     </App>
-    <style jsx>
-      {`
-        .container {
-          padding-top:65px;
-        }
-      `}
-    </style>
   </div>
 )
 

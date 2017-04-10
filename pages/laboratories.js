@@ -13,13 +13,6 @@ export default class extends React.Component {
             <LabsWrapper labs={labs.labs}/>
           </div>
         </App>
-        <style jsx>
-          {`
-            .container {
-              padding-top:65px;
-            }
-          `}
-        </style>
       </div>
     )
   }

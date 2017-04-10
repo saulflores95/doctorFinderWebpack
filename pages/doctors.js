@@ -8,13 +8,6 @@ const doctors = () => (
         <DoctorWrapper />
       </div>
     </App>
-    <style jsx>
-      {`
-        .container {
-          padding-top:65px;
-        }
-      `}
-    </style>
   </div>
 )
 

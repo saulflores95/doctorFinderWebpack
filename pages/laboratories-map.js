@@ -16,18 +16,11 @@ export default class extends React.Component {
       <div>
         <App>
           <div className='container'>
-            <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...</div>}>
+            <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...'</div>}>
               <LabsGeneralMap labs={lab} />
             </NoSSR>
           </div>
         </App>
-        <style jsx>
-          {`
-            .container {
-              padding-top:65px;
-            }
-          `}
-        </style>
       </div>
     )
   }

@@ -4,17 +4,10 @@ import App from '../components/App/App'
 const hospitals = () => (
   <div>
     <App>
-      <div className='container'>
+      <div>
         <HospitalWrapper />
       </div>
     </App>
-    <style jsx>
-      {`
-        .container {
-          padding-top:65px;
-        }
-      `}
-    </style>
   </div>
 )
 

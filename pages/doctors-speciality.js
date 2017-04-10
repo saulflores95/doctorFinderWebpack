@@ -17,13 +17,6 @@ export default class extends React.Component {
             <DocListWrapper doctor={doctor}/>
           </div>
         </App>
-        <style jsx>
-          {`
-            .container {
-              padding-top:65px;
-            }
-          `}
-        </style>
       </div>
     )
   }
