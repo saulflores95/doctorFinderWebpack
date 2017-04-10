@@ -59,7 +59,7 @@ export default class ButtomNavigationComponet extends Component {
                 style={styles.bottomNavItem}
               />
             </Link>
-            <Link href='/contact'>
+            <Link href='/contact-us'>
               <BottomNavigationItem
                 icon={<FaPlus style={styles.icon} />}
                 onClick={() => this.select(3)}
