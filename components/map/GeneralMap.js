@@ -253,11 +253,23 @@ export default class GeneralMap extends Component {
         )
       }
     }
-
     var mapCenter = [this.state.latitude, this.state.longitude]
-
+    var styles = {
+      button: {
+        zIndex: 999,
+        position: 'absolute',
+        top: 85,
+        left: 7
+      }
+    }
     return (
       <div className='map'>
+        <MuiThemeProvider>
+          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
+            <ContentAdd>
+            </ContentAdd>
+          </FloatingActionButton>
+        </MuiThemeProvider>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -316,14 +328,11 @@ export default class GeneralMap extends Component {
             </Drawer>
           </div>
         </MuiThemeProvider>
-        <button onClick={this.handleToggle.bind(this)}></button>
-
         <style jsx>
           {`
             .map {
               height: 100%;
             }
-
           `}
         </style>
       </div>

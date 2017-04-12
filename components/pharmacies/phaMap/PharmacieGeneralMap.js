@@ -47,13 +47,25 @@ export default class PharmacieGeneralMap extends Component {
     })
 
     var mapCenter = [this.state.latitude, this.state.longitude]
-
+    var styles = {
+      button: {
+        zIndex: 999,
+        position: 'absolute',
+        top: 85,
+        left: 7
+      }
+    }
     return (
       <div className='map'>
+        <MuiThemeProvider>
+          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
+            <ContentAdd>
+            </ContentAdd>
+          </FloatingActionButton>
+        </MuiThemeProvider>
         <Map center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
           <div>
             {this.props.pharmacies.map((pharmacie) => {
               return (
@@ -83,7 +95,7 @@ export default class PharmacieGeneralMap extends Component {
               <div className='sidenav'>
                 <PharmacieListWrapper pharmacies={this.props.pharmacies} />
               </div>
-              <MenuItem onClick={() => this.handleClose()} >
+              <MenuItem onClick={this.handleClose.bind(this)} >
                 <h3>Close </h3>
               </MenuItem>
             </Drawer>

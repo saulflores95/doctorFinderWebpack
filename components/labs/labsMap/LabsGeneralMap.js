@@ -45,12 +45,25 @@ export default class LabsGeneralMap extends Component  {
       popupAnchor: [0, -18],
       iconSize: [25, 41]
     })
+    var styles = {
+      button: {
+        zIndex: 999,
+        position: 'absolute',
+        top: 85,
+        left: 7
+      }
+    }
     return (
       <div className='mapcontainer'>
+        <MuiThemeProvider>
+          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
+            <ContentAdd>
+            </ContentAdd>
+          </FloatingActionButton>
+        </MuiThemeProvider>
         <Map center={positionState} zoom={this.state.zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
           <div>
             <div>
               {this.props.labs.map((lab) => {
@@ -73,8 +86,8 @@ export default class LabsGeneralMap extends Component  {
               docked={false}
               onRequestChange={this.handleClose.bind(this)}>
                 <LabsListWrapper labs={this.props.labs} />
-              <MenuItem onClick={() => this.handleClose.bind(this)} >
-                Close
+              <MenuItem onClick={this.handleClose.bind(this)} >
+                <h3> Close </h3>
               </MenuItem>
             </Drawer>
           </div>
