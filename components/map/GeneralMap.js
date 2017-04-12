@@ -40,6 +40,13 @@ export default class GeneralMap extends Component {
     this.setState({open: false})
   }
 
+  componentDidMount() {
+    this.map = this.refs.map.leafletElement
+    setTimeout(() => {
+      this.map.invalidateSize()
+    }, 100)
+}
+
   toogle (value) {
     if (value === 'doctors') {
       if (this.state.showDoctors === true) {
@@ -270,10 +277,9 @@ export default class GeneralMap extends Component {
             </ContentAdd>
           </FloatingActionButton>
         </MuiThemeProvider>
-        <Map center={mapCenter} zoom={this.state.zoom}>
+        <Map ref='map' center={mapCenter} zoom={this.state.zoom} >
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-          />
+            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' />
           <div>
             {handlePharmacies()}
           </div>

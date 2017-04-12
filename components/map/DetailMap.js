@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 
 export default class DetailMap extends Component {
 
+  componentDidMount() {
+    this.map = this.refs.map.leafletElement
+    setTimeout(() => {
+      this.map.invalidateSize()
+    }, 100)
+}
+
   render () {
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
     console.log(this.props.props);
@@ -11,10 +18,9 @@ export default class DetailMap extends Component {
     return (
       <div>
           <div className='map'>
-            <Map center={position} zoom={12}>
+            <Map ref='map' center={position} zoom={12}>
               <TileLayer
-                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-              />
+                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
               <Marker position={propPoistion}>
                 <Popup>
                   <span><a href={'http://maps.google.com/?q=' + this.props.props.latitude + ',' + this.props.props.longitude} > <br />{this.props.props.name}</a></span>

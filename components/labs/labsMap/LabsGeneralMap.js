@@ -36,6 +36,13 @@ export default class LabsGeneralMap extends Component  {
     return coordinate
   }
 
+  componentDidMount() {
+    this.map = this.refs.map.leafletElement
+    setTimeout(() => {
+      this.map.invalidateSize()
+    }, 100)
+}
+
   render () {
     const positionState = [this.state.lat, this.state.lng]
     var L = require('leaflet')
@@ -61,7 +68,7 @@ export default class LabsGeneralMap extends Component  {
             </ContentAdd>
           </FloatingActionButton>
         </MuiThemeProvider>
-        <Map center={positionState} zoom={this.state.zoom}>
+        <Map ref='map' center={positionState} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
           <div>

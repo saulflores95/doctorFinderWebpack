@@ -36,6 +36,13 @@ export default class LabsMap extends Component {
     this.setState({open: false})
   }
 
+  componentDidMount() {
+    this.map = this.refs.map.leafletElement
+    setTimeout(() => {
+      this.map.invalidateSize()
+    }, 100)
+}
+
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
     var L = require('leaflet')
@@ -50,7 +57,7 @@ export default class LabsMap extends Component {
 
     return (
       <div className='map'>
-        <Map center={mapCenter} zoom={this.state.zoom}>
+        <Map ref='map' center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
             url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
