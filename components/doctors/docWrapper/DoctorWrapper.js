@@ -1,6 +1,6 @@
 import React from 'react'
 import DocCatList from './docCatList/DocCatList'
-var doctors = require('../../../doctors.json')
+let doctors = require('../../../doctors.json')
 
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
@@ -12,8 +12,9 @@ const doctorCategory = (props) => {
   return uniqueArr
 }
 
-const DoctorWrapper = () => (
+const DoctorWrapper = (doctorProp) => (
   <div className='wrapper'>
+      {console.log(doctorProp)}
       {doctors.doctors.length
       ? doctorCategory(doctors.doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
       }
