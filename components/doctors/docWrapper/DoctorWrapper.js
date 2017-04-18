@@ -14,7 +14,7 @@ const doctorCategory = (props) => {
 
 const DoctorWrapper = (doctorProp) => (
   <div className='wrapper'>
-      {console.log(doctorProp)}
+      {console.log('Doctors PROP', doctorProp)}
       {doctors.doctors.length
       ? doctorCategory(doctors.doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
       }

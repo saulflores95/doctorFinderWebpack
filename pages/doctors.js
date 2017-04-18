@@ -7,9 +7,7 @@ let doctorsFetched = []
 
 let doctorFetch = axios.get('/api/doctors')
   .then(function (response) {
-    console.log('response: ', response)
-    doctorFetch.doctors = response.data
-    console.log('Doctors: ', doctorFetch)
+    doctorFetch.doctors = response.data.data
     return doctorFetch
   })
   .catch(function (error) {
