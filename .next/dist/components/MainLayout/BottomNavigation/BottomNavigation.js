@@ -56,6 +56,9 @@ var _link2 = _interopRequireDefault(_link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\Users\\Saul\\Documents\\GitHub\\doctorFinderWebpack\\components\\MainLayout\\BottomNavigation\\BottomNavigation.js';
+
+
 var ButtomNavigationComponet = function (_Component) {
   (0, _inherits3.default)(ButtomNavigationComponet, _Component);
 
@@ -93,30 +96,91 @@ var ButtomNavigationComponet = function (_Component) {
           display: 'block'
         }
       };
-      return _react2.default.createElement('div', { className: 'footer' }, _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement(_BottomNavigation.BottomNavigation, { selectedIndex: this.state.selectedIndex }, _react2.default.createElement(_link2.default, { href: '/doctors' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
-        icon: _react2.default.createElement(_userMd2.default, { style: styles.icon }),
+      return _react2.default.createElement('div', { className: 'footer', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        }
+      }, _react2.default.createElement(_MuiThemeProvider2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        }
+      }, _react2.default.createElement(_BottomNavigation.BottomNavigation, { selectedIndex: this.state.selectedIndex, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        }
+      }, _react2.default.createElement(_link2.default, { href: '/doctors', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        }
+      }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
+        icon: _react2.default.createElement(_userMd2.default, { style: styles.icon, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          }
+        }),
         onClick: function onClick() {
           return _this2.select(0);
         },
-        style: styles.bottomNavItem
-      })), _react2.default.createElement(_link2.default, { href: '/categories' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
-        icon: _react2.default.createElement(_hospitalO2.default, { style: styles.icon }),
+        style: styles.bottomNavItem,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        }
+      })), _react2.default.createElement(_link2.default, { href: '/categories', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
+        icon: _react2.default.createElement(_hospitalO2.default, { style: styles.icon, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50
+          }
+        }),
         onClick: function onClick() {
           return _this2.select(1);
         },
-        style: styles.bottomNavItem
-      })), _react2.default.createElement(_link2.default, { href: '/map' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
-        icon: _react2.default.createElement(_mapMarker2.default, { style: styles.icon }),
+        style: styles.bottomNavItem,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        }
+      })), _react2.default.createElement(_link2.default, { href: '/map', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        }
+      }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
+        icon: _react2.default.createElement(_mapMarker2.default, { style: styles.icon, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57
+          }
+        }),
         onClick: function onClick() {
           return _this2.select(2);
         },
-        style: styles.bottomNavItem
-      })), _react2.default.createElement(_link2.default, { href: '/contact-us' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
-        icon: _react2.default.createElement(_plus2.default, { style: styles.icon }),
+        style: styles.bottomNavItem,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        }
+      })), _react2.default.createElement(_link2.default, { href: '/contact-us', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        }
+      }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
+        icon: _react2.default.createElement(_plus2.default, { style: styles.icon, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64
+          }
+        }),
         onClick: function onClick() {
           return _this2.select(3);
         },
-        style: styles.bottomNavItem
+        style: styles.bottomNavItem,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        }
       })))));
     }
   }]);

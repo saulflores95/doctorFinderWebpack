@@ -35,7 +35,7 @@ const Header = () => (
         <Link href="/pharmacie-registration">
           <div style={linkStyle}>Add Pharmacies</div>
         </Link>
-        <div style={linkStyle}><a href="http://healthcarebaja.com/webmail" target="_blank">Webmail</a></div>
+        <div style={linkStyle}><a href="https://a2plcpnl0950.prod.iad2.secureserver.net:2096" target="_blank">Webmail</a></div>
 
     </div>
 )

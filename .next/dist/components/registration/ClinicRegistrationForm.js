@@ -76,6 +76,9 @@ var _RegistrationMap2 = _interopRequireDefault(_RegistrationMap);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\Users\\Saul\\Documents\\GitHub\\doctorFinderWebpack\\components\\registration\\ClinicRegistrationForm.js';
+
+
 var ClinicRegistrationForm = function (_Component) {
   (0, _inherits3.default)(ClinicRegistrationForm, _Component);
 
@@ -205,51 +208,281 @@ var ClinicRegistrationForm = function (_Component) {
         }
       };
 
-      return _react2.default.createElement('div', { style: styles.container }, _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement(_reactGridSystem.Container, null, _react2.default.createElement(_Paper2.default, { style: styles.paper, zDepth: 3 }, _react2.default.createElement(_reactGridSystem.Container, null, _react2.default.createElement('form', { className: 'new-doctor' }, _react2.default.createElement('div', { style: styles.formDivisor }, _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 6, lg: 6 }, _react2.default.createElement('img', { width: '250', height: '200', style: styles.img, src: this.state.url })), _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 6, lg: 6 }, _react2.default.createElement(_Uploader2.default, { handle: this.handleImageChange.bind(this) })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+      return _react2.default.createElement('div', { style: styles.container, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136
+        }
+      }, _react2.default.createElement(_MuiThemeProvider2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        }
+      }, _react2.default.createElement(_reactGridSystem.Container, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        }
+      }, _react2.default.createElement(_Paper2.default, { style: styles.paper, zDepth: 3, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        }
+      }, _react2.default.createElement(_reactGridSystem.Container, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
+        }
+      }, _react2.default.createElement('form', { className: 'new-doctor', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
+        }
+      }, _react2.default.createElement('div', { style: styles.formDivisor, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        }
+      }, _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 6, lg: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 144
+        }
+      }, _react2.default.createElement('img', { width: '250', height: '200', style: styles.img, src: this.state.url, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 6, lg: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 147
+        }
+      }, _react2.default.createElement(_Uploader2.default, { handle: this.handleImageChange.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 148
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 150
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Clinic Name',
         ref: 'clinicName',
-        fullWidth: true
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_SelectField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        }
+      }, _react2.default.createElement(_SelectField2.default, {
         floatingLabelText: 'Specialty',
         value: this.state.value,
-        onChange: this.handleChange.bind(this)
-      }, _react2.default.createElement(_MenuItem2.default, { value: 'Dermatology', primaryText: 'Dermatology' }), _react2.default.createElement(_MenuItem2.default, { value: 'Dental', primaryText: 'Dental ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Hair Transplant', primaryText: 'Hair Transplant  ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Foot', primaryText: 'Foot ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Oncology', primaryText: 'Oncology ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Fertility Control ', primaryText: 'Fertility Control  ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Eye', primaryText: 'Eye ' }), _react2.default.createElement(_MenuItem2.default, { value: 'SPA ', primaryText: 'SPA  ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Pediatric', primaryText: 'Pediatric ' }), _react2.default.createElement(_MenuItem2.default, { value: 'Plastic Surgery', primaryText: 'Plastic Surgery  ' }))))), _react2.default.createElement('div', { style: styles.formDivisor }, _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        onChange: this.handleChange.bind(this),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        }
+      }, _react2.default.createElement(_MenuItem2.default, { value: 'Dermatology', primaryText: 'Dermatology', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Dental', primaryText: 'Dental ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 164
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Hair Transplant', primaryText: 'Hair Transplant  ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 165
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Foot', primaryText: 'Foot ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 166
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Oncology', primaryText: 'Oncology ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 167
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Fertility Control ', primaryText: 'Fertility Control  ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 168
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Eye', primaryText: 'Eye ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 169
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'SPA ', primaryText: 'SPA  ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 170
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Pediatric', primaryText: 'Pediatric ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 171
+        }
+      }), _react2.default.createElement(_MenuItem2.default, { value: 'Plastic Surgery', primaryText: 'Plastic Surgery  ', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172
+        }
+      }))))), _react2.default.createElement('div', { style: styles.formDivisor, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179
+        }
+      }, _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 181
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality',
         ref: 'specificOne',
-        fullWidth: true
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 182
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 188
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality 2',
         ref: 'specificTwo',
-        fullWidth: true
-      }))), _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 189
+        }
+      }))), _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 196
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 197
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality 3',
         ref: 'specificThree',
-        fullWidth: true
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 198
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 204
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality 4',
         ref: 'specificFour',
-        fullWidth: true
-      }))), _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 205
+        }
+      }))), _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 212
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 213
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality 5',
         ref: 'specificFive',
-        fullWidth: true
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 214
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 220
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Specific Speaciality 6',
         ref: 'specificSix',
-        fullWidth: true
-      }))), _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 12, lg: 12 }, _react2.default.createElement(_reactNoSsr2.default, { onSSR: _react2.default.createElement('div', null, 'Map Loading...') }, _react2.default.createElement(_RegistrationMap2.default, { position: this.state.position, mapClick: this.mapClick.bind(this) }))))), _react2.default.createElement('div', { style: styles.formDivisor }, _react2.default.createElement(_reactGridSystem.Row, null, _react2.default.createElement(_reactGridSystem.Col, { sm: 6, md: 6, lg: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 221
+        }
+      }))), _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 228
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 12, md: 12, lg: 12, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 229
+        }
+      }, _react2.default.createElement(_reactNoSsr2.default, { onSSR: _react2.default.createElement('div', {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 230
+          }
+        }, 'Map Loading...'), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 230
+        }
+      }, _react2.default.createElement(_RegistrationMap2.default, { position: this.state.position, mapClick: this.mapClick.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 231
+        }
+      }))))), _react2.default.createElement('div', { style: styles.formDivisor, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 236
+        }
+      }, _react2.default.createElement(_reactGridSystem.Row, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 237
+        }
+      }, _react2.default.createElement(_reactGridSystem.Col, { sm: 6, md: 6, lg: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 238
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'E-mail',
         ref: 'email',
-        fullWidth: false
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, md: 6, lg: 6 }, _react2.default.createElement(_TextField2.default, {
+        fullWidth: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 239
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 6, md: 6, lg: 6, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 245
+        }
+      }, _react2.default.createElement(_TextField2.default, {
         hintText: 'Phone Number',
         ref: 'phone',
-        fullWidth: false
-      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 2 }, _react2.default.createElement(_RaisedButton2.default, {
+        fullWidth: false,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 246
+        }
+      })), _react2.default.createElement(_reactGridSystem.Col, { sm: 2, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 252
+        }
+      }, _react2.default.createElement(_RaisedButton2.default, {
         label: 'Register',
         onClick: this.addClinic.bind(this),
         className: 'button-submit',
-        primary: true
+        primary: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 253
+        }
       }))))))))));
     }
   }]);

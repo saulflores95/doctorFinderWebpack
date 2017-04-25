@@ -34,6 +34,9 @@ var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\Users\\Saul\\Documents\\GitHub\\doctorFinderWebpack\\components\\uploader\\Uploader.js';
+
+
 var Uploader = function (_React$Component) {
   (0, _inherits3.default)(Uploader, _React$Component);
 
@@ -102,7 +105,19 @@ var Uploader = function (_React$Component) {
           overFlow: 'hidden'
         }
       };
-      return _react2.default.createElement('div', { style: styles.form }, _react2.default.createElement('input', { style: styles.hideOriginalInputButton, onChange: this.upload.bind(this), name: 'file', type: 'file', id: 'file' }), _react2.default.createElement('div', { style: styles.inputBtn, onClick: this.getFile.bind(this) }, 'click to upload a file'));
+      return _react2.default.createElement('div', { style: styles.form, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        }
+      }, _react2.default.createElement('input', { style: styles.hideOriginalInputButton, onChange: this.upload.bind(this), name: 'file', type: 'file', id: 'file', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65
+        }
+      }), _react2.default.createElement('div', { style: styles.inputBtn, onClick: this.getFile.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 66
+        }
+      }, 'click to upload a file'));
     }
   }]);
 

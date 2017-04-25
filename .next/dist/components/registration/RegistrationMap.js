@@ -30,6 +30,9 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\Users\\Saul\\Documents\\GitHub\\doctorFinderWebpack\\components\\registration\\RegistrationMap.js';
+
+
 var RegistrationMap = function (_Component) {
   (0, _inherits3.default)(RegistrationMap, _Component);
 
@@ -62,10 +65,36 @@ var RegistrationMap = function (_Component) {
         }
       };
 
-      return _react2.default.createElement('div', { style: styles.leafletContainer }, _react2.default.createElement(Map, { center: [this.state.lat, this.state.lng], zoom: this.state.zoom, onClick: this.props.mapClick }, _react2.default.createElement(TileLayer, {
+      return _react2.default.createElement('div', { style: styles.leafletContainer, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      }, _react2.default.createElement(Map, { center: [this.state.lat, this.state.lng], zoom: this.state.zoom, onClick: this.props.mapClick, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        }
+      }, _react2.default.createElement(TileLayer, {
         attribution: '<a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png'
-      }), _react2.default.createElement(Marker, { position: this.props.position }, _react2.default.createElement(Popup, null, _react2.default.createElement('span', null, 'Is there where?')))));
+        url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
+      }), _react2.default.createElement(Marker, { position: this.props.position, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        }
+      }, _react2.default.createElement(Popup, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        }
+      }, _react2.default.createElement('span', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        }
+      }, 'Is there where?')))));
     }
   }]);
 

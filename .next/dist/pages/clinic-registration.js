@@ -38,6 +38,9 @@ var _ClinicRegistrationForm2 = _interopRequireDefault(_ClinicRegistrationForm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = 'C:\\Users\\Saul\\Documents\\GitHub\\doctorFinderWebpack\\pages\\clinic-registration.js?entry';
+
+
 var _class = function (_React$Component) {
   (0, _inherits3.default)(_class, _React$Component);
 
@@ -50,7 +53,26 @@ var _class = function (_React$Component) {
   (0, _createClass3.default)(_class, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement(_App2.default, null, _react2.default.createElement('div', { className: 'container' }, _react2.default.createElement(_ClinicRegistrationForm2.default, null))));
+      return _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        }
+      }, _react2.default.createElement(_App2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9
+        }
+      }, _react2.default.createElement('div', { className: 'container', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      }, _react2.default.createElement(_ClinicRegistrationForm2.default, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      }))));
     }
   }]);
 
