@@ -117,6 +117,7 @@ export default class DoctorRegistrationForm extends Component {
         console.log(error)
       })
     }
+
   }
 
   render () {
