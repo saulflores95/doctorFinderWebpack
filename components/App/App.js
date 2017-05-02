@@ -14,7 +14,9 @@ const App = (props) => (
             height: 100%;
             width: 100%;
           }
-
+          .leaflet-control-attribution a {
+            display:none;
+          }
           body{
             background-color: rgb(0, 188, 212);
             width: 100%;

@@ -38,7 +38,7 @@ export default class ButtomNavigationComponet extends Component {
       <div className='footer'>
         <MuiThemeProvider>
           <BottomNavigation selectedIndex={this.state.selectedIndex}>
-            <Link href='/doctors'>
+            <Link href='/'>
               <BottomNavigationItem
                 icon={<FaUserMd style={styles.icon} />}
                 onClick={() => this.select(0)}

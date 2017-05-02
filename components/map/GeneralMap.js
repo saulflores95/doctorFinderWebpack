@@ -45,9 +45,10 @@ export default class GeneralMap extends Component {
     setTimeout(() => {
       this.map.invalidateSize()
     }, 100)
-}
+  }
 
   toogle (value) {
+    this.handleClose()
     if (value === 'doctors') {
       if (this.state.showDoctors === true) {
         this.setState({
@@ -137,8 +138,11 @@ export default class GeneralMap extends Component {
 
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
+
     var L = require('leaflet')
+
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
+
     var handlePharmacies = () => {
       if (this.state.showPharmacies === true) {
         var PharmacieMapIcon = L.icon({
@@ -260,7 +264,9 @@ export default class GeneralMap extends Component {
         )
       }
     }
+
     var mapCenter = [this.state.latitude, this.state.longitude]
+
     var styles = {
       button: {
         zIndex: 999,
@@ -269,6 +275,7 @@ export default class GeneralMap extends Component {
         left: 7
       }
     }
+
     return (
       <div className='map'>
         <MuiThemeProvider>
@@ -313,7 +320,7 @@ export default class GeneralMap extends Component {
               <MenuItem onClick={() => this.toogle('all')} >
                 <h3>Show All </h3>
               </MenuItem>
-              <MenuItem onClick={() => this.toogle('doctors')} >
+              <MenuItem onClick={() => this.toogle('doctors') && this.handleClose()} >
                 <h3>Doctors </h3>
               </MenuItem>
               <MenuItem onClick={() => this.toogle('pharmacies')} >
