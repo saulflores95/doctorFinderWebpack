@@ -7,7 +7,7 @@ const App = (props) => (
   <div className='wrapperHeight'>
       <Head>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta name="theme-color" />
+        <meta name="theme-color"  content="#2196f3" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
         <style>
