@@ -14,6 +14,7 @@ app.prepare().then(() => {
     console.log('Connected to mongodb HCB')
   })
   server.use(bodyParser.json())
+  server.use('/sw.js', express.static('sw-installer.js'));
   server.use('/api/', routes, (err) => {
     if(err) throw err
   })
