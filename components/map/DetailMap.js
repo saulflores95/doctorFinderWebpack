@@ -9,6 +9,11 @@ export default class DetailMap extends Component {
     }, 100)
 }
 
+  linkto(){
+    var linkTo = 'http://maps.google.com/?q=' + this.props.props.latitude + ',' + this.props.props.longitude
+    window.location.href = linkTo
+  }
+
   render () {
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
     console.log(this.props.props);
@@ -21,11 +26,7 @@ export default class DetailMap extends Component {
             <Map ref='map' center={position} zoom={12}>
               <TileLayer
                 url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
-              <Marker position={propPoistion}>
-                <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + this.props.props.latitude + ',' + this.props.props.longitude} > <br />{this.props.props.name}</a></span>
-                </Popup>
-              </Marker>
+                <Marker position={propPoistion} onClick={this.linkto.bind(this)} />
             </Map>
           </div>
         <style jsx>
