@@ -3,7 +3,7 @@ var cacheName = 'v1';
 
 // Default files to always cache
 var cacheFiles = [
-	'./static/*',
+	'/static',
 ]
 
 
