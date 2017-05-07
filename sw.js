@@ -1,102 +1,65 @@
-// Set a name for the current cache
-var cacheName = 'v1';
-
-// Default files to always cache
-var cacheFiles = [
-	'/',
+/*
+** CONFIG
+*/
+const CACHE_VERSION = '0.1.3'
+const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
+const CACHED_ASSETS = [
+  /* [PLACEHOLDER_FOR_FILES] */
 ]
 
 
-self.addEventListener('install', function(e) {
-    console.log('[ServiceWorker] Installed');
+function clearPreviousCaches (keys) {
+  const deletedCachesPromises = keys.map(key => {
+    if (key !== CACHE_NAME) {
+      return caches.delete(key)
+    }
+  })
 
-    // e.waitUntil Delays the event until the Promise is resolved
-    e.waitUntil(
+  return Promise.all(deletedCachesPromises)
+}
 
-    	// Open the cache
-	    caches.open(cacheName).then(function(cache) {
-
-	    	// Add all the default files to the cache
-			console.log('[ServiceWorker] Caching cacheFiles');
-			return cache.addAll(cacheFiles);
-	    })
-	); // end e.waitUntil
-});
-
-
-self.addEventListener('activate', function(e) {
-    console.log('[ServiceWorker] Activated');
-
-    e.waitUntil(
-
-    	// Get all the cache keys (cacheName)
-		caches.keys().then(function(cacheNames) {
-			return Promise.all(cacheNames.map(function(thisCacheName) {
-
-				// If a cached item is saved under a previous cacheName
-				if (thisCacheName !== cacheName) {
-
-					// Delete that cached file
-					console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
-					return caches.delete(thisCacheName);
-				}
-			}));
-		})
-	); // end e.waitUntil
-
-});
+/*
+** INSTALL SW
+*/
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    caches.keys()
+      .then(keys => clearPreviousCaches(keys))
+      .then(_ => caches.open(CACHE_NAME))
+      .then(cache => cache.addAll(CACHED_ASSETS))
+      .then(_ => self.skipWaiting())
+  )
+})
 
 
-self.addEventListener('fetch', function(e) {
-	console.log('[ServiceWorker] Fetch', e.request.url);
-
-	// e.respondWidth Responds to the fetch event
-	e.respondWith(
-
-		// Check in cache for the request being made
-		caches.match(e.request)
-
-
-			.then(function(response) {
-
-				// If the request is in the cache
-				if ( response ) {
-					console.log("[ServiceWorker] Found in Cache", e.request.url, response);
-					// Return the cached version
-					return response;
-				}
-
-				// If the request is NOT in the cache, fetch and cache
-
-				var requestClone = e.request.clone();
-				fetch(requestClone)
-					.then(function(response) {
-
-						if ( !response ) {
-							console.log("[ServiceWorker] No response from fetch ")
-							return response;
-						}
-
-						var responseClone = response.clone();
-
-						//  Open the cache
-						caches.open(cacheName).then(function(cache) {
-
-							// Put the fetched response in the cache
-							cache.put(e.request, responseClone);
-							console.log('[ServiceWorker] New Data Cached', e.request.url);
-
-							// Return the response
-							return response;
-
-				        }); // end caches.open
-
-					})
-					.catch(function(err) {
-						console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
-					});
+/*
+** ACTIVATE SW
+*/
+self.addEventListener('activate', (event) => {
+  console.log('[ServiceWorker] activating...');
+  event.waitUntil(self.clients.claim())
+})
 
 
-			}) // end caches.match(e.request)
-	); // end e.respondWith
-});
+/*
+** INTERCEPT REQUESTS
+*/
+self.addEventListener('fetch', (event) => {
+  console.log('[ServiceWorker] fetching..');
+  event.respondWith(
+    caches.match(event.request)
+      .then(resp => resp ||
+        // If not in cache, request it over the network and add it to current cache
+        fetch(event.request).then(response => {
+          const isChromeExtension = event.request.url.startsWith('chrome-extension')
+
+          if (!isChromeExtension) {
+            caches.open(CACHE_NAME)
+              .then(cache => cache.put(event.request, response.clone()))
+          }
+
+          return response.clone()
+        })
+      )
+  )
+})
