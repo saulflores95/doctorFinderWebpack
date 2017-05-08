@@ -1,24 +1,13 @@
 import Layout from '../components/MyLayout'
 import DoctorWrapper from  '../components/doctors/docWrapper/DoctorWrapper'
 import App from '../components/App/App'
-import axios from 'axios'
+import fetch from 'isomorphic-unfetch'
 
-let doctorsFetched = []
-
-let doctorFetch = axios.get('/api/doctors')
-  .then(function (response) {
-    doctorFetch.doctors = response.data.data
-    return doctorFetch
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-
-const doctors = () => (
+const doctors = ({ docs }) => (
   <div className='container'>
     <App>
       <div>
-        <DoctorWrapper doctorProp={doctorFetch}/>
+        <DoctorWrapper docs={docs}/>
       </div>
     </App>
     <style jsx>
@@ -30,5 +19,11 @@ const doctors = () => (
     </style>
   </div>
 )
+
+doctors.getInitialProps = async ({ req }) => {
+  const res = await fetch('http://localhost:3000/api/doctors')
+  const json = await res.json()
+  return { docs: json.data }
+}
 
 export default doctors

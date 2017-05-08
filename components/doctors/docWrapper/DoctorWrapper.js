@@ -12,11 +12,10 @@ const doctorCategory = (props) => {
   return uniqueArr
 }
 
-const DoctorWrapper = (doctorProp) => (
+const DoctorWrapper = (docs) => (
   <div className='wrapper'>
-      {console.log('Doctors PROP', doctorProp)}
-      {doctors.doctors.length
-      ? doctorCategory(doctors.doctors).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+      {docs.docs.length
+      ? doctorCategory(docs.docs).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
       }
     <style jsx>
       {`
