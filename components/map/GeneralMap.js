@@ -286,7 +286,7 @@ export default class GeneralMap extends Component {
         </MuiThemeProvider>
         <Map ref='map' center={mapCenter} zoom={this.state.zoom} >
           <TileLayer
-            url='https://{s}.tile.osm.org/{z}/{x}/{y}.png' />
+            url='https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'/>
           <div>
             {handlePharmacies()}
           </div>
