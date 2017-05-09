@@ -18,4 +18,5 @@ clinics.getInitialProps = async ({ req }) => {
   const json = await res.json()
   return { cli: json.data }
 }
+
 export default clinics

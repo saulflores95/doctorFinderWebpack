@@ -72,7 +72,8 @@ export default class PharmacieGeneralMap extends Component {
         </MuiThemeProvider>
         <Map ref='map' center={mapCenter} zoom={this.state.zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+          />
           <div>
             {this.props.pharmacies.map((pharmacie) => {
               return (

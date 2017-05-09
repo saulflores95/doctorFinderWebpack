@@ -12,6 +12,7 @@ import Uploader from '../uploader/Uploader';
 import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from './RegistrationMap'
+import AlertContainer from 'react-alert'
 
 export default class PharmacieRegistrationForm extends Component {
 
@@ -23,6 +24,14 @@ export default class PharmacieRegistrationForm extends Component {
       position: [32, 100],
       url:'http://plainicon.com/download-icons/60447/plainicon.com-60447-f430-512px.png',
     }
+  }
+
+  alertOptions = {
+    offset: 14,
+    position: 'top right',
+    theme: 'dark',
+    time: 5000,
+    transition: 'scale'
   }
 
   handleImageChange(url){
@@ -42,16 +51,12 @@ export default class PharmacieRegistrationForm extends Component {
       position: event.latlng
     })
     console.log(this.state.position)
-
-    // L.marker(event.latlng)
   }
 
   addPharmacie(){
     var name = this.refs.clinicName.getValue();
     var img = this.state.url;
     var phone = this.refs.phone.getValue();
-    var latitude = this.refs.latitude.getValue();
-    var longitude = this.refs.longitude.getValue();
     var tag = this.refs.tag.getValue();
     var pharmacie = {
       name: name,
@@ -62,6 +67,7 @@ export default class PharmacieRegistrationForm extends Component {
     };
 
     console.log(pharmacie);
+    let _self = this;
     if (pharmacie) {
       axios.post('/api/pharmacie-registration', {
         name: pharmacie.name,
@@ -72,6 +78,11 @@ export default class PharmacieRegistrationForm extends Component {
       })
       .then(function (response) {
         console.log(response)
+        _self.msg.show('Pharmacie Added', {
+          time: 2000,
+          type: 'success',
+          icon: <img width='50px' height='50px' src='https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Ok_check_yes_tick_accept_success_green_correct.png' />
+        })
       })
       .catch(function (error) {
         console.log(error)
@@ -170,6 +181,9 @@ export default class PharmacieRegistrationForm extends Component {
             </div>
           </form>
         </Container>
+        <div>
+          <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+        </div>
         </Paper>
         </Container>
       </MuiThemeProvider>

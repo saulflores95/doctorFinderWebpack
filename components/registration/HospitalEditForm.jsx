@@ -8,6 +8,8 @@ import Paper from 'material-ui/Paper';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Close from 'material-ui/svg-icons/navigation/close';
+import AlertContainer from 'react-alert'
+
 export default class HospitalEditForm extends Component {
 
   constructor(){
@@ -26,6 +28,15 @@ export default class HospitalEditForm extends Component {
     return Hospitals.findOne(this.props.id);
   }
 
+  alertOptions = {
+    offset: 14,
+    position: 'top right',
+    theme: 'dark',
+    time: 5000,
+    transition: 'scale'
+  }
+
+
   editHospital(event){
     event.preventDefault();
     var name = this.refs.hospitalName.getValue();
@@ -34,25 +45,36 @@ export default class HospitalEditForm extends Component {
     var latitude = this.refs.latitude.getValue();
     var longitude = this.refs.longitude.getValue()
 
-
     var hospital = {
       name: name,
       img: img,
       phone: phone,
-      latitude:latitude,
-      longitude:longitude,
+      position: this.state.position
+
     };
     console.log(hospital);
-      if(hospital){
-        Meteor.call('editHospital', this.hospital(), hospital, (error, data)=>{
-          if(error){
-            Bert.alert( 'Ingresa a tu cuenta o registrate!', 'danger', 'growl-top-left' );
-          }else{
-            Bert.alert( 'Edit Succesfull!', 'info', 'fixed-top' );
-          }
-      });
+    let _self = this;
 
-    }
+      if(hospital){
+        axios.post('/api/hospital-registration', {
+          name: hospital.name,
+          img: hospital.img,
+          phone: hospital.phone,
+          position: hospital.position
+        })
+        .then(function (response) {
+          console.log(response)
+          _self.msg.show('hospital Added', {
+            time: 2000,
+            type: 'success',
+            icon: <img width='50px' height='50px' src='https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Ok_check_yes_tick_accept_success_green_correct.png' />
+          })
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+
+      }
   }
 
   addInputField(event){

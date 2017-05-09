@@ -11,6 +11,7 @@ import Uploader from '../uploader/Uploader';
 import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from './RegistrationMap'
+import AlertContainer from 'react-alert'
 
 export default class ClinicRegistrationForm extends Component {
 
@@ -22,6 +23,14 @@ export default class ClinicRegistrationForm extends Component {
       position: [32, 100],
       url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbPvqnfj0taeHk9BLFCYpySg2-eVk2i7kx4PE046Waix2-zM-NAILl-m8'
     }
+  }
+
+  alertOptions = {
+    offset: 14,
+    position: 'top right',
+    theme: 'dark',
+    time: 5000,
+    transition: 'scale'
   }
 
   toggleChecked(Checkbox){
@@ -80,8 +89,9 @@ export default class ClinicRegistrationForm extends Component {
       position: this.state.position,
       specialty:specialty
     };
-    console.log(clinic);
-    console.log(specific);
+    console.log('Doctor: ', clinic)
+    let _self = this;
+
     if (clinic) {
       axios.post('/api/clinic-registration', {
         name: clinic.name,
@@ -93,6 +103,11 @@ export default class ClinicRegistrationForm extends Component {
       })
       .then(function (response) {
         console.log(response)
+        _self.msg.show('Clinic Added', {
+          time: 2000,
+          type: 'success',
+          icon: <img width='50px' height='50px' src='https://cdn2.iconfinder.com/data/icons/perfect-flat-icons-2/512/Ok_check_yes_tick_accept_success_green_correct.png' />
+        })
       })
       .catch(function (error) {
         console.log(error)
@@ -262,6 +277,9 @@ export default class ClinicRegistrationForm extends Component {
           </form>
         </Container>
         </Paper>
+        <div>
+          <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+        </div>
         </Container>
       </MuiThemeProvider>
       </div>

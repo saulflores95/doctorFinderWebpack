@@ -2,18 +2,21 @@ import React from 'react'
 import App from '../components/App/App'
 import LabsWrapper from '../components/labs/labsWrapper/LabsWrapper'
 
-export default class extends React.Component {
 
-  render () {
-    const labs = require('../labs.json')
-    return(
-      <div>
-        <App>
-          <div className='container'>
-            <LabsWrapper labs={labs.labs}/>
-          </div>
-        </App>
+const laboratories = ({labs}) => (
+  <div>
+    <App>
+      <div className='container'>
+        <LabsWrapper labs={labs}/>
       </div>
-    )
-  }
+    </App>
+  </div>
+)
+
+laboratories.getInitialProps = async ({ req }) => {
+  const res = await fetch('https://healthcarebaja.com/api/labs')
+  const json = await res.json()
+  return { labs: json.data }
 }
+
+export laboratories

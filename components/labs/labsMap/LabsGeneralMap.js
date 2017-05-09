@@ -70,7 +70,8 @@ export default class LabsGeneralMap extends Component  {
         </MuiThemeProvider>
         <Map ref='map' center={positionState} zoom={this.state.zoom}>
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+          />
           <div>
             <div>
               {this.props.labs.map((lab) => {
