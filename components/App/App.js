@@ -12,10 +12,10 @@ const App = (props) => (
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/icon-144x144.png" />
         <link rel="apple-touch-icon-precomposed" sizes="384x384" href="/static/icon-384x384" />
         <link rel="apple-touch-icon-precomposed" sizes="512x512" href="/static/icon-512x512.png" />
+        <script src='/sw-installer.js'></script>
         <meta name="theme-color"  content="#2196f3" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="shortcut icon" type="image/png" href="/static/favicon-16x16.png" />
-        <script src='/sw-installer.js'></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
         <style>
           {`.leaflet-container {

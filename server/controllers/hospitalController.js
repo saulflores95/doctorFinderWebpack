@@ -6,8 +6,7 @@ hospitalController.post = (req, res) => {
   const {
     name,
     img,
-    latitude,
-    longitude,
+    position,
     phone,
     email,
     userId,
@@ -17,8 +16,7 @@ hospitalController.post = (req, res) => {
     name,
     email,
     img,
-    latitude,
-    longitude,
+    position,
     phone,
     _creator: userId
   })

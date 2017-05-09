@@ -2,12 +2,17 @@ import React from 'react'
 import App from '../components/App/App'
 import LabsDetail from '../components/labs/labsDetail/LabsDetail'
 export default class extends React.Component {
-  static getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps  ({ query: { id } }) {
+    const res = await fetch('https://healthcarebaja/api/labs')
+    const json = await res.json()
+    return {
+      id,
+      labs: json.data
+     }
   }
-
   render () {
-    const labs = require('../labs.json')
+    let labs = []
+    labs.labs = this.props.labs
     const lab = labs.labs.filter(lab => this.props.id === lab._id)
     return(
       <div>

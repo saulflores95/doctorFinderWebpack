@@ -2,16 +2,22 @@ import React from 'react'
 import App from '../components/App/App'
 import LabsGeneralMap from '../components/labs/labsMap/LabsGeneralMap'
 import NoSSR from 'react-no-ssr'
+import fetch from 'isomorphic-unfetch'
 
 export default class extends React.Component {
-  static getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps  ({ query: { id } }) {
+    const res = await fetch('https://healthcarebaja/api/labs')
+    const json = await res.json()
+    return {
+      id,
+      labs: json.data
+     }
   }
 
   render () {
-    const labs = require('../labs.json')
+    let labs = []
+    labs.labs = this.props.labs
     const lab = labs.labs.filter(lab => this.props.id === lab.tag)
-    console.log(lab);
     return(
       <div className='container'>
         <App className='container'>

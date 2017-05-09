@@ -1,7 +1,7 @@
 import React from 'react'
 import App from '../components/App/App'
 import LabsWrapper from '../components/labs/labsWrapper/LabsWrapper'
-
+import fetch from 'isomorphic-unfetch'
 
 const laboratories = ({labs}) => (
   <div>
@@ -14,9 +14,9 @@ const laboratories = ({labs}) => (
 )
 
 laboratories.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://healthcarebaja.com/api/labs')
+  const res = await fetch('https://healthcarebaja/api/labs')
   const json = await res.json()
   return { labs: json.data }
 }
 
-export laboratories
+export default laboratories

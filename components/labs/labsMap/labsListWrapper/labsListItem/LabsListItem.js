@@ -9,7 +9,7 @@ import Link from 'next/link'
 const LabsListItem = (lab) => (
   <div>
     <MuiThemeProvider>
-      <Link href={`/laboratories-detail?id=${lab._id}`}>
+      <Link href={`/laboratories-detail?id=${lab._id}`} as={`/laboratories-detail/${lab._id}`}>
         <List>
           <ListItem
             leftAvatar={<Avatar className='img-pharmacieSingle' src={lab.img} />}

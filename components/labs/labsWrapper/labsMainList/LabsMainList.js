@@ -8,6 +8,9 @@ const imageChooser = (props) => {
   }
   if (props === 'Gamboa') {
     return 'https://pbs.twimg.com/profile_images/705493262472056832/i_GpO3EZ.jpg'
+  }
+  if (props === 'Roma') {
+    return 'https://pbs.twimg.com/media/C8WV4WLW0AMYdpn.jpg'
   } else {
     console.log('No tag fits the choosen image')
   }

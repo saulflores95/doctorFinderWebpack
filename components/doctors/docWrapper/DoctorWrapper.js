@@ -1,6 +1,5 @@
 import React from 'react'
 import DocCatList from './docCatList/DocCatList'
-let doctors = require('../../../doctors.json')
 
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {

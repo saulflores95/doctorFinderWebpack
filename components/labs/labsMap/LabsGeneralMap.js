@@ -75,11 +75,10 @@ export default class LabsGeneralMap extends Component  {
           <div>
             <div>
               {this.props.labs.map((lab) => {
-                {console.log('From props: ', lab);}
                 return (
-                  <Marker icon={LabMapIcon} key={lab._id} position={[lab.latitude, lab.longitude]}>
+                  <Marker icon={LabMapIcon} key={lab._id} position={[lab.position[0].lat, lab.position[0].lng]}>
                     <Popup>
-                      <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude} > <br />{lab.name}</a></span>
+                      <span><a href={'http://maps.google.com/?q=' + lab.position[0].lat + ',' + lab.position[0].lng} > <br />{lab.name}</a></span>
                     </Popup>
                   </Marker>
                 )
