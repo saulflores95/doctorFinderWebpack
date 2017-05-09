@@ -3,7 +3,7 @@ import App from '../components/App/App'
 import LabsDetail from '../components/labs/labsDetail/LabsDetail'
 export default class extends React.Component {
   static async getInitialProps  ({ query: { id } }) {
-    const res = await fetch('https://healthcarebaja/api/labs')
+    const res = await fetch('https://healthcarebaja.com/api/labs')
     const json = await res.json()
     return {
       id,
