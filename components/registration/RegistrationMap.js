@@ -25,7 +25,7 @@ export default class RegistrationMap extends Component {
         <Map center={[this.state.lat, this.state.lng]} zoom={this.state.zoom} onClick={this.props.mapClick}>
           <TileLayer
             attribution='<a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
           <Marker position={this.props.position}>
             <Popup>
