@@ -255,7 +255,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={lab._id} icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
+                    <span><a href={'https://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
                   </Popup>
                 </Marker>
               )
@@ -286,7 +286,7 @@ export default class GeneralMap extends Component {
         </MuiThemeProvider>
         <Map ref='map' center={mapCenter} zoom={this.state.zoom} >
           <TileLayer
-            url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' />
+            url='https://{s}.tile.osm.org/{z}/{x}/{y}.png' />
           <div>
             {handlePharmacies()}
           </div>
