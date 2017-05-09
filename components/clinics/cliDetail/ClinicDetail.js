@@ -8,11 +8,12 @@ import NoSSR from 'react-no-ssr'
 
 const ClinicDetail = ({clinic}) => (
   <div className='wrapper'>
+    {console.log(clinic)}
     <MuiThemeProvider>
       <Container>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={6}><ClinicHeader clinic={clinic} /></Col>
-          <Col xs={12} sm={12} md={12} lg={6}><ClinicSpeciality clinic={clinic} /></Col>
+          <Col xs={12} sm={12} md={12} lg={6}><ClinicHeader clinic={clinic[0]} /></Col>
+          <Col xs={12} sm={12} md={12} lg={6}><ClinicSpeciality clinic={clinic[0]} /></Col>
           <Col xs={12} sm={12} md={12} lg={12}><NoSSR><DetailMap props={clinic[0]} /></NoSSR></Col>
         </Row>
       </Container>

@@ -20,7 +20,7 @@ export default class ClinicRegistrationForm extends Component {
       toogleState: false,
       value:'Dermatology',
       position: [32, 100],
-      url:'http://www.gatt.org/re/clt/wp-content/uploads/wovaxproperty-images/3224367/3224367-default.jpg',
+      url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbPvqnfj0taeHk9BLFCYpySg2-eVk2i7kx4PE046Waix2-zM-NAILl-m8'
     }
   }
 

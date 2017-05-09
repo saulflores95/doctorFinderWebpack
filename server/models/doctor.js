@@ -14,6 +14,7 @@ const doctorSchema = new Schema({
     curriculumSix: String,
     specialty:String,
     email: String,
+    position: {type: Array, default: [0, 0]},
     insurance: {type: Boolean, default:false},
     createdAt: {type: Date, default: Date.now},
     _creator: {type: Schema.ObjectId, ref: 'User'},

@@ -9,6 +9,7 @@ const clinicSchema = new Schema({
     specificTwo: String,
     specificThree: String,
     specificFour: String,
+    position: {type: Array, default: [0, 0]},
     specificFive: String,
     specificSix: String,
     email: String,
