@@ -1,14 +1,14 @@
 import React from 'react'
 import {Row} from 'react-grid-system'
 import ClinicList from './cliList/ClinicList'
-var clinics = require('../../../clinics.json')
+//var clinics = require('../../../clinics.json')
 
-const ClinicWrapper = () => (
+const ClinicWrapper = ({clinics}) => (
   <div className='wrapper'>
     <div className='wrapperList'>
       <Row>
-        {clinics.clinics.length
-          ? clinics.clinics.map(clinic => <ClinicList key={clinic._id} clinic={clinic} />) : <p>Awaiting clinics</p>
+        {clinics.length
+          ? clinics.map(clinic => <ClinicList key={clinic._id} clinic={clinic} />) : <p>Awaiting clinics</p>
         }
       </Row>
     </div>

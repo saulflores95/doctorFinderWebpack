@@ -1,14 +1,21 @@
 import React from 'react'
 import App from '../components/App/App'
 import ClinicDetail from '../components/clinics/cliDetail/ClinicDetail'
+import fetch from 'isomorphic-unfetch'
+
 export default class extends React.Component {
-  static getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps  ({ query: { id } }) {
+    const res = await fetch('http://localhost:3000/api/clinics')
+    const json = await res.json()
+    return {
+      id,
+      clinics: json.data
+     }
   }
 
   render () {
-    const clinics = require('../clinics.json')
-    const clinic = clinics.clinics.filter(clinic => this.props.id === clinic._id)
+    let clinics = this.props.clinics
+    const clinic = clinics.filter(cli => this.props.id === cli._id)
     return(
       <div>
         <App>

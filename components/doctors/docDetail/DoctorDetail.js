@@ -10,7 +10,6 @@ import {spring} from 'react-motion'
 
 const DoctorDetail = (doctor) => (
   <div className='doctorDetailWrapper'>
-    {console.log('Doctor', doctor)}
     <Transition
       component={false}
       enter={{
