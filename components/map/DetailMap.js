@@ -19,10 +19,10 @@ export default class DetailMap extends Component {
           <div className='map'>
             <Map ref='map' center={propPoistion} zoom={12}>
               <TileLayer
-                url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
+                url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'/>
               <Marker position={propPoistion}>
                 <Popup>
-                  <span><a href={'http://maps.google.com/?q=' + this.props.props.latitude + ',' + this.props.props.longitude} > <br />{this.props.props.name}</a></span>
+                  <span><a href={'https://maps.google.com/?q=' + this.props.props.latitude + ',' + this.props.props.longitude} > <br />{this.props.props.name}</a></span>
                 </Popup>
               </Marker>
             </Map>

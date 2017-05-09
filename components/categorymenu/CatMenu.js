@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import {Col, Row} from 'react-grid-system'
-const hospitalImg = 'http://wildhunt.org/wp-content/uploads/2016/04/maxresdefault.jpg'
-const pharmacieImg = 'http://1.bp.blogspot.com/-ieQbmNVAFIY/UIAz7tNDBJI/AAAAAAAAqNU/MtfSy_q9b4w/s1600/pharmacie.jpg'
-const clinicImg = 'http://www.health-local.com/images/businesses/medium_crop/50884.jpg'
+const hospitalImg = 'https://pbs.twimg.com/media/C7cRX8xX4AA6DJX.jpg'
+const pharmacieImg = 'https://www.fasola.jp/search/floor-map/no3/img/pic-drugstore.jpg'
+const clinicImg = 'https://www.scripps.org/sparkle-assets/images/scripps-clinic-del-mar-1300-x-800.jpg'
 const labImg = 'https://www.qualitylaboratory.com/images/slider1.jpg'
 
 const CatMenu = () => (
