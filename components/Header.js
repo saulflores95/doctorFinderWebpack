@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import {Container, Row, Col} from 'react-grid-system'
 
 const linkStyle = {
   margin: '15px',
@@ -12,29 +13,47 @@ const linkStyle = {
 
 const Header = () => (
     <div className='wrapper'>
-        <h1>Hello Welcome To HCB DEV interface</h1>
-        <Link href="/api/doctors">
-          <div className='enjoy-css'>API</div>
-        </Link>
-        <Link href="/">
-          <div className='enjoy-css'>App</div>
-        </Link>
-        <Link href="/doctor-registration">
-          <div className='enjoy-css'>Add Doctors</div>
-        </Link>
-        <Link href="/hospital-registration">
-          <div className='enjoy-css'>Add Hospital</div>
-        </Link>
-        <Link href="/clinic-registration">
-          <div className='enjoy-css'>Add Clinics</div>
-        </Link>
-        <Link href="/lab-registration">
-          <div className='enjoy-css'>Add Labs</div>
-        </Link>
-        <Link href="/pharmacie-registration">
-          <div className='enjoy-css'>Add Pharmacies</div>
-        </Link>
-        <div className='enjoy-css'><a href="https://a2plcpnl0950.prod.iad2.secureserver.net:2096" target="_blank">Webmail</a></div>
+        <Container>
+          <h1>Hello Welcome To HCB DEV interface</h1>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/api/doctors">
+              <div className='enjoy-css'>API</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/">
+              <div className='enjoy-css'>App</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/doctor-registration">
+              <div className='enjoy-css'>Add Doctors</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/hospital-registration">
+              <div className='enjoy-css'>Add Hospital</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/clinic-registration">
+              <div className='enjoy-css'>Add Clinics</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/lab-registration">
+              <div className='enjoy-css'>Add Labs</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <Link href="/pharmacie-registration">
+              <div className='enjoy-css'>Add Pharmacies</div>
+            </Link>
+          </Col>
+          <Col xs={12} sm={12} md={6} lg={3}>
+            <div className='enjoy-css'><a href="https://a2plcpnl0950.prod.iad2.secureserver.net:2096" target="_blank">Webmail</a></div>
+          </Col>
+        </Container>
     <style jsx>
     {`
       a {
@@ -46,13 +65,13 @@ const Header = () => (
       -webkit-box-sizing: content-box;
       -moz-box-sizing: content-box;
       box-sizing: content-box;
-      width: 20%;
+      width: 100%;
       height: 50px;
       cursor: pointer;
       margin-left: auto;
       margin-right: 50px;
-      margin-bottom: 25px;
-      margin-top: 30px;
+      margin-bottom: 20px;
+      margin-top: 20px;
       padding: auto;
       border: 2px solid #39CCCC;
       -webkit-border-radius: 40px;
