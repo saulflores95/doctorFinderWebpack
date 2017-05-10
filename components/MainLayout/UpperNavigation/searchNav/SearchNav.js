@@ -55,7 +55,6 @@ export default class SearchNav extends Component {
     const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
     let identifier = this.props.identifier
     let props = this.props.props
-    console.log('Search nav identifier', identifier)
     let filterArregelo = this.updateFilter(props, identifier)
     return (
       <div>

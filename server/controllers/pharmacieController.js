@@ -6,8 +6,7 @@ phrmacieController.post = (req, res) => {
   const {
     name,
     img,
-    latitude,
-    longitude,
+    position,
     phone,
     tag,
     email,
@@ -18,8 +17,7 @@ phrmacieController.post = (req, res) => {
     name,
     email,
     img,
-    latitude,
-    longitude,
+    position,
     phone,
     tag,
     _creator: userId

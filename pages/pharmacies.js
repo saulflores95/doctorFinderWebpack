@@ -1,19 +1,22 @@
 import React from 'react'
 import App from '../components/App/App'
 import PharmacieWrapper from '../components/pharmacies/phaWrapper/PharmacieWrapper'
+import fetch from 'isomorphic-unfetch'
 
-export default class extends React.Component {
-
-  render () {
-    const pharmacies = require('../pharmacies.json')
-    return(
-      <div>
-        <App>
-          <div className='container'>
-            <PharmacieWrapper pharmacies={pharmacies.pharmacies}/>
-          </div>
-        </App>
+const pharmacies = ({pharmas}) => (
+  <div>
+    <App>
+      <div className='container'>
+        <PharmacieWrapper pharmacies={pharmas}/>
       </div>
-    )
-  }
+    </App>
+  </div>
+)
+
+pharmacies.getInitialProps = async ({ req }) => {
+  const res = await fetch('https://healthcarebaja.com/api/pharmacies')
+  const json = await res.json()
+  return { pharmas: json.data }
 }
+
+export default pharmacies
