@@ -14,7 +14,7 @@ const hospitals = ({hospitals}) => (
 )
 
 hospitals.getInitialProps = async ({ req }) => {
-  const res = await fetch('http://localhost:3000/api/hospitals')
+  const res = await fetch('https://healthcarebaja.com/api/hospitals')
   const json = await res.json()
   return { hospitals: json.data }
 }
