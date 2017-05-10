@@ -4,13 +4,11 @@ import Link from 'next/link'
 
 const imageChooser = (props) => {
   if (props === 'Roma') {
-    return 'http://www.lacronica.com/Edicionenlinea/Fotos/Noticias/1138343-N.JPG'
+    return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/roma.jpg'
   }
-  if (props === 'farmacia') {
-    return 'http://toma-control.com/wp-content/themes/cronadyn/images/puntos-de-venta/benavides.png'
-  } else {
-    console.log('No tag fits the choosen image')
-  }
+   else {
+      console.log('No tag fits the choosen image')
+    }
 }
 
 const PharmacieMainList = ({pharmacie}) => (

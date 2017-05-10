@@ -9,11 +9,9 @@ const imageChooser = (props) => {
   if (props === 'Gamboa') {
     return 'https://pbs.twimg.com/profile_images/705493262472056832/i_GpO3EZ.jpg'
   }
-  if (props === 'Roma') {
-    return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/roma.jpg'
-  } else {
-    console.log('No tag fits the choosen image')
-  }
+   else {
+      console.log('No tag fits the choosen image')
+    }
 }
 
 const LabsMainList = ({lab}) => (
