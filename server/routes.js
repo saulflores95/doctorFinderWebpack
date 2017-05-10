@@ -24,6 +24,6 @@ routes.get('/doctors', doctorController.getAll)
 routes.get('/clinics', clinicController.getAll)
 routes.get('/pharmacies', pharmacieController.getAll)
 routes.get('/labs', labController.getAll)
-routes.get('/hospitals', clinicController.getAll)
+routes.get('/hospitals', hospitalController.getAll)
 
 module.exports = routes;

@@ -17,7 +17,7 @@ const DoctorHeader = (doctor) => (
             <span className='label'>{doctor[0].specialty}</span>
           </Col>
           <Col sm={12} md={12} lg={5}>
-            <DoctorExp {...doctor} />
+            <DoctorExp doctor={doctor[0]} />
           </Col>
         </Row>
       </div>

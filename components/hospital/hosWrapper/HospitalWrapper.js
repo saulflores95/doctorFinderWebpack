@@ -1,10 +1,8 @@
 import React from 'react'
 import HospitalList from './hosList/HospitalList'
 import {Row} from 'react-grid-system'
-var hospitalss = require('../../../hospitals.json')
-var hospitals = hospitalss.hospitals
 
-const HospitalWrapper = () => (
+const HospitalWrapper = ({hospitals}) => (
   <div className='wrapper'>
     <div className='wrapperList'>
       <Row>

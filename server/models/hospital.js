@@ -10,7 +10,6 @@ const hospitalSchema = new Schema({
     createdAt: {type: Date, default: Date.now},
     _creator: {type: Schema.ObjectId, ref: 'User'},
     isDeleted:{type: Boolean, default: false},
-
 })
 
 const Hospital = mongoose.model('Hospital', hospitalSchema)

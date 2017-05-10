@@ -9,23 +9,21 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Close from 'material-ui/svg-icons/navigation/close';
 import AlertContainer from 'react-alert'
+import NoSSR from 'react-no-ssr'
+import axios from 'axios'
+import Uploader from '../uploader/Uploader'
+import RegistrationMap from './RegistrationMap'
 
-export default class HospitalEditForm extends Component {
+export default class HospitalRegistrationForm extends Component {
 
-  constructor(){
-    super();
+  constructor () {
+    super()
     this.state = {
       toogleState: false,
-      value:'Podologia',
-      inputs:[1],
-      subscription: {
-        hospitals: Meteor.subscribe("allHospitals")
-      },
+      count: 0,
+      position: [32, 100],
+      url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbPvqnfj0taeHk9BLFCYpySg2-eVk2i7kx4PE046Waix2-zM-NAILl-m8'
     }
-  }
-
-  hospital(){
-    return Hospitals.findOne(this.props.id);
   }
 
   alertOptions = {
@@ -36,15 +34,42 @@ export default class HospitalEditForm extends Component {
     transition: 'scale'
   }
 
+  toggleChecked (Checkbox) {
+    console.log('this was pressed')
+    if (this.state.toogleState === false) {
+      this.state.toogleState = true
+    } else {
+      this.state.toogleState = false
+    }
+    console.log(this.state.toogleState)
+  }
 
-  editHospital(event){
+  mapClick (event) {
+    console.log('user right-clicked on map coordinates: ' + event.latlng.toString())
+    this.setState({
+      position: event.latlng
+    })
+    console.log(this.state.position)
+
+    // L.marker(event.latlng)
+  }
+
+  handleImageChange (url) {
+    if (url) {
+      this.setState({
+        url: url
+      })
+      console.log('State From Parent Change: ', this.state.url)
+    } else if (!url) {
+      console.log('url not found')
+    }
+  }
+
+  addHospital(event){
     event.preventDefault();
     var name = this.refs.hospitalName.getValue();
-    var img = this.refs.hospitalImgUrl.getValue();
+    var img = this.state.url;
     var phone = this.refs.phone.getValue();
-    var latitude = this.refs.latitude.getValue();
-    var longitude = this.refs.longitude.getValue()
-
     var hospital = {
       name: name,
       img: img,
@@ -77,21 +102,7 @@ export default class HospitalEditForm extends Component {
       }
   }
 
-  addInputField(event){
-    event.preventDefault();
-    var newInput = this.state.inputs.length;
-    this.state.inputs.push(newInput);
-    this.setState({});
-  }
-
-  removeInputField(event){
-    event.preventDefault();
-    this.state.inputs.pop();
-    this.setState({});
-  }faceface
-
   render(){
-    let hospital = this.hospital();
     const styles = {
       paper: {
         width: '100%',
@@ -121,7 +132,7 @@ export default class HospitalEditForm extends Component {
         <Container>
         <Paper style={styles.paper} zDepth={3}>
         <Container>
-          <form className="new-doctor" onSubmit={this.editHospital.bind(this)}>
+          <form className="new-doctor" onSubmit={this.addHospital.bind(this)}>
             <div style={styles.formDivisor}>
               <Row>
                 <Col sm={6}>
@@ -129,32 +140,23 @@ export default class HospitalEditForm extends Component {
                     hintText="Hospital Name"
                     ref="hospitalName"
                     fullWidth={true}
-                    defaultValue={hospital.name}
                   />
                 </Col>
-                <Col sm={6}>
-                  <TextField
-                    hintText="url de imagen"
-                    ref="hospitalImgUrl"
-                    fullWidth={true}
-                    defaultValue={hospital.img}
-                  />
+              </Row>
+              <Row>
+                <Col sm={12} md={6} lg={6}>
+                  <img width='200px' height='200px' style={styles.img} src={this.state.url} />
                 </Col>
-                <Col sm={6} md={6} lg={6}>
-                  <TextField
-                    hintText="Latitude"
-                    ref="latitude"
-                    fullWidth={true}
-                    defaultValue={hospital.latitude}
-                  />
+
+                <Col sm={12} md={6} lg={6}>
+                  <Uploader handle={this.handleImageChange.bind(this)} />
                 </Col>
-                <Col sm={6} md={6} lg={6}>
-                  <TextField
-                    hintText="Longitude"
-                    ref="longitude"
-                    fullWidth={true}
-                    defaultValue={hospital.longitude}
-                  />
+              </Row>
+              <Row>
+                <Col sm={12} md={12} lg={12}>
+                  <NoSSR onSSR={<div>Map Loading...</div>} >
+                    <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                  </NoSSR>
                 </Col>
               </Row>
             </div>
@@ -165,7 +167,6 @@ export default class HospitalEditForm extends Component {
                     hintText="Phone Number"
                     ref="phone"
                     fullWidth={false}
-                    defaultValue={hospital.phone}
                   />
                 </Col>
                 <Col sm={2}>
@@ -181,6 +182,9 @@ export default class HospitalEditForm extends Component {
           </form>
         </Container>
         </Paper>
+        <div>
+          <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+        </div>
         </Container>
       </MuiThemeProvider>
       </div>

@@ -1,17 +1,22 @@
 import React from 'react'
 import App from '../components/App/App'
 import HospitalDetail from '../components/hospital/hosDetail/HospitalDetail'
+import fetch from 'isomorphic-unfetch'
+
 export default class extends React.Component {
-  static getInitialProps ({ query: { id } }) {
-    return { id }
+  static async getInitialProps  ({ query: { id } }) {
+    const res = await fetch('http://localhost:3000/api/hospitals')
+    const json = await res.json()
+    return {
+      id,
+      hospitals: json.data
+     }
   }
 
   render () {
-    const hospitals = require('../hospitals.json')
-    console.log(hospitals);
-    const hospitall = hospitals.hospitals.filter(hospital => this.props.id === hospital._id)
-    const hospital = hospitall[0]
-    console.log('hospital-detail: ', hospital)
+    let hospitals = []
+    hospitals = this.props.hospitals
+    const hospital = hospitals.filter(hospital => this.props.id === hospital._id)
     return(
       <div>
         <App>
