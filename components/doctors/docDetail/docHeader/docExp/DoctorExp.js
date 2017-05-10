@@ -5,14 +5,14 @@ const DoctorExp = (doctor) => (
   <div className='experienceContainer'>
     <Row>
       <Col xs={6} sm={6} md={6} lg={6}>
-        <p className='detail-text'>{doctor.curriculumOne}</p>
-        <p className='detail-text'>{doctor.curriculumTwo}</p>
-        <p className='detail-text'>{doctor.curriculumThree}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].one}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].two}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].three}</p>
       </Col>
       <Col xs={6} sm={6} md={6} lg={6}>
-        <p className='detail-text'>{doctor.curriculumFour}</p>
-        <p className='detail-text'>{doctor.curriculumFive}</p>
-        <p className='detail-text'>{doctor.curriculumSix}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].four}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].five}</p>
+        <p className='detail-text'>{doctor.doctor.curriculum[0].six}</p>
       </Col>
     </Row>
     <style jsx>
