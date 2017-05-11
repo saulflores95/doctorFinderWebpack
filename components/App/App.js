@@ -12,7 +12,7 @@ const App = (props) => (
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/icon-144x144.png" />
         <link rel="apple-touch-icon-precomposed" sizes="384x384" href="/static/icon-384x384" />
         <link rel="apple-touch-icon-precomposed" sizes="512x512" href="/static/icon-512x512.png" />
-        <script src='/sw-installer.js'></script>
+        {<script src='/sw-installer.js'></script>}
         <meta name="theme-color"  content="#2196f3" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="shortcut icon" type="image/png" href="/static/favicon-16x16.png" />
@@ -33,7 +33,7 @@ const App = (props) => (
             top: 0;
             overflow-x: hidden;
             overflow-y: hidden;
-
+            background-color: white;
           }
           html {
             height: 100%;

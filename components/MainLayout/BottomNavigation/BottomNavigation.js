@@ -5,6 +5,7 @@ import FaMapMarker from 'react-icons/lib/fa/map-marker'
 import FaHospitalO from 'react-icons/lib/fa/hospital-o'
 import FaUserMd from 'react-icons/lib/fa/user-md'
 import FaPlus from 'react-icons/lib/fa/plus'
+import FaEllipsisV from 'react-icons/lib/fa/ellipsis-v'
 import Link from 'next/link'
 
 export default class ButtomNavigationComponet extends Component {
@@ -24,7 +25,8 @@ export default class ButtomNavigationComponet extends Component {
     var styles = {
       icon: {
         height: 24,
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
       },
       bottomNavItem: {
         marginLeft: 'auto',
@@ -32,12 +34,15 @@ export default class ButtomNavigationComponet extends Component {
         minWidth: 80,
         maxWidth: 80,
         display: 'block'
+      },
+      buttonNav: {
+        backgroundColor: '#192e48'
       }
     }
     return (
       <div className='footer'>
         <MuiThemeProvider>
-          <BottomNavigation selectedIndex={this.state.selectedIndex}>
+          <BottomNavigation selectedIndex={this.state.selectedIndex} style={styles.buttonNav}>
             <Link href='/'>
               <BottomNavigationItem
                 icon={<FaUserMd style={styles.icon} />}

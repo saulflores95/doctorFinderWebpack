@@ -50,6 +50,10 @@ var _plus = require('react-icons/lib/fa/plus');
 
 var _plus2 = _interopRequireDefault(_plus);
 
+var _ellipsisV = require('react-icons/lib/fa/ellipsis-v');
+
+var _ellipsisV2 = _interopRequireDefault(_ellipsisV);
+
 var _link = require('next\\dist\\lib\\link.js');
 
 var _link2 = _interopRequireDefault(_link);
@@ -83,7 +87,8 @@ var ButtomNavigationComponet = function (_Component) {
       var styles = {
         icon: {
           height: 24,
-          textAlign: 'center'
+          textAlign: 'center',
+          color: 'white'
         },
         bottomNavItem: {
           marginLeft: 'auto',
@@ -91,9 +96,12 @@ var ButtomNavigationComponet = function (_Component) {
           minWidth: 80,
           maxWidth: 80,
           display: 'block'
+        },
+        buttonNav: {
+          backgroundColor: '#192e48'
         }
       };
-      return _react2.default.createElement('div', { className: 'footer' }, _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement(_BottomNavigation.BottomNavigation, { selectedIndex: this.state.selectedIndex }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
+      return _react2.default.createElement('div', { className: 'footer' }, _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement(_BottomNavigation.BottomNavigation, { selectedIndex: this.state.selectedIndex, style: styles.buttonNav }, _react2.default.createElement(_link2.default, { href: '/' }, _react2.default.createElement(_BottomNavigation.BottomNavigationItem, {
         icon: _react2.default.createElement(_userMd2.default, { style: styles.icon }),
         onClick: function onClick() {
           return _this2.select(0);

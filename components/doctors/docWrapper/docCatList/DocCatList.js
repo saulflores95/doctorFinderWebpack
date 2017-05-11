@@ -74,7 +74,6 @@ const imageChooser = (props) => {
       return null
   }
 }
-
 const DocCatList = ({specialty}) => (
   <div className='prueba'>
     <Link href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
@@ -94,20 +93,21 @@ const DocCatList = ({specialty}) => (
               >
               <ListItem
                 leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
-                rightIcon={<ActionInfo />}
+                rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
                 primaryText={<div className='label'>{specialty}</div>}
               />
             </Transition>
-            <Divider inset />
+            <Divider inset style={{backgroundColor: '#57c6df'}}/>
           </List>
         </MuiThemeProvider>
       </div>
     </Link>
     <style jsx>
       {`
+
         .label {
           font-size: 16px;
-          color: white !important;
+          color: #2d517b !important;
           font-family: 'Montserrat', sans-serif;
         }
 
@@ -118,7 +118,7 @@ const DocCatList = ({specialty}) => (
 
         .label2 {
           font-size: 16px;
-          color: white !important;
+          color: #2d517b !important;
         }
 
 

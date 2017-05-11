@@ -1,11 +1,31 @@
 import React from 'react'
 import Link  from 'next/link'
+import IconMenu from 'material-ui/IconMenu'
+import MenuItem from 'material-ui/MenuItem'
+import IconButton from 'material-ui/IconButton'
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
 const NewUpperNavigation = () => (
   <div className='container'>
     <ul className='ul'>
-      <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} /></Link></li>
+      <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
+      <li className='liRight'>
+        <MuiThemeProvider>
+          <IconMenu
+           iconButtonElement={<IconButton iconStyle={{color: 'white'}}><MoreVertIcon /></IconButton>}
+           anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+           targetOrigin={{horizontal: 'left', vertical: 'top'}}
+           >
+             <MenuItem primaryText="Refresh" />
+             <MenuItem primaryText="Send feedback" />
+             <MenuItem primaryText="Settings" />
+             <MenuItem primaryText="Help" />
+             <MenuItem primaryText="Sign out" />
+          </IconMenu>
+        </MuiThemeProvider>
+      </li>
     </ul>
     <style jsx>
       {`
@@ -21,6 +41,7 @@ const NewUpperNavigation = () => (
             padding-bottom: 10px;
             padding-top: 10px;
             z-index: 9999;
+            background-color: #2d517b;
         }
 
         .li {
