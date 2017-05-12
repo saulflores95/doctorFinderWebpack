@@ -60,7 +60,7 @@ export default class SearchNav extends Component {
       <div>
         <div>
           <ul className='ul'>
-            <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} /></Link></li>
+            <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
             <li className='liRight'>
               <div className='wrap'>
                 <form action=''>
@@ -120,6 +120,7 @@ export default class SearchNav extends Component {
                 padding-bottom: 10px;
                 padding-top: 10px;
                 z-index: 9999;
+                background-color: #2d517b;
             }
 
             .li {
