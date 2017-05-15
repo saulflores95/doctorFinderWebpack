@@ -2,7 +2,6 @@ import React from 'react'
 import SearchNav from '../../MainLayout/UpperNavigation/searchNav/SearchNav'
 
 const pharmaciesList = (props) => {
-  console.log(props)
   var arr = props.map((pharmacie) => {
     return pharmacie.tag
   })
