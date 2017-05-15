@@ -17,7 +17,6 @@ export default class DetailMap extends Component {
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
     const position = [32.5194358, -117.0101997]
     const propPoistion = [Number(this.props.props.position[0].lat), Number(this.props.props.position[0].lng)]
-    console.log('propPoistion: ', propPoistion);
     return (
       <div>
           <div className='map'>

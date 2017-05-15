@@ -12,8 +12,9 @@ const App = (props) => (
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/icon-144x144.png" />
         <link rel="apple-touch-icon-precomposed" sizes="384x384" href="/static/icon-384x384" />
         <link rel="apple-touch-icon-precomposed" sizes="512x512" href="/static/icon-512x512.png" />
-        {<script src='/sw-installer.js'></script>}
-        <meta name="theme-color"  content="#2196f3" />
+        <script src='/sw-installer.js'></script>
+        <meta name="theme-color"  content="white" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
         <link rel="manifest" href="/static/manifest.json" />
         <link rel="shortcut icon" type="image/png" href="/static/favicon-16x16.png" />
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
@@ -26,7 +27,7 @@ const App = (props) => (
             display:none;
           }
           body{
-            background-color: rgb(0, 188, 212);
+            background-color: white;
             width: 100%;
             height: 100%;
             margin: 0;
@@ -34,6 +35,7 @@ const App = (props) => (
             overflow-x: hidden;
             overflow-y: hidden;
             background-color: white;
+            font-family: 'Montserrat', sans-serif;
           }
           html {
             height: 100%;
@@ -42,6 +44,7 @@ const App = (props) => (
             top: 0;
             box-sizing: border-box;
             overflow-y: hidden;
+            font-family: 'Montserrat', sans-serif;
           }
           #__next {
             height: 100%;

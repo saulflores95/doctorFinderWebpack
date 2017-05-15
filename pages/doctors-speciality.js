@@ -17,8 +17,6 @@ export default class extends React.Component {
     let doctors = []
     doctors.doctors = this.props.docs
     let doctor = doctors.doctors.filter(doctor => this.props.id === doctor.specialty)
-    console.log('doctors-speciality ALL', doctors.doctors);
-    console.log('doctors-speciality', doctor);
     return(
       <div>
         <App>

@@ -4,8 +4,6 @@ import {Col} from 'react-grid-system'
 
 const HospitalList = ({hospital}) => (
   <Col xs={12} sm={12} md={12} lg={4}>
-    {console.log('Hospital List: ', hospital)}
-
     <div className='back'>
       <h1 className='h1'>
         <Link href={`/hospital-detail?id=${hospital._id}`} as={`/hospital-detail/${hospital._id}`}>
