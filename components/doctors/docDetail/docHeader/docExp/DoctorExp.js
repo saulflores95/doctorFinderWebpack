@@ -21,6 +21,12 @@ const DoctorExp = (doctor) => (
           height:100%;
         }
 
+        .detail-text {
+          color: #2d517b;
+          font-size: 16px;
+          font-family: 'Montserrat', sans-serif;
+        }
+
         .exp-text:{
           font-size: x-large;
           font-weight: 100;

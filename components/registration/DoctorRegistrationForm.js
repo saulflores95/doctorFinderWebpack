@@ -12,6 +12,7 @@ import Uploader from '../uploader/Uploader'
 import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import AlertContainer from 'react-alert'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 export default class DoctorRegistrationForm extends Component {
 
@@ -34,6 +35,9 @@ export default class DoctorRegistrationForm extends Component {
     transition: 'scale'
   }
 
+  componentWillMount() {
+    try { injectTapEventPlugin() } catch (e) { }
+  }
 
   toggleChecked (Checkbox) {
     console.log('this was pressed')

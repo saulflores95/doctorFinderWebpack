@@ -41,7 +41,8 @@ const DoctorList = ({doctor}) => (
 
         .label2 {
           font-size: 16px;
-          color: #2d517b !important;
+          color: #ef726f !important;
+          font-family: 'Montserrat', sans-serif;
         }
 
 

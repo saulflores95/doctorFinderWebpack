@@ -13,7 +13,7 @@ const DoctorHeader = (doctor) => (
             <img alt={doctor[0].name} className='img' src={doctor[0].img} />
           </Col>
           <Col sm={6} md={6} lg={5}>
-            <h1>{doctor[0].name}</h1>
+            <h1 className='doctor-name'>{doctor[0].name}</h1>
             <span className='label'>{doctor[0].specialty}</span>
           </Col>
           <Col sm={12} md={12} lg={5}>
@@ -42,7 +42,15 @@ const DoctorHeader = (doctor) => (
 
         .label {
           font-size: 16px;
-          font-family: Roboto, sans-serif;
+          color: #ef726f;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+        .doctor-name {
+          font-size: 16px;
+          color: #2d517b;
+          font-weight: bold;
+          font-family: 'Montserrat', sans-serif;
         }
 
         .divider {

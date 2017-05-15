@@ -53,21 +53,25 @@ const DoctorContactForm = (doctor) => (
         />
         <RaisedButton
           label={<span className='label-text'>Send</span>}
+          backgroundColor='#2d517b'
           type='submit'
-          primary
         />
         <RaisedButton
-          label={<span className='label-text'>Call</span>}
+          label={<span style={{color: '#2d517b'}}>Call</span>}
           labelPosition='before'
           primary={false}
-          icon={<FaPhone className='label-icon' />}
+          icon={<FaPhone className='label-icon'/>}
         />
       </form>
     </MuiThemeProvider>
     <style jsx>
       {`
         .label {
-          color: white !important;
+          color: #2d517b !important;
+          font-family: 'Montserrat', sans-serif
+        }
+        .label-text {
+          color: white;
         }
       `}
     </style>

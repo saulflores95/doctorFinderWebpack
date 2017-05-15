@@ -116,12 +116,6 @@ const DocCatList = ({specialty}) => (
           height: 45px !important ;
         }
 
-        .label2 {
-          font-size: 16px;
-          color: #2d517b !important;
-        }
-
-
         .pageSlider-enter {
           transform: translate3d(100%, 0, 0);
         }

@@ -12,6 +12,7 @@ import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from './RegistrationMap'
 import AlertContainer from 'react-alert'
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
 export default class ClinicRegistrationForm extends Component {
 
@@ -31,6 +32,10 @@ export default class ClinicRegistrationForm extends Component {
     theme: 'dark',
     time: 5000,
     transition: 'scale'
+  }
+
+  componentWillMount() {
+    try { injectTapEventPlugin() } catch (e) { }
   }
 
   toggleChecked(Checkbox){

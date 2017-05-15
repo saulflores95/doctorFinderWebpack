@@ -44,7 +44,7 @@ export default class DoctorDescription extends Component {
             <div>
               <Container style={styles.textCenter}>
                 <p className='doctorDescription'>{this.props.doctor[0].description}</p>
-                <RaisedButton label='Read more' style={styles.label} onClick={this.handleOpen.bind(this)} />
+                <RaisedButton label={<span style={{color: 'white'}}>Read More</span>} backgroundColor='#2d517b' onClick={this.handleOpen.bind(this)} />
               </Container>
             </div>
           </Paper>
@@ -69,7 +69,6 @@ export default class DoctorDescription extends Component {
             .paper {
               padding: 5px 0 10px 0;
               margin-bottom: 20px;
-              text-align: center;
             }
 
             p {
@@ -84,15 +83,25 @@ export default class DoctorDescription extends Component {
             }
 
             .doctorDescription {
+              text-align: justify;
+              padding-top: 23px;
+              margin-top: 15px;
               font-size: 16px;
               overflow: hidden;
               height: 80px;
+              text-align: justify;
+              color: #2d517b;
+              font-family: 'Montserrat', sans-serif;
             }
 
             .doctorDescriptionDialog {
               height: 40vh;
               overflow-y: scroll;
               overflow-x: hidden;
+              text-align: left;
+              color: #2d517b;
+              padding-right: 15px;
+              font-family: 'Montserrat', sans-serif;
             }
 
           `}
