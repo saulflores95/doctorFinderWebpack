@@ -6,7 +6,7 @@ import IconButton from 'material-ui/IconButton'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
+const imgUrl = '/static/healthcarebaja.png'
 const NewUpperNavigation = () => (
   <div className='container'>
     <ul className='ul'>

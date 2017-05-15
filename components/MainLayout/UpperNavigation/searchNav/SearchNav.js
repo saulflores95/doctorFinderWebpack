@@ -52,7 +52,7 @@ export default class SearchNav extends Component {
   }
 
   render () {
-    const imgUrl = 'https://s30.postimg.org/biuab6sk1/image.jpg'
+    const imgUrl = '/static/healthcarebaja.png'
     let identifier = this.props.identifier
     let props = this.props.props
     let filterArregelo = this.updateFilter(props, identifier)
