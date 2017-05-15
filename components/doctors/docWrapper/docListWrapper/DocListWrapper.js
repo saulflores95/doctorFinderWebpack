@@ -11,7 +11,7 @@ const DoctorListWrapper = ({doctor}) => (
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgb(0, 188, 212);
+        background-color: white;
       }
       `}
     </style>
