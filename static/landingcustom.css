@@ -273,7 +273,7 @@ h6 {
 /* FEATURE SECTION */
 .features-box .features-text .features-info .info-text h6 { color: #f27670; }
 .features-box .features-info .ficon img { max-width: 70px; }
-.features-mob {	background: url(../images/img-328x690_2.png) no-repeat top center; }
+.features-mob {	background: url(/static/landing-img-328x690_2.png) no-repeat top center; }
 .features-box .features-text .features-info .info-text p { font-size: 17px; }
 
 

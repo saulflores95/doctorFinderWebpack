@@ -1005,7 +1005,7 @@ a {
  }
 /* 5. features-main */
 .features-main {
-  background: url(../images/features-bg.jpg) no-repeat center;
+  background: url(/static/landing-features-bg.jpg) no-repeat center;
 }
 .features-box .features-text {
   width: 30%;
