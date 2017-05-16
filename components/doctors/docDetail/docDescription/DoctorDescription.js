@@ -98,7 +98,7 @@ export default class DoctorDescription extends Component {
               height: 40vh;
               overflow-y: scroll;
               overflow-x: hidden;
-              text-align: left;
+              text-align: justify;
               color: #2d517b;
               padding-right: 15px;
               font-family: 'Montserrat', sans-serif;

@@ -2,14 +2,17 @@ import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import {Container} from 'react-grid-system'
+import RaisedButton from 'material-ui/RaisedButton'
 
 const ContactForm = () => (
   <div className='wrapper'>
-    <div className='imgcontainer'>
-      <img src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
+    <div className='img-container'>
+      <img className="img" src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
     </div>
-    <h2 className='text'>Contact us</h2>
-    <h2 className='text'>It is our pleasure!</h2>
+    <div className='text-container'>
+      <h2 className='text'>Contact us</h2>
+      <h2 className='text'>It is our pleasure!</h2>
+    </div>
     <Container className='contactForm'>
       <MuiThemeProvider>
         <div>
@@ -31,6 +34,15 @@ const ContactForm = () => (
             multiLine
             rows={2}
         /><br />
+        <div className='button-form'>
+          <RaisedButton
+            label={<span style={{color: 'white'}}>Send</span>}
+            labelPosition='before'
+            primary={false}
+            backgroundColor="#2d517b"
+            style={{marginLeft: 'auto', marginRight:'auto',display:'block', width:300, marginTop:20, marginBottom:20}}
+          />
+        </div>
         </div>
       </MuiThemeProvider>
     </Container>
@@ -42,18 +54,23 @@ const ContactForm = () => (
 
         .text{
           text-align: center;
-          color: white;
+          color: #2d517b;
           font-size: 16px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          font-family: 'Montserrat', sans-serif;
         }
 
         .label {
-          color: white !important;
+          color: #2d517b !important;
           background-image: none !important;
+          font-family: 'Montserrat', sans-serif;
         }
 
-        .imgcontainer{
-          width: 100px;
-          height: 100px;
+        .img-container{
+          width: 128px;
+          height: 128px;
           margin-left: auto;
         	margin-right: auto;
         	display: block;
@@ -61,6 +78,24 @@ const ContactForm = () => (
 
         .contactForm {
           padding-top: 15px;
+        }
+
+        .img {
+          margin-left: auto;
+          margin-right: auto;
+          display: bock;
+        }
+
+        .text-container {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+        }
+
+        .button-form {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
         }
 
       `}
