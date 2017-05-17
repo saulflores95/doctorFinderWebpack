@@ -20,6 +20,9 @@ routes.post('/hospital-registration', hospitalController.post)
 routes.post('/pharmacie-registration', pharmacieController.post)
 routes.post('/lab-registration', labController.post)
 
+//edit routes
+routes.put('/doctor-edit/:id', doctorController.put)
+
 routes.get('/doctors', doctorController.getAll)
 routes.get('/clinics', clinicController.getAll)
 routes.get('/pharmacies', pharmacieController.getAll)
