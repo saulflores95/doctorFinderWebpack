@@ -69,7 +69,7 @@ export default class SearchNav extends Component {
                     className='search'
                     name='search'
                     type='text'
-                    placeholder='Search...'
+                    placeholder="Search..."
                     value={this.state.search}
                     onChange={this.updateSearch.bind(this)} />
                   <label className='labelSearch' htmlFor='search'>Rechercher</label>
@@ -164,7 +164,6 @@ export default class SearchNav extends Component {
             }
 
             .searchBar {
-              background-image: url(https://cdn0.iconfinder.com/data/icons/octicons/1024/search-128.png) !important;
               background-repeat: no-repeat !important;
               background-size: 50px 50px !important;
             }
@@ -177,7 +176,7 @@ export default class SearchNav extends Component {
               font-weight: 100;
               border: none;
               outline: none;
-              color: #555;
+              color: white;
               padding: 30px;
               padding-right: 25px;
               padding-left: 60px;
@@ -192,37 +191,53 @@ export default class SearchNav extends Component {
             }
 
             input[type="text"]:focus:hover {
-              border-bottom: 1px solid #BBB;
+              border-bottom: 1px solid white;
             }
 
             input[type="text"]:focus {
               width: 50vw;
               z-index: 1;
-              border-bottom: 1px solid #BBB;
+              color: white;
               cursor: text;
             }
 
+            @media only screen and (max-width: 768px) {
+              input[type="text"]:focus {
+                width: 30vw;
+              }
+            }
+
             input[type="submit"] {
+              font-color: white;
               height: 50px;
               width: 63px;
               display: inline-block;
               color:red;
               float: right;
-              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+              background: url(https://res.cloudinary.com/dlpqiaopi/image/upload/v1495061171/searchbar_uokmh1.png) center center no-repeat;
               text-indent: -10000px;
+              background-size: contain;
               border: none;
               position: absolute;
               top: 0;
               right: 0;
               z-index: 2;
               cursor: pointer;
-              opacity: 0.4;
+              opacity: 1;
               cursor: pointer;
               transition: opacity .4s ease;
             }
 
             input[type="submit"]:hover {
               opacity: 0.8;
+            }
+
+            input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+              color: white;
+            }
+
+            input:-moz-placeholder, textarea:-moz-placeholder {
+              color: white;
             }
 
             img{
