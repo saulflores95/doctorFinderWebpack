@@ -97,6 +97,7 @@ export default class DoctorRegistrationForm extends Component {
       six: this.refs.curriculumSix.getValue()
     }
     var email = this.refs.email.getValue()
+    var phone = this.refs.phone.getValue()
     var direccion = this.refs.direccion.getValue()
     var doctor = {
       name: name,
@@ -106,6 +107,7 @@ export default class DoctorRegistrationForm extends Component {
       curriculum: curriculum,
       email: email,
       specialty: specialty,
+      phone: phone,
       direccion: direccion,
       position: this.state.position
     }
@@ -121,6 +123,7 @@ export default class DoctorRegistrationForm extends Component {
         insurance: doctor.insurance,
         curriculum: doctor.curriculum,
         email: doctor.email,
+        phone:doctor.phone,
         specialty: doctor.specialty,
         direccion: doctor.direccion,
         position: doctor.position

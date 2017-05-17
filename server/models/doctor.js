@@ -9,6 +9,7 @@ const doctorSchema = new Schema({
     curriculum:{type: Array, default: ['Experience not available']},
     specialty:String,
     email: String,
+    phone: {type: String, default: '000-000-000'}
     position: {type: Array, default: [0, 0]},
     insurance: {type: Boolean, default:false},
     createdAt: {type: Date, default: Date.now},
