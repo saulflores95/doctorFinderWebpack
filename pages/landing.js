@@ -52,7 +52,7 @@ export default () => (
                  <a href="#about" className="go-down"></a>
               </div>
               <div className="fadeScroll">
-                 <img src="static/landing_hand_bg.png" alt="hand_bg" className="animated hand_bg wow fadeInLeft" data-wow-delay="1s" />
+                 <img src="/static/landing_hand_bg.png" alt="hand_bg" className="animated hand_bg wow fadeInLeft" data-wow-delay="1s" />
               </div>
            </div>
            <div id="about" className="container about-main">
@@ -142,7 +142,7 @@ export default () => (
            <div id="benefits" className="container benefits-main">
               <div className="wrapper">
                  <div className="col-5 md-col-12 benefits-img wow fadeInLeft">
-                    <img src="images/img-410x690.png" alt="IMG" />
+                    <img src="/static/landing-img-410x690.png" alt="IMG" />
                  </div>
                  <div className="col-6 md-col-12 benefits-text">
                     <div className="title-block small">
@@ -183,7 +183,7 @@ export default () => (
                     <li>
                        <p>“Curabitur eget lobortis arcu, non venenatis felis. Duis volutpat lorem eros, tempus ornare velit sodales in. Vivamus at risus neque. Duis auctor lorem id ipsum sollicitudin congue.</p>
                        <div className="client-info">
-                          <img src="images/client01.png" alt="client01" />
+                          <img src="/static/landing-client01.png" alt="client01" />
                           <strong>Tyrion Lannister</strong>
                           <span>Master of Coin</span>
                        </div>
@@ -191,7 +191,7 @@ export default () => (
                     <li>
                        <p>“Curabitur eget lobortis arcu, non venenatis felis. Duis volutpat lorem eros, tempus ornare velit sodales in. Vivamus at risus neque. Duis auctor lorem id ipsum sollicitudin congue.</p>
                        <div className="client-info">
-                          <img src="images/client01.png" alt="client01" />
+                          <img src="/static/landing-client01.png" alt="client01" />
                           <strong>Tyrion Lannister</strong>
                           <span>Master of Coin</span>
                        </div>
@@ -199,7 +199,7 @@ export default () => (
                     <li>
                        <p>“Curabitur eget lobortis arcu, non venenatis felis. Duis volutpat lorem eros, tempus ornare velit sodales in. Vivamus at risus neque. Duis auctor lorem id ipsum sollicitudin congue.</p>
                        <div className="client-info">
-                          <img src="images/client01.png" alt="client01" />
+                          <img src="/static/landing-client01.png" alt="client01" />
                           <strong>Tyrion Lannister</strong>
                           <span>Master of Coin</span>
                        </div>
@@ -246,7 +246,7 @@ export default () => (
       					<ul className="team-slider">
       						<li>
       							<div className="team-photo">
-      								<img src="images/DR_ICON.jpg" alt="Category" />
+      								<img src="/static/landing-DR_ICON.jpg" alt="Category" />
       								<span className="social-links">
       									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
       								</span>
@@ -255,7 +255,7 @@ export default () => (
       						</li>
       						<li>
       							<div className="team-photo">
-      								<img src="images/HOSPITAL_ICON.jpg" alt="Category" />
+      								<img src="/static/landing-HOSPITAL_ICON.jpg" alt="Category" />
       								<span className="social-links">
       									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
       								</span>
@@ -264,7 +264,7 @@ export default () => (
       						</li>
       						<li>
       							<div className="team-photo">
-      								<img src="images/CLINIC_ICON.jpg" alt="Category" />
+      								<img src="/static/landing-CLINIC_ICON.jpg" alt="Category" />
       								<span className="social-links">
       									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
       								</span>
@@ -273,7 +273,7 @@ export default () => (
       						</li>
       						<li>
       							<div className="team-photo">
-      								<img src="images/LAB_ICON.jpg" alt="Category" />
+      								<img src="/static/landing-LAB_ICON.jpg" alt="Category" />
       								<span className="social-links">
       									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
       								</span>
@@ -282,7 +282,7 @@ export default () => (
       						</li>
       						<li>
       							<div className="team-photo">
-      								<img src="images/PHARMA_ICON.jpg" alt="Category" />
+      								<img src="/static/landing-PHARMA_ICON.jpg" alt="Category" />
       								<span className="social-links">
       									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
       								</span>
@@ -349,7 +349,7 @@ export default () => (
 
         <div className="form-row">
           <div className="col-5">
-            <img src="images/reCAPTCHA.png" />
+            <img src="/static/landing-reCAPTCHA.png" />
           </div>
           <div className="col-5 text-right">
             <button className="send-btn"> <span className="icon-ic_send_small"></span>Enviar</button>
@@ -366,7 +366,7 @@ export default () => (
         <div className="inner-contact b-l b-danger pl50 ml50">
           <div className="row">
             <div className="col-2">
-              <img src="images/contact-icon-pin.png" />
+              <img src="/static/landing-contact-icon-pin.png" />
             </div>
             <div className="col-10">
               <p>Blvd. Las Américas #4460-A <br/>
@@ -376,7 +376,7 @@ export default () => (
           </div>
           <div className="row">
             <div className="col-2">
-              <img src="images/contact-icon-tel.png" />
+              <img src="/static/landing-contact-icon-tel.png" />
             </div>
             <div className="col-10">
               <p>(664) 208.1720</p>
@@ -384,7 +384,7 @@ export default () => (
           </div>
           <div className="row">
             <div className="col-2">
-              <img src="images/contact-icon-mobile.png" />
+              <img src="/static/landing-contact-icon-mobile.png" />
             </div>
             <div className="col-10">
               <p>(664) 364.5124</p>
@@ -392,7 +392,7 @@ export default () => (
           </div>
           <div className="row">
             <div className="col-2">
-              <img src="images/contact-icon-mail.png" />
+              <img src="/static/landing-contact-icon-mail.png" />
             </div>
             <div className="col-10">
               <p>info@healthcarebaja.com</p>

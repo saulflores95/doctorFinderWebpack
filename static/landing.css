@@ -1161,7 +1161,7 @@ a {
 
 /* 8. send-block-main */
 .send-block-main {
-  background: url(../images/send-block-bg.png) no-repeat center;
+  background: url(/static/landing-send-block-bg.png) no-repeat center;
   position: relative;
 }
 .topClr {
@@ -1216,7 +1216,7 @@ a {
 }
 /* 9. client-block-main */
 .client-block-main {
-  background: url(../images/client-slider-bg.jpg) no-repeat center;
+  background: url(/static/landing-client-slider-bg.jpg) no-repeat center;
   background-size: cover;
 }
 .client-slider li {
@@ -1404,7 +1404,7 @@ a {
 }
 /* 12. team-block-main */
 .team-block-main {
-  background: url(../images/team-slider-bg.jpg) no-repeat center;
+  background: url(/static/landing-team-slider-bg.jpg) no-repeat center;
   background-size: cover;
 }
 .team-slider-main {
@@ -1519,7 +1519,7 @@ a {
 }
 /* 13. downlod-block-main */
 .downlod-block-main {
-  background: url(../images/download-bg-img.jpg) no-repeat center;
+  background: url(/static/landing-download-bg-img.jpg) no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -1577,7 +1577,7 @@ a {
   height: 46px;
   border-radius: 0 10px 10px 0;
   box-sizing: content-box;
-  background: url(../images/send-icon.png) no-repeat center #162331;
+  background: url(/static/landing-send-icon.png) no-repeat center #162331;
   text-indent: -999px;
   width: 20px;
   float: left;
@@ -1587,7 +1587,7 @@ a {
   transition: 0.5s all;
 }
 .subscribe-form input.submit-btn:hover {
-  background: url(../images/send-icon-hover.png) no-repeat center #162331;
+  background: url(/static/landing-send-icon-hover.png) no-repeat center #162331;
 }
 /* 14. contact-form-main */
 .contact-form-main {
