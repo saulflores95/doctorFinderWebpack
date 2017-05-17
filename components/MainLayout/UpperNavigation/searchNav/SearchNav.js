@@ -69,11 +69,12 @@ export default class SearchNav extends Component {
                     className='search'
                     name='search'
                     type='text'
+                    autoComplete='off'
                     placeholder="Search..."
                     value={this.state.search}
                     onChange={this.updateSearch.bind(this)} />
                   <label className='labelSearch' htmlFor='search'>Rechercher</label>
-                  <input className='search_submit' name='searcht' value='Rechercher' type='submit' />
+                  <input className='search_submit' autoComplete='off' name='searcht' value='Rechercher' type='submit' />
                 </form>
               </div>
             </li>
