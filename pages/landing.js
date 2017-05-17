@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default () => (
+const landing = () => (
   <div>
      <Head>
         <meta charset="utf-8" />
@@ -29,9 +29,9 @@ export default () => (
                              <li><a href="#about">Nosotros</a></li>
                              <li><a href="#!">Revista en Línea</a></li>
                              <li><a href="#features">Servicios</a></li>
-                             <li><a href="#our-team">Directorio</a></li>
+                             <li><a href="/">Directorio</a></li>
                              <li><a href="#contact">Contacto</a></li>
-                             <li className="download"><a href="#download">Descargar App</a></li>
+                             <li className="download"><a href="/">Descargar App</a></li>
                           </ul>
                        </nav>
                     </div>
@@ -46,7 +46,7 @@ export default () => (
                     <h1 className="small">Your tour guide<br /> to Health</h1>
                     <p>Descarga nuestra App y empieza tu búsqueda ahora</p>
                     <div className="btn-box">
-                       <a className="red text-uppercase" href="#download">Obtener App</a>
+                       <a className="red text-uppercase" href="/">Obtener App</a>
                     </div>
                  </div>
                  <a href="#about" className="go-down"></a>
@@ -208,209 +208,200 @@ export default () => (
               </div>
            </div>
            <div className="container count-block-main" id="achievement">
-     				<div className="wrapper">
-     					<div className="row text-center">
-     						<div className="col-3 md-col-6">
-     							<span className="icon-ic_download ficon"></span>
-     							<span className="count counter">649</span>
-     							<em>Downloaded</em>
-     						</div>
-     						<div className="col-3 md-col-6">
-     							<span className="icon-ic_apple ficon"></span>
-     							<span className="count counter">628</span>
-     							<em>iOs users</em>
-     						</div>
-     						<div className="col-3 md-col-6">
-     							<span className="icon-ic_android ficon"> </span>
-     							<span className="count counter">247</span>
-     							<em>Android users</em>
-     						</div>
-     						<div className="col-3 md-col-6">
-     							<span className="icon-ic_windows ficon"> </span>
-     							<span className="count counter">325</span>
-     							<em>Windows users</em>
-     						</div>
-     					</div>
-     				</div>
-     			</div>
-          <div className="container team-block-main parallax" id="our-team">
-      				<div className="wrapper">
-      					<div className="title-block">
-      						<h2>Categorías</h2>
-      						<span className="sub-title">Todo lo que puedes encontrar en Healthcare Baja</span>
-      						<i className="sep-line">&nbsp;</i>
-      					</div>
-      				</div>
-
-      				<div className="team-slider-main text-center">
-      					<ul className="team-slider">
-      						<li>
-      							<div className="team-photo">
-      								<img src="/static/landing-DR_ICON.jpg" alt="Category" />
-      								<span className="social-links">
-      									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
-      								</span>
-      							</div>
-      							<span className="name">Doctores</span>
-      						</li>
-      						<li>
-      							<div className="team-photo">
-      								<img src="/static/landing-HOSPITAL_ICON.jpg" alt="Category" />
-      								<span className="social-links">
-      									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
-      								</span>
-      							</div>
-      							<span className="name">Hospitales</span>
-      						</li>
-      						<li>
-      							<div className="team-photo">
-      								<img src="/static/landing-CLINIC_ICON.jpg" alt="Category" />
-      								<span className="social-links">
-      									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
-      								</span>
-      							</div>
-      							<span className="name">Clínicas</span>
-      						</li>
-      						<li>
-      							<div className="team-photo">
-      								<img src="/static/landing-LAB_ICON.jpg" alt="Category" />
-      								<span className="social-links">
-      									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
-      								</span>
-      							</div>
-      							<span className="name">Laboratorios</span>
-      						</li>
-      						<li>
-      							<div className="team-photo">
-      								<img src="/static/landing-PHARMA_ICON.jpg" alt="Category" />
-      								<span className="social-links">
-      									<a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
-      								</span>
-      							</div>
-      							<span className="name">Farmacias</span>
-      						</li>
-      					</ul>
-      				</div>
-      			</div>
-            <div id="download" className="container downlod-block-main parallax">
-      				<div className="topClr"></div>
-      					<div className="wrapper">
-      						<div className="title-block">
-      							<h2>Descarga nuestra App</h2>
-      							<i className="sep-line">&nbsp;</i>
-      						</div>
-      						<div className="downlod-main">
-
-      							<div className="download-btn text-center mb80">
-      								<a href="#!" className="btn btn-primary"><i className="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Obtener App</a>
-      							</div>
-
-      							<div className="title-block mb05">
-      								<h3>Suscríbete a nuestro boletín</h3>
-      							</div>
-
-      							<div className="text-center">
-      								<form className="subscribe-form">
-      								  <input className="email" placeholder="Agrega tu email..." type="text" /><input className="submit-btn" type="submit" name="lastname" />
-      								</form>
-      							</div>
-      						</div>
-      					</div>
-      			</div>
-
-            <div className="container contact-block-main contact-dark" id="contact">
-  <div className="wrapper">
-    <div className="title-block b-b b-danger ">
-      <h2>Contáctanos</h2>
-      <span className="sub-title mb50">Favor de llenar la forma siguiente</span>
-    </div>
-
-    <div className="row">
-      <div className="md-col-12 ld-col-6 col-5 offset-xld-1">
-
-    <div className="contact-form-main">
-      <form className="contact-form">
-        <div className="form-row">
-          <div className="col-5">
-            <input placeholder="Nombre completo" type="text" />
-          </div>
-          <div className="col-5">
-            <input placeholder="Email" type="text" />
-          </div>
-        </div>
-
-        <div className="form-row">
-          <input placeholder="Teléfono" type="text" />
-        </div>
-
-        <div className="form-row">
-          <textarea placeholder="Mensaje..."></textarea>
-        </div>
-
-        <div className="form-row">
-          <div className="col-5">
-            <img src="/static/landing-reCAPTCHA.png" />
-          </div>
-          <div className="col-5 text-right">
-            <button className="send-btn"> <span className="icon-ic_send_small"></span>Enviar</button>
-          </div>
-        </div>
-
-
-      </form>
-    </div>
-
-      </div>
-
-      <div className="col-6 md-col-12 mt05">
-        <div className="inner-contact b-l b-danger pl50 ml50">
-          <div className="row">
-            <div className="col-2">
-              <img src="/static/landing-contact-icon-pin.png" />
-            </div>
-            <div className="col-10">
-              <p>Blvd. Las Américas #4460-A <br/>
-              Lomas de Agua Caliente<br/>
-              Tijuana BC, México</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <img src="/static/landing-contact-icon-tel.png" />
-            </div>
-            <div className="col-10">
-              <p>(664) 208.1720</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <img src="/static/landing-contact-icon-mobile.png" />
-            </div>
-            <div className="col-10">
-              <p>(664) 364.5124</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <img src="/static/landing-contact-icon-mail.png" />
-            </div>
-            <div className="col-10">
-              <p>info@healthcarebaja.com</p>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
-
-
+              <div className="wrapper">
+                 <div className="row text-center">
+                    <div className="col-3 md-col-6">
+                       <span className="icon-ic_download ficon"></span>
+                       <span className="count counter">649</span>
+                       <em>Downloaded</em>
+                    </div>
+                    <div className="col-3 md-col-6">
+                       <span className="icon-ic_apple ficon"></span>
+                       <span className="count counter">628</span>
+                       <em>iOs users</em>
+                    </div>
+                    <div className="col-3 md-col-6">
+                       <span className="icon-ic_android ficon"> </span>
+                       <span className="count counter">247</span>
+                       <em>Android users</em>
+                    </div>
+                    <div className="col-3 md-col-6">
+                       <span className="icon-ic_windows ficon"> </span>
+                       <span className="count counter">325</span>
+                       <em>Windows users</em>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div className="container team-block-main parallax" id="our-team">
+              <div className="wrapper">
+                 <div className="title-block">
+                    <h2>Categorías</h2>
+                    <span className="sub-title">Todo lo que puedes encontrar en Healthcare Baja</span>
+                    <i className="sep-line">&nbsp;</i>
+                 </div>
+              </div>
+              <div className="team-slider-main text-center">
+                 <ul className="team-slider">
+                    <li>
+                       <div className="team-photo">
+                          <img src="/static/landing-DR_ICON.jpg" alt="Category" />
+                          <span className="social-links">
+                          <a href="https://healthcarebaja.com"><i className="fa fa-search fa-2x"></i></a>
+                          </span>
+                       </div>
+                       <span className="name">Doctores</span>
+                    </li>
+                    <li>
+                       <div className="team-photo">
+                          <img src="/static/landing-HOSPITAL_ICON.jpg" alt="Category" />
+                          <span className="social-links">
+                          <a href="https://healthcarebaja.com/hospitals"><i className="fa fa-search fa-2x"></i></a>
+                          </span>
+                       </div>
+                       <span className="name">Hospitales</span>
+                    </li>
+                    <li>
+                       <div className="team-photo">
+                          <img src="/static/landing-CLINIC_ICON.jpg" alt="Category" />
+                          <span className="social-links">
+                          <a href="https://healthcarebaja.com/clinics"><i className="fa fa-search fa-2x"></i></a>
+                          </span>
+                       </div>
+                       <span className="name">Clínicas</span>
+                    </li>
+                    <li>
+                       <div className="team-photo">
+                          <img src="/static/landing-LAB_ICON.jpg" alt="Category" />
+                          <span className="social-links">
+                          <a href="https://healthcarebaja.com/labs"><i className="fa fa-search fa-2x"></i></a>
+                          </span>
+                       </div>
+                       <span className="name">Laboratorios</span>
+                    </li>
+                    <li>
+                       <div className="team-photo">
+                          <img src="/static/landing-PHARMA_ICON.jpg" alt="Category" />
+                          <span className="social-links">
+                          <a href="https://healthcarebaja.com/pharmacies"><i className="fa fa-search fa-2x"></i></a>
+                          </span>
+                       </div>
+                       <span className="name">Farmacias</span>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+           <div id="download" className="container downlod-block-main parallax">
+              <div className="topClr"></div>
+              <div className="wrapper">
+                 <div className="title-block">
+                    <h2>Descarga nuestra App</h2>
+                    <i className="sep-line">&nbsp;</i>
+                 </div>
+                 <div className="downlod-main">
+                    <div className="download-btn text-center mb80">
+                       <a href="/" className="btn btn-primary"><i className="fa fa-download" aria-hidden="true"></i>&nbsp;&nbsp;Obtener App</a>
+                    </div>
+                    <div className="title-block mb05">
+                       <h3>Suscríbete a nuestro boletín</h3>
+                    </div>
+                    <div className="text-center">
+                       <form className="subscribe-form">
+                          <input className="email" placeholder="Agrega tu email..." type="text" /><input className="submit-btn" type="submit" name="lastname" />
+                       </form>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <div className="container contact-block-main contact-dark" id="contact">
+              <div className="wrapper">
+                 <div className="title-block b-b b-danger ">
+                    <h2>Contáctanos</h2>
+                    <span className="sub-title mb50">Favor de llenar la forma siguiente</span>
+                 </div>
+                 <div className="row">
+                    <div className="md-col-12 ld-col-6 col-5 offset-xld-1">
+                       <div className="contact-form-main">
+                          <form className="contact-form">
+                             <div className="form-row">
+                                <div className="col-5">
+                                   <input placeholder="Nombre completo" type="text" />
+                                </div>
+                                <div className="col-5">
+                                   <input placeholder="Email" type="text" />
+                                </div>
+                             </div>
+                             <div className="form-row">
+                                <input placeholder="Teléfono" type="text" />
+                             </div>
+                             <div className="form-row">
+                                <textarea placeholder="Mensaje..."></textarea>
+                             </div>
+                             <div className="form-row">
+                                <div className="col-5">
+                                   <img src="/static/landing-reCAPTCHA.png" />
+                                </div>
+                                <div className="col-5 text-right">
+                                   <button className="send-btn"> <span className="icon-ic_send_small"></span>Enviar</button>
+                                </div>
+                             </div>
+                          </form>
+                       </div>
+                    </div>
+                    <div className="col-6 md-col-12 mt05">
+                       <div className="inner-contact b-l b-danger pl50 ml50">
+                          <div className="row">
+                             <div className="col-2">
+                                <img src="/static/landing-contact-icon-pin.png" />
+                             </div>
+                             <div className="col-10">
+                                <p>Blvd. Las Américas #4460-A <br/>
+                                   Lomas de Agua Caliente<br/>
+                                   Tijuana BC, México
+                                </p>
+                             </div>
+                          </div>
+                          <div className="row">
+                             <div className="col-2">
+                                <img src="/static/landing-contact-icon-tel.png" />
+                             </div>
+                             <div className="col-10">
+                                <p>(664) 208.1720</p>
+                             </div>
+                          </div>
+                          <div className="row">
+                             <div className="col-2">
+                                <img src="/static/landing-contact-icon-mobile.png" />
+                             </div>
+                             <div className="col-10">
+                                <p>(664) 364.5124</p>
+                             </div>
+                          </div>
+                          <div className="row">
+                             <div className="col-2">
+                                <img src="/static/landing-contact-icon-mail.png" />
+                             </div>
+                             <div className="col-10">
+                                <p>info@healthcarebaja.com</p>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
         </div>
      </div>
   </div>
 )
+
+landing.getInitialProps = async ({ req, res }) => {
+  var deviceType = req.device.type
+  if(deviceType === 'phone'){
+    res.redirect('https://healthcarebaja.com')
+  }
+  return {deviceType: deviceType}
+}
+
+
+export default  landing

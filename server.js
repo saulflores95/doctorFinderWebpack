@@ -7,6 +7,7 @@ const app = next({ dev })
 const handler = nextRoutes.getRequestHandler(app)
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const device = require('express-device')
 
 app.prepare().then(() => {
   const server = express()
@@ -16,6 +17,7 @@ app.prepare().then(() => {
   server.use(bodyParser.json())
   server.use('/sw-installer.js', express.static('sw-installer.js'));
   server.use('/sw.js', express.static('sw.js'));
+  server.use(device.capture());
   server.use('/api/', routes, (err) => {
     if(err) throw err
   })
