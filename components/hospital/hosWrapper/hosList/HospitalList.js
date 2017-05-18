@@ -25,11 +25,6 @@ const HospitalList = ({hospital}) => (
           filter: brightness(40%);
           transition: 0.2s;
         }
-
-        .img:hover {
-          border-radius: 50%;
-          transition: 0.2s;
-        }
         .h1 {
           position: absolute;
           width: 100%;
