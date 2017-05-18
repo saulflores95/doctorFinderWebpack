@@ -3,7 +3,7 @@ import Head from 'next/head'
 const landing = () => (
   <div>
      <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" type="image/png" href="/static/favicon-16x16.png" />
         <title>Healthcare Baja - Your tour guide to health</title>

@@ -23,7 +23,7 @@ routes.post('/lab-registration', labController.post)
 //edit routes
 routes.put('/doctor-edit/:id', doctorController.put)
 
-routes.get('cmd/doctors', doctorController.getAll)
+routes.get('/doctors', doctorController.getAll)
 routes.get('/clinics', clinicController.getAll)
 routes.get('/pharmacies', pharmacieController.getAll)
 routes.get('/labs', labController.getAll)

@@ -41,7 +41,7 @@ doctorController.post = (req, res) => {
       message:err
     })
   })
-}
+};
 
 doctorController.put = (req, res) => {
   console.log('id:', req.params.id);
@@ -59,7 +59,7 @@ doctorController.put = (req, res) => {
       });
     }
   });
-}
+};
 
 doctorController.getAll = (req, res) => {
   db.Doctor.find({}).populate({
