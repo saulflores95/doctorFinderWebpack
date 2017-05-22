@@ -5,7 +5,7 @@ const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
     return doctor.specialty
   })
-  var uniqueArr = arr.filter(function (elem, index, self) {
+  var uniqueArr = arr.sort().filter(function (elem, index, self) {
     return index === self.indexOf(elem)
   })
   return uniqueArr
