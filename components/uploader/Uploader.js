@@ -48,7 +48,7 @@ export default class Uploader extends React.Component {
         width: 150,
         padding: 10,
         webKitBorderRadius: 5,
-        mozBorderRadius: 5,
+        MozBorderRadius: 5,
         border: 1,
         textAlign: 'center',
         backgroundColor: '#DDD',

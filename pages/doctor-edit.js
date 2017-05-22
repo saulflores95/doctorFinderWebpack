@@ -1,6 +1,7 @@
 import React from 'react'
 import App from '../components/App/App'
 import fetch from 'isomorphic-unfetch'
+import DoctorEditForm from '../components/edit/doctorEditForm'
 
 export default class extends React.Component {
   static async getInitialProps  ({ query: { id } }) {
@@ -14,14 +15,13 @@ export default class extends React.Component {
   render () {
     let doctors = []
     doctors.doctors = this.props.docs
-    const doctor = doctors.doctors.filter(doctor => this.props.id === doctor._id)
-    console.log(doctor)
-    if(doctor){
-      console.log(`/api/doctor-edit/${doctor[0]._id}`)
-    }
+    let doctor = doctors.doctors.filter(doctor => this.props.id === doctor._id)
+    doctor = doctor[0]
     return(
       <div>
-        <h1>doctor id: {doctor[0]._id}</h1>
+        <App>
+          <DoctorEditForm doctor={doctor}></DoctorEditForm>
+        </App>
       </div>
     )
   }
