@@ -229,6 +229,7 @@ export default class DoctorRegistrationForm extends Component {
                           <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
                           <MenuItem value={'Surgeon'} primaryText='Surgeon  ' />
                           <MenuItem value={'Urologist'} primaryText='Urologist  ' />
+                          <MenuItem value={'Veterinarian'} primaryText='Veterinarian  ' />
                         </SelectField>
                       </Col>
                     </Row>

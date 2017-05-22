@@ -81,10 +81,6 @@ const CatMenu = () => (
           transition: 0.2s;
         }
 
-        .img:hover {
-          border-radius: 50%;
-          transition: 0.2s;
-        }
         .h1 {
           position: absolute;
           width: 100%;
@@ -111,6 +107,7 @@ const CatMenu = () => (
 
         .wrapper {
           padding-top: 15px;
+          padding-bottom: 50px;
         }
       `}
     </style>
