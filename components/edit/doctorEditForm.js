@@ -130,7 +130,6 @@ export default class DoctorEditForm extends React.Component {
     this.setState({
       position: props.position,
       value: props.specialty,
-      position: props.position,
       url: props.img
     })
   }
