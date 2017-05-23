@@ -46,6 +46,7 @@ export default class DoctorEditForm extends React.Component {
       var address = this.refs.address.getValue();
       var description = this.refs.description.getValue();
       var phone = this.refs.phone.getValue();
+      var position = this.state.position;
       var insurance = this.state.toogleState;
       var specialty = this.state.value;
       var curriculum = {
@@ -59,6 +60,7 @@ export default class DoctorEditForm extends React.Component {
       var email = this.refs.email.getValue();
       var doctor = {
         name: name,
+        position: position,
         img: img,
         address: address,
         phone: phone,
