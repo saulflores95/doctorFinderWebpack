@@ -12,6 +12,7 @@ import NoSSR from 'react-no-ssr'
 import RegistrationMap from '../registration/RegistrationMap'
 import AlertContainer from 'react-alert'
 import injectTapEventPlugin from 'react-tap-event-plugin'
+import axios from 'axios'
 
 export default class DoctorEditForm extends React.Component {
 
@@ -41,8 +42,10 @@ export default class DoctorEditForm extends React.Component {
   editDoctor(event){
       event.preventDefault();
       var name = this.refs.doctorName.getValue();
-      var img = this.refs.doctorImgUrl.getValue();
+      var img = this.state.url;
+      var address = this.refs.address.getValue();
       var description = this.refs.description.getValue();
+      var phone = this.refs.phone.getValue();
       var insurance = this.state.toogleState;
       var specialty = this.state.value;
       var curriculum = {
@@ -57,17 +60,33 @@ export default class DoctorEditForm extends React.Component {
       var doctor = {
         name: name,
         img: img,
+        address: address,
+        phone: phone,
         description: description,
         insurance: insurance,
         curriculum: curriculum,
         email: email,
-        specialty:specialty,
+        specialty:specialty
       };
-
-      console.log('Doctor: ', doctor);
 
       if(doctor){
         console.log('Doctor Added: ', doctor)
+        axios.put(`/api/doctor-edit/${this.props.doctor._id}`, {
+          name: doctor.name,
+          img: doctor.img,
+          description: doctor.description,
+          insurance: doctor.insurance,
+          curriculum: doctor.curriculum,
+          email: doctor.email,
+          phone:doctor.phone,
+          specialty: doctor.specialty,
+          address: doctor.address,
+          position: doctor.position
+        }).then(function (response) {
+          console.log(response)
+        }).catch(function (err){
+          console.log(err)
+        })
       }
   }
 
@@ -80,7 +99,6 @@ export default class DoctorEditForm extends React.Component {
     }
     console.log(this.state.toogleState);
   }
-
 
   handleChange (event, index, value) {
     this.setState({value: value})
@@ -107,7 +125,7 @@ export default class DoctorEditForm extends React.Component {
     }
   }
 
-  handleProps(e, props) {
+  handleProps(props) {
     console.log('clicked');
     this.setState({
       position: props.position,
@@ -116,7 +134,6 @@ export default class DoctorEditForm extends React.Component {
       url: props.img
     })
   }
-
 
   render(){
     const styles = {

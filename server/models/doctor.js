@@ -6,6 +6,7 @@ const doctorSchema = new Schema({
     name: {type: String, reqired: true},
     img: {type: String, reqired: true},
     description:String,
+    address: String,
     curriculum:{type: Array, default: ['Experience not available']},
     specialty:String,
     email: String,

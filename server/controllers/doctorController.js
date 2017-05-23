@@ -12,7 +12,7 @@ doctorController.post = (req, res) => {
     email,
     specialty,
     phone,
-    direccion,
+    address,
     position,
     userId,
   } = req.body
@@ -26,7 +26,7 @@ doctorController.post = (req, res) => {
     email,
     phone,
     specialty,
-    direccion,
+    address,
     position,
     _creator: userId
   })
@@ -44,13 +44,38 @@ doctorController.post = (req, res) => {
 };
 
 doctorController.put = (req, res) => {
-  console.log('id:', req.params.id);
+  const {
+    name,
+    img,
+    description,
+    insurance,
+    curriculum,
+    email,
+    specialty,
+    phone,
+    address,
+    position,
+    userId,
+  } = req.body
   let id = req.params.id
+  console.log(req.body);
   db.Doctor.findById(id, function(err, doctor) {
     if(!doctor)
       return next(new Error('Coud not find document'));
     else {
-      doctor.name = 'Luigi'
+
+      doctor.name = name
+      doctor.img = img
+      doctor.description = description
+      doctor.insurance = insurance
+      doctor.curriculum = curriculum
+      doctor.email = email
+      doctor.specialty = specialty
+      doctor.phone = phone
+      doctor.address = address
+      doctor.position = position
+
+      console.log('Name:', doctor.name);
       doctor.save(function(err) {
         if(err)
           console.log('error in updating collection');

@@ -125,7 +125,7 @@ export default class DoctorRegistrationForm extends Component {
         email: doctor.email,
         phone:doctor.phone,
         specialty: doctor.specialty,
-        direccion: doctor.direccion,
+        address: doctor.address,
         position: doctor.position
       })
       .then(function (response) {
@@ -293,7 +293,7 @@ export default class DoctorRegistrationForm extends Component {
                     <Col sm={12} md={12} lg={12}>
                       <TextField
                         hintText='Direccion'
-                        ref='direccion'
+                        ref='address'
                         fullWidth
                         multiLine
                       />
