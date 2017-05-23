@@ -111,8 +111,7 @@ export default class DoctorEditForm extends React.Component {
     this.setState({
       position: event.latlng
     })
-    console.log(this.state.position)
-
+    console.log('Position: ', this.state.position)
     // L.marker(event.latlng)
   }
 
@@ -127,7 +126,7 @@ export default class DoctorEditForm extends React.Component {
     }
   }
 
-  handleProps(props) {
+  handleChangeProps(props) {
     console.log('clicked');
     this.setState({
       position: props.position,
@@ -168,7 +167,7 @@ export default class DoctorEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <button type='button' onClick={this.handleProps.bind(this, doctor)}>CLICK HERE</button>
+                  <button type='button' onClick={this.handleChangeProps.bind(this, doctor)}>CLICK HERE</button>
                   <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
