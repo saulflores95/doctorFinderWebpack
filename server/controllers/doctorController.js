@@ -61,7 +61,7 @@ doctorController.put = (req, res) => {
   console.log(req.body);
   db.Doctor.findById(id, function(err, doctor) {
     if(!doctor)
-      return next(new Error('Coud not find document'));
+      return new Error('Coud not find document');
     else {
 
       doctor.name = name
