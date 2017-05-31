@@ -107,7 +107,6 @@ const CatMenu = () => (
 
         .wrapper {
           padding-top: 15px;
-          padding-bottom: 50px;
         }
       `}
     </style>
