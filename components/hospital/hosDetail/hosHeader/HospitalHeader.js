@@ -7,6 +7,7 @@ const HospitalHeader = ({hospital}) => (
       <Col sm={6} md={6} lg={4}>
         <img width='250' height='200' className='img' src={hospital.img} />
       </Col>
+      <Col sm={6} md={6} lg={6}>
         <p className='detail-text'>{hospital.name}</p>
       </Col>
     </Row>
