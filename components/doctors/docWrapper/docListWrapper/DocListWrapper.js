@@ -7,7 +7,6 @@ const DoctorListWrapper = ({doctor}) => (
     <style jsx>
       {`
       .wrapper {
-        padding-top: 10px;
         position: absolute;
         width: 100%;
         height: 100%;

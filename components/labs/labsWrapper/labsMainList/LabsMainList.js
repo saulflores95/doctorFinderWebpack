@@ -1,6 +1,11 @@
 import React from 'react'
 import {Col} from 'react-grid-system'
 import Link from 'next/link'
+import {List, ListItem} from 'material-ui/List'
+import Divider from 'material-ui/Divider'
+import ActionInfo from 'material-ui/svg-icons/action/info'
+import Avatar from 'material-ui/Avatar'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const imageChooser = (props) => {
   if (props === 'Certus') {
@@ -15,47 +20,36 @@ const imageChooser = (props) => {
 }
 
 const LabsMainList = ({lab}) => (
-  <Col xs={12} sm={12} md={12} lg={4}>
-    <div className='back'>
-      <h1 className='h1'>
+  <div>
+    <MuiThemeProvider>
+      <List style={{padding: 0}}>
         <Link href={`/laboratories-map?id=${lab}`} as={`/laboratories-map/${lab}`}>
-          <div className='link'>{lab}</div>
+          <ListItem
+            leftAvatar={<Avatar className='avatar' src={imageChooser(lab)} />}
+            primaryText={<div className='label'>{lab}</div>}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
+            style={{marginTop:10, marginBottom:10}}
+          />
         </Link>
-      </h1>
-      <Link href={`/laboratories-map?id=${lab}`} as={`/laboratories-map/${lab}`}>
-        <img
-          className='img'
-          src={imageChooser(lab)}
-        />
-      </Link>
-    </div>
-    <style jsx>{`
-      .img {
-        width: 100%;
-        height: 250px;
-        filter: brightness(40%);
-        transition: 0.2s;
-      }
-      .h1 {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        text-align: center;
-        margin-top: 20%;
-      }
-      .back {
-        position: relative;
-        height: 250px;
-        width: 100%;
-        margin-bottom: 30px;
-      }
-      .link {
-        color: white;
-        font-size: 30px;
-      }
+        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+      </List>
+    </MuiThemeProvider>
+    <style jsx>
+      {`
+        .avatar {
+          width: 45px !important;
+          height: 45px !important;
+        }
 
-    `}</style>
-  </Col>
+        .label {
+          font-size: 18px;
+          color: #2d517b !important;
+          font-family: 'Montserrat', sans-serif;
+        }
+
+      `}
+    </style>
+  </div>
 )
 
 export default LabsMainList

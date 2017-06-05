@@ -1,48 +1,38 @@
 import React from 'react'
 import {Col} from 'react-grid-system'
 import Link from 'next/link'
+import {List, ListItem} from 'material-ui/List'
+import Divider from 'material-ui/Divider'
+import ActionInfo from 'material-ui/svg-icons/action/info'
+import Avatar from 'material-ui/Avatar'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const ClinicList = ({clinic}) => (
   <div>
-    <Col xs={12} sm={12} md={12} lg={4}>
-      <div className='back'>
-        <h1 className='h1'>
-          <Link href={`/clinic-detail?id=${clinic._id}`} as={`/clinic-detail/${clinic._id}`}>
-            <div className='link'>{clinic.name}</div>
-          </Link>
-        </h1>
-        <Link to={`/clinics/${clinic._id}`}>
-          <img
-            className='img'
-            src={clinic.img}
+    <MuiThemeProvider>
+      <List style={{padding: 0}}>
+        <Link href={`/clinic-detail?id=${clinic._id}`} as={`/clinic-detail/${clinic._id}`}>
+          <ListItem
+            leftAvatar={<Avatar className='avatar' src={clinic.img} />}
+            primaryText={<div className='label'>{clinic.name}</div>}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
+            style={{marginTop:10, marginBottom:10}}
           />
         </Link>
-      </div>
-    </Col>
+        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+      </List>
+    </MuiThemeProvider>
     <style jsx>
       {`
-        .img {
-          width: 100%;
-          height: 250px;
-          filter: brightness(40%);
-          transition: 0.2s;
+        .avatar {
+          width: 45px !important;
+          height: 45px !important;
         }
-        .h1 {
-          position: absolute;
-          width: 100%;
-          z-index: 1;
-          text-align: center;
-          margin-top: 20%;
-        }
-        .back {
-          position: relative;
-          height: 250px;
-          width: 100%;
-          margin-bottom: 30px;
-        }
-        .link {
-          color: white;
-          font-size: 30px;
+
+        .label {
+          font-size: 18px;
+          color: #2d517b !important;
+          font-family: 'Montserrat', sans-serif;
         }
 
       `}

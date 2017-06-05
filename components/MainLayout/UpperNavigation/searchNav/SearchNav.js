@@ -58,28 +58,26 @@ export default class SearchNav extends Component {
     let filterArregelo = this.updateFilter(props, identifier)
     return (
       <div>
-        <div>
-          <ul className='ul'>
-            <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
-            <li className='liRight'>
-              <div className='wrap'>
-                <form action=''>
-                  <label className='labelSearch' htmlFor='search'>Search</label>
-                  <input
-                    className='search'
-                    name='search'
-                    type='text'
-                    autoComplete='off'
-                    placeholder="Search..."
-                    value={this.state.search}
-                    onChange={this.updateSearch.bind(this)} />
-                  <label className='labelSearch' htmlFor='search'>Rechercher</label>
-                  <input className='search_submit' autoComplete='off' name='searcht' value='Rechercher' type='submit' />
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul className='ul'>
+          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
+          <li className='liRight'>
+            <div className='wrap'>
+              <form action=''>
+                <label className='labelSearch' htmlFor='search'>Search</label>
+                <input
+                  className='search'
+                  name='search'
+                  type='text'
+                  autoComplete='off'
+                  placeholder="Search..."
+                  value={this.state.search}
+                  onChange={this.updateSearch.bind(this)} />
+                <label className='labelSearch' htmlFor='search'>Rechercher</label>
+                <input className='search_submit' autoComplete='off' name='searcht' value='Rechercher' type='submit' />
+              </form>
+            </div>
+          </li>
+        </ul>
         <div>
           <Transition
             component={false}
