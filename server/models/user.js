@@ -1,22 +1,18 @@
 const mongoose = require('mongoose')
 
 const {Schema} = mongoose;
+const passportLocalMongoose = require('passport-local-mongoose');
+
 mongoose.Promise = global.Promise;
 
 const userSchema = new Schema({
-  username:{
-    type:String,
-    required:true,
-    minLength:[5, 'username must be 5 or more characters']
-  },
-  password:{
-    type:String,
-    required:true,
-    minLength:[8, 'psw must be 8 or more']
-  },
-  isDeleted:{type: Boolean, default: true},
+  username:String,
+  password:String,
+  isDeleted:{type: Boolean, default: false},
   createdAt:{type: Date, default: Date.now}
 })
+
+userSchema.plugin(passportLocalMongoose) //this is used tp handle salting/ hashing the password
 
 const User = mongoose.model('User', userSchema)
 

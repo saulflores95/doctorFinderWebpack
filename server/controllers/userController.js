@@ -1,22 +1,29 @@
 const db = require('../models')
+const passport = require('passport')
 
 const userController = {};
 
-userController.post = (req, res) => {
-  const {username, password} = req.body
-  const user = new db.User({
+userController.register = (req, res) => {
+  const {
     username,
-    password,
-    type
-  })
-  user.save().then(newUser => {
-    res.status(200).json({
-      success:true,
-      data:newUser
-    })
-  }).catch((err) => {
-    message:err
-  })
+    password
+  } = req.body
+
+  db.User.register(new db.User({ username : req.body.username }), req.body.password, function(err, account) {
+      if (err) {
+        console.log(err)
+        return res.send(err)
+      }
+      passport.authenticate('local')(req, res, function () {
+          req.session.save(function (err) {
+              if (err) {
+                  return next(err);
+              }
+              res.send('User registered')
+          });
+      });
+  });
+
 }
 
 module.exports = userController
