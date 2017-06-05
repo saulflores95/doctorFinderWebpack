@@ -83,6 +83,7 @@ const imageChooser = (props) => {
 const DocCatList = ({specialty}) => (
   <div>
     <Link href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
+      <div>
         <MuiThemeProvider>
           <List style={{padding: 0}}>
             <Transition
@@ -106,6 +107,7 @@ const DocCatList = ({specialty}) => (
             <Divider inset style={{backgroundColor: '#57c6df'}}/>
           </List>
         </MuiThemeProvider>
+      </div>
     </Link>
     <style jsx>
       {`
