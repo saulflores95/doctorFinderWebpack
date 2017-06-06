@@ -36,7 +36,7 @@ export default class ButtomNavigationComponet extends Component {
         display: 'block'
       },
       buttonNav: {
-        backgroundColor: '#192e48'
+        backgroundColor: '#2d517b'
       }
     }
     return (

@@ -50,9 +50,6 @@ const App = (props) => (
           #__next {
             height: 100%;
           }
-          [data-reactroot],[data-reactid='2'] {
-            height: 100%;
-          }
           `}
         </style>
       </Head>

@@ -24,7 +24,7 @@ const DoctorList = ({doctor}) => (
     <style jsx>
       {`
         .label {
-          font-size: 16px;
+          font-size: 18px;
           color: #2d517b !important;
           font-family: 'Montserrat', sans-serif;
         }

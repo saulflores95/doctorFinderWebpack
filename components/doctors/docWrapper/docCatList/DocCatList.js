@@ -81,11 +81,11 @@ const imageChooser = (props) => {
   }
 }
 const DocCatList = ({specialty}) => (
-  <div className='prueba'>
+  <div>
     <Link href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
       <div>
         <MuiThemeProvider>
-          <List>
+          <List style={{padding: 0}}>
             <Transition
               component={false}
               enter={{
@@ -101,6 +101,7 @@ const DocCatList = ({specialty}) => (
                 leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
                 rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
                 primaryText={<div className='label'>{specialty}</div>}
+                style={{marginTop:10, marginBottom:10}}
               />
             </Transition>
             <Divider inset style={{backgroundColor: '#57c6df'}}/>
@@ -112,7 +113,7 @@ const DocCatList = ({specialty}) => (
       {`
 
         .label {
-          font-size: 16px;
+          font-size: 18px;
           color: #2d517b !important;
           font-family: 'Montserrat', sans-serif;
         }
@@ -129,9 +130,6 @@ const DocCatList = ({specialty}) => (
         .pageSlider-enter.pageSlider-enter-active {
           transform: translate3d(0, 0, 0);
           transition: all 600ms;
-        }
-        .prueba {
-          height: 100;
         }
       `}
     </style>

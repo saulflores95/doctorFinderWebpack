@@ -12,18 +12,30 @@ const ClinicDetail = ({clinic}) => (
     <MuiThemeProvider>
       <Container>
         <Row>
-          <Col xs={12} sm={12} md={12} lg={6}><ClinicHeader clinic={clinic[0]} /></Col>
+          <Col xs={12} sm={12} md={12} lg={12}><ClinicHeader clinic={clinic[0]} /></Col>
           <Col xs={12} sm={12} md={12} lg={6}><ClinicSpeciality clinic={clinic[0]} /></Col>
-          <Col xs={12} sm={12} md={12} lg={12}><NoSSR><DetailMap props={clinic[0]} /></NoSSR></Col>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <div className='detail-map'>
+              <NoSSR onSSR={<div>Map Loading...</div>}>
+                <DetailMap props={clinic[0]} />
+              </NoSSR>
+            </div>
+          </Col>
         </Row>
       </Container>
     </MuiThemeProvider>
-    <style jsx>{`
-      .wrapper {
-        padding-top: 15px;
-        padding-bottom: 30px;
-      }
-    `}</style>
+    <style jsx>
+      {`
+        .wrapper {
+          padding-top: 15px;
+          padding-bottom: 30px;
+        }
+
+        .detail-map {
+          padding-top: 20px;
+        }
+      `}
+    </style>
   </div>
 )
 

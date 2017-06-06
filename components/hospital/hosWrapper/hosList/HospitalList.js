@@ -1,52 +1,43 @@
 import React from 'react'
 import Link from 'next/link'
 import {Col} from 'react-grid-system'
+import {List, ListItem} from 'material-ui/List'
+import Divider from 'material-ui/Divider'
+import ActionInfo from 'material-ui/svg-icons/action/info'
+import Avatar from 'material-ui/Avatar'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const HospitalList = ({hospital}) => (
-  <Col xs={12} sm={12} md={12} lg={4}>
-    <div className='back'>
-      <h1 className='h1'>
+  <div>
+    <MuiThemeProvider>
+      <List style={{padding: 0}}>
         <Link href={`/hospital-detail?id=${hospital._id}`} as={`/hospital-detail/${hospital._id}`}>
-          <a className='link'>{hospital.name}</a>
+          <ListItem
+            leftAvatar={<Avatar className='avatar' src={hospital.img} />}
+            primaryText={<div className='label'>{hospital.name}</div>}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
+            style={{marginTop:10, marginBottom:10}}
+          />
         </Link>
-      </h1>
-      <Link href={`/hospital-detail?id=${hospital._id}`} as={`/hospital-detail/${hospital._id}`}>
-        <img
-          className='img'
-          src={hospital.img}
-        />
-      </Link>
-    </div>
+        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+      </List>
+    </MuiThemeProvider>
     <style jsx>
       {`
-        .img {
-          width: 100%;
-          height: 250px;
-          filter: brightness(40%);
-          transition: 0.2s;
+        .avatar {
+          width: 45px !important;
+          height: 45px !important;
         }
-        .h1 {
-          position: absolute;
-          width: 100%;
-          z-index: 1;
-          text-align: center;
-          margin-top: 20%;
-        }
-        .back {
-          position: relative;
-          height: 250px;
-          width: 100%;
-          margin-bottom: 30px;
-        }
-        .link {
-          color: white;
-          font-size: 30px;
-          text-decoration:none;
+
+        .label {
+          font-size: 18px;
+          color: #2d517b !important;
+          font-family: 'Montserrat', sans-serif;
         }
 
       `}
     </style>
-  </Col>
+  </div>
 )
 
 export default HospitalList
