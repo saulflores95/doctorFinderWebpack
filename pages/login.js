@@ -1,12 +1,25 @@
 import React from 'react'
 import App from '../components/App/App'
-import UserRegistration from '../components/registration/UserRegistration'
+import Login from '../components/login/Login'
 
-const login = () => (
-  <div>
-    <UserRegistration />
-  </div>
+const check = (user) => {
+  if(user === 'No User'){
+    return <Login />
+  }
+}
+
+const login = ({user}) => (
+    <div>
+      {check(user)}
+    </div>
 )
 
+login.getInitialProps = async ({ req, res }) => {
+  if(req.user){
+    return res.redirect('/')
+  }
+  let user = 'No User'
+  return { user: user}
+}
 
 export default login

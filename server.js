@@ -15,6 +15,8 @@ const cookieParser = require('cookie-parser');
 
 app.prepare().then(() => {
   const server = express()
+  const User = db.User
+
   mongoose.connect('mongodb://localhost:27017/healthcare', () => {
     console.log('Connected to mongodb HCB')
   })
@@ -28,17 +30,16 @@ app.prepare().then(() => {
   }));
   server.use(passport.initialize());
   server.use(passport.session());
+  passport.use(new LocalStrategy(User.authenticate()));
+  passport.serializeUser(User.serializeUser());
+  passport.deserializeUser(User.deserializeUser());
+
   server.use('/sw-installer.js', express.static('sw-installer.js'));
   server.use('/sw.js', express.static('sw.js'));
   server.use(device.capture());
   server.use('/api/', routes, (err) => {
     if(err) throw err
   })
-  const User = db.User
-  passport.use(new LocalStrategy(User.authenticate()));
-  passport.serializeUser(User.serializeUser());
-  passport.deserializeUser(User.deserializeUser());
-
   server.use(handler).listen(3000, (err) => {
     if (err) throw err
     console.log('>>>Ready on PORT: 3000')

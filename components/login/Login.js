@@ -11,25 +11,26 @@ export default class UserRegistration extends Component {
     }
   }
 
-  addUser() {
+  login() {
     let username = this.refs.username.value
     let password = this.refs.password.value
-    if (username) {
-      axios.post('/api/register', {
+    if (username && password) {
+      axios.post('/api/login', {
         username: username,
         password: password
       })
       .then(function (response) {
-        if(response.data.message === 'A user with the given username is already registered'){
-          return alert(response.data.message)
-        }else {
-          alert(`Welcome to HCB ${username}`)
-          Router.push('/');
-        }
+        Router.push('/')
       })
       .catch(function (error) {
         console.log(error)
       })
+    }
+    if(!username){
+      alert('Username Missing')
+    }
+    if(!password){
+      alert('Password Missing')
     }
 
   }
@@ -47,11 +48,13 @@ export default class UserRegistration extends Component {
                   <source src='https://static.videezy.com/system/resources/previews/000/006/789/original/weight_being_set.mp4' type='video/webm' />
                 </video>
                 <div className='box'>
-                  <h1>Register Son!</h1>
+                  <h1>Login</h1>
                   <input type='text' ref="username" placeholder='Username'/>
+
                   <input type='password' ref="password" placeholder='Password'/>
-                  <button type="button" onClick={this.addUser.bind(this)}>Register</button>
-                  <p>Are you member? <span><Link href="/login"><a>Log In</a></Link></span></p>
+
+                  <button type="button" onClick={this.login.bind(this)}>Log In</button>
+                  <p>Not a member? <span><Link href="/register"><a>Register</a></Link></span></p>
                 </div>
               </div>
             </div>

@@ -42,9 +42,6 @@ routes.get('/login', function(req, res) {
 
 routes.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), (req, res, next) => {
     req.session.save((err) => {
-        if (err) {
-            return next(err);
-        }
         res.redirect('/');
     });
 });
@@ -60,6 +57,7 @@ routes.get('/logout', (req, res, next) => {
 });
 
 routes.get('/user', (req, res) => {
+    console.log('Data in routes.js', req.user)
     return res.status(200).json({
       succes:true,
       data:req.user
