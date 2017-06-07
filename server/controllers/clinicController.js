@@ -1,6 +1,6 @@
 const db = require('../models')
 
-const clinicController = {};
+const clinicController = {}
 
 clinicController.post = (req, res) => {
   const {
@@ -33,30 +33,30 @@ clinicController.post = (req, res) => {
 
   clinic.save().then(newClinic => {
     return res.status(200).json({
-      success:true,
-      data:newClinic
+      success: true,
+      data: newClinic
     })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
+      message: err
     })
   })
 }
 
 clinicController.getAll = (req, res) => {
   db.Clinic.find({}).populate({
-    path:'_creator',
-    select:'username createdAt -_id'
+    path: '_creator',
+    select: 'username createdAt -_id'
   }).then((clinic) => {
     return res.status(200).json({
-      succes:true,
-      data:clinic
-    });
+      succes: true,
+      data: clinic
+    })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
-    });
-  });
-};
+      message: err
+    })
+  })
+}
 
 module.exports = clinicController

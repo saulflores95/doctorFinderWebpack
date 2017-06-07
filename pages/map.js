@@ -1,4 +1,4 @@
-import GeneralMap from  '../components/map/GeneralMap'
+import GeneralMap from '../components/map/GeneralMap'
 import App from '../components/App/App'
 import NoSSR from 'react-no-ssr'
 const hospitals = require('../hospitals')
@@ -13,7 +13,7 @@ const map = () => (
       <div className='container'>
         <NoSSR onSSR={<div>On server</div>}>
           <div className='container'>
-            <GeneralMap doctors={doctors.doctors} hospitals={hospitals.hospitals} clinics={clinics.clinics} pharmacies={pharmacies.pharmacies} labs={labs.labs}/>
+            <GeneralMap doctors={doctors.doctors} hospitals={hospitals.hospitals} clinics={clinics.clinics} pharmacies={pharmacies.pharmacies} labs={labs.labs} />
           </div>
         </NoSSR>
       </div>

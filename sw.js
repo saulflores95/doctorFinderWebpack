@@ -7,7 +7,6 @@ const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
 ]
 
-
 function clearPreviousCaches (keys) {
   const deletedCachesPromises = keys.map(key => {
     if (key !== CACHE_NAME) {
@@ -31,21 +30,19 @@ self.addEventListener('install', (e) => {
   )
 })
 
-
 /*
 ** ACTIVATE SW
 */
 self.addEventListener('activate', (event) => {
-  console.log('[ServiceWorker] activating...');
+  console.log('[ServiceWorker] activating...')
   event.waitUntil(self.clients.claim())
 })
-
 
 /*
 ** INTERCEPT REQUESTS
 */
 self.addEventListener('fetch', (event) => {
-  console.log('[ServiceWorker] fetching..');
+  console.log('[ServiceWorker] fetching..')
   event.respondWith(
     caches.match(event.request)
       .then(resp => resp ||

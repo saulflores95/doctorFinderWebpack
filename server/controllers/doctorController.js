@@ -1,6 +1,6 @@
 const db = require('../models')
 
-const doctorController = {};
+const doctorController = {}
 
 doctorController.post = (req, res) => {
   const {
@@ -14,7 +14,7 @@ doctorController.post = (req, res) => {
     phone,
     address,
     position,
-    userId,
+    userId
   } = req.body
 
   const doctor = new db.Doctor({
@@ -33,15 +33,15 @@ doctorController.post = (req, res) => {
 
   doctor.save().then(newDoctor => {
     return res.status(200).json({
-      success:true,
-      data:newDoctor
+      success: true,
+      data: newDoctor
     })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
+      message: err
     })
   })
-};
+}
 
 doctorController.put = (req, res) => {
   const {
@@ -54,16 +54,16 @@ doctorController.put = (req, res) => {
     specialty,
     phone,
     address,
-    position,
-    userId,
+    position
   } = req.body
   let id = req.params.id
-  console.log(req.body);
-  db.Doctor.findById(id, function(err, doctor) {
-    if(!doctor)
-      return next(new Error('Coud not find document'));
-    else {
-
+  db.Doctor.findById(id, function (err, doctor) {
+    if (err) {
+      console.log(err)
+    }
+    if (!doctor) {
+      return new Error('Coud not find document')
+    } else {
       doctor.name = name
       doctor.img = img
       doctor.description = description
@@ -75,31 +75,31 @@ doctorController.put = (req, res) => {
       doctor.address = address
       doctor.position = position
 
-      console.log('Name:', doctor.name);
-      doctor.save(function(err) {
-        if(err)
-          console.log('error in updating collection');
-        else
+      doctor.save(function (err) {
+        if (err) {
+          console.log('error in updating collection')
+        } else {
           console.log('success in updating')
-      });
+        }
+      })
     }
-  });
-};
+  })
+}
 
 doctorController.getAll = (req, res) => {
   db.Doctor.find({}).populate({
-    path:'_creator',
-    select:'username createdAt -_id'
+    path: '_creator',
+    select: 'username createdAt -_id'
   }).then((doctor) => {
     return res.status(200).json({
-      succes:true,
-      data:doctor
-    });
+      succes: true,
+      data: doctor
+    })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
-    });
-  });
-};
+      message: err
+    })
+  })
+}
 
 module.exports = doctorController

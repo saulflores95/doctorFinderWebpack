@@ -1,6 +1,6 @@
 const db = require('../models')
 
-const hospitalController = {};
+const hospitalController = {}
 
 hospitalController.post = (req, res) => {
   const {
@@ -9,7 +9,7 @@ hospitalController.post = (req, res) => {
     position,
     phone,
     email,
-    userId,
+    userId
   } = req.body
 
   const hospital = new db.Hospital({
@@ -23,30 +23,30 @@ hospitalController.post = (req, res) => {
 
   hospital.save().then(newHospital => {
     return res.status(200).json({
-      success:true,
-      data:newHospital
+      success: true,
+      data: newHospital
     })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
+      message: err
     })
   })
 }
 
 hospitalController.getAll = (req, res) => {
   db.Hospital.find({}).populate({
-    path:'_creator',
-    select:'username createdAt -_id'
+    path: '_creator',
+    select: 'username createdAt -_id'
   }).then((hospital) => {
     return res.status(200).json({
-      succes:true,
-      data:hospital
-    });
+      succes: true,
+      data: hospital
+    })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
-    });
-  });
-};
+      message: err
+    })
+  })
+}
 
 module.exports = hospitalController

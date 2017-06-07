@@ -1,6 +1,6 @@
 const db = require('../models')
 
-const labController = {};
+const labController = {}
 
 labController.post = (req, res) => {
   const {
@@ -10,7 +10,7 @@ labController.post = (req, res) => {
     phone,
     tag,
     email,
-    userId,
+    userId
   } = req.body
 
   const lab = new db.Lab({
@@ -25,30 +25,30 @@ labController.post = (req, res) => {
 
   lab.save().then(newLab => {
     return res.status(200).json({
-      success:true,
-      data:newLab
+      success: true,
+      data: newLab
     })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
+      message: err
     })
   })
 }
 
 labController.getAll = (req, res) => {
   db.Lab.find({}).populate({
-    path:'_creator',
-    select:'username createdAt -_id'
+    path: '_creator',
+    select: 'username createdAt -_id'
   }).then((lab) => {
     return res.status(200).json({
-      succes:true,
-      data:lab
-    });
+      succes: true,
+      data: lab
+    })
   }).catch((err) => {
     return res.status(500).json({
-      message:err
-    });
-  });
-};
+      message: err
+    })
+  })
+}
 
 module.exports = labController

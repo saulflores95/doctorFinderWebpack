@@ -3,11 +3,11 @@ import App from '../components/App/App'
 import PharmacieWrapper from '../components/pharmacies/phaWrapper/PharmacieWrapper'
 import fetch from 'isomorphic-unfetch'
 
-const pharmacies = ({pharmas}) => (
+const pharmacies = ({ pharmas }) => (
   <div>
     <App>
       <div className='container'>
-        <PharmacieWrapper pharmacies={pharmas}/>
+        <PharmacieWrapper pharmacies={pharmas} />
       </div>
     </App>
   </div>

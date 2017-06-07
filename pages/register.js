@@ -1,5 +1,4 @@
 import React from 'react'
-import App from '../components/App/App'
 import UserRegistration from '../components/registration/UserRegistration'
 
 const register = () => (
@@ -9,11 +8,11 @@ const register = () => (
 )
 
 register.getInitialProps = async({ req, res }) => {
-  if(req.user){
+  if (req.user) {
     return res.redirect('/')
   }
   let user = 'No User'
-  return { user: user}
+  return { user: user }
 }
 
 export default register
