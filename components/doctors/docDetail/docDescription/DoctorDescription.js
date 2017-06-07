@@ -7,7 +7,6 @@ import FlatButton from 'material-ui/FlatButton'
 import {Container} from 'react-grid-system'
 
 export default class DoctorDescription extends Component {
-
   constructor () {
     super()
     this.state = {
@@ -28,7 +27,7 @@ export default class DoctorDescription extends Component {
       textCenter: {
         textAlign: 'center',
         paddingBottom: 15
-      },
+      }
     }
     const actions = [
       <FlatButton

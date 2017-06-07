@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 const ContactForm = () => (
   <div className='wrapper'>
     <div className='img-container'>
-      <img className="img" src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
+      <img className='img' src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
     </div>
     <div className='text-container'>
       <h2 className='text'>Contact us</h2>
@@ -34,15 +34,15 @@ const ContactForm = () => (
             multiLine
             rows={2}
         /><br />
-        <div className='button-form'>
-          <RaisedButton
-            label={<span style={{color: 'white'}}>Send</span>}
-            labelPosition='before'
-            primary={false}
-            backgroundColor="#2d517b"
-            style={{marginLeft: 'auto', marginRight:'auto',display:'block', width:300, marginTop:20, marginBottom:20}}
+          <div className='button-form'>
+            <RaisedButton
+              label={<span style={{color: 'white'}}>Send</span>}
+              labelPosition='before'
+              primary={false}
+              backgroundColor='#2d517b'
+              style={{marginLeft: 'auto', marginRight: 'auto', display: 'block', width: 300, marginTop: 20, marginBottom: 20}}
           />
-        </div>
+          </div>
         </div>
       </MuiThemeProvider>
     </Container>
@@ -68,12 +68,12 @@ const ContactForm = () => (
           font-family: 'Montserrat', sans-serif;
         }
 
-        .img-container{
+        .img-container {
+          margin-right: auto;
+          display: block;
           width: 128px;
           height: 128px;
           margin-left: auto;
-        	margin-right: auto;
-        	display: block;
         }
 
         .contactForm {

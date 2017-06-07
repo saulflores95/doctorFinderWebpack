@@ -1,20 +1,17 @@
 import React, {Component} from 'react'
-import FloatingActionButton from 'material-ui/FloatingActionButton'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import ContentAdd from 'material-ui/svg-icons/content/add'
 import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from '../components/labs/labsMap/labsListWrapper/LabsListWrapper'
 
 export default class LabsMap extends Component {
-
   constructor () {
     super()
     this.state = {
       latitude: 32.50504,
       longitude: -116.99056,
       zoom: 5,
-      open: false,
+      open: false
     }
   }
 
@@ -36,22 +33,17 @@ export default class LabsMap extends Component {
     this.setState({open: false})
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.map = this.refs.map.leafletElement
     setTimeout(() => {
       this.map.invalidateSize()
     }, 100)
-}
+  }
 
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
     var L = require('leaflet')
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
-    var PharmacieMapIcon = L.icon({
-      iconUrl: 'https://s28.postimg.org/t501cy4el/Farmacias.png',
-      popupAnchor: [0, -18],
-      iconSize: [25, 41]
-    })
 
     var mapCenter = [this.state.latitude, this.state.longitude]
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import {Col} from 'react-grid-system'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
@@ -15,11 +14,11 @@ const HospitalList = ({hospital}) => (
           <ListItem
             leftAvatar={<Avatar className='avatar' src={hospital.img} />}
             primaryText={<div className='label'>{hospital.name}</div>}
-            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
       </List>
     </MuiThemeProvider>
     <style jsx>

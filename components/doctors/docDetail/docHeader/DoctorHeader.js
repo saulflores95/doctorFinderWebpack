@@ -2,7 +2,6 @@ import React from 'react'
 import DoctorExp from './docExp/DoctorExp'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Row, Col} from 'react-grid-system'
-import Divider from 'material-ui/Divider'
 
 const DoctorHeader = (doctor) => (
   <div>

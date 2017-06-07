@@ -27,7 +27,7 @@ export default class SearchNav extends Component {
       case 'pharmacie':
         return <PharmacieMainList pharmacie={props} />
       default:
-        null
+        return null
     }
   }
 
@@ -47,7 +47,7 @@ export default class SearchNav extends Component {
          }
         )
       default:
-        null
+        return null
     }
   }
 
@@ -59,7 +59,7 @@ export default class SearchNav extends Component {
     return (
       <div>
         <ul className='ul'>
-          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
+          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}} /></Link></li>
           <li className='liRight'>
             <div className='wrap'>
               <form action=''>
@@ -69,7 +69,7 @@ export default class SearchNav extends Component {
                   name='search'
                   type='text'
                   autoComplete='off'
-                  placeholder="Search..."
+                  placeholder='Search...'
                   value={this.state.search}
                   onChange={this.updateSearch.bind(this)} />
                 <label className='labelSearch' htmlFor='search'>Rechercher</label>
@@ -167,11 +167,11 @@ export default class SearchNav extends Component {
               background-size: 50px 50px !important;
             }
 
-            input[type="text"] {
+            input[type='text'] {
               height: 25px;
               font-size: 20px;
               display: inline-block;
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-weight: 100;
               border: none;
               outline: none;
@@ -189,11 +189,11 @@ export default class SearchNav extends Component {
               cursor: pointer;
             }
 
-            input[type="text"]:focus:hover {
+            input[type='text']:focus:hover {
               border-bottom: 1px solid white;
             }
 
-            input[type="text"]:focus {
+            input[type='text']:focus {
               width: 50vw;
               z-index: 1;
               color: white;
@@ -201,12 +201,12 @@ export default class SearchNav extends Component {
             }
 
             @media only screen and (max-width: 768px) {
-              input[type="text"]:focus {
+              input[type='text']:focus {
                 width: 30vw;
               }
             }
 
-            input[type="submit"] {
+            input[type='submit'] {
               font-color: white;
               height: 50px;
               width: 63px;
@@ -227,7 +227,7 @@ export default class SearchNav extends Component {
               transition: opacity .4s ease;
             }
 
-            input[type="submit"]:hover {
+            input[type='submit']:hover {
               opacity: 0.8;
             }
 

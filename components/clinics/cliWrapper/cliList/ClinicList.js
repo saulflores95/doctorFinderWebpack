@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col} from 'react-grid-system'
 import Link from 'next/link'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
@@ -15,11 +14,11 @@ const ClinicList = ({clinic}) => (
           <ListItem
             leftAvatar={<Avatar className='avatar' src={clinic.img} />}
             primaryText={<div className='label'>{clinic.name}</div>}
-            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
       </List>
     </MuiThemeProvider>
     <style jsx>

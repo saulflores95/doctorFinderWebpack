@@ -60,7 +60,7 @@ const DoctorContactForm = (doctor) => (
           label={<span style={{color: '#2d517b'}}>Call</span>}
           labelPosition='before'
           primary={false}
-          icon={<FaPhone className='label-icon'/>}
+          icon={<FaPhone className='label-icon' />}
         />
       </form>
     </MuiThemeProvider>

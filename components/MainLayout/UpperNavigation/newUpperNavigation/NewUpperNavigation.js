@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Link  from 'next/link'
+import Link from 'next/link'
 import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 import IconButton from 'material-ui/IconButton'
@@ -9,34 +9,28 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 
 const imgUrl = '/static/healthcarebaja.png'
 export default class NewUpperNavigation extends Component {
-
-  componentWillMount() {
+  componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
   }
 
   render () {
-    var styles = {
-      iconMenu: {
-        height: 300
-      }
-    }
     return (
       <div className='container'>
         <ul className='ul'>
-          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}}/></Link></li>
+          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}} /></Link></li>
           <li className='liRight'>
             <MuiThemeProvider>
               <IconMenu
-               iconButtonElement={<IconButton iconStyle={{color: 'white'}}><MoreVertIcon /></IconButton>}
-               anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-               targetOrigin={{horizontal: 'left', vertical: 'top'}}
-               menuStyle={{width: 200}}
-               className='menuItem'
+                iconButtonElement={<IconButton iconStyle={{color: 'white'}}><MoreVertIcon /></IconButton>}
+                anchorOrigin={{horizontal: 'left', vertical: 'top'}}
+                targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                menuStyle={{width: 200}}
+                className='menuItem'
                >
-                 <MenuItem primaryText="Doctors" href="/"/>
-                 <MenuItem primaryText="Categories" href="/categories"/>
-                 <MenuItem primaryText="Map" href="/map"/>
-                 <MenuItem primaryText="Contact us" href="/contact-us" />
+                <MenuItem primaryText='Doctors' href='/' />
+                <MenuItem primaryText='Categories' href='/categories' />
+                <MenuItem primaryText='Map' href='/map' />
+                <MenuItem primaryText='Contact us' href='/contact-us' />
               </IconMenu>
             </MuiThemeProvider>
           </li>
@@ -98,11 +92,11 @@ export default class NewUpperNavigation extends Component {
               position: relative;
             }
 
-            input[type="text"] {
+            input[type='text'] {
               height: 25px;
               font-size: 20px;
               display: inline-block;
-              font-family: "Montserrat";
+              font-family: 'Montserrat';
               font-weight: 100;
               border: none;
               outline: none;
@@ -119,18 +113,18 @@ export default class NewUpperNavigation extends Component {
               cursor: pointer;
             }
 
-            input[type="text"]:focus:hover {
+            input[type='text']:focus:hover {
               border-bottom: 1px solid #BBB;
             }
 
-            input[type="text"]:focus {
+            input[type='text']:focus {
               width: 50vw;
               z-index: 1;
               border-bottom: 1px solid #BBB;
               cursor: text;
             }
 
-            input[type="submit"] {
+            input[type='submit'] {
               height: 50px;
               width: 63px;
               display: inline-block;
@@ -149,7 +143,7 @@ export default class NewUpperNavigation extends Component {
               transition: opacity .4s ease;
             }
 
-            input[type="submit"]:hover {
+            input[type='submit']:hover {
               opacity: 0.8;
             }
 

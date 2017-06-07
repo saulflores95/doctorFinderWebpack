@@ -13,9 +13,9 @@ const doctorCategory = (props) => {
 
 const DoctorWrapper = (docs) => (
   <div className='wrapper'>
-      {docs.docs.length
-      ? doctorCategory(docs.docs).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
-      }
+    {docs.docs.length
+    ? doctorCategory(docs.docs).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+    }
     <style jsx>
       {`
       .wrapper {

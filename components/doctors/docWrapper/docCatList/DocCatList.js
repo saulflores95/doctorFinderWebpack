@@ -99,12 +99,12 @@ const DocCatList = ({specialty}) => (
               >
               <ListItem
                 leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
-                rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
+                rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
                 primaryText={<div className='label'>{specialty}</div>}
-                style={{marginTop:10, marginBottom:10}}
+                style={{marginTop: 10, marginBottom: 10}}
               />
             </Transition>
-            <Divider inset style={{backgroundColor: '#57c6df'}}/>
+            <Divider inset style={{backgroundColor: '#57c6df'}} />
           </List>
         </MuiThemeProvider>
       </div>

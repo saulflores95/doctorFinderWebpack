@@ -6,8 +6,7 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 import LabsListWrapper from './labsListWrapper/LabsListWrapper'
 
-export default class LabsGeneralMap extends Component  {
-
+export default class LabsGeneralMap extends Component {
   constructor () {
     super()
     this.state = {
@@ -36,12 +35,12 @@ export default class LabsGeneralMap extends Component  {
     return coordinate
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.map = this.refs.map.leafletElement
     setTimeout(() => {
       this.map.invalidateSize()
     }, 100)
-}
+  }
 
   render () {
     const positionState = [this.state.lat, this.state.lng]
@@ -63,9 +62,8 @@ export default class LabsGeneralMap extends Component  {
     return (
       <div className='mapcontainer'>
         <MuiThemeProvider>
-          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
-            <ContentAdd>
-            </ContentAdd>
+          <FloatingActionButton style={styles.button} mini onClick={this.handleToggle.bind(this)}>
+            <ContentAdd />
           </FloatingActionButton>
         </MuiThemeProvider>
         <Map ref='map' center={positionState} zoom={this.state.zoom}>
@@ -92,7 +90,7 @@ export default class LabsGeneralMap extends Component  {
               open={this.state.open}
               docked={false}
               onRequestChange={this.handleClose.bind(this)}>
-                <LabsListWrapper labs={this.props.labs} />
+              <LabsListWrapper labs={this.props.labs} />
               <MenuItem onClick={this.handleClose.bind(this)} >
                 <h3> Close </h3>
               </MenuItem>
@@ -116,5 +114,4 @@ export default class LabsGeneralMap extends Component  {
       </div>
     )
   }
-
 }

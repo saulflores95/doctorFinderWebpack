@@ -1,12 +1,12 @@
-import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import Checkbox from 'material-ui/Checkbox';
-import { Container, Row, Col, Visible, Hidden } from 'react-grid-system';
-import Paper from 'material-ui/Paper';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import React from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import TextField from 'material-ui/TextField'
+import RaisedButton from 'material-ui/RaisedButton'
+import Checkbox from 'material-ui/Checkbox'
+import { Container, Row, Col } from 'react-grid-system'
+import Paper from 'material-ui/Paper'
+import SelectField from 'material-ui/SelectField'
+import MenuItem from 'material-ui/MenuItem'
 import Uploader from '../uploader/Uploader'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from '../registration/RegistrationMap'
@@ -15,91 +15,89 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import axios from 'axios'
 
 export default class DoctorEditForm extends React.Component {
-
-  constructor(){
-    super();
+  constructor () {
+    super()
     this.state = {
       toogleState: false,
-      value:'Podologia',
-      count:0,
+      value: 'Podologia',
+      count: 0,
       position: [32, 100],
-      url: '',
+      url: ''
+    }
+    this.alertOptions = {
+      offset: 14,
+      position: 'top right',
+      theme: 'dark',
+      time: 5000,
+      transition: 'scale'
     }
   }
 
-  alertOptions = {
-    offset: 14,
-    position: 'top right',
-    theme: 'dark',
-    time: 5000,
-    transition: 'scale'
-  }
-
-  componentWillMount() {
+  componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
   }
 
-  editDoctor(event){
-      event.preventDefault();
-      var name = this.refs.doctorName.getValue();
-      var img = this.state.url;
-      var address = this.refs.address.getValue();
-      var description = this.refs.description.getValue();
-      var phone = this.refs.phone.getValue();
-      var position = this.state.position;
-      var insurance = this.state.toogleState;
-      var specialty = this.state.value;
-      var curriculum = {
-        one:this.refs.curriculumOne.getValue(),
-        two:this.refs.curriculumTwo.getValue(),
-        three:this.refs.curriculumThree.getValue(),
-        four:this.refs.curriculumFour.getValue(),
-        five:this.refs.curriculumFive.getValue(),
-        six:this.refs.curriculumSix.getValue()
-      };
-      var email = this.refs.email.getValue();
-      var doctor = {
-        name: name,
-        position: position,
-        img: img,
-        address: address,
-        phone: phone,
-        description: description,
-        insurance: insurance,
-        curriculum: curriculum,
-        email: email,
-        specialty:specialty
-      };
+  editDoctor (event) {
+    event.preventDefault()
+    var name = this.refs.doctorName.getValue()
+    var img = this.state.url
+    var address = this.refs.address.getValue()
+    var description = this.refs.description.getValue()
+    var phone = this.refs.phone.getValue()
+    var position = this.state.position
+    var insurance = this.state.toogleState
+    var specialty = this.state.value
+    var curriculum = {
+      one: this.refs.curriculumOne.getValue(),
+      two: this.refs.curriculumTwo.getValue(),
+      three: this.refs.curriculumThree.getValue(),
+      four: this.refs.curriculumFour.getValue(),
+      five: this.refs.curriculumFive.getValue(),
+      six: this.refs.curriculumSix.getValue()
+    }
+    var email = this.refs.email.getValue()
+    var doctor = {
+      name: name,
+      position: position,
+      img: img,
+      address: address,
+      phone: phone,
+      description: description,
+      insurance: insurance,
+      curriculum: curriculum,
+      email: email,
+      specialty: specialty
+    }
 
-      if(doctor){
-        console.log('Doctor Added: ', doctor)
-        axios.put(`/api/doctor-edit/${this.props.doctor._id}`, {
-          name: doctor.name,
-          img: doctor.img,
-          description: doctor.description,
-          insurance: doctor.insurance,
-          curriculum: doctor.curriculum,
-          email: doctor.email,
-          phone:doctor.phone,
-          specialty: doctor.specialty,
-          address: doctor.address,
-          position: doctor.position
-        }).then(function (response) {
-          console.log(response)
-        }).catch(function (err){
-          console.log(err)
-        })
-      }
+    if (doctor) {
+      console.log('Doctor Added: ', doctor)
+      axios.put(`/api/doctor-edit/${this.props.doctor._id}`, {
+        name: doctor.name,
+        img: doctor.img,
+        description: doctor.description,
+        insurance: doctor.insurance,
+        curriculum: doctor.curriculum,
+        email: doctor.email,
+        phone: doctor.phone,
+        specialty: doctor.specialty,
+        address: doctor.address,
+        position: doctor.position
+      }).then(function (response) {
+        console.log(response)
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
   }
 
-  toggleChecked(Checkbox){
-    console.log('this was pressed');
-    if(this.state.toogleState == false){
-      this.state.toogleState = true;
-    }else{
-      this.state.toogleState = false;
+  toggleChecked (Checkbox) {
+    console.log('this was pressed')
+    if (this.state.toogleState === false) {
+      this.state.toogleState = true
+    } else {
+      this.state.toogleState = false
     }
-    console.log(this.state.toogleState);
+    console.log(this.state.toogleState)
   }
 
   handleChange (event, index, value) {
@@ -126,8 +124,8 @@ export default class DoctorEditForm extends React.Component {
     }
   }
 
-  handleChangeProps(props) {
-    console.log('clicked');
+  handleChangeProps (props) {
+    console.log('clicked')
     this.setState({
       position: props.position,
       value: props.specialty,
@@ -135,7 +133,7 @@ export default class DoctorEditForm extends React.Component {
     })
   }
 
-  render(){
+  render () {
     const styles = {
       paper: {
         width: '100%',
@@ -345,12 +343,11 @@ export default class DoctorEditForm extends React.Component {
               </Container>
             </Paper>
             <div>
-              <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+              <AlertContainer ref={(a) => { this.msg = a }} {...this.alertOptions} />
             </div>
           </Container>
         </MuiThemeProvider>
       </div>
     )
   }
-
 }

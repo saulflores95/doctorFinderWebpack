@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import {Col, Row} from 'react-grid-system'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import Avatar from 'material-ui/Avatar'
@@ -22,42 +21,42 @@ const CatMenu = () => (
           <ListItem
             leftAvatar={<Avatar className='avatar' src={hospitalImg} />}
             primaryText={<div className='label'>Hospitals</div>}
-            rightIcon={<FaHospitalO style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<FaHospitalO style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
         <Link href='/clinics'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={clinicImg} />}
             primaryText={<div className='label'>Clinics</div>}
-            rightIcon={<FaHeartbeat style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<FaHeartbeat style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
         <Link href='/pharmacies'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={pharmacieImg} />}
             primaryText={<div className='label'>Pharmacies</div>}
-            rightIcon={<FaPlusSquare style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<FaPlusSquare style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
         <Link href='/laboratories'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={labImg} />}
             primaryText={<div className='label'>Laboratories</div>}
-            rightIcon={<FaEyedropper style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<FaEyedropper style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
       </List>
     </MuiThemeProvider>
-  <style jsx>
-    {`
+    <style jsx>
+      {`
       .label{
         font-size: 18px;
         color: #2d517b !important;
@@ -69,8 +68,8 @@ const CatMenu = () => (
         height: 45px !important;
       }
     `}
-  </style>
-</div>
+    </style>
+  </div>
 )
 
 export default CatMenu

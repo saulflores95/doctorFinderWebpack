@@ -12,7 +12,7 @@ const LabsHeader = ({lab}) => (
       </Col>
     </Row>
     <style jsx>
-    {`
+      {`
       .detail-text {
         font-size: 20px;
         color: #2d517b;

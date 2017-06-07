@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row} from 'react-grid-system'
 import ClinicList from './cliList/ClinicList'
-//var clinics = require('../../../clinics.json')
+//  var clinics = require('../../../clinics.json')
 
 const ClinicWrapper = ({clinics}) => (
   <div className='wrapper'>

@@ -6,7 +6,6 @@ import {Container, Row, Col} from 'react-grid-system'
 import DetailMap from '../../map/DetailMap'
 import NoSSR from 'react-no-ssr'
 import Transition from 'react-motion-ui-pack'
-import {spring} from 'react-motion'
 
 const DoctorDetail = (doctor) => (
   <div className='doctorDetailWrapper'>
@@ -23,7 +22,7 @@ const DoctorDetail = (doctor) => (
       >
       <Container className='doc-Container'>
         <div className='doctor-header'>
-          <DoctorHeader {...doctor.doctor}/>
+          <DoctorHeader {...doctor.doctor} />
         </div>
         <div className='doctor-description'>
           <DoctorDescription doctor={doctor.doctor} />
