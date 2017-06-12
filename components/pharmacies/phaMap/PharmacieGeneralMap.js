@@ -7,14 +7,13 @@ import MenuItem from 'material-ui/MenuItem'
 import PharmacieListWrapper from './phaListWrapper/PharmacieListWrapper'
 
 export default class PharmacieGeneralMap extends Component {
-
   constructor () {
     super()
     this.state = {
       latitude: 32.50504,
       longitude: -116.99056,
       zoom: 5,
-      open: false,
+      open: false
     }
   }
 
@@ -36,12 +35,12 @@ export default class PharmacieGeneralMap extends Component {
     this.setState({open: false})
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.map = this.refs.map.leafletElement
     setTimeout(() => {
       this.map.invalidateSize()
     }, 100)
-}
+  }
 
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
@@ -65,9 +64,8 @@ export default class PharmacieGeneralMap extends Component {
     return (
       <div className='map'>
         <MuiThemeProvider>
-          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
-            <ContentAdd>
-            </ContentAdd>
+          <FloatingActionButton style={styles.button} mini onClick={this.handleToggle.bind(this)}>
+            <ContentAdd />
           </FloatingActionButton>
         </MuiThemeProvider>
         <Map ref='map' center={mapCenter} zoom={this.state.zoom}>

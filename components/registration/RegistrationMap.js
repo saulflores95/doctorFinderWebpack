@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 
 export default class RegistrationMap extends Component {
-
   constructor () {
     super()
     this.state = {

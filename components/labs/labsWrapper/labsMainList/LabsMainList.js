@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col} from 'react-grid-system'
 import Link from 'next/link'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
@@ -13,10 +12,9 @@ const imageChooser = (props) => {
   }
   if (props === 'Gamboa') {
     return 'https://pbs.twimg.com/profile_images/705493262472056832/i_GpO3EZ.jpg'
+  } else {
+    console.log('No tag fits the choosen image')
   }
-   else {
-      console.log('No tag fits the choosen image')
-    }
 }
 
 const LabsMainList = ({lab}) => (
@@ -27,11 +25,11 @@ const LabsMainList = ({lab}) => (
           <ListItem
             leftAvatar={<Avatar className='avatar' src={imageChooser(lab)} />}
             primaryText={<div className='label'>{lab}</div>}
-            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
       </List>
     </MuiThemeProvider>
     <style jsx>

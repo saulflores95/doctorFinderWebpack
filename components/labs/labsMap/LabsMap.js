@@ -42,7 +42,6 @@ export default class LabsMap extends Component {
 
   render () {
     const userPosition = [this.state.latitude, this.state.longitude]
-    var L = require('leaflet')
     var { Map, Marker, Popup, TileLayer } = require('react-leaflet')
 
     var mapCenter = [this.state.latitude, this.state.longitude]
@@ -58,7 +57,9 @@ export default class LabsMap extends Component {
               return (
                 <Marker position={[lab.latitude, lab.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q= + lab.latitude + ',' + pharmacie.longitude'} > <br />{pharmacie.name}</a></span>
+                    <span><a href={'http://maps.google.com/?q= + lab.latitude + "," + lab.longitude'}>
+                      <br />{lab.name}</a>
+                    </span>
                   </Popup>
                 </Marker>
               )
@@ -106,5 +107,4 @@ export default class LabsMap extends Component {
       </div>
     )
   }
-
 }

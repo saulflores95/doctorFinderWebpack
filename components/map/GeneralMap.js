@@ -6,7 +6,6 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 
 export default class GeneralMap extends Component {
-
   constructor () {
     super()
     this.state = {
@@ -40,7 +39,7 @@ export default class GeneralMap extends Component {
     this.setState({open: false})
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.map = this.refs.map.leafletElement
     setTimeout(() => {
       this.map.invalidateSize()
@@ -263,9 +262,7 @@ export default class GeneralMap extends Component {
         )
       }
     }
-
     var mapCenter = [this.state.latitude, this.state.longitude]
-
     var styles = {
       button: {
         zIndex: 999,
@@ -274,13 +271,11 @@ export default class GeneralMap extends Component {
         left: 7
       }
     }
-
     return (
       <div className='map'>
         <MuiThemeProvider>
-          <FloatingActionButton style={styles.button} mini={true} onClick={this.handleToggle.bind(this)}>
-            <ContentAdd>
-            </ContentAdd>
+          <FloatingActionButton style={styles.button} mini onClick={this.handleToggle.bind(this)}>
+            <ContentAdd />
           </FloatingActionButton>
         </MuiThemeProvider>
         <Map ref='map' center={mapCenter} zoom={this.state.zoom} >

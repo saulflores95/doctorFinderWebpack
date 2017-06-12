@@ -1,5 +1,4 @@
 import React from 'react'
-import {Col} from 'react-grid-system'
 import Link from 'next/link'
 import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
@@ -10,10 +9,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 const imageChooser = (props) => {
   if (props === 'Roma') {
     return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/roma.jpg'
+  } else {
+    console.log('No tag fits the choosen image')
   }
-   else {
-      console.log('No tag fits the choosen image')
-    }
 }
 
 const PharmacieMainList = ({pharmacie}) => (
@@ -24,11 +22,11 @@ const PharmacieMainList = ({pharmacie}) => (
           <ListItem
             leftAvatar={<Avatar className='avatar' src={imageChooser(pharmacie)} />}
             primaryText={<div className='label'>{pharmacie}</div>}
-            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}}/>}
-            style={{marginTop:10, marginBottom:10}}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+            style={{marginTop: 10, marginBottom: 10}}
           />
         </Link>
-        <Divider inset style={{backgroundColor: '#57c6df'}}/>
+        <Divider inset style={{backgroundColor: '#57c6df'}} />
       </List>
     </MuiThemeProvider>
     <style jsx>

@@ -15,7 +15,6 @@ import AlertContainer from 'react-alert'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 export default class DoctorRegistrationForm extends Component {
-
   constructor () {
     super()
     this.state = {
@@ -25,17 +24,16 @@ export default class DoctorRegistrationForm extends Component {
       position: [32, 100],
       url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbPvqnfj0taeHk9BLFCYpySg2-eVk2i7kx4PE046Waix2-zM-NAILl-m8'
     }
+    this.alertOptions = {
+      offset: 14,
+      position: 'top right',
+      theme: 'dark',
+      time: 5000,
+      transition: 'scale'
+    }
   }
 
-  alertOptions = {
-    offset: 14,
-    position: 'top right',
-    theme: 'dark',
-    time: 5000,
-    transition: 'scale'
-  }
-
-  componentWillMount() {
+  componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
   }
 
@@ -113,7 +111,7 @@ export default class DoctorRegistrationForm extends Component {
     }
 
     console.log('Doctor: ', doctor)
-    let _self = this;
+    let _self = this
 
     if (doctor) {
       axios.post('/api/doctor-registration', {
@@ -123,7 +121,7 @@ export default class DoctorRegistrationForm extends Component {
         insurance: doctor.insurance,
         curriculum: doctor.curriculum,
         email: doctor.email,
-        phone:doctor.phone,
+        phone: doctor.phone,
         specialty: doctor.specialty,
         address: doctor.address,
         position: doctor.position
@@ -139,9 +137,7 @@ export default class DoctorRegistrationForm extends Component {
       .catch(function (error) {
         console.log(error)
       })
-
     }
-
   }
 
   render () {
@@ -343,12 +339,11 @@ export default class DoctorRegistrationForm extends Component {
               </Container>
             </Paper>
             <div>
-              <AlertContainer ref={a => this.msg = a} {...this.alertOptions} />
+              <AlertContainer ref={(a) => { this.msg = a }} {...this.alertOptions} />
             </div>
           </Container>
         </MuiThemeProvider>
       </div>
     )
   }
-
 }
