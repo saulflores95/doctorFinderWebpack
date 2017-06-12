@@ -4,23 +4,23 @@ import fetch from 'isomorphic-unfetch'
 import DoctorEditForm from '../components/edit/doctorEditForm'
 
 export default class extends React.Component {
-  static async getInitialProps  ({ query: { id } }) {
-  const res = await fetch('https://healthcarebaja.com/api/doctors')
+  static async getInitialProps ({ query: { id } }) {
+    const res = await fetch('https://healthcarebaja.com/api/doctors')
     const json = await res.json()
     return {
       id,
       docs: json.data
-     }
+    }
   }
   render () {
     let doctors = []
     doctors.doctors = this.props.docs
     let doctor = doctors.doctors.filter(doctor => this.props.id === doctor._id)
     doctor = doctor[0]
-    return(
+    return (
       <div>
         <App>
-          <DoctorEditForm doctor={doctor}></DoctorEditForm>
+          <DoctorEditForm doctor={doctor} />
         </App>
       </div>
     )

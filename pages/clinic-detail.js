@@ -4,23 +4,23 @@ import ClinicDetail from '../components/clinics/cliDetail/ClinicDetail'
 import fetch from 'isomorphic-unfetch'
 
 export default class extends React.Component {
-  static async getInitialProps  ({ query: { id } }) {
+  static async getInitialProps ({ query: { id } }) {
     const res = await fetch('https://healthcarebaja.com/api/clinics')
     const json = await res.json()
     return {
       id,
       clinics: json.data
-     }
+    }
   }
 
   render () {
     let clinics = this.props.clinics
     const clinic = clinics.filter(cli => this.props.id === cli._id)
-    return(
+    return (
       <div>
         <App>
           <div className='container'>
-            <ClinicDetail clinic={clinic}/>
+            <ClinicDetail clinic={clinic} />
           </div>
         </App>
       </div>

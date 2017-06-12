@@ -4,7 +4,7 @@ import ClinicRegistrationForm from '../components/registration/ClinicRegistratio
 
 export default class extends React.Component {
   render () {
-    return(
+    return (
       <div>
         <App>
           <div className='container'>

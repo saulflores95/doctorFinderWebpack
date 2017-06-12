@@ -1,5 +1,4 @@
-import Layout from '../components/MyLayout'
-import ClinicWrapper from  '../components/clinics/cliWrapper/ClinicWrapper'
+import ClinicWrapper from '../components/clinics/cliWrapper/ClinicWrapper'
 import App from '../components/App/App'
 import fetch from 'isomorphic-unfetch'
 
@@ -7,7 +6,7 @@ const clinics = ({cli}) => (
   <div>
     <App>
       <div className='container'>
-        <ClinicWrapper clinics={cli}/>
+        <ClinicWrapper clinics={cli} />
       </div>
     </App>
   </div>

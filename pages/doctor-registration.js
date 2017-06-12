@@ -13,10 +13,9 @@ const doctorRegistration = () => (
 )
 
 doctorRegistration.getInitialProps = async ({ req, res }) => {
-  if(!req.user){
+  if (!req.user) {
     return res.redirect('/login')
-  }
-  return { user: req.user}
+  } return { user: req.user }
 }
 
 export default doctorRegistration

@@ -2,7 +2,6 @@ import React from 'react'
 import App from '../components/App/App'
 import HospitalRegistrationForm from '../components/registration/HospitalRegistrationForm'
 
-
 const hospitalRegistration = () => (
   <div>
     <App>
@@ -14,10 +13,9 @@ const hospitalRegistration = () => (
 )
 
 hospitalRegistration.getInitialProps = async ({ req, res }) => {
-  if(!req.user){
+  if (!req.user) {
     return res.redirect('/login')
-  }
-  return { user: req.user}
+  } return { user: req.user }
 }
 
 export default hospitalRegistration

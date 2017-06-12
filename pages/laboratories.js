@@ -7,7 +7,7 @@ const laboratories = ({labs}) => (
   <div>
     <App>
       <div className='container'>
-        <LabsWrapper labs={labs}/>
+        <LabsWrapper labs={labs} />
       </div>
     </App>
   </div>

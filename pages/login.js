@@ -18,7 +18,7 @@ login.getInitialProps = async ({ req, res }) => {
     return res.redirect('/')
   }
   let user = 'No User'
-  return { user: user}
+  return { user: user }
 }
 
 export default login

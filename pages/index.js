@@ -1,5 +1,4 @@
-import Layout from '../components/MyLayout'
-import DoctorWrapper from  '../components/doctors/docWrapper/DoctorWrapper'
+import DoctorWrapper from '../components/doctors/docWrapper/DoctorWrapper'
 import App from '../components/App/App'
 import fetch from 'isomorphic-unfetch'
 
@@ -7,7 +6,7 @@ const doctors = ({ docs }) => (
   <div className='container'>
     <App>
       <div>
-        <DoctorWrapper docs={docs}/>
+        <DoctorWrapper docs={docs} />
       </div>
     </App>
     <style jsx>
@@ -23,7 +22,7 @@ const doctors = ({ docs }) => (
 doctors.getInitialProps = async ({ req }) => {
   const res = await fetch('https://healthcarebaja.com/api/doctors')
   const json = await res.json()
-  return { docs: json.data}
+  return { docs: json.data }
 }
 
 export default doctors

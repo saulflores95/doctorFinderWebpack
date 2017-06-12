@@ -1,6 +1,5 @@
 import Layout from '../components/MyLayout'
 
-
 const Index = ({user}) => (
   <Layout>
     <h1>{`Welcome back ${user.username}`}</h1>
@@ -9,9 +8,9 @@ const Index = ({user}) => (
 )
 
 Index.getInitialProps = async ({ req, res }) => {
-  if(!req.user){
+  if (!req.user) {
     return res.redirect('/login')
-  }
-  return { user: req.user}
+  } return { user: req.user }
 }
+
 export default Index

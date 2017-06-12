@@ -5,20 +5,20 @@ import NoSSR from 'react-no-ssr'
 import fetch from 'isomorphic-unfetch'
 
 export default class extends React.Component {
-  static async getInitialProps  ({ query: { id } }) {
+  static async getInitialProps ({ query: { id } }) {
     const res = await fetch('https://healthcarebaja.com/api/labs')
     const json = await res.json()
     return {
       id,
       labs: json.data
-     }
+    }
   }
 
   render () {
     let labs = []
     labs.labs = this.props.labs
     const lab = labs.labs.filter(lab => this.props.id === lab.tag)
-    return(
+    return (
       <div className='container'>
         <App className='container'>
           <div className='container'>
