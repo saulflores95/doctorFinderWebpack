@@ -19,13 +19,14 @@ export default class SearchNav extends Component {
   }
 
   updateProp (props, identifier) {
+    let idCounter = 0
     switch (identifier) {
       case 'doctor':
-        return <DoctorList doctor={props} />
+        return <DoctorList doctor={props} key={idCounter++}/>
       case 'lab':
-        return <LabsMainList lab={props} />
+        return <LabsMainList lab={props} key={idCounter++}/>
       case 'pharmacie':
-        return <PharmacieMainList pharmacie={props} />
+        return <PharmacieMainList pharmacie={props} key={idCounter++}/>
       default:
         return null
     }
@@ -56,6 +57,7 @@ export default class SearchNav extends Component {
     let identifier = this.props.identifier
     let props = this.props.props
     let filterArregelo = this.updateFilter(props, identifier)
+    let idCounter = 0
     return (
       <div>
         <ul className='ul'>
@@ -90,7 +92,7 @@ export default class SearchNav extends Component {
               opacity: 0
             }}
             >
-            <div className='wrapper'>
+            <div className='wrapper' key={idCounter++}>
               {filterArregelo.map((props) => {
                 return this.updateProp(props, identifier)
               })}
