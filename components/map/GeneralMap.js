@@ -154,7 +154,7 @@ export default class GeneralMap extends Component {
             {this.props.pharmacies.map((pharmacie) => {
               var cordinates = this.handleCoordinates(pharmacie.position[0].lat, pharmacie.position[0].lng)
               return (
-                <Marker icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
+                <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
                     <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
                   </Popup>
