@@ -1,6 +1,7 @@
 import React from 'react'
 import DocCatList from './docCatList/DocCatList'
 
+let idCounter = 0
 const doctorCategory = (props) => {
   var arr = props.map((doctor) => {
     return doctor.specialty
@@ -14,7 +15,7 @@ const doctorCategory = (props) => {
 const DoctorWrapper = (docs) => (
   <div className='wrapper'>
     {docs.docs.length
-    ? doctorCategory(docs.docs).map(specialty => <DocCatList specialty={specialty} />) : <div>Loading</div>
+      ? doctorCategory(docs.docs).map(specialty => <DocCatList specialty={specialty} key={idCounter++}/>) : <div>Loading</div>
     }
     <style jsx>
       {`

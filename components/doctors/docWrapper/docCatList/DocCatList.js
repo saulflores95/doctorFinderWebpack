@@ -8,6 +8,8 @@ import Avatar from 'material-ui/Avatar'
 import Transition from 'react-motion-ui-pack'
 import {spring} from 'react-motion'
 
+let idCounter = 0
+
 const imageChooser = (props) => {
   switch (props) {
     case 'Allergist':
@@ -102,6 +104,7 @@ const DocCatList = ({specialty}) => (
                 rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
                 primaryText={<div className='label'>{specialty}</div>}
                 style={{marginTop: 10, marginBottom: 10}}
+                key={idCounter++}
               />
             </Transition>
             <Divider inset style={{backgroundColor: '#57c6df'}} />
