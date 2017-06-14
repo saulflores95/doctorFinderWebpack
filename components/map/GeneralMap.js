@@ -51,7 +51,7 @@ export default class GeneralMap extends Component {
     if (value === 'doctors') {
       if (this.state.showDoctors === true) {
         this.setState({
-          showDoctors: false,
+          showDoctors: true,
           showPharmacies: false,
           showClinics: false,
           showHospitals: false,
@@ -69,7 +69,11 @@ export default class GeneralMap extends Component {
     } else if (value === 'pharmacies') {
       if (this.state.showPharmacies === true) {
         this.setState({
-          showPharmacies: false
+          showPharmacies: true,
+          showDoctors: false,
+          showClinics: false,
+          showHospitals: false,
+          showLabs: false
         })
       } else {
         this.setState({
@@ -83,7 +87,11 @@ export default class GeneralMap extends Component {
     } else if (value === 'clinics') {
       if (this.state.showClinics === true) {
         this.setState({
-          showClinics: false
+          showClinics: true,
+          showPharmacies: false,
+          showDoctors: false,
+          showHospitals: false,
+          showLabs: false
         })
       } else {
         this.setState({
@@ -97,7 +105,11 @@ export default class GeneralMap extends Component {
     } else if (value === 'labs') {
       if (this.state.showLabs === true) {
         this.setState({
-          showLabs: false
+          showLabs: true,
+          showPharmacies: false,
+          showDoctors: false,
+          showClinics: false,
+          showHospitals: false
         })
       } else {
         this.setState({
@@ -111,7 +123,11 @@ export default class GeneralMap extends Component {
     } else if (value === 'hospitals') {
       if (this.state.showHospitals === true) {
         this.setState({
-          showHospitals: false
+          showHospitals: true,
+          showPharmacies: false,
+          showDoctors: false,
+          showClinics: false,
+          showLabs: false
         })
       } else {
         this.setState({

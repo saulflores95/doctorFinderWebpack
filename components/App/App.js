@@ -6,7 +6,7 @@ import Head from 'next/head'
 const App = (props) => (
   <div className='wrapperHeight'>
     <Head>
-      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      <meta name='viewport' content='initial-scale=1.0, width=device-width maximum-scale=1.0, user-scalable=no' />
       <link rel='apple-touch-icon-precomposed' sizes='72x72' href='/static/icon-72x72.png' />
       <link rel='apple-touch-icon-precomposed' sizes='128x128' href='/static/icon-128x128.png' />
       <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/static/icon-144x144.png' />
