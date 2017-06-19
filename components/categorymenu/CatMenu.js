@@ -17,7 +17,7 @@ const CatMenu = () => (
   <div className='wrapper'>
     <MuiThemeProvider>
       <List>
-        <Link href='/hospitals'>
+        <Link prefetch href='/hospitals'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={hospitalImg} />}
             primaryText={<div className='label'>Hospitals</div>}
@@ -26,7 +26,7 @@ const CatMenu = () => (
           />
         </Link>
         <Divider inset style={{backgroundColor: '#57c6df'}} />
-        <Link href='/clinics'>
+        <Link prefetch href='/clinics'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={clinicImg} />}
             primaryText={<div className='label'>Clinics</div>}
@@ -35,7 +35,7 @@ const CatMenu = () => (
           />
         </Link>
         <Divider inset style={{backgroundColor: '#57c6df'}} />
-        <Link href='/pharmacies'>
+        <Link prefetch href='/pharmacies'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={pharmacieImg} />}
             primaryText={<div className='label'>Pharmacies</div>}
@@ -44,7 +44,7 @@ const CatMenu = () => (
           />
         </Link>
         <Divider inset style={{backgroundColor: '#57c6df'}} />
-        <Link href='/laboratories'>
+        <Link prefetch href='/laboratories'>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={labImg} />}
             primaryText={<div className='label'>Laboratories</div>}

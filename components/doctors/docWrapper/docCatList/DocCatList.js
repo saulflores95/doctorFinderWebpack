@@ -84,7 +84,7 @@ const imageChooser = (props) => {
 }
 const DocCatList = ({specialty}) => (
   <div>
-    <Link href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
+    <Link prefetch href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
       <div>
         <MuiThemeProvider>
           <List style={{padding: 0}}>

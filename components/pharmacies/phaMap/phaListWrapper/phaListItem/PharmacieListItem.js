@@ -9,7 +9,7 @@ import Link from 'next/link'
 const PharmacieListItem = (pharmacie) => (
   <div>
     <MuiThemeProvider>
-      <Link href={`/pharmacie-detail?id=${pharmacie._id}`} as={`/pharmacie-detail/${pharmacie._id}`}>
+      <Link prefetch href={`/pharmacie-detail?id=${pharmacie._id}`} as={`/pharmacie-detail/${pharmacie._id}`}>
         <List>
           <ListItem
             leftAvatar={<Avatar className='img-pharmacieSingle' src={pharmacie.img} />}

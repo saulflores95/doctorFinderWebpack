@@ -10,7 +10,7 @@ const ClinicList = ({clinic}) => (
   <div>
     <MuiThemeProvider>
       <List style={{padding: 0}}>
-        <Link href={`/clinic-detail?id=${clinic._id}`} as={`/clinic-detail/${clinic._id}`}>
+        <Link prefetch href={`/clinic-detail?id=${clinic._id}`} as={`/clinic-detail/${clinic._id}`}>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={clinic.img} />}
             primaryText={<div className='label'>{clinic.name}</div>}
