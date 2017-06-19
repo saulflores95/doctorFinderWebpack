@@ -22,11 +22,11 @@ export default class SearchNav extends Component {
     let idCounter = 0
     switch (identifier) {
       case 'doctor':
-        return <DoctorList doctor={props} key={idCounter++}/>
+        return <DoctorList doctor={props} key={idCounter++} />
       case 'lab':
-        return <LabsMainList lab={props} key={idCounter++}/>
+        return <LabsMainList lab={props} key={idCounter++} />
       case 'pharmacie':
-        return <PharmacieMainList pharmacie={props} key={idCounter++}/>
+        return <PharmacieMainList pharmacie={props} key={idCounter++} />
       default:
         return null
     }
