@@ -7,6 +7,8 @@ import DetailMap from '../../map/DetailMap'
 import NoSSR from 'react-no-ssr'
 import Transition from 'react-motion-ui-pack'
 
+let idCounter = 0
+
 const DoctorDetail = (doctor) => (
   <div className='doctorDetailWrapper'>
     <Transition
@@ -20,26 +22,28 @@ const DoctorDetail = (doctor) => (
         scale: 0
       }}
       >
-      <Container className='doc-Container'>
-        <div className='doctor-header'>
-          <DoctorHeader {...doctor.doctor} />
-        </div>
-        <div className='doctor-description'>
-          <DoctorDescription doctor={doctor.doctor} />
-        </div>
-        <Row>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <DoctorContactForm {...doctor.doctor[0]} />
-          </Col>
-          <Col xs={12} sm={12} md={6} lg={6}>
-            <div className='doctor-map'>
-              <NoSSR onSSR={<div>Map Loading...</div>} >
-                <DetailMap props={doctor.doctor[0]} />
-              </NoSSR>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <div key={idCounter++}>
+        <Container className='doc-Container'>
+          <div className='doctor-header'>
+            <DoctorHeader {...doctor.doctor} />
+          </div>
+          <div className='doctor-description'>
+            <DoctorDescription doctor={doctor.doctor} />
+          </div>
+          <Row>
+            <Col xs={12} sm={12} md={6} lg={6}>
+              <DoctorContactForm {...doctor.doctor[0]} />
+            </Col>
+            <Col xs={12} sm={12} md={6} lg={6}>
+              <div className='doctor-map'>
+                <NoSSR onSSR={<div>Map Loading...</div>} >
+                  <DetailMap props={doctor.doctor[0]} />
+                </NoSSR>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </Transition>
     <style jsx>
       {`
