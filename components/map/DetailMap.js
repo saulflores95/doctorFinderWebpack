@@ -9,7 +9,7 @@ export default class DetailMap extends Component {
   }
 
   handleHref () {
-    window.location.href = 'https://maps.google.com/?q=' + this.props.props.position[0].lat + ',' + this.props.props.position[0].lng
+    window.open('https://maps.google.com/?q=' + this.props.props.position[0].lat + ',' + this.props.props.position[0].lng, '_blank')
   }
 
   render () {
