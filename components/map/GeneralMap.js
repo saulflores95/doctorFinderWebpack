@@ -11,7 +11,7 @@ export default class GeneralMap extends Component {
     this.state = {
       latitude: 32.50504,
       longitude: -116.99056,
-      zoom: 5,
+      zoom: 13,
       open: false,
       showPharmacies: true,
       showHospitals: true,
@@ -172,7 +172,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={pharmacie._id} icon={PharmacieMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q=' + pharmacie.latitude + ',' + pharmacie.longitude} > <br />{pharmacie.name}</a></span>
+                    <span><a target='_blank' href={'http://maps.google.com/?q=' + cordinates.latitude + ',' + cordinates.longitude} > <br />{pharmacie.name}</a></span>
                   </Popup>
                 </Marker>
               )
@@ -197,7 +197,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={hospital._id} icon={hospitalMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q=' + hospital.latitude + ',' + hospital.longitude}><br />{hospital.name}</a></span>
+                    <span><a target='_blank' href={'http://maps.google.com/?q=' + cordinates.latitude + ',' + cordinates.longitude}><br />{hospital.name}</a></span>
                   </Popup>
                 </Marker>
               )
@@ -221,7 +221,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={doctor._id} icon={DoctorMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><br /><a href={'http://maps.google.com/?q=' + doctor.latitude + ',' + doctor.longitude}>{doctor.name}</a></span>
+                    <span><br /><a target='_blank' href={'http://maps.google.com/?q=' + cordinates.latitude + ',' + cordinates.longitude}>{doctor.name}</a></span>
                   </Popup>
                 </Marker>
               )
@@ -245,7 +245,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={clinic._id} icon={clinicMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><a href={'http://maps.google.com/?q=' + clinic.latitude + ',' + clinic.longitude}> <br />{clinic.name}</a></span>
+                    <span><a target='_blank' href={'http://maps.google.com/?q=' + cordinates.latitude + ',' + cordinates.longitude}> <br />{clinic.name}</a></span>
                   </Popup>
                 </Marker>
               )
@@ -269,7 +269,7 @@ export default class GeneralMap extends Component {
               return (
                 <Marker key={lab._id} icon={labMapIcon} position={[cordinates.latitude, cordinates.longitude]}>
                   <Popup>
-                    <span><a href={'https://maps.google.com/?q=' + lab.latitude + ',' + lab.longitude}><br />{lab.name}</a></span>
+                    <span><a target='_blank' href={'https://maps.google.com/?q=' + cordinates.latitude + ',' + cordinates.longitude}><br />{lab.name}</a></span>
                   </Popup>
                 </Marker>
               )
