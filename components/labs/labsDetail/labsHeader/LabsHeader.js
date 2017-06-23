@@ -1,5 +1,8 @@
 import React from 'react'
 import {Row, Col} from 'react-grid-system'
+import Checkbox from 'material-ui/Checkbox'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import LabSpeciality from './labsSpeciality/LabSpeciality'
 
 const LabsHeader = ({lab}) => (
   <div>
@@ -9,6 +12,15 @@ const LabsHeader = ({lab}) => (
       </Col>
       <Col sm={6} md={6} lg={6}>
         <p className='detail-text'>{lab.name}</p>
+        <MuiThemeProvider>
+          <Checkbox
+            label='USA insurance'
+            defaultChecked
+            disabled />
+        </MuiThemeProvider>
+      </Col>
+      <Col sm={6} md={6} lg={6}>
+        <LabSpeciality lab={lab[0]} />
       </Col>
     </Row>
     <style jsx>
