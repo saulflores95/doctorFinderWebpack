@@ -1,6 +1,7 @@
 import React from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Container, Row, Col} from 'react-grid-system'
+import GeneralContactForm from '../../contact/GeneralContactForm'
 import PharmacieHeader from './phaHeader/PharmacieHeader'
 import DetailMap from '../../map/DetailMap'
 import NoSSR from 'react-no-ssr'
@@ -17,6 +18,11 @@ const PharmacieDetail = ({pharmacie}) => {
                 <NoSSR onSSR={<div>loading</div>}>
                   <DetailMap props={pharmacie[0]} />
                 </NoSSR>
+              </div>
+            </Col>
+            <Col xs={12} sm={12} md={12} lg={12}>
+              <div style={{marginTop: 25}}>
+                <GeneralContactForm />
               </div>
             </Col>
           </Row>

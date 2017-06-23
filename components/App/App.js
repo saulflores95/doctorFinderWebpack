@@ -12,7 +12,8 @@ const App = (props) => (
       <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/static/icon-144x144.png' />
       <link rel='apple-touch-icon-precomposed' sizes='384x384' href='/static/icon-384x384' />
       <link rel='apple-touch-icon-precomposed' sizes='512x512' href='/static/icon-512x512.png' />
-      <script src='/sw-installer.js' />
+      {// <script src='/sw-installer.js' />
+      }
       <meta name='theme-color' content='white' />
       <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
       <link rel='manifest' href='/static/manifest.json' />
@@ -109,6 +110,16 @@ const App = (props) => (
           z-index: 999;
         }
 
+        .leaflet-popup-content a {
+          font-size: 16px !important;
+        }
+
+        .leaflet-popup-content-wrapper {
+          background: red !important;
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+          background: red !important;
+        }
       `}
     </style>
   </div>

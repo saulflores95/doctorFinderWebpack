@@ -1,6 +1,7 @@
 import React from 'react'
 import HospitalHeader from './hosHeader/HospitalHeader'
 import DetailMap from '../../map/DetailMap'
+import GeneralContactForm from '../../contact/GeneralContactForm'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Col, Container, Row} from 'react-grid-system'
 import NoSSR from 'react-no-ssr'
@@ -17,6 +18,11 @@ const HospitalDetail = ({hospital}) => (
               <NoSSR onSSR={<div>Map Loading...</div>}>
                 <DetailMap props={hospital[0]} />
               </NoSSR>
+            </div>
+          </Col>
+          <Col xs={12} sm={12} md={12} lg={12}>
+            <div style={{marginTop: 25}}>
+              <GeneralContactForm />
             </div>
           </Col>
         </Row>
