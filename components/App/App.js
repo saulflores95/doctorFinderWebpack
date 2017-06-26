@@ -7,11 +7,11 @@ const App = (props) => (
   <div className='wrapperHeight'>
     <Head>
       <meta name='viewport' content='initial-scale=1.0, width=device-width maximum-scale=1.0, user-scalable=no' />
-      <link rel='apple-touch-icon-precomposed' sizes='72x72' href='/static/icon-72x72.png' />
-      <link rel='apple-touch-icon-precomposed' sizes='128x128' href='/static/icon-128x128.png' />
-      <link rel='apple-touch-icon-precomposed' sizes='114x114' href='/static/icon-144x144.png' />
-      <link rel='apple-touch-icon-precomposed' sizes='384x384' href='/static/icon-384x384' />
-      <link rel='apple-touch-icon-precomposed' sizes='512x512' href='/static/icon-512x512.png' />
+      <link rel='apple-touch-startup-image' href='/static/icon-512x512.png' />
+      <link rel='apple-touch-icon' href='/static/icon-384x384' />
+      <meta name='apple-mobile-web-app-title' content='HCB' />
+      <meta name='apple-mobile-web-app-capable' content='yes' />
+      <meta name='apple-mobile-web-app-status-bar-style' content='blue' />
       <script src='/sw-installer.js' />
       <meta name='theme-color' content='white' />
       <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
