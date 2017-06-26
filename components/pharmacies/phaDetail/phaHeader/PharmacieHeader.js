@@ -20,7 +20,9 @@ const PharmacieHeader = ({pharmacie}) => (
         </MuiThemeProvider>
       </Col>
       <Col sm={6} md={6} lg={6}>
-        <PharmacieSpeciality pharmacie={pharmacie[0]} />
+        <div style={{marginTop: 15}}>
+          <PharmacieSpeciality pharmacie={pharmacie[0]} />
+        </div>
       </Col>
     </Row>
     <style jsx>

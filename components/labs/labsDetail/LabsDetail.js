@@ -19,7 +19,9 @@ const LabsDetail = ({lab}) => (
             <LabDescription lab={lab.lab} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <GeneralContactForm />
+            <div style={{marginTop: 15}}>
+              <GeneralContactForm />
+            </div>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div className='detail-map'>
@@ -33,7 +35,7 @@ const LabsDetail = ({lab}) => (
     </MuiThemeProvider>
     <style jsx>{`
       .labDetailContainer {
-        padding-top: 15px;
+        margin-top: 25px;
         padding-bottom: 30px;
       }
 

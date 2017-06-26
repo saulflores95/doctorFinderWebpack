@@ -20,7 +20,9 @@ const HospitalDetail = ({hospital}) => (
             <HospitalDescription hospital={hospital.hospital} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <GeneralContactForm />
+            <div style={{marginTop: 15}}>
+              <GeneralContactForm />
+            </div>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div className='detail-map'>
@@ -35,7 +37,7 @@ const HospitalDetail = ({hospital}) => (
     <style jsx>
       {`
         .wrapper {
-          padding-top: 15px;
+          margin-top: 25px;
           padding-bottom: 30px;
         }
 

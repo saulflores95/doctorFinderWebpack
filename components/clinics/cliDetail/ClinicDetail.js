@@ -20,7 +20,9 @@ const ClinicDetail = ({clinic}) => (
             <ClinicDescription clinic={clinic.clinic} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
-            <GeneralContactForm />
+            <div style={{marginTop: 15}}>
+              <GeneralContactForm />
+            </div>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div className='detail-map'>

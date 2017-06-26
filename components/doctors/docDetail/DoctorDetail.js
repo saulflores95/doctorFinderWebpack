@@ -32,7 +32,7 @@ const DoctorDetail = (doctor) => (
           </div>
           <Row>
             <Col xs={12} sm={12} md={6} lg={6}>
-              <div style={{marginTop: 10}}>
+              <div style={{marginTop: 15}}>
                 <DoctorContactForm {...doctor.doctor[0]} />
               </div>
             </Col>
@@ -50,7 +50,7 @@ const DoctorDetail = (doctor) => (
     <style jsx>
       {`
         .doctorDetailWrapper {
-          padding-top: 15px;
+          margin-top: 25px;
           position: absolute;
           height: 100%;
           width: 100%;

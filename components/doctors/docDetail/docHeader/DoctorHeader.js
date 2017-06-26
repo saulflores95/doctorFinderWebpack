@@ -12,7 +12,7 @@ const DoctorHeader = (doctor) => (
           <Col sm={6} md={6} lg={2}>
             <img alt={doctor[0].name} className='img' src={doctor[0].img} />
           </Col>
-          <Col sm={6} md={6} lg={5}>
+          <Col sm={6} md={6} lg={3}>
             <h1 className='doctor-name'>{doctor[0].name}</h1>
             <span className='label'>{doctor[0].specialty}</span>
             <MuiThemeProvider>
