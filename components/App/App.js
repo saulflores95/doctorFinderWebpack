@@ -23,6 +23,12 @@ const App = (props) => (
           height: 100%;
           width: 100%;
         }
+        .leaflet-container a {
+          color: #2d517b;
+          text-decoration: none;
+          font-size: 15px;
+          font-family: 'Montserrat', sans-serif;
+        }
         .leaflet-control-attribution a {
           display:none;
         }
@@ -109,6 +115,16 @@ const App = (props) => (
           z-index: 999;
         }
 
+        .leaflet-popup-content a {
+          font-size: 16px !important;
+        }
+
+        .leaflet-popup-content-wrapper {
+          background: red !important;
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
+          background: red !important;
+        }
       `}
     </style>
   </div>

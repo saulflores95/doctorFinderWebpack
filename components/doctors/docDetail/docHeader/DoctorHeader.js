@@ -2,6 +2,7 @@ import React from 'react'
 import DoctorExp from './docExp/DoctorExp'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Row, Col} from 'react-grid-system'
+import Checkbox from 'material-ui/Checkbox'
 
 const DoctorHeader = (doctor) => (
   <div>
@@ -11,9 +12,16 @@ const DoctorHeader = (doctor) => (
           <Col sm={6} md={6} lg={2}>
             <img alt={doctor[0].name} className='img' src={doctor[0].img} />
           </Col>
-          <Col sm={6} md={6} lg={5}>
+          <Col sm={6} md={6} lg={3}>
             <h1 className='doctor-name'>{doctor[0].name}</h1>
             <span className='label'>{doctor[0].specialty}</span>
+            <MuiThemeProvider>
+              <Checkbox
+                label='USA insurance'
+                defaultChecked={doctor[0].insurance}
+                disabled
+                style={{marginTop: 15}} />
+            </MuiThemeProvider>
           </Col>
           <Col sm={12} md={12} lg={5}>
             <DoctorExp doctor={doctor[0]} />
