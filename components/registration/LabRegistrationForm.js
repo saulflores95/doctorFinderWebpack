@@ -9,6 +9,7 @@ import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from './RegistrationMap'
 import AlertContainer from 'react-alert'
+import Checkbox from 'material-ui/Checkbox';
 
 export default class LabRegistrationForm extends Component {
   constructor () {
@@ -26,6 +27,16 @@ export default class LabRegistrationForm extends Component {
       time: 5000,
       transition: 'scale'
     }
+  }
+
+  toggleChecked (Checkbox) {
+    console.log('this was pressed')
+    if (this.state.toogleState === false) {
+      this.state.toogleState = true
+    } else {
+      this.state.toogleState = false
+    }
+    console.log(this.state.toogleState)
   }
 
   handleImageChange (url) {
@@ -50,19 +61,31 @@ export default class LabRegistrationForm extends Component {
   }
 
   addLab () {
+    event.preventDefault()
     var name = this.refs.clinicName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
     var tag = this.refs.tag.getValue()
+    var description = this.refs.description.getValue()
+    var categories = [
+      this.refs.specificOne.getValue(),
+      this.refs.specificTwo.getValue(),
+      this.refs.specificThree.getValue(),
+      this.refs.specificFour.getValue()
+    ]
+    var insurance = this.state.toogleState
     var lab = {
       name: name,
       img: img,
       phone: phone,
       position: this.state.position,
-      tag: tag
+      tag: tag,
+      insurance: insurance,
+      description: description,
+      categories: categories
     }
 
-    console.log(lab)
+    console.log('Lab', lab)
     let _self = this
 
     if (lab) {
@@ -71,7 +94,10 @@ export default class LabRegistrationForm extends Component {
         img: lab.img,
         phone: lab.phone,
         position: lab.position,
-        tag: lab.tag
+        tag: lab.tag,
+        insurance: insurance,
+        description: lab.description,
+        categories: lab.categories
       })
       .then(function (response) {
         console.log(response)
@@ -139,6 +165,12 @@ export default class LabRegistrationForm extends Component {
                           fullWidth
                         />
                       </Col>
+                      <Col sm={6}>
+                        <Checkbox
+                          label='USA insurance?'
+                          onClick={this.toggleChecked.bind(this)}
+                        />
+                      </Col>
                     </Row>
                   </div>
                   <div style={styles.formDivisor}>
@@ -155,6 +187,48 @@ export default class LabRegistrationForm extends Component {
                           fullWidth
                         />
                       </Col>
+                    </Row>
+                    <Row>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality'
+                          ref='specificOne'
+                          fullWidth
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 2'
+                          ref='specificTwo'
+                          fullWidth
+                        />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 3'
+                          ref='specificThree'
+                          fullWidth
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 4'
+                          ref='specificFour'
+                          fullWidth
+                        />
+                      </Col>
+                      <div style={styles.formMessageDivisor}>
+                        <TextField
+                          hintText='Describe yourself or experience(do not be shy)'
+                          ref='description'
+                          fullWidth
+                          multiLine
+                          rows={3}
+                          rowsMax={6}
+                        />
+                      </div>
                     </Row>
                     <Row>
                       <Col sm={6} md={6} lg={6}>

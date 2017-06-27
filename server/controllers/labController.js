@@ -7,6 +7,8 @@ labController.post = (req, res) => {
     name,
     img,
     position,
+    categories,
+    insurance,
     phone,
     tag,
     email,
@@ -15,11 +17,13 @@ labController.post = (req, res) => {
 
   const lab = new db.Lab({
     name,
-    email,
     img,
     position,
+    categories,
+    insurance,
     phone,
     tag,
+    email,
     _creator: userId
   })
 

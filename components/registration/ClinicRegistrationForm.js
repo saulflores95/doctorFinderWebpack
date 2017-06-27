@@ -5,6 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { Container, Row, Col } from 'react-grid-system'
 import Paper from 'material-ui/Paper'
 import SelectField from 'material-ui/SelectField'
+import Checkbox from 'material-ui/Checkbox';
 import MenuItem from 'material-ui/MenuItem'
 import Uploader from '../uploader/Uploader'
 import axios from 'axios'
@@ -70,35 +71,50 @@ export default class ClinicRegistrationForm extends Component {
     }
   }
 
+  toggleChecked (Checkbox) {
+    if (this.state.toogleState === false) {
+      this.state.toogleState = true
+    } else {
+      this.state.toogleState = false
+    }
+  }
+
+  handleChange (event, index, value) {
+    this.setState({value: value})
+  }
+
   addClinic () {
     var name = this.refs.clinicName.getValue()
     var img = this.state.url
+    var description = this.refs.description.getValue()
     var specialty = this.state.value
-    var specific = {
-      one: this.refs.specificOne.getValue(),
-      two: this.refs.specificTwo.getValue(),
-      three: this.refs.specificThree.getValue(),
-      four: this.refs.specificFour.getValue(),
-      five: this.refs.specificFive.getValue(),
-      six: this.refs.specificSix.getValue()
-    }
+    var categories = [
+      this.refs.specificOne.getValue(),
+      this.refs.specificTwo.getValue(),
+      this.refs.specificThree.getValue(),
+      this.refs.specificFour.getValue()
+    ]
     var email = this.refs.email.getValue()
+    var insurance = this.state.toogleState
     var clinic = {
       name: name,
       img: img,
-      specific: specific,
+      categories: categories,
+      description: description,
+      insurance: insurance,
       email: email,
       position: this.state.position,
       specialty: specialty
     }
-    console.log('Doctor: ', clinic)
+    console.log('Clinic: ', clinic)
     let _self = this
-
     if (clinic) {
       axios.post('/api/clinic-registration', {
         name: clinic.name,
         img: clinic.img,
-        specific: clinic.specific,
+        description: clinic.description,
+        insurance: clinic.insurance,
+        categories: clinic.categories,
         email: clinic.email,
         position: clinic.position,
         specialty: clinic.specialty
@@ -170,6 +186,12 @@ export default class ClinicRegistrationForm extends Component {
                         />
                       </Col>
                       <Col sm={6}>
+                        <Checkbox
+                          label='USA insurance?'
+                          onClick={this.toggleChecked.bind(this)}
+                        />
+                      </Col>
+                      <Col sm={6}>
                         <SelectField
                           floatingLabelText='Specialty'
                           value={this.state.value}
@@ -221,22 +243,16 @@ export default class ClinicRegistrationForm extends Component {
                           fullWidth
                         />
                       </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
+                      <div style={styles.formMessageDivisor}>
                         <TextField
-                          hintText='Specific Speaciality 5'
-                          ref='specificFive'
+                          hintText='Describe yourself or experience(do not be shy)'
+                          ref='description'
                           fullWidth
+                          multiLine
+                          rows={3}
+                          rowsMax={6}
                         />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 6'
-                          ref='specificSix'
-                          fullWidth
-                        />
-                      </Col>
+                      </div>
                     </Row>
                     <Row>
                       <Col sm={12} md={12} lg={12}>

@@ -52,12 +52,23 @@ export default class PharmacieRegistrationForm extends Component {
     var img = this.state.url
     var phone = this.refs.phone.getValue()
     var tag = this.refs.tag.getValue()
+    var categories = [
+      this.refs.specificOne.getValue(),
+      this.refs.specificTwo.getValue(),
+      this.refs.specificThree.getValue(),
+      this.refs.specificFour.getValue()
+    ]
+    var description = this.refs.description.getValue()
+    var insurance = this.state.toogleState
     var pharmacie = {
-      name: name,
-      img: img,
-      phone: phone,
+      name,
+      categories,
+      insurance,
+      description,
+      img,
+      phone,
       position: this.state.position,
-      tag: tag
+      tag
     }
 
     console.log(pharmacie)
@@ -66,6 +77,9 @@ export default class PharmacieRegistrationForm extends Component {
       axios.post('/api/pharmacie-registration', {
         name: pharmacie.name,
         img: pharmacie.img,
+        description: pharmacie.description,
+        insurance: pharmacie.insurance,
+        categories: pharmacie.categories,
         phone: pharmacie.phone,
         position: pharmacie.position,
         tag: pharmacie.tag
@@ -139,6 +153,48 @@ export default class PharmacieRegistrationForm extends Component {
                     </Row>
                   </div>
                   <div style={styles.formDivisor}>
+                    <Row>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality'
+                          ref='specificOne'
+                          fullWidth
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 2'
+                          ref='specificTwo'
+                          fullWidth
+                        />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 3'
+                          ref='specificThree'
+                          fullWidth
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 4'
+                          ref='specificFour'
+                          fullWidth
+                        />
+                      </Col>
+                      <div style={styles.formMessageDivisor}>
+                        <TextField
+                          hintText='Describe yourself or experience(do not be shy)'
+                          ref='description'
+                          fullWidth
+                          multiLine
+                          rows={3}
+                          rowsMax={6}
+                        />
+                      </div>
+                    </Row>
                     <Row>
                       <Col sm={6} md={6} lg={6}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >

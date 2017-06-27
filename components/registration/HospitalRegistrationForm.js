@@ -9,6 +9,7 @@ import NoSSR from 'react-no-ssr'
 import axios from 'axios'
 import Uploader from '../uploader/Uploader'
 import RegistrationMap from './RegistrationMap'
+import Checkbox from 'material-ui/Checkbox';
 
 export default class HospitalRegistrationForm extends Component {
   constructor () {
@@ -64,22 +65,34 @@ export default class HospitalRegistrationForm extends Component {
     var name = this.refs.hospitalName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var description = this.refs.description.getValue()
+    var categories = [
+      this.refs.specificOne.getValue(),
+      this.refs.specificTwo.getValue(),
+      this.refs.specificThree.getValue(),
+      this.refs.specificFour.getValue()
+    ]
+    var insurance = this.state.toogleState
     var hospital = {
       name: name,
       img: img,
       phone: phone,
-      position: this.state.position
-
+      position: this.state.position,
+      insurance: insurance,
+      description: description,
+      categories: categories
     }
-    console.log(hospital)
+    console.log('Hospital', hospital)
     let _self = this
-
     if (hospital) {
       axios.post('/api/hospital-registration', {
         name: hospital.name,
         img: hospital.img,
         phone: hospital.phone,
-        position: hospital.position
+        position: hospital.position,
+        insurance: insurance,
+        description: hospital.description,
+        categories: hospital.categories
       })
       .then(function (response) {
         console.log(response)
@@ -127,6 +140,14 @@ export default class HospitalRegistrationForm extends Component {
                 <form className='new-doctor' onSubmit={this.addHospital.bind(this)}>
                   <div style={styles.formDivisor}>
                     <Row>
+                      <Col sm={12} md={6} lg={6}>
+                        <img width='200px' height='200px' style={styles.img} src={this.state.url} />
+                      </Col>
+                      <Col sm={12} md={6} lg={6}>
+                        <Uploader handle={this.handleImageChange.bind(this)} />
+                      </Col>
+                    </Row>
+                    <Row>
                       <Col sm={6}>
                         <TextField
                           hintText='Hospital Name'
@@ -134,15 +155,54 @@ export default class HospitalRegistrationForm extends Component {
                           fullWidth
                         />
                       </Col>
+                      <Col sm={6}>
+                        <Checkbox
+                          label='USA insurance?'
+                          onClick={this.toggleChecked.bind(this)}
+                        />
+                      </Col>
                     </Row>
                     <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <img width='200px' height='200px' style={styles.img} src={this.state.url} />
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality'
+                          ref='specificOne'
+                          fullWidth
+                        />
                       </Col>
-
-                      <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 2'
+                          ref='specificTwo'
+                          fullWidth
+                        />
                       </Col>
+                    </Row>
+                    <Row>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 3'
+                          ref='specificThree'
+                          fullWidth
+                        />
+                      </Col>
+                      <Col sm={6}>
+                        <TextField
+                          hintText='Specific Speaciality 4'
+                          ref='specificFour'
+                          fullWidth
+                        />
+                      </Col>
+                      <div style={styles.formMessageDivisor}>
+                        <TextField
+                          hintText='Describe yourself or experience(do not be shy)'
+                          ref='description'
+                          fullWidth
+                          multiLine
+                          rows={3}
+                          rowsMax={6}
+                        />
+                      </div>
                     </Row>
                     <Row>
                       <Col sm={12} md={12} lg={12}>

@@ -7,6 +7,8 @@ phrmacieController.post = (req, res) => {
     name,
     img,
     position,
+    categories,
+    insurance,
     phone,
     tag,
     email,
@@ -15,11 +17,13 @@ phrmacieController.post = (req, res) => {
 
   const pharmacie = new db.Pharmacie({
     name,
-    email,
     img,
     position,
+    categories,
+    insurance,
     phone,
     tag,
+    email,
     _creator: userId
   })
 

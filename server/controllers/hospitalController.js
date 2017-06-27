@@ -7,6 +7,8 @@ hospitalController.post = (req, res) => {
     name,
     img,
     position,
+    categories,
+    insurance,
     phone,
     email,
     userId
@@ -14,10 +16,12 @@ hospitalController.post = (req, res) => {
 
   const hospital = new db.Hospital({
     name,
-    email,
     img,
     position,
+    categories,
+    insurance,
     phone,
+    email,
     _creator: userId
   })
 

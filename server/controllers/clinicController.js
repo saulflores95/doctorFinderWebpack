@@ -6,13 +6,10 @@ clinicController.post = (req, res) => {
   const {
     name,
     email,
+    description,
     img,
-    specificOne,
-    specificTwo,
-    specificThree,
-    specificFour,
-    specificFive,
-    specificSix,
+    categories,
+    insurance,
     position,
     userId
   } = req.body
@@ -20,13 +17,10 @@ clinicController.post = (req, res) => {
   const clinic = new db.Clinic({
     name,
     email,
+    description,
     img,
-    specificOne,
-    specificTwo,
-    specificThree,
-    specificFour,
-    specificFive,
-    specificSix,
+    categories,
+    insurance,
     position,
     _creator: userId
   })
