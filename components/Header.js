@@ -6,7 +6,7 @@ const Header = () => (
     <Container>
       <h1>Hello Welcome To HCB DEV interface</h1>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/api/doctors'>
+        <Link target='_blank' href='/api/doctors'>
           <div className='enjoy-css'>API</div>
         </Link>
       </Col>
@@ -16,32 +16,32 @@ const Header = () => (
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/doctor-registration'>
+        <Link target='_blank' href='/doctor-registration'>
           <div className='enjoy-css'>Add Doctors</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/hospital-registration'>
+        <Link target='_blank' href='/hospital-registration'>
           <div className='enjoy-css'>Add Hospital</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/clinic-registration'>
+        <Link target='_blank' href='/clinic-registration'>
           <div className='enjoy-css'>Add Clinics</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/lab-registration'>
+        <Link target='_blank' href='/lab-registration'>
           <div className='enjoy-css'>Add Labs</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/pharmacie-registration'>
+        <Link target='_blank' href='/pharmacie-registration'>
           <div className='enjoy-css'>Add Pharmacies</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='https://healthcarebaja.com/api/logout'>
+        <Link target='_blank' href='/api/logout'>
           <div className='enjoy-css'>Logout BYE BYE</div>
         </Link>
       </Col>
