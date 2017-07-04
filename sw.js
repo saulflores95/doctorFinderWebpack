@@ -5,7 +5,7 @@ const CACHE_VERSION = '0.1.6.4'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
-  '/static/'
+  '/static/*'
 ]
 
 function clearPreviousCaches (keys) {
