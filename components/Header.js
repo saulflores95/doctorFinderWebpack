@@ -41,7 +41,7 @@ const Header = () => (
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/api/logout'>
+        <Link href='https://healthcarebaja.com/api/logout'>
           <div className='enjoy-css'>Logout BYE BYE</div>
         </Link>
       </Col>
