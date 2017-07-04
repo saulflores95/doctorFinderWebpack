@@ -41,6 +41,11 @@ const Header = () => (
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
+        <Link href='/api/logout'>
+          <div className='enjoy-css'>Logout BYE BYE</div>
+        </Link>
+      </Col>
+      <Col xs={12} sm={12} md={6} lg={3}>
         <div className='enjoy-css'><a href='https://a2plcpnl0950.prod.iad2.secureserver.net:2096' target='_blank'>Webmail</a></div>
       </Col>
     </Container>

@@ -10,7 +10,9 @@ const Index = ({user}) => (
 Index.getInitialProps = async ({ req, res }) => {
   if (!req.user) {
     return res.redirect('/login')
-  } return { user: req.user }
+  }
+
+  return { user: req.user }
 }
 
 export default Index
