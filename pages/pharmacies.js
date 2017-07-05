@@ -14,7 +14,8 @@ const pharmacies = ({ pharmas }) => (
 )
 
 pharmacies.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://healthcarebaja.com/api/pharmacies')
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const res = await fetch(baseUrl + '/api/pharmacies')
   const json = await res.json()
   return { pharmas: json.data }
 }

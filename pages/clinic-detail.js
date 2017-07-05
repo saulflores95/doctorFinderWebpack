@@ -4,8 +4,9 @@ import ClinicDetail from '../components/clinics/cliDetail/ClinicDetail'
 import fetch from 'isomorphic-unfetch'
 
 export default class extends React.Component {
-  static async getInitialProps ({ query: { id } }) {
-    const res = await fetch('https://healthcarebaja.com/api/clinics')
+  static async getInitialProps ({ req, query: { id } }) {
+    const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+    const res = await fetch(baseUrl + '/api/clinics')
     const json = await res.json()
     return {
       id,

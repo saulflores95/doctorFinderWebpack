@@ -5,7 +5,8 @@ import fetch from 'isomorphic-unfetch'
 
 export default class extends React.Component {
   static async getInitialProps ({ query: { id } }) {
-    const res = await fetch('https://healthcarebaja.com/api/pharmacies')
+    const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+    const res = await fetch(baseUrl + '/api/pharmacies')
     const json = await res.json()
     return {
       id,
