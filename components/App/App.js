@@ -12,7 +12,6 @@ const App = (props) => (
       <link rel='apple-touch-icon' sizes='152x152' href='/static/icon-apple-152.png' />
       <link rel='apple-touch-icon' sizes='167x167' href='/static/icon-apple-167.png' />
       <link rel='apple-touch-icon' sizes='180x180' href='/static/icon-apple-180.png' />
-      <link href="/static/icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
       <meta name='apple-mobile-web-app-title' content='HCB' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='blue' />
