@@ -96,7 +96,7 @@ export default class DoctorRegistrationForm extends Component {
     }
     var email = this.refs.email.getValue()
     var phone = this.refs.phone.getValue()
-    var direccion = this.refs.direccion.getValue()
+    var address = this.refs.address.getValue()
     var doctor = {
       name: name,
       img: img,
@@ -106,7 +106,7 @@ export default class DoctorRegistrationForm extends Component {
       email: email,
       specialty: specialty,
       phone: phone,
-      direccion: direccion,
+      address: address,
       position: this.state.position
     }
 

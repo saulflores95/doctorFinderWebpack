@@ -6,7 +6,7 @@ const Header = () => (
     <Container>
       <h1>Hello Welcome To HCB DEV interface</h1>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/api/doctors'>
+        <Link  href='/api/doctors'>
           <div className='enjoy-css'>API</div>
         </Link>
       </Col>
@@ -16,37 +16,37 @@ const Header = () => (
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/doctor-registration'>
+        <Link href='/doctor-registration'>
           <div className='enjoy-css'>Add Doctors</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/hospital-registration'>
+        <Link href='/hospital-registration'>
           <div className='enjoy-css'>Add Hospital</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/clinic-registration'>
+        <Link href='/clinic-registration'>
           <div className='enjoy-css'>Add Clinics</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/lab-registration'>
+        <Link href='/lab-registration'>
           <div className='enjoy-css'>Add Labs</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/pharmacie-registration'>
+        <Link href='/pharmacie-registration'>
           <div className='enjoy-css'>Add Pharmacies</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link target='_blank' href='/api/logout'>
+        <Link href='/api/logout'>
           <div className='enjoy-css'>Logout BYE BYE</div>
         </Link>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <div className='enjoy-css'><a href='https://a2plcpnl0950.prod.iad2.secureserver.net:2096' target='_blank'>Webmail</a></div>
+        <div className='enjoy-css'><a href='https://a2plcpnl0950.prod.iad2.secureserver.net:2096' >Webmail</a></div>
       </Col>
     </Container>
     <style jsx>

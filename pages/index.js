@@ -20,7 +20,8 @@ const doctors = ({ docs }) => (
 )
 
 doctors.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://healthcarebaja.com/api/doctors')
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const res = await fetch(baseUrl + '/api/doctors')
   const json = await res.json()
   return { docs: json.data }
 }

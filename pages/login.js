@@ -14,11 +14,13 @@ const login = ({user}) => (
 )
 
 login.getInitialProps = async ({ req, res }) => {
+  if(!req.user) {
+    let user = 'No User'
+    return { user: user }
+  }
   if (req.user) {
     return res.redirect('/')
   }
-  let user = 'No User'
-  return { user: user }
 }
 
 export default login
