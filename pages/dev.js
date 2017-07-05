@@ -1,6 +1,6 @@
 import Layout from '../components/MyLayout'
 
-const Index = ({user}) => (
+const Index = ({ user }) => (
   <Layout>
     <h1>{`Welcome back ${user.username}`}</h1>
     <p>for the pekubianos by the pekubianos</p>

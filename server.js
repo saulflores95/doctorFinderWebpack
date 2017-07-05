@@ -12,6 +12,7 @@ const LocalStrategy = require('passport-local').Strategy
 const passport = require('passport')
 const db = require('./server/models')
 const cookieParser = require('cookie-parser')
+const session = require('express-session')
 
 app.prepare().then(() => {
   const server = express()
@@ -19,16 +20,17 @@ app.prepare().then(() => {
   mongoose.connect('mongodb://localhost:27017/healthcare', () => {
     console.log('Connected to mongodb HCB')
   })
-  server.use(bodyParser.json())
 
   server.use(cookieParser())
-  server.use(require('express-session')({
+  server.use(bodyParser.json())
+  server.use(session({
     secret: 'keyboard cat',
-    resave: false,
+    resave: true,
     saveUninitialized: false
   }))
   server.use(passport.initialize())
   server.use(passport.session())
+
   passport.use(new LocalStrategy(User.authenticate()))
   passport.serializeUser(User.serializeUser())
   passport.deserializeUser(User.deserializeUser())

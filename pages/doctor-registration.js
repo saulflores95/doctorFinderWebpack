@@ -1,8 +1,9 @@
 import React from 'react'
 import App from '../components/App/App'
 import DoctorRegistrationForm from '../components/registration/DoctorRegistrationForm'
+import fetch from 'isomorphic-unfetch'
 
-const doctorRegistration = ({ user }) => (
+const doctorRegistration = () => (
   <div>
     <App>
       <div className='container'>
@@ -16,9 +17,7 @@ doctorRegistration.getInitialProps = async ({ req, res }) => {
   if (!req.user) {
     return res.redirect('/login')
   }
-  if(req.user) {
-    return { user: req.user }
-  }
+  return { user: req.user }
 }
 
 export default doctorRegistration

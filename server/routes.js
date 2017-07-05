@@ -59,7 +59,7 @@ routes.get('/logout', (req, res, next) => {
 })
 
 routes.get('/user', (req, res) => {
-  console.log('Data in routes.js', req.user)
+  //  console.log('Data in routes.js', req.user)
   return res.status(200).json({
     succes: true,
     data: req.user
