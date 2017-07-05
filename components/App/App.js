@@ -7,7 +7,10 @@ const App = (props) => (
   <div className='wrapperHeight'>
     <Head>
       <meta name='viewport' content='initial-scale=1.0, width=device-width maximum-scale=1.0, user-scalable=no' />
-      <link rel='apple-touch-icon' sizes='144x144' href='/static/icon-144x144.png' />
+      <link rel='apple-touch-icon' sizes='120x120' href='/static/icon-apple-120.png' />
+      <link rel='apple-touch-icon' sizes='144x144' href='/static/icon-apple-144.png' />
+      <link rel='apple-touch-icon' sizes='152x152' href='/static/icon-apple-152.png' />
+      <link rel='apple-touch-icon' sizes='167x167' href='/static/icon-apple-167.png' />
       <link rel='apple-touch-icon' sizes='180x180' href='/static/icon-apple-180.png' />
       <link href="/static/icon-152x152.png" rel="apple-touch-icon" sizes="152x152" />
       <meta name='apple-mobile-web-app-title' content='HCB' />
