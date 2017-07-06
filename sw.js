@@ -1,10 +1,12 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.6.5'
+const CACHE_VERSION = '0.1.7.4'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
+  '/static/healthcarebaja.png',
+  '/static/Veterinarian.jpg'
 ]
 
 function clearPreviousCaches (keys) {
@@ -43,6 +45,22 @@ self.addEventListener('activate', (event) => {
 */
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] fetching..')
+  if(event.request.url === `http://localhost:3000/login`) {
+    console.log('Login cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/dev`) {
+    console.log('Dev cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/register`) {
+    console.log('Register cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/api/logout`) {
+    console.log('Logout cache ignored')
+    event.respondWith(fetch(event.request));
+  }
   event.respondWith(
     caches.match(event.request)
       .then(resp => resp ||
