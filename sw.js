@@ -45,19 +45,19 @@ self.addEventListener('activate', (event) => {
 */
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] fetching..')
-  if(event.request.url === `http://localhost:3000/login`) {
+  if(event.request.url === `https://healthcarebaja.com/login`) {
     console.log('Login cache ignored')
     event.respondWith(fetch(event.request));
   }
-  if(event.request.url === `http://localhost:3000/dev`) {
+  if(event.request.url === `https://healthcarebaja.com/dev`) {
     console.log('Dev cache ignored')
     event.respondWith(fetch(event.request));
   }
-  if(event.request.url === `http://localhost:3000/register`) {
+  if(event.request.url === `https://healthcarebaja.com/register`) {
     console.log('Register cache ignored')
     event.respondWith(fetch(event.request));
   }
-  if(event.request.url === `http://localhost:3000/api/logout`) {
+  if(event.request.url === `https://healthcarebaja.com/api/logout`) {
     console.log('Logout cache ignored')
     event.respondWith(fetch(event.request));
   }
