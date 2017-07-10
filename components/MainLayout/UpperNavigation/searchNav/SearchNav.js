@@ -19,14 +19,14 @@ export default class SearchNav extends Component {
   }
 
   updateProp (props, identifier) {
-    let idCounter = 0
     switch (identifier) {
       case 'doctor':
-        return <DoctorList doctor={props} key={idCounter++} />
+        console.log(props._id)
+        return <DoctorList doctor={props} key={props._id} />
       case 'lab':
-        return <LabsMainList lab={props} key={idCounter++} />
+        return <LabsMainList lab={props} key={props._id} />
       case 'pharmacie':
-        return <PharmacieMainList pharmacie={props} key={idCounter++} />
+        return <PharmacieMainList pharmacie={props} key={props._id} />
       default:
         return null
     }

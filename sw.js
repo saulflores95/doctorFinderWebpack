@@ -45,6 +45,18 @@ self.addEventListener('activate', (event) => {
 */
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] fetching..')
+  if(event.request.url === `http://localhost:3000/login`) {
+    console.log('Login cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/api/doctors`) {
+    console.log('Login cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/dev`) {
+    console.log('Login cache ignored')
+    event.respondWith(fetch(event.request));
+  }
   if(event.request.url === `https://healthcarebaja.com/login`) {
     console.log('Login cache ignored')
     event.respondWith(fetch(event.request));
@@ -59,6 +71,14 @@ self.addEventListener('fetch', (event) => {
   }
   if(event.request.url === `https://healthcarebaja.com/api/logout`) {
     console.log('Logout cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `https://healthcarebaja.com/doctor-registration` || event.request.url === `https://healthcarebaja.com/lab-registration` || event.request.url === `https://healthcarebaja.com/pharmacie-registration` || event.request.url === `https://healthcarebaja.com/hospital-registration` || event.request.url === `https://healthcarebaja.com/clinic-registration`) {
+    console.log('registration cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `http://localhost:3000/doctor-registration` || event.request.url === `http://localhost:3000/lab-registration` || event.request.url === `http://localhost:3000/pharmacie-registration` || event.request.url === `http://localhost:3000/hospital-registration` || event.request.url === `http://localhost:3000/clinic-registration`) {
+    console.log('local host registration cache ignored')
     event.respondWith(fetch(event.request));
   }
   event.respondWith(

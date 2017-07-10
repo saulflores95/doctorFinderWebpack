@@ -22,7 +22,7 @@ export default class extends React.Component {
       <div>
         <App>
           <div className='container'>
-            <DocListWrapper doctor={doctor} />
+            <DocListWrapper doctors={doctor} />
           </div>
         </App>
       </div>

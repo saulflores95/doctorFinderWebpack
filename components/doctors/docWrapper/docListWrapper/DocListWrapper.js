@@ -1,9 +1,9 @@
 import React from 'react'
 import SearchNav from '../../../MainLayout/UpperNavigation/searchNav/SearchNav'
 
-const DoctorListWrapper = ({doctor}) => (
+const DoctorListWrapper = ({doctors}) => (
   <div className='wrapper'>
-    <SearchNav props={doctor} identifier='doctor' />
+    <SearchNav props={doctors} identifier='doctor' />
     <style jsx>
       {`
       .wrapper {
