@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.8.0.2'
+const CACHE_VERSION = '0.1.8.1'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */

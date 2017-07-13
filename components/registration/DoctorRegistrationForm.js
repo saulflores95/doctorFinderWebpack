@@ -22,7 +22,7 @@ export default class DoctorRegistrationForm extends Component {
       value: 'Podologia',
       count: 0,
       position: [32, 100],
-      url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQbPvqnfj0taeHk9BLFCYpySg2-eVk2i7kx4PE046Waix2-zM-NAILl-m8'
+      url: 'https://s3-us-west-1.amazonaws.com/healthcarebaja/9.png'
     }
     this.alertOptions = {
       offset: 14,
