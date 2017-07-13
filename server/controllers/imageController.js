@@ -3,8 +3,8 @@ const fs = require('fs')
 const S3FS = require('s3fs')
 
 var s3fsImpl = new S3FS('healthcarebaja', {
-  accessKeyId: 'AKIAI2NKJAYFPHPZ5P5A',
-  secretAccessKey: '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',
+  accessKeyId: process.env.AKI,
+  secretAccessKey: process.env.SAK,
   subregion: 'us-west-2'
 })
 const imageController = {}
