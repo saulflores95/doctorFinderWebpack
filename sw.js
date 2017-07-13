@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.8.0.1'
+const CACHE_VERSION = '0.1.8.0.2'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -81,8 +81,12 @@ self.addEventListener('fetch', (event) => {
     console.log('local host registration cache ignored')
     event.respondWith(fetch(event.request));
   }
-  if(event.request.url === 'http://localhost:3000/api/image-upload' || event.request.url === 'https://healthcarebaja.com/api/image-upload'){
+  if(event.request.url === 'http://localhost:3000/api/image-upload'){
     console.log('localhost image upload ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === 'https://healthcarebaja.com/api/image-upload'){
+    console.log('hcb request for image upload ignored')
     event.respondWith(fetch(event.request));
   }
   event.respondWith(
