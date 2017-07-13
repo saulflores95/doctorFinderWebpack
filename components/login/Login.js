@@ -19,7 +19,7 @@ export default class UserRegistration extends Component {
         password: password
       })
       .then(function (response) {
-        Router.push('/')
+        Router.push('/dev')
       })
       .catch(function (error) {
         console.log(error)
