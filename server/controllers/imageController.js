@@ -10,6 +10,7 @@ var s3fsImpl = new S3FS('healthcarebaja', {
 
 console.log('AKI', process.env.AKI)
 console.log('SAK', process.env.SAK)
+console.log('ENV', process.env)
 
 const imageController = {}
 
