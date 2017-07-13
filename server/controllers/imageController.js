@@ -7,6 +7,10 @@ var s3fsImpl = new S3FS('healthcarebaja', {
   secretAccessKey: process.env.SAK,
   subregion: 'us-west-2'
 })
+
+console.log('AKI', process.env.AKI)
+console.log('SAK', process.env.SAK)
+
 const imageController = {}
 
 imageController.post = (req, res) => {
