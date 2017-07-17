@@ -10,6 +10,7 @@ const hospitalSchema = new Schema({
   description: String,
   categories: { type: Array, default: ['Categories not available'] },
   phone: String,
+  email: String,
   createdAt: { type: Date, default: Date.now },
   _creator: { type: Schema.ObjectId, ref: 'User' },
   isDeleted: { type: Boolean, default: false }

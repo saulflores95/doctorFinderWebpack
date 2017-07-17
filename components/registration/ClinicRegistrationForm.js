@@ -88,6 +88,7 @@ export default class ClinicRegistrationForm extends Component {
     var img = this.state.url
     var description = this.refs.description.getValue()
     var specialty = this.state.value
+    var phone = this.refs.phone.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -103,6 +104,7 @@ export default class ClinicRegistrationForm extends Component {
       description: description,
       insurance: insurance,
       email: email,
+      phone: phone,
       position: this.state.position,
       specialty: specialty
     }
@@ -116,6 +118,7 @@ export default class ClinicRegistrationForm extends Component {
         insurance: clinic.insurance,
         categories: clinic.categories,
         email: clinic.email,
+        phone: clinic.phone,
         position: clinic.position,
         specialty: clinic.specialty
       })

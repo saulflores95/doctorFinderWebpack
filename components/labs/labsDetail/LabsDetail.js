@@ -9,6 +9,7 @@ import LabDescription from './labsDescription/LabDescription'
 
 const LabsDetail = ({lab}) => (
   <div className='labDetailContainer'>
+    {console.log(lab)}
     <MuiThemeProvider>
       <Container>
         <Row>
@@ -16,7 +17,7 @@ const LabsDetail = ({lab}) => (
             <LabsHeader lab={lab[0]} />
           </Col>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <LabDescription lab={lab.lab} />
+            <LabDescription description={lab[0].description} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div style={{marginTop: 15}}>

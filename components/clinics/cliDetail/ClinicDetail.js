@@ -17,7 +17,7 @@ const ClinicDetail = ({clinic}) => (
             <ClinicHeader clinic={clinic[0]} />
           </Col>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <ClinicDescription clinic={clinic.clinic} />
+            <ClinicDescription description={clinic[0].description} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div style={{marginTop: 15}}>

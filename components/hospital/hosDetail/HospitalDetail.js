@@ -9,7 +9,6 @@ import NoSSR from 'react-no-ssr'
 
 const HospitalDetail = ({hospital}) => (
   <div className='wrapper'>
-    {console.log('detail: ', hospital)}
     <MuiThemeProvider>
       <Container>
         <Row>
@@ -17,7 +16,7 @@ const HospitalDetail = ({hospital}) => (
             <HospitalHeader hospital={hospital[0]} />
           </Col>
           <Col xs={12} sm={12} md={12} lg={12}>
-            <HospitalDescription hospital={hospital.hospital} />
+            <HospitalDescription description={hospital[0].description} />
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div style={{marginTop: 15}}>

@@ -42,7 +42,8 @@ export default class LabDescription extends Component {
           <Paper zDepth={1} className='paper'>
             <div>
               <Container style={styles.textCenter}>
-                <p className='labDescription'>Texto de prueba</p>
+                {console.log(this.props.description)}
+                <p className='labDescription'>{this.props.description}</p>
                 <RaisedButton label={<span style={{color: 'white'}}>Read More</span>} backgroundColor='#2d517b' onClick={this.handleOpen.bind(this)} />
               </Container>
             </div>
@@ -58,7 +59,7 @@ export default class LabDescription extends Component {
               onRequestClose={this.handleClose.bind(this)}
              >
               <div>
-                <p className='labDescriptionDialog'>Texto de prueba</p>
+                <p className='labDescriptionDialog'>{this.props.description}</p>
               </div>
             </Dialog>
           </MuiThemeProvider>

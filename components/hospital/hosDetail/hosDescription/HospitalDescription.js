@@ -42,7 +42,7 @@ export default class hospitalDescription extends Component {
           <Paper zDepth={1} className='paper'>
             <div>
               <Container style={styles.textCenter}>
-                <p className='hospitalDescription'>Texto de prueba</p>
+                <p className='hospitalDescription'>{this.props.description}</p>
                 <RaisedButton label={<span style={{color: 'white'}}>Read More</span>} backgroundColor='#2d517b' onClick={this.handleOpen.bind(this)} />
               </Container>
             </div>
@@ -58,7 +58,7 @@ export default class hospitalDescription extends Component {
               onRequestClose={this.handleClose.bind(this)}
              >
               <div>
-                <p className='hospitalDescriptionDialog'>Texto de prueba</p>
+                <p className='hospitalDescriptionDialog'>{this.props.description}</p>
               </div>
             </Dialog>
           </MuiThemeProvider>

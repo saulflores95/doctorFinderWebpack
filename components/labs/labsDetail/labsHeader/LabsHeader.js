@@ -21,7 +21,7 @@ const LabsHeader = ({lab}) => (
       </Col>
       <Col sm={6} md={6} lg={6}>
         <div style={{marginTop: 15}}>
-          <LabSpeciality lab={lab[0]} />
+          <LabSpeciality categories={lab.categories} />
         </div>
       </Col>
     </Row>

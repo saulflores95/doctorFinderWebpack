@@ -60,6 +60,8 @@ const imageChooser = (props) => {
       return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/Physiologist.jpg'
     case 'Plastic Surgeon':
       return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/Plastic-Surgeon.jpg'
+    case 'Orthopedic Surgeon':
+      return '../../../../static/Orthopedic.jpg'
     case 'Podiatrist':
       return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/Podiatrist.jpg'
     case 'Psychiatrist':
@@ -78,6 +80,8 @@ const imageChooser = (props) => {
       return '../../../../static/Otorhinolaryngologist.jpg'
     case 'Gastroenterologist':
       return '../../../../static/Gastroenterologist.jpg'
+    case 'Hematologist':
+      return '../../../../static/Hematologist.jpg'
     default:
       return null
   }

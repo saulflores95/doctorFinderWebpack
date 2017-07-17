@@ -13,11 +13,12 @@ const PharmacieDetail = ({pharmacie}) => {
       <MuiThemeProvider>
         <Container>
           <Row>
+            {console.log(pharmacie[0])}
             <Col xs={12} sm={12} md={12} lg={12}>
               <PharmacieHeader pharmacie={pharmacie[0]} />
             </Col>
             <Col xs={12} sm={12} md={12} lg={12}>
-              <PharmacieDescription pharmacie={pharmacie.pharmacie} />
+              <PharmacieDescription description={pharmacie[0].description} />
             </Col>
             <Col xs={12} sm={12} md={6} lg={6}>
               <div style={{marginTop: 15}}>

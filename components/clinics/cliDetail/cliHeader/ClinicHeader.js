@@ -21,7 +21,7 @@ const ClinicHeader = ({clinic}) => (
       </Col>
       <Col sm={12} md={12} lg={6}>
         <div style={{marginTop: 15}}>
-          <ClinicSpeciality clinic={clinic[0]} />
+          <ClinicSpeciality categories={clinic.categories} />
         </div>
       </Col>
     </Row>
