@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.8.1'
+const CACHE_VERSION = '0.1.8.3'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -63,6 +63,10 @@ self.addEventListener('fetch', (event) => {
   }
   if(event.request.url === `https://healthcarebaja.com/dev`) {
     console.log('Dev cache ignored')
+    event.respondWith(fetch(event.request));
+  }
+  if(event.request.url === `https://healthcarebaja.com/api/email`) {
+    console.log('Email cache ignored')
     event.respondWith(fetch(event.request));
   }
   if(event.request.url === `https://healthcarebaja.com/register`) {
