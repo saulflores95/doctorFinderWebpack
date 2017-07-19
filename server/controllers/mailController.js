@@ -14,7 +14,7 @@ mailController.post = (req, res) => {
   }))
   var mailOptions = {
     from: 'saulpolo95@gmail.com', // sender address
-    to: `info@guicomercialtijuana.com,saulpolo95@gmail.com,luis.encinas1506@gmail.com,antonio@pekub.com,${to}`, // list of receivers
+    to: `info@guiacomercialtijuana.com, ${to}`, // list of receivers
     subject: `Email from ${name} -- Healthcare Baja`, // Subject line
     text: `Email: ${email} message: ${message}` //, // plaintext body
       // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
