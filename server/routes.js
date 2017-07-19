@@ -12,7 +12,10 @@ const pharmacieController = require('./controllers/pharmacieController')
 const hospitalController = require('./controllers/hospitalController')
 const labController = require('./controllers/labController')
 const imageController = require('./controllers/imageController')
+const mailController = require('./controllers/mailController')
+//mailing routes
 
+routes.post('/email', mailController.post)
 //  Registration Routes
 routes.post('/image-upload', upload.single('file'), imageController.post)
 routes.post('/doctor-registration', doctorController.post)
@@ -59,7 +62,6 @@ routes.get('/logout', (req, res, next) => {
 })
 
 routes.get('/user', (req, res) => {
-  //  console.log('Data in routes.js', req.user)
   return res.status(200).json({
     succes: true,
     data: req.user

@@ -108,7 +108,6 @@ export default class ClinicRegistrationForm extends Component {
       position: this.state.position,
       specialty: specialty
     }
-    console.log('Clinic: ', clinic)
     let _self = this
     if (clinic) {
       axios.post('/api/clinic-registration', {

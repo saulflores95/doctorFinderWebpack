@@ -70,7 +70,6 @@ export default class DoctorEditForm extends React.Component {
     }
 
     if (doctor) {
-      console.log('Doctor Added: ', doctor)
       axios.put(`/api/doctor-edit/${this.props.doctor._id}`, {
         name: doctor.name,
         img: doctor.img,
@@ -91,7 +90,7 @@ export default class DoctorEditForm extends React.Component {
   }
 
   toggleChecked (Checkbox) {
-    console.log('this was pressed')
+    console.log('toogle was pressed')
     if (this.state.toogleState === false) {
       this.state.toogleState = true
     } else {

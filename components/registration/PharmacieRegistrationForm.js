@@ -71,7 +71,6 @@ export default class PharmacieRegistrationForm extends Component {
       tag
     }
 
-    console.log(pharmacie)
     let _self = this
     if (pharmacie) {
       axios.post('/api/pharmacie-registration', {

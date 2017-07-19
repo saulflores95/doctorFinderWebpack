@@ -1,7 +1,7 @@
 import React from 'react'
 import DoctorHeader from './docHeader/DoctorHeader'
 import DoctorDescription from './docDescription/DoctorDescription'
-import DoctorContactForm from './docContact/DoctorContactForm'
+import GeneralContactForm from '../../contact/GeneralContactForm'
 import {Container, Row, Col} from 'react-grid-system'
 import DetailMap from '../../map/DetailMap'
 import NoSSR from 'react-no-ssr'
@@ -33,7 +33,7 @@ const DoctorDetail = (doctor) => (
           <Row>
             <Col xs={12} sm={12} md={6} lg={6}>
               <div style={{marginTop: 15}}>
-                <DoctorContactForm {...doctor.doctor[0]} />
+                <GeneralContactForm phone={doctor.doctor[0].phone} email={doctor.doctor[0].email} />
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6}>

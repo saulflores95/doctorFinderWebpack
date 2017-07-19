@@ -42,7 +42,6 @@ export default class LabDescription extends Component {
           <Paper zDepth={1} className='paper'>
             <div>
               <Container style={styles.textCenter}>
-                {console.log(this.props.description)}
                 <p className='labDescription'>{this.props.description}</p>
                 <RaisedButton label={<span style={{color: 'white'}}>Read More</span>} backgroundColor='#2d517b' onClick={this.handleOpen.bind(this)} />
               </Container>

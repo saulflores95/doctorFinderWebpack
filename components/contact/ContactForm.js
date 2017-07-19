@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField'
 import {Container} from 'react-grid-system'
 import RaisedButton from 'material-ui/RaisedButton'
 
-const ContactForm = () => (
+const ContactForm = (email, phone) => (
   <div className='wrapper'>
     <div className='img-container'>
       <img className='img' src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />

@@ -9,7 +9,6 @@ import LabDescription from './labsDescription/LabDescription'
 
 const LabsDetail = ({lab}) => (
   <div className='labDetailContainer'>
-    {console.log(lab)}
     <MuiThemeProvider>
       <Container>
         <Row>

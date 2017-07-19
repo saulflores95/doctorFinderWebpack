@@ -82,7 +82,6 @@ export default class HospitalRegistrationForm extends Component {
       description: description,
       categories: categories
     }
-    console.log('Hospital', hospital)
     let _self = this
     if (hospital) {
       axios.post('/api/hospital-registration', {

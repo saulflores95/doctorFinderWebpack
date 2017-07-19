@@ -9,7 +9,6 @@ import NoSSR from 'react-no-ssr'
 
 const ClinicDetail = ({clinic}) => (
   <div className='wrapper'>
-    {console.log(clinic)}
     <MuiThemeProvider>
       <Container>
         <Row>

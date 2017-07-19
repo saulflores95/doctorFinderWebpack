@@ -85,7 +85,6 @@ export default class LabRegistrationForm extends Component {
       categories: categories
     }
 
-    console.log('Lab', lab)
     let _self = this
 
     if (lab) {
