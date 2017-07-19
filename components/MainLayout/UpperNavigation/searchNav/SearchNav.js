@@ -5,12 +5,15 @@ import PharmacieMainList from '../../../pharmacies/phaWrapper/phaMainList/Pharma
 import Link from 'next/link'
 import Transition from 'react-motion-ui-pack'
 import {spring} from 'react-motion'
+import {Visible} from 'react-grid-system'
+import MobileSearch from './MobileSearch'
 
 export default class SearchNav extends Component {
   constructor () {
     super()
     this.state = {
-      search: ''
+      search: '',
+      showMobileSearch: false
     }
   }
 
@@ -18,10 +21,13 @@ export default class SearchNav extends Component {
     this.setState({search: event.target.value.substr(0, 20)})
   }
 
+  showMobile () {
+    this.setState({showMobileSearch: true})
+  }
+
   updateProp (props, identifier) {
     switch (identifier) {
       case 'doctor':
-        console.log(props._id)
         return <DoctorList doctor={props} key={props._id} />
       case 'lab':
         return <LabsMainList lab={props} key={props._id} />
@@ -62,23 +68,30 @@ export default class SearchNav extends Component {
       <div>
         <ul className='ul'>
           <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}} /></Link></li>
-          <li className='liRight'>
-            <div className='wrap'>
-              <form action=''>
-                <label className='labelSearch' htmlFor='search'>Search</label>
-                <input
-                  className='search'
-                  name='search'
-                  type='text'
-                  autoComplete='off'
-                  placeholder='Search...'
-                  value={this.state.search}
-                  onChange={this.updateSearch.bind(this)} />
-                <label className='labelSearch' htmlFor='search'>Rechercher</label>
-                <input className='search_submit' autoComplete='off' name='searcht' value='Rechercher' type='submit' />
-              </form>
-            </div>
-          </li>
+          <Visible md lg xl>
+            <li className='liRight'>
+              <div className='wrap'>
+                <form action=''>
+                  <label className='labelSearch' htmlFor='search'>Search</label>
+                  <input
+                    className='search'
+                    name='search'
+                    type='text'
+                    autoComplete='off'
+                    placeholder='Search...'
+                    value={this.state.search}
+                    onChange={this.updateSearch.bind(this)} />
+                  <label className='labelSearch' htmlFor='search'>Rechercher</label>
+                  <input className='search_submit' autoComplete='off' name='searcht' value='Rechercher' type='submit' />
+                </form>
+              </div>
+            </li>
+          </Visible>
+          <Visible xs sm>
+            <li className='liRight' onClick={this.showMobile.bind(this)}>
+              <div style={{width: 63, height: 50}} className='search-mobile' />
+            </li>
+          </Visible>
         </ul>
         <div>
           <Transition
@@ -93,6 +106,11 @@ export default class SearchNav extends Component {
             }}
             >
             <div className='wrapper' key={idCounter++}>
+              <Visible xs sm>
+                <div className='wrapper-mobile' onClick={this.showMobile.bind(this)}>
+                  { this.state.showMobileSearch ? <MobileSearch /> : null }
+                </div>
+              </Visible>
               {filterArregelo.map((props) => {
                 return this.updateProp(props, identifier)
               })}
@@ -101,6 +119,15 @@ export default class SearchNav extends Component {
         </div>
         <style jsx>
           {`
+            .wrapper-mobile {
+              margin-top: 10px;
+            }
+
+            .search-mobile {
+              background: url(https://res.cloudinary.com/dlpqiaopi/image/upload/v1495061171/searchbar_uokmh1.png) center center no-repeat;
+              background-size: 50px 50px !important;
+            }
+
             .search {
               text-transform: lowercase;
             }
