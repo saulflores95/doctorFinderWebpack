@@ -79,7 +79,7 @@ export default class GeneralContactForm extends Component {
               labelPosition='before'
               primary={false}
               icon={<FaPhone className='label-icon' />}
-              onClick={() => window.open(`tel:${phone.phone}`)}
+              onClick={() => window.open(`tel:${this.props.phone}`)}
             />
           </form>
         </MuiThemeProvider>
