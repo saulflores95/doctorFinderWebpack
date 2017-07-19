@@ -192,25 +192,29 @@ export default class DoctorEditForm extends React.Component {
                           onChange={this.handleChange.bind(this)}
                         >
                           <MenuItem value={'Audiologist'} primaryText='Audiologist' />
-                          <MenuItem value={'Allergist'} primaryText='Allergist ' />
-                          <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist  ' />
-                          <MenuItem value={'Cardiologist'} primaryText='Cardiologist ' />
-                          <MenuItem value={'Dentist'} primaryText='Dentist ' />
-                          <MenuItem value={'Dermatologist'} primaryText='Dermatologist ' />
-                          <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist ' />
-                          <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist ' />
-                          <MenuItem value={'Gynecologist'} primaryText='Gynecologist ' />
-                          <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist ' />
-                          <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist  ' />
-                          <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist  ' />
-                          <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist  ' />
-                          <MenuItem value={'Microbiologist'} primaryText='Microbiologist  ' />
-                          <MenuItem value={'Neonatologist'} primaryText='Neonatologist  ' />
-                          <MenuItem value={'Neurologist'} primaryText='Neurologist  ' />
-                          <MenuItem value={'Obstetrician'} primaryText='Obstetrician  ' />
-                          <MenuItem value={'Oncologist'} primaryText='Oncologist  ' />
-                          <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon  ' />
-                          <MenuItem value={'Otorrinolaringologista'} primaryText='Otorrinolaringologista  ' />
+                          <MenuItem value={'Allergist'} primaryText='Allergist' />
+                          <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
+                          <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
+                          <MenuItem value={'Dentist'} primaryText='Dentist' />
+                          <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
+                          <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
+                          <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
+                          <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
+                          <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
+                          <MenuItem value={'General Medicine'} primaryText='General Medicine' />
+                          <MenuItem value={'Hematologist'} primaryText='Hematologist' />
+                          <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
+                          <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
+                          <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
+                          <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
+                          <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
+                          <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
+                          <MenuItem value={'Neurologist'} primaryText='Neurologist' />
+                          <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
+                          <MenuItem value={'Oncologist'} primaryText='Oncologist' />
+                          <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
+                          <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
+                          <MenuItem value={'Otorrinolaringologista'} primaryText='Otorrinolaringologista' />
                           <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
                           <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
                           <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
@@ -218,8 +222,9 @@ export default class DoctorEditForm extends React.Component {
                           <MenuItem value={'Psychiatrist'} primaryText='Psychiatrist' />
                           <MenuItem value={'Radiologist'} primaryText='Radiologist' />
                           <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
-                          <MenuItem value={'Surgeon'} primaryText='Surgeon  ' />
-                          <MenuItem value={'Urologist'} primaryText='Urologist  ' />
+                          <MenuItem value={'Surgeon'} primaryText='Surgeon' />
+                          <MenuItem value={'Urologist'} primaryText='Urologist' />
+                          <MenuItem value={'Veterinarian'} primaryText='Veterinarian' />
                         </SelectField>
                       </Col>
                     </Row>

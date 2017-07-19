@@ -206,12 +206,14 @@ export default class DoctorRegistrationForm extends Component {
                           <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
                           <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
                           <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
+                          <MenuItem value={'General Medicine'} primaryText='General Medicine' />
                           <MenuItem value={'Hematologist'} primaryText='Hematologist' />
                           <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
                           <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
                           <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
                           <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
                           <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
+                          <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
                           <MenuItem value={'Neurologist'} primaryText='Neurologist' />
                           <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
                           <MenuItem value={'Oncologist'} primaryText='Oncologist' />
