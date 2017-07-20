@@ -16,8 +16,15 @@ mailController.post = (req, res) => {
     from: 'saulpolo95@gmail.com', // sender address
     to: `info@guiacomercialtijuana.com, ${to}`, // list of receivers
     subject: `Email from ${name} -- Healthcare Baja`, // Subject line
-    text: `Email: ${email} message: ${message}` //, // plaintext body
-      // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+    //  text: `Email: ${email} message: ${message}` //, // plaintext body
+    html: `<div>
+        <h1>Healthcare Baja </h1> </br>
+        Email from: <b>${name}</b>  </br>
+        ${message} </br>
+        Contact me back at: <b>${email}</b>
+        <p>Do not respond this email as it is an automated message, thank you!</p>
+        <img src='https://media.tenor.com/images/1e0a8c05fa4735cbfc94c8fa337b305c/tenor.gif' />
+      </div>` // You can choose to send an HTML body instead
   }
 
   transporter.sendMail(mailOptions, function (error, info) {
