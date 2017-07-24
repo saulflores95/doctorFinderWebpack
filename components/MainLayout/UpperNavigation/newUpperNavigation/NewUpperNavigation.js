@@ -17,7 +17,7 @@ export default class NewUpperNavigation extends Component {
     return (
       <div className='container'>
         <ul className='ul'>
-          <li className='li'><Link href='/'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}} /></Link></li>
+          <li className='li'><Link href='/doctors'><img alt='Healthcare Baja' src={imgUrl} style={{marginLeft: 20}} /></Link></li>
           <li className='liRight'>
             <MuiThemeProvider>
               <IconMenu
