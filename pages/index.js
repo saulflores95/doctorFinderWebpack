@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 const landing = () => (
   <div>
@@ -20,7 +21,7 @@ const landing = () => (
           <div className='wrapper'>
             <div className='row'>
               <div className='logo-main col-3'>
-                <a href='index.html'><img src='/static/healthcarebaja.png' alt='logo' /></a>
+                <Link href='/doctors'><a><img src='/static/healthcarebaja.png' alt='logo' /></a></Link>
               </div>
               <div className='col-9 text-right'>
                 <div className='responsive-menu-btn'><i><b /><b /><b /></i>
@@ -48,7 +49,7 @@ const landing = () => (
               <h1 className='small'>Your tour guide<br /> to Health</h1>
               <p>Descarga nuestra App y empieza tu búsqueda ahora</p>
               <div className='btn-box'>
-                <a className='red text-uppercase' href='/'>Obtener App</a>
+                <Link href='/doctors'><a className='red text-uppercase'>Ir a App</a></Link>
               </div>
             </div>
             <a href='#about' className='go-down' />
@@ -171,7 +172,7 @@ const landing = () => (
                 <input className='email' placeholder='Inicia una búsqueda...' type='text' /><input className='search-btn' type='submit' name='lastname' />
               </form>
             </div>
-            <div className='col-12 text-center mt40'><a href='https://healthcarebaja.com/'>Ver directorio</a></div>
+            <div className='col-12 text-center mt40'><Link href='/doctors'><a>Ver directorio</a></Link></div>
           </div>
         </div>
         <div className='container client-block-main hidden' id='testimonials'>
@@ -248,7 +249,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-DR_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                    <a href='https://healthcarebaja.com'><i className='fa fa-search fa-2x' /></a>
+                  <Link href='/doctors'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Doctores</span>
@@ -257,7 +258,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-HOSPITAL_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                    <a href='https://healthcarebaja.com/hospitals'><i className='fa fa-search fa-2x' /></a>
+                    <Link href='/hospitals'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Hospitales</span>
@@ -266,7 +267,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-CLINIC_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                    <a href='https://healthcarebaja.com/clinics'><i className='fa fa-search fa-2x' /></a>
+                  <Link href='/clinics'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Clínicas</span>
@@ -275,7 +276,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-LAB_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                    <a href='https://healthcarebaja.com/labs'><i className='fa fa-search fa-2x' /></a>
+                  <Link href='/laboratories'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Laboratorios</span>
@@ -284,7 +285,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-PHARMA_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                    <a href='https://healthcarebaja.com/pharmacies'><i className='fa fa-search fa-2x' /></a>
+                  <Link href='/pharmacies'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Farmacias</span>
