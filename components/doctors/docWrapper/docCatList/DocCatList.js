@@ -5,8 +5,6 @@ import {List, ListItem} from 'material-ui/List'
 import Divider from 'material-ui/Divider'
 import ActionInfo from 'material-ui/svg-icons/action/info'
 import Avatar from 'material-ui/Avatar'
-import Transition from 'react-motion-ui-pack'
-import {spring} from 'react-motion'
 
 let idCounter = 0
 
@@ -85,11 +83,11 @@ const imageChooser = (props) => {
     case 'Nephrologist':
       return '../../../../static/Nephrologist.jpg'
     case 'Ophthalmologists':
-      return '../../../../static/Ophtalmologist.jpg'
+      return  '../../../../static/Ophtalmologist.jpg'
     case 'General Medicine':
-      return '../../../../static/General-Medicine.jpg'
-    case 'Traumatologist':
-      return '../../../../static/Traumatologist.jpg'
+      return  '../../../../static/General-Medicine.jpg'
+      case 'Traumatologist':
+        return  '../../../../static/Traumatologist.jpg'
     default:
       return null
   }
@@ -97,32 +95,18 @@ const imageChooser = (props) => {
 const DocCatList = ({specialty}) => (
   <div>
     <Link prefetch href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
-      <div>
-        <MuiThemeProvider>
-          <List style={{padding: 0}}>
-            <Transition
-              component={false}
-              enter={{
-                opacity: 1,
-                translateX: spring(0, {stiffness: 400, damping: 25})
-              }}
-              leave={{
-                opacity: 0,
-                translateX: 350
-              }}
-              >
-              <ListItem
-                leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
-                rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
-                primaryText={<div className='label'>{specialty}</div>}
-                style={{marginTop: 10, marginBottom: 10}}
-                key={idCounter++}
-              />
-            </Transition>
-            <Divider inset style={{backgroundColor: '#57c6df'}} />
-          </List>
-        </MuiThemeProvider>
-      </div>
+      <MuiThemeProvider>
+        <List style={{padding: 0}}>
+          <ListItem
+            leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
+            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+            primaryText={<div className='label'>{specialty}</div>}
+            style={{marginTop: 10, marginBottom: 10}}
+            key={idCounter++}
+          />
+          <Divider inset style={{backgroundColor: '#57c6df'}} />
+        </List>
+      </MuiThemeProvider>
     </Link>
     <style jsx>
       {`
