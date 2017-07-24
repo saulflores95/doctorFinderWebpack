@@ -2,6 +2,7 @@ import React from 'react'
 import App from '../components/App/App'
 import DoctorDetail from '../components/doctors/docDetail/DoctorDetail'
 import fetch from 'isomorphic-unfetch'
+import Head from 'next/head'
 
 export default class extends React.Component {
   static async getInitialProps ({ req, query: { id } }) {
@@ -20,6 +21,12 @@ export default class extends React.Component {
     return (
       <div>
         <App>
+          <Head>
+            <title>{doctor[0].name} - HCB</title>
+            <meta property='og:type' content='article' />
+            <meta property='og:title' content={doctor[0].name} />
+            <meta property='og:description' content={doctor[0].description} />
+          </Head>
           <div className='container'>
             <DoctorDetail doctor={doctor} />
           </div>
