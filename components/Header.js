@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {Container, Col} from 'react-grid-system'
 
 const Header = () => (
@@ -6,44 +5,44 @@ const Header = () => (
     <Container>
       <h1>Hello Welcome To HCB DEV interface</h1>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/api/doctors'>
+        <a href='/api/doctors' target='_blank'>
           <div className='enjoy-css'>API</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/'>
+      <a href='/api/doctors' target='_blank'>
           <div className='enjoy-css'>App</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/doctor-registration'>
-          <div className='enjoy-css'>Add Doctors</div>
-        </Link>
+        <a href='/doctor-registration' target='_blank'>
+            <div className='enjoy-css'>Add Doctors</div>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/hospital-registration'>
+        <a href='/hospital-registration' target='_blank'>
           <div className='enjoy-css'>Add Hospital</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/clinic-registration'>
+        <a href='/clinic-registration' target='_blank'>
           <div className='enjoy-css'>Add Clinics</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/lab-registration'>
+        <a href='/lab-registration' target='_blank'>
           <div className='enjoy-css'>Add Labs</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/pharmacie-registration'>
+        <a href='/pharmacie-registration' target='_blank'>
           <div className='enjoy-css'>Add Pharmacies</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link href='/api/logout'>
+        <a href='/api/logout'>
           <div className='enjoy-css'>Logout BYE BYE</div>
-        </Link>
+        </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
         <div className='enjoy-css'><a href='https://a2plcpnl0950.prod.iad2.secureserver.net:2096' >Webmail</a></div>

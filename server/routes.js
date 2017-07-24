@@ -47,7 +47,10 @@ routes.post('/login', passport.authenticate('local', { failureRedirect: '/login'
     if (err) {
       console.log(err)
     }
-    res.redirect('/')
+    return res.status(200).json({
+      succes: true,
+      data: req.user
+    })
   })
 })
 

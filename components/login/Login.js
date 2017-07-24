@@ -19,7 +19,8 @@ export default class UserRegistration extends Component {
         password: password
       })
       .then(function (response) {
-        Router.push('/dev')
+        console.log(response)
+        window.location.href = '/dev'
       })
       .catch(function (error) {
         console.log(error)
