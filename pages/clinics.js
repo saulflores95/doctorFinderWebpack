@@ -13,7 +13,7 @@ const clinics = ({cli}) => (
 )
 
 clinics.getInitialProps = async ({ req }) => {
-  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : ''
   const res = await fetch(baseUrl + '/api/clinics')
   const json = await res.json()
   return { cli: json.data }

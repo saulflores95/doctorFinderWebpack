@@ -108,7 +108,7 @@ export default class SearchNav extends Component {
             <div className='wrapper' key={idCounter++}>
               <Visible xs sm>
                 <div className='wrapper-mobile' onClick={this.showMobile.bind(this)}>
-                  { this.state.showMobileSearch ? <MobileSearch search={this.updateSearch.bind(this)}/> : null }
+                  { this.state.showMobileSearch ? <MobileSearch search={this.updateSearch.bind(this)} /> : null }
                 </div>
               </Visible>
               {filterArregelo.map((props) => {

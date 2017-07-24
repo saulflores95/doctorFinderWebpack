@@ -13,7 +13,7 @@ const hospitalController = require('./controllers/hospitalController')
 const labController = require('./controllers/labController')
 const imageController = require('./controllers/imageController')
 const mailController = require('./controllers/mailController')
-//mailing routes
+// mailing routes
 
 routes.post('/email', mailController.post)
 //  Registration Routes

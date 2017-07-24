@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import { Container, Row, Col } from 'react-grid-system'
 import Paper from 'material-ui/Paper'
 import SelectField from 'material-ui/SelectField'
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from 'material-ui/Checkbox'
 import MenuItem from 'material-ui/MenuItem'
 import Uploader from '../uploader/Uploader'
 import axios from 'axios'
@@ -34,16 +34,6 @@ export default class ClinicRegistrationForm extends Component {
 
   componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
-  }
-
-  toggleChecked (Checkbox) {
-    console.log('this was pressed')
-    if (this.state.toogleState === false) {
-      this.state.toogleState = true
-    } else {
-      this.state.toogleState = false
-    }
-    console.log(this.state.toogleState)
   }
 
   mapClick (event) {
@@ -77,10 +67,6 @@ export default class ClinicRegistrationForm extends Component {
     } else {
       this.state.toogleState = false
     }
-  }
-
-  handleChange (event, index, value) {
-    this.setState({value: value})
   }
 
   addClinic () {

@@ -9,7 +9,7 @@ import NoSSR from 'react-no-ssr'
 import axios from 'axios'
 import Uploader from '../uploader/Uploader'
 import RegistrationMap from './RegistrationMap'
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from 'material-ui/Checkbox'
 
 export default class HospitalRegistrationForm extends Component {
   constructor () {

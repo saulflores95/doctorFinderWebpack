@@ -45,53 +45,53 @@ self.addEventListener('activate', (event) => {
 */
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] fetching..')
-  if(event.request.url === `http://localhost:3000/login`) {
+  if (event.request.url === `http://localhost:3000/login`) {
     console.log('Login cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `http://localhost:3000/api/doctors`) {
+  if (event.request.url === `http://localhost:3000/api/doctors`) {
     console.log('Login cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `http://localhost:3000/dev`) {
+  if (event.request.url === `http://localhost:3000/dev`) {
     console.log('Login cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/login`) {
+  if (event.request.url === `https://healthcarebaja.com/login`) {
     console.log('Login cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/dev`) {
+  if (event.request.url === `https://healthcarebaja.com/dev`) {
     console.log('Dev cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/api/email`) {
+  if (event.request.url === `https://healthcarebaja.com/api/email`) {
     console.log('Email cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/register`) {
+  if (event.request.url === `https://healthcarebaja.com/register`) {
     console.log('Register cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/api/logout`) {
+  if (event.request.url === `https://healthcarebaja.com/api/logout`) {
     console.log('Logout cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === `https://healthcarebaja.com/doctor-registration` || event.request.url === `https://healthcarebaja.com/lab-registration` || event.request.url === `https://healthcarebaja.com/pharmacie-registration` || event.request.url === `https://healthcarebaja.com/hospital-registration` || event.request.url === `https://healthcarebaja.com/clinic-registration`) {
+  if (event.request.url === `https://healthcarebaja.com/doctor-registration` || event.request.url === `https://healthcarebaja.com/lab-registration` || event.request.url === `https://healthcarebaja.com/pharmacie-registration` || event.request.url === `https://healthcarebaja.com/hospital-registration` || event.request.url === `https://healthcarebaja.com/clinic-registration`) {
     console.log('registration cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === 'http://localhost:3000/doctor-registration' || event.request.url === `http://localhost:3000/lab-registration` || event.request.url === `http://localhost:3000/pharmacie-registration` || event.request.url === `http://localhost:3000/hospital-registration` || event.request.url === `http://localhost:3000/clinic-registration`) {
+  if (event.request.url === 'http://localhost:3000/doctor-registration' || event.request.url === `http://localhost:3000/lab-registration` || event.request.url === `http://localhost:3000/pharmacie-registration` || event.request.url === `http://localhost:3000/hospital-registration` || event.request.url === `http://localhost:3000/clinic-registration`) {
     console.log('local host registration cache ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === 'http://localhost:3000/api/image-upload'){
+  if (event.request.url === 'http://localhost:3000/api/image-upload') {
     console.log('localhost image upload ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
-  if(event.request.url === 'https://healthcarebaja.com/api/image-upload'){
+  if (event.request.url === 'https://healthcarebaja.com/api/image-upload') {
     console.log('hcb request for image upload ignored')
-    event.respondWith(fetch(event.request));
+    event.respondWith(fetch(event.request))
   }
   event.respondWith(
     caches.match(event.request)

@@ -9,7 +9,7 @@ import axios from 'axios'
 import NoSSR from 'react-no-ssr'
 import RegistrationMap from './RegistrationMap'
 import AlertContainer from 'react-alert'
-import Checkbox from 'material-ui/Checkbox';
+import Checkbox from 'material-ui/Checkbox'
 
 export default class LabRegistrationForm extends Component {
   constructor () {
@@ -60,7 +60,7 @@ export default class LabRegistrationForm extends Component {
     // L.marker(event.latlng)
   }
 
-  addLab () {
+  addLab (event) {
     event.preventDefault()
     var name = this.refs.clinicName.getValue()
     var img = this.state.url

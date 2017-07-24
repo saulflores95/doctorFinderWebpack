@@ -6,7 +6,7 @@ const Header = () => (
     <Container>
       <h1>Hello Welcome To HCB DEV interface</h1>
       <Col xs={12} sm={12} md={6} lg={3}>
-        <Link  href='/api/doctors'>
+        <Link href='/api/doctors'>
           <div className='enjoy-css'>API</div>
         </Link>
       </Col>

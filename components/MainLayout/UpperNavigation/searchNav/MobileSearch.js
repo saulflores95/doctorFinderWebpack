@@ -3,9 +3,6 @@ import Transition from 'react-motion-ui-pack'
 import {spring} from 'react-motion'
 
 export default class MobileSearch extends Component {
-  constructor (props) {
-    super(props)
-  }
   render () {
     let key = 0
     return (
@@ -21,10 +18,10 @@ export default class MobileSearch extends Component {
             opacity: 0
           }}
           >
-        <form key={key++}>
-          <input type="text" className="search" placeholder="What are you looking for?" autoFocus onChange={this.props.search}/>
-        </form>
-      </Transition>
+          <form key={key++}>
+            <input type='text' className='search' placeholder='What are you looking for?' autoFocus onChange={this.props.search} />
+          </form>
+        </Transition>
         <style jsx>
           {`
             .search {

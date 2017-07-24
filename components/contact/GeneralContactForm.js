@@ -5,7 +5,6 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
 import axios from 'axios'
 
-
 export default class GeneralContactForm extends Component {
   constructor () {
     super()
