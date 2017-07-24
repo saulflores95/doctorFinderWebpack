@@ -398,8 +398,10 @@ const landing = () => (
 
 landing.getInitialProps = async ({ req, res }) => {
   var deviceType = req.device.type
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const url = baseUrl + '/doctors'
   if (deviceType === 'phone') {
-    res.redirect('https://healthcarebaja.com/doctors')
+    res.redirect(url)
   }
   return {deviceType: deviceType}
 }
