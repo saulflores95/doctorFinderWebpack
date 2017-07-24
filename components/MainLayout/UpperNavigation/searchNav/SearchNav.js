@@ -257,6 +257,7 @@ export default class SearchNav extends Component {
             }
             .wrapper {
               margin-left: 10px;
+              margin-bottom: 56px;
             }
           `}
         </style>
