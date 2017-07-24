@@ -26,6 +26,7 @@ export default class extends React.Component {
             <meta property='og:type' content='article' />
             <meta property='og:title' content={doctor[0].name} />
             <meta property='og:description' content={doctor[0].description} />
+            <meta property='og:image' content={doctor[0].img}/>
           </Head>
           <div className='container'>
             <DoctorDetail doctor={doctor} />
