@@ -108,7 +108,7 @@ const landing = () => (
                 </div>
               </div>
               <div className='features-img wow fadeIn'>
-                <div className='features-mob'><img src='http://placehold.it/278x494/transparent?text=&nbsp;' alt='features-screen' /></div>
+                <div className='features-mob'><img src='#' alt='features-screen' /></div>
               </div>
               <div className='features-text text-left wow fadeInRight' data-wow-delay='0.75s'>
                 <div className='features-info md-col-12' >
