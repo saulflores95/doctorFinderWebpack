@@ -95,18 +95,20 @@ const imageChooser = (props) => {
 const DocCatList = ({specialty}) => (
   <div>
     <Link prefetch href={`/doctors-speciality?id=${specialty}`} as={`/doctors-speciality/${specialty}`}>
-      <MuiThemeProvider>
-        <List style={{padding: 0}}>
-          <ListItem
-            leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
-            rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
-            primaryText={<div className='label'>{specialty}</div>}
-            style={{marginTop: 10, marginBottom: 10}}
-            key={idCounter++}
-          />
-          <Divider inset style={{backgroundColor: '#57c6df'}} />
-        </List>
-      </MuiThemeProvider>
+      <div>
+        <MuiThemeProvider>
+          <List style={{padding: 0}}>
+            <ListItem
+              leftAvatar={<Avatar className='doctor' alt={specialty} src={imageChooser(specialty)} />}
+              rightIcon={<ActionInfo style={{color: '#ef726f', fill: '#ef726f'}} />}
+              primaryText={<div className='label'>{specialty}</div>}
+              style={{marginTop: 10, marginBottom: 10}}
+              key={idCounter++}
+            />
+            <Divider inset style={{backgroundColor: '#57c6df'}} />
+          </List>
+        </MuiThemeProvider>
+      </div>
     </Link>
     <style jsx>
       {`
