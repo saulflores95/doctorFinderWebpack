@@ -79,7 +79,7 @@ export default class ClinicEditForm extends React.Component {
         phone: clinic.phone,
         position: clinic.position,
         specialty: clinic.specialty
-        })
+      })
       .then(function (response) {
         console.log(response)
       })
@@ -130,7 +130,7 @@ export default class ClinicEditForm extends React.Component {
       value: props.specialty,
       url: props.img
     })
-    console.log('Data has been loaded...');
+    console.log('Data has been loaded...')
   }
 
   render () {

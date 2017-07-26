@@ -2,7 +2,6 @@ import React from 'react'
 import App from '../components/App/App'
 import DoctorDetail from '../components/doctors/docDetail/DoctorDetail'
 import fetch from 'isomorphic-unfetch'
-import Head from 'next/head'
 import Ogtags from '../components/MainLayout/OgTags/OgTags.js'
 
 export default class extends React.Component {

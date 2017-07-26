@@ -21,7 +21,7 @@ export default class extends React.Component {
     return (
       <div>
         <App>
-          <Ogtags props={clinic[0]}/>
+          <Ogtags props={clinic[0]} />
           <div className='container'>
             <ClinicDetail clinic={clinic} />
           </div>

@@ -249,7 +249,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-DR_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                  <Link href='/doctors'><a><i className='fa fa-search fa-2x' /></a></Link>
+                    <Link href='/doctors'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Doctores</span>
@@ -267,7 +267,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-CLINIC_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                  <Link href='/clinics'><a><i className='fa fa-search fa-2x' /></a></Link>
+                    <Link href='/clinics'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Clínicas</span>
@@ -276,7 +276,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-LAB_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                  <Link href='/laboratories'><a><i className='fa fa-search fa-2x' /></a></Link>
+                    <Link href='/laboratories'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Laboratorios</span>
@@ -285,7 +285,7 @@ const landing = () => (
                 <div className='team-photo'>
                   <img src='/static/landing-PHARMA_ICON.jpg' alt='Category' />
                   <span className='social-links'>
-                  <Link href='/pharmacies'><a><i className='fa fa-search fa-2x' /></a></Link>
+                    <Link href='/pharmacies'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
                 <span className='name'>Farmacias</span>

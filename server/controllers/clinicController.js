@@ -85,7 +85,6 @@ clinicController.put = (req, res) => {
   })
 }
 
-
 clinicController.getAll = (req, res) => {
   db.Clinic.find({}).populate({
     path: '_creator',

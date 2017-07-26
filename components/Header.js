@@ -10,13 +10,13 @@ const Header = () => (
         </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
-      <a href='/api/doctors' target='_blank'>
+        <a href='/api/doctors' target='_blank'>
           <div className='enjoy-css'>App</div>
         </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
         <a href='/doctor-registration' target='_blank'>
-            <div className='enjoy-css'>Add Doctors</div>
+          <div className='enjoy-css'>Add Doctors</div>
         </a>
       </Col>
       <Col xs={12} sm={12} md={6} lg={3}>
