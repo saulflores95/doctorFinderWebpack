@@ -8,13 +8,13 @@ mailController.post = (req, res) => {
   let transporter = nodemailer.createTransport(smtpTransport({
     service: 'Gmail',
     auth: {
-      user: 'saulpolo95@gmail.com', // Your email id
-      pass: 'poloboy1' // Your password
+      user: 'info@healthcarebaja.com', // Your email id
+      pass: 'hypogrifo' // Your password
     }
   }))
   var mailOptions = {
-    from: 'saulpolo95@gmail.com', // sender address
-    to: `info@guiacomercialtijuana.com, ${to}`, // list of receivers
+    from: 'info@healthcarebaja.com', // sender address
+    to: `info@guiacomercialtijuana.com, saulpolo95@gmail.com, ${to}`, // list of receivers
     subject: `Email from ${name} -- Healthcare Baja`, // Subject line
     //  text: `Email: ${email} message: ${message}` //, // plaintext body
     html: `<div>
