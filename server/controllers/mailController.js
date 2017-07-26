@@ -6,11 +6,13 @@ const mailController = {}
 mailController.post = (req, res) => {
   const { name, email, message, to } = req.body
   let transporter = nodemailer.createTransport(smtpTransport({
-    service: 'Gmail',
+    host: 'a2plcpnl0950.prod.iad2.secureserver.net',
+    port: 465,
     auth: {
       user: 'info@healthcarebaja.com', // Your email id
       pass: 'hypogrifo' // Your password
-    }
+    },
+    secure: true
   }))
   var mailOptions = {
     from: 'info@healthcarebaja.com', // sender address
