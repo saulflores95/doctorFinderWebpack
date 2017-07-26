@@ -89,6 +89,10 @@ self.addEventListener('fetch', (event) => {
     console.log('localhost image upload ignored')
     event.respondWith(fetch(event.request))
   }
+  if (event.request.url === 'http://localhost:3000/hospital-edit/') {
+    console.log('localhost image upload ignored')
+    event.respondWith(fetch(event.request))
+  }
   if (event.request.url === 'https://healthcarebaja.com/api/image-upload') {
     console.log('hcb request for image upload ignored')
     event.respondWith(fetch(event.request))

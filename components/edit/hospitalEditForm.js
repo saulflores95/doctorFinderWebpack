@@ -29,6 +29,10 @@ export default class HospitalEditForm extends React.Component {
     }
   }
 
+  componentDidMount () {
+    this.handleChangeProps(this.props.hospital)
+  }
+
   toggleChecked (Checkbox) {
     console.log('this was pressed')
     if (this.state.toogleState === false) {
@@ -101,6 +105,15 @@ export default class HospitalEditForm extends React.Component {
     }
   }
 
+  handleChangeProps (props) {
+    console.log('clicked')
+    this.setState({
+      position: props.position[0],
+      value: props.specialty,
+      url: props.img
+    })
+  }
+
   render () {
     const styles = {
       paper: {
@@ -120,7 +133,7 @@ export default class HospitalEditForm extends React.Component {
         width: '95%'
       }
     }
-
+    const hospital  = this.props.hospital
     return (
       <div>
         <MuiThemeProvider>
@@ -143,6 +156,7 @@ export default class HospitalEditForm extends React.Component {
                           hintText='Hospital Name'
                           ref='hospitalName'
                           fullWidth
+                          defaultValue={hospital.name}
                         />
                       </Col>
                       <Col sm={6}>
@@ -157,6 +171,7 @@ export default class HospitalEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality'
                           ref='specificOne'
+                          defaultValue={hospital.categories[0]}
                           fullWidth
                         />
                       </Col>
@@ -164,6 +179,7 @@ export default class HospitalEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality 2'
                           ref='specificTwo'
+                          defaultValue={hospital.categories[1]}
                           fullWidth
                         />
                       </Col>
@@ -173,12 +189,14 @@ export default class HospitalEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality 3'
                           ref='specificThree'
+                          defaultValue={hospital.categories[2]}
                           fullWidth
                         />
                       </Col>
                       <Col sm={6}>
                         <TextField
                           hintText='Specific Speaciality 4'
+                          defaultValue={hospital.categories[3]}
                           ref='specificFour'
                           fullWidth
                         />
@@ -188,6 +206,7 @@ export default class HospitalEditForm extends React.Component {
                           hintText='Describe yourself or experience(do not be shy)'
                           ref='description'
                           fullWidth
+                          defaultValue={hospital.description}
                           multiLine
                           rows={3}
                           rowsMax={6}
@@ -208,6 +227,7 @@ export default class HospitalEditForm extends React.Component {
                         <TextField
                           hintText='Phone Number'
                           ref='phone'
+                          defaultValue={hospital.phone}
                           fullWidth={false}
                         />
                       </Col>

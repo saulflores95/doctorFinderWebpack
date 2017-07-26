@@ -22,7 +22,7 @@ export default class extends React.Component {
       <div>
         <App>
           <div className='container' style={{paddingBottom: 140}}>
-            <HospitalEditForm hospital={hospital} />
+            <HospitalEditForm hospital={hospital[0]} />
           </div>
         </App>
       </div>
