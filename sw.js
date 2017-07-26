@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.9.7'
+const CACHE_VERSION = '0.1.9.8'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -86,10 +86,6 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch(event.request))
   }
   if (event.request.url === 'http://localhost:3000/api/image-upload') {
-    console.log('localhost image upload ignored')
-    event.respondWith(fetch(event.request))
-  }
-  if (event.request.url === 'http://localhost:3000/hospital-edit/') {
     console.log('localhost image upload ignored')
     event.respondWith(fetch(event.request))
   }
