@@ -41,6 +41,50 @@ phrmacieController.post = (req, res) => {
   })
 }
 
+phrmacieController.put = (req, res) => {
+  const {
+    name,
+    img,
+    position,
+    categories,
+    description,
+    insurance,
+    phone,
+    tag,
+    email,
+    userId
+  } = req.body
+
+  db.Pharmacie.findById(id, function (err, pharmacie) {
+    if (err) {
+      console.log(err)
+    }
+    if (!pharmacie) {
+      return new Error('Coud not find document')
+    } else {
+      pharmacie.name = name
+      pharmacie.img = img
+      pharmacie.description = description
+      pharmacie.insurance = insurance
+      pharmacie.categories = categories
+      pharmacie.email = email
+      pharmacie.tag = tag
+      pharmacie.phone = phone
+      pharmacie.address = address
+      pharmacie.position = position
+
+      pharmacie.save(function (err) {
+        if (err) {
+          console.log('error in updating collection')
+        } else {
+          console.log('success in updating')
+        }
+      })
+    }
+  })
+}
+
+
 phrmacieController.getAll = (req, res) => {
   db.Pharmacie.find({}).populate({
     path: '_creator',

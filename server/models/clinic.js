@@ -7,6 +7,7 @@ const clinicSchema = new Schema({
   email: String,
   description: String,
   img: { type: String, reqired: true },
+  address: String,
   phone: { type: String, default: '000-000-000' },
   categories: { type: Array, default: ['Categories not available'] },
   insurance: { type: Boolean, default: false },

@@ -41,6 +41,50 @@ labController.post = (req, res) => {
   })
 }
 
+labController.put = (req, res) => {
+  const {
+    name,
+    img,
+    position,
+    description,
+    categories,
+    insurance,
+    phone,
+    tag,
+    email,
+    userId
+  } = req.body
+
+  db.Lab.findById(id, function (err, lab) {
+    if (err) {
+      console.log(err)
+    }
+    if (!lab) {
+      return new Error('Coud not find document')
+    } else {
+      lab.name = name
+      lab.img = img
+      lab.description = description
+      lab.insurance = insurance
+      lab.categories = categories
+      lab.email = email
+      lab.tag = tag
+      lab.phone = phone
+      lab.position = position
+
+      lab.save(function (err) {
+        if (err) {
+          console.log('error in updating collection')
+        } else {
+          console.log('success in updating')
+        }
+      })
+    }
+  })
+}
+
+
+
 labController.getAll = (req, res) => {
   db.Lab.find({}).populate({
     path: '_creator',

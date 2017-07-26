@@ -8,6 +8,7 @@ const hospitalSchema = new Schema({
   position: { type: Array, default: [0, 0] },
   insurance: { type: Boolean, default: false },
   description: String,
+  address: String,
   categories: { type: Array, default: ['Categories not available'] },
   phone: String,
   email: String,

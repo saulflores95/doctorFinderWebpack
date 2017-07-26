@@ -39,6 +39,49 @@ hospitalController.post = (req, res) => {
   })
 }
 
+hospitalController.put = (req, res) => {
+  const {
+    name,
+    img,
+    position,
+    categories,
+    description,
+    insurance,
+    phone,
+    address,
+    email,
+    userId
+  } = req.body
+
+  db.Hospital.findById(id, function (err, hospital) {
+    if (err) {
+      console.log(err)
+    }
+    if (!hospital) {
+      return new Error('Coud not find document')
+    } else {
+      hospital.name = name
+      hospital.img = img
+      hospital.description = description
+      hospital.insurance = insurance
+      hospital.categories = categories
+      hospital.email = email
+      hospital.specialty = specialty
+      hospital.phone = phone
+      hospital.address = address
+      hospital.position = position
+
+      hospital.save(function (err) {
+        if (err) {
+          console.log('error in updating collection')
+        } else {
+          console.log('success in updating')
+        }
+      })
+    }
+  })
+}
+
 hospitalController.getAll = (req, res) => {
   db.Hospital.find({}).populate({
     path: '_creator',

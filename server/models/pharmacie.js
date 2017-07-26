@@ -10,6 +10,7 @@ const pharmacieSchema = new Schema({
   description: String,
   categories: { type: Array, default: ['Categories not available'] },
   phone: String,
+  address: String,
   tag: String,
   createdAt: { type: Date, default: Date.now },
   email: String,
