@@ -33,6 +33,10 @@ export default class ClinicEditForm extends React.Component {
     }
   }
 
+  componentDidMount () {
+    this.handleChangeProps(this.props.clinic)
+  }
+
   componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
   }
@@ -65,7 +69,7 @@ export default class ClinicEditForm extends React.Component {
     }
 
     if (clinic) {
-      axios.put(`/api/doctor-edit/${this.props.clinic._id}`, {
+      axios.put(`/api/clinic-edit/${this.props.clinic._id}`, {
         name: clinic.name,
         img: clinic.img,
         description: clinic.description,
@@ -120,12 +124,13 @@ export default class ClinicEditForm extends React.Component {
   }
 
   handleChangeProps (props) {
-    console.log('clicked')
+    console.log(props)
     this.setState({
-      position: props.position,
+      position: props.position[0],
       value: props.specialty,
       url: props.img
     })
+    console.log('Data has been loaded...');
   }
 
   render () {
@@ -152,6 +157,7 @@ export default class ClinicEditForm extends React.Component {
         color: 'white'
       }
     }
+    const clinic = this.props.clinic
 
     return (
       <div style={styles.container}>
@@ -159,7 +165,7 @@ export default class ClinicEditForm extends React.Component {
           <Container>
             <Paper style={styles.paper} zDepth={3}>
               <Container>
-                <form className='new-doctor'>
+                <form className='new-clinic'>
                   <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
@@ -172,6 +178,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Clinic Name'
                           ref='clinicName'
+                          defaultValue={clinic.name}
                           fullWidth
                         />
                       </Col>
@@ -207,6 +214,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality'
                           ref='specificOne'
+                          defaultValue={clinic.categories[0]}
                           fullWidth
                         />
                       </Col>
@@ -214,6 +222,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality 2'
                           ref='specificTwo'
+                          defaultValue={clinic.categories[1]}
                           fullWidth
                         />
                       </Col>
@@ -223,6 +232,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality 3'
                           ref='specificThree'
+                          defaultValue={clinic.categories[2]}
                           fullWidth
                         />
                       </Col>
@@ -230,6 +240,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Specific Speaciality 4'
                           ref='specificFour'
+                          defaultValue={clinic.categories[3]}
                           fullWidth
                         />
                       </Col>
@@ -238,6 +249,7 @@ export default class ClinicEditForm extends React.Component {
                           hintText='Describe yourself or experience(do not be shy)'
                           ref='description'
                           fullWidth
+                          defaultValue={clinic.description}
                           multiLine
                           rows={3}
                           rowsMax={6}
@@ -247,7 +259,7 @@ export default class ClinicEditForm extends React.Component {
                     <Row>
                       <Col sm={12} md={12} lg={12}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
-                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                          <RegistrationMap center={this.state.position} position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
                     </Row>
@@ -258,6 +270,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='E-mail'
                           ref='email'
+                          defaultValue={clinic.email}
                           fullWidth={false}
                         />
                       </Col>
@@ -265,6 +278,7 @@ export default class ClinicEditForm extends React.Component {
                         <TextField
                           hintText='Phone Number'
                           ref='phone'
+                          defaultValue={clinic.phone}
                           fullWidth={false}
                         />
                       </Col>

@@ -14,8 +14,10 @@ export default class extends React.Component {
     }
   }
   render () {
-    let clinics = this.props.clinics
-    const clinic = clinics.filter(cli => this.props.id === cli._id)
+    let clinics = []
+    clinics.clinics = this.props.clinics
+    let clinic = clinics.clinics.filter(cli => this.props.id === cli._id)
+    clinic = clinic[0]
     return (
       <div>
         <App>

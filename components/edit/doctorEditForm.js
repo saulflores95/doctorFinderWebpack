@@ -33,6 +33,10 @@ export default class DoctorEditForm extends React.Component {
     }
   }
 
+  componentDidMount () {
+    this.handleChangeProps(this.props.doctor)
+  }
+
   componentWillMount () {
     try { injectTapEventPlugin() } catch (e) { }
   }
@@ -126,7 +130,7 @@ export default class DoctorEditForm extends React.Component {
   handleChangeProps (props) {
     console.log('clicked')
     this.setState({
-      position: props.position,
+      position: props.position[0],
       value: props.specialty,
       url: props.img
     })
@@ -164,7 +168,6 @@ export default class DoctorEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <button type='button' onClick={this.handleChangeProps.bind(this, doctor)}>CLICK HERE</button>
                   <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={12} md={6} lg={6}>

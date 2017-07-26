@@ -8,6 +8,7 @@ clinicController.post = (req, res) => {
     email,
     description,
     phone,
+    address,
     img,
     categories,
     insurance,
@@ -21,6 +22,7 @@ clinicController.post = (req, res) => {
     description,
     phone,
     img,
+    address,
     categories,
     insurance,
     position,
@@ -38,6 +40,51 @@ clinicController.post = (req, res) => {
     })
   })
 }
+
+clinicController.put = (req, res) => {
+  const {
+    name,
+    img,
+    description,
+    insurance,
+    categories,
+    email,
+    specialty,
+    phone,
+    address,
+    position
+  } = req.body
+  let id = req.params.id
+  console.log(categories)
+  db.Clinic.findById(id, function (err, clinic) {
+    if (err) {
+      console.log(err)
+    }
+    if (!clinic) {
+      return new Error('Coud not find document')
+    } else {
+      clinic.name = name
+      clinic.img = img
+      clinic.description = description
+      clinic.insurance = insurance
+      clinic.categories = categories
+      clinic.email = email
+      clinic.specialty = specialty
+      clinic.phone = phone
+      clinic.address = address
+      clinic.position = position
+
+      clinic.save(function (err) {
+        if (err) {
+          console.log('error in updating collection')
+        } else {
+          console.log('success in updating')
+        }
+      })
+    }
+  })
+}
+
 
 clinicController.getAll = (req, res) => {
   db.Clinic.find({}).populate({
