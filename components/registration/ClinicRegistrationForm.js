@@ -139,10 +139,6 @@ export default class ClinicRegistrationForm extends Component {
       customWidth: {
         width: '95%'
       },
-      container: {
-        paddingTop: 35,
-        paddingBottom: 85
-      },
       img: {
         paddingTop: 25,
         marginLeft: 'auto',

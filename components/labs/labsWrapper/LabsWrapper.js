@@ -20,7 +20,7 @@ const LabsWrapper = ({labs}) => (
       {`
         .wrapper {
           padding-top: 15px;
-          margin-bottom: 70px;
+          padding-bottom: 135px;
         }
 
         .wrapperList {

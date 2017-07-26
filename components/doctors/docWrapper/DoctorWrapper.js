@@ -25,6 +25,7 @@ const DoctorWrapper = (docs) => (
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
+        padding-bottom: 135px;
       }
       `}
     </style>

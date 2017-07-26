@@ -21,7 +21,9 @@ export default class extends React.Component {
     return (
       <div>
         <App>
-          <DoctorEditForm doctor={doctor} />
+          <div style={{paddingBottom 135}}>
+            <DoctorEditForm doctor={doctor} />
+          </div>
         </App>
       </div>
     )

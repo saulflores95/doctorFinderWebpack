@@ -5,7 +5,7 @@ import HospitalRegistrationForm from '../components/registration/HospitalRegistr
 const hospitalRegistration = () => (
   <div>
     <App>
-      <div className='container'>
+      <div className='container' style={{paddingBottom: 135}}>
         <HospitalRegistrationForm />
       </div>
     </App>

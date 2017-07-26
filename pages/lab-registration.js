@@ -5,7 +5,7 @@ import LabRegistrationForm from '../components/registration/LabRegistrationForm'
 const labRegistration = () => (
   <div>
     <App>
-      <div className='container'>
+      <div className='container' style={{paddingBottom: 135}}>
         <LabRegistrationForm />
       </div>
     </App>

@@ -50,6 +50,7 @@ const ContactForm = (email, phone) => (
       {`
         .wrapper{
           padding-top: 15px;
+          padding-bottom: 140px;
         }
 
         .text{

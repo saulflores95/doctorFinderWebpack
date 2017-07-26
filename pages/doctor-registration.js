@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch'
 const doctorRegistration = () => (
   <div>
     <App>
-      <div className='container'>
+      <div className='container' style={{paddingBottom: 150}}>
         <DoctorRegistrationForm />
       </div>
     </App>

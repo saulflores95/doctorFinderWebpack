@@ -130,10 +130,6 @@ export default class LabRegistrationForm extends Component {
       customWidth: {
         width: '95%'
       },
-      container: {
-        paddingTop: 35,
-        paddingBottom: 90
-      },
       img: {
         paddingTop: 25,
         marginLeft: 'auto',
@@ -143,7 +139,7 @@ export default class LabRegistrationForm extends Component {
     }
 
     return (
-      <div style={styles.container}>
+      <div>
         <MuiThemeProvider>
           <Container>
             <Paper style={styles.paper} zDepth={3}>

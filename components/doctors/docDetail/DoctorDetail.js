@@ -22,7 +22,7 @@ const DoctorDetail = (doctor) => (
         scale: 0
       }}
       >
-      <div key={idCounter++}>
+      <div key={idCounter++} style={{paddingBottom: 100}}>
         <Container className='doc-Container'>
           <div className='doctor-header'>
             <DoctorHeader {...doctor.doctor} />

@@ -19,7 +19,7 @@ const PharmacieWrapper = ({pharmacies}) => (
     <style jsx>
       {`
         .wrapper {
-          margin-bottom: 70px;
+          padding-bottom: 135px;
           padding-top: 15px;
         }
 

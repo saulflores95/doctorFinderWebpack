@@ -38,7 +38,7 @@ const PharmacieDetail = ({pharmacie}) => {
         {`
           .pharmacieDetailContainer {
             margin-top: 20px;
-            padding-bottom: 30px;
+            padding-bottom: 135px;
           }
 
           .detail-map {

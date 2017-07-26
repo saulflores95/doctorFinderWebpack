@@ -16,6 +16,7 @@ const ClinicWrapper = ({clinics}) => (
       {`
         .wrapper {
           padding-top: 15px;
+          padding-bottom: 60px;
           margin-bottom: 70px;
         }
 

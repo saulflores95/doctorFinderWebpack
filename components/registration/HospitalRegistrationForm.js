@@ -124,14 +124,11 @@ export default class HospitalRegistrationForm extends Component {
       },
       customWidth: {
         width: '95%'
-      },
-      container: {
-        paddingTop: 50
       }
     }
 
     return (
-      <div style={styles.container}>
+      <div>
         <MuiThemeProvider>
           <Container>
             <Paper style={styles.paper} zDepth={3}>

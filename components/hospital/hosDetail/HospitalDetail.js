@@ -37,7 +37,7 @@ const HospitalDetail = ({hospital}) => (
       {`
         .wrapper {
           margin-top: 25px;
-          padding-bottom: 30px;
+          padding-bottom: 135px;
         }
 
         .detail-map {
