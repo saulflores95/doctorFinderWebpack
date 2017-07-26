@@ -204,6 +204,7 @@ export default class DoctorRegistrationForm extends Component {
                           <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
                           <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
                           <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
+                          <MenuItem value={'Family Medicine'} primaryText='Family Medicine' />
                           <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
                           <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
                           <MenuItem value={'General Medicine'} primaryText='General Medicine' />
@@ -219,7 +220,8 @@ export default class DoctorRegistrationForm extends Component {
                           <MenuItem value={'Oncologist'} primaryText='Oncologist' />
                           <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
                           <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
-                          <MenuItem value={'Otorrinolaringologista'} primaryText='Otorrinolaringologista' />
+                          <MenuItem value={'Otorhinolaryngologist'} primaryText='Otorhinolaryngology' />
+                          <MenuItem value={'Emergency Medicine'} primaryText='Emergency Medicine' />
                           <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
                           <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
                           <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
