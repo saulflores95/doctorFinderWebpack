@@ -12,11 +12,6 @@ const App = (props) => (
       <link rel='apple-touch-icon' sizes='152x152' href='/static/icon-apple-152.png' />
       <link rel='apple-touch-icon' sizes='167x167' href='/static/icon-apple-167.png' />
       <link rel='apple-touch-icon' sizes='180x180' href='/static/icon-apple-180.png' />
-      <link rel='apple-touch-icon' sizes='360x360' href='/static/icon-apple-360.png' />
-      <meta name="msapplication-TileColor" content="#FFFFFF" />
-      <meta name="msapplication-TileImage" content="/static/icon-apple-144.png" />
-      <meta name="application-name" content="HealthcareBaja" />
-      <meta name="msapplication-tooltip" content="Tooltip" />
       <meta name='apple-mobile-web-app-title' content='HCB' />
       <meta name='apple-mobile-web-app-capable' content='yes' />
       <meta name='apple-mobile-web-app-status-bar-style' content='blue' />
@@ -88,6 +83,8 @@ const App = (props) => (
           overflow-y: hidden;
           overflow-x: hidden;
           height: 100%;
+          position: fixed;
+          width: 100%;
         }
 
         .footerF {
@@ -112,7 +109,9 @@ const App = (props) => (
           bottom: 0;
           padding-bottom: 56px;
           overflow-x: hidden;
-          overflow-y: auto;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
+          height:calc(100% - 1px);
         }
 
         #header {
