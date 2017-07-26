@@ -10,6 +10,7 @@ routes.add('doctor-registration', '/doctor-registration')
 //  Hospital related routes
 routes.add('hospital-detail', '/hospital-detail/:id')
 routes.add('hospital-registration', '/hospital-registration')
+routes.add('hospital-edit', '/hospital-edit/:id')
 
 //  Clinic Related routes
 routes.add('clinic-detail', '/clinic-detail/:id')
@@ -25,5 +26,6 @@ routes.add('laboratories-registration', '/laboratories-registration')
 routes.add('pharmacie-map', '/pharmacie-map/:id')
 routes.add('pharmacie-detail', '/pharmacie-detail/:id')
 routes.add('pharmacie-registration', '/pharmacie-registration')
+routes.add('pharmacie-edit', '/pharmacie-edit/:id')
 
 routes.add('dev', '/dev')
