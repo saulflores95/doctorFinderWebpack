@@ -31,6 +31,7 @@ export default class NewUpperNavigation extends Component {
                 <MenuItem primaryText='Categories' href='/categories' />
                 <MenuItem primaryText='Map' href='/map' />
                 <MenuItem primaryText='Contact us' href='/contact-us' />
+                <MenuItem primaryText='Terms & Conditions' href='/terms' />
               </IconMenu>
             </MuiThemeProvider>
           </li>

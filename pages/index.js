@@ -29,12 +29,12 @@ const landing = () => (
                 </div>
                 <nav id='main-menu'>
                   <ul className='main-top-menu'>
-                    <li><a href='#about'>Nosotros</a></li>
-                    <li><a href='#!'>Revista en Línea</a></li>
-                    <li><a href='#features'>Servicios</a></li>
-                    <li><a href='/doctors'>Directorio</a></li>
-                    <li><a href='#contact'>Contacto</a></li>
-                    <li className='download'><a href='/doctors'>Ir a App</a></li>
+                    <li><a href='#about'>About us</a></li>
+                    <li><a href='#!'>Online Magazine</a></li>
+                    <li><a href='#features'>Services</a></li>
+                    <li><a href='/doctors'>Directory</a></li>
+                    <li><a href='#contact'>Contact</a></li>
+                    <li className='download'><a href='/doctors'>Go to app</a></li>
                   </ul>
                 </nav>
               </div>
@@ -68,10 +68,10 @@ const landing = () => (
                   </div>
                   <div className='col-10 sd-col-12 md-col-12'>
                     <div className='title-block text-left text-center-xs'>
-                      <h2>¿Qué es Healthcare Baja?</h2>
+                      <h2>What is healthcare Baja?</h2>
                       <i className='sep-line'>&nbsp;</i>
-                      <p>Healthcare Baja es una guía medica orientada a proporcionar información al turismo americano que busca las mejores opciones en el área de salud y bienestar en Baja California México.</p>
-                      <p>Por medio de Healthcare Baja podrás lograr que tu negocio ya sea consultorio, hospital, clínica, centro de bienestar y belleza, farmacia o laboratorio, sea conocido y visitado por más turistas norteamericanos.</p>
+                      <p>Healthcare Baja is a medical guide oriented to providing information to American tourism that looks for the best options in the area of health and wellness in Baja California Mexico.</p>
+                      <p>By means of low healthcare you will be able to get your business to be an office, hospital, Clinic, wellness and Beauty Center, pharmacy or laboratory, be known and visited by more American tourists.</p>
                     </div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ const landing = () => (
         <div id='features' className='container features-main parallax'>
           <div className='wrapper'>
             <div className='title-block'>
-              <h2>Nuestros servicios</h2>
+              <h2>Our services</h2>
               <i className='sep-line'>&nbsp;</i>
             </div>
             <div className='features-box text-center'>
@@ -92,8 +92,8 @@ const landing = () => (
                     <img src='static/landing-magazine-icon.png' />
                   </span>
                   <div className='info-text'>
-                    <h6>Guía impresa</h6>
-                    <p>Anuncio impreso en la guía con distribución a domicilio de 10,000 ejemplares en el Sur de California E.U.A.</p>
+                    <h6>Printed Guide</h6>
+                    <p>Advertisement printed on the guide with home distribution of 10.000 specimens in Southern California E.U.A.</p>
                     <p className='mt15 text-strong'>Downtown San Diego, Eastlake, National City, Coronado, Bonita, Hillcrest Point Loma, Chula Vista, Imperial Beach & Mission Valley.</p>
                   </div>
                 </div>
@@ -103,12 +103,12 @@ const landing = () => (
                   </span>
                   <div className='info-text'>
                     <h6>Facebook</h6>
-                    <p>Campaña en Facebook segmentada a un público previamente filto para aumentar la conversión de prospectos a clientes.</p>
+                    <p>Facebook campaign segmented to a previously filter audience to increase the conversion of prospects to customers.</p>
                   </div>
                 </div>
               </div>
               <div className='features-img wow fadeIn'>
-                <div className='features-mob'><img src='#' alt='features-screen' /></div>
+                <div className='features-mob'></div>
               </div>
               <div className='features-text text-left wow fadeInRight' data-wow-delay='0.75s'>
                 <div className='features-info md-col-12' >
@@ -116,8 +116,8 @@ const landing = () => (
                     <img src='/static/landing-app-icon.png' />
                   </span>
                   <div className='info-text'>
-                    <h6>Aplicación web</h6>
-                    <p>Aplicación para que el usuario pueda ubicar y contactar a médicos, hospitales, clínicas, laboratorios, etc.</p>
+                    <h6>Progressive Web App</h6>
+                    <p>Application so that the user can locate and contact doctors, hospitals, clinics, laboratories, etc.</p>
                   </div>
                 </div>
                 <div className='features-info md-col-12'>
@@ -125,8 +125,8 @@ const landing = () => (
                     <img src='/static/landing-tel-icon.png' />
                   </span>
                   <div className='info-text'>
-                    <h6>Directorio web</h6>
-                    <p>Presencia en nuestro directorio web e impreso en la revista.</p>
+                    <h6>Web Directory</h6>
+                    <p>Presence in our web directory and printed in the magazine.</p>
                   </div>
                 </div>
                 <div className='features-info md-col-12'>
@@ -134,8 +134,8 @@ const landing = () => (
                     <img src='/static/landing-mail-icon.png' />
                   </span>
                   <div className='info-text'>
-                    <h6>Correos masivos</h6>
-                    <p>Envío de correo masivo por medio de una plataforma certificada con filtros anti spam a una base de datos de 40,000 correos en Tijuana, Baja California (los correos son filtrados y legítimos).</p>
+                    <h6>Email Blast</h6>
+                    <p>Mass mailing by means of a certified platform with anti-spam filters to a database of 40.000 emails in Tijuana, Baja California (emails are filtered and legitimate).</p>
                   </div>
                 </div>
               </div>
@@ -145,17 +145,17 @@ const landing = () => (
         <div id='benefits' className='container benefits-main'>
           <div className='wrapper'>
             <div className='col-5 md-col-12 benefits-img wow fadeInLeft'>
-              <img src='/static/landing-img-410x690.png' alt='IMG' />
+              <img src='/static/landing-img.jpg' alt='landing-img' />
             </div>
             <div className='col-6 md-col-12 benefits-text'>
               <div className='title-block small'>
-                <h2>Beneficios</h2>
-                <span className='sub-title'>Baja California recibe más de 2.4 millones de pacientes
-                y sus acompañantes al año</span>
+                <h2>Benefits</h2>
+                <span className='sub-title'>Baja California receives more than 2.4 million patients and their
+                companions a year</span>
                 <i className='sep-line'>&nbsp;</i>
-                <p>Baja California se caracteriza por ser una ciudad moderna y dinámica, alberga sitios llenos de historia, museos, hoteles y restaurantes. Además de hospitales de la más alta calidad en cuanto a infraestructura y certificados por autoridades de salud.</p>
-                <p>En los últimos años, la calidad de los servicios médicos en Baja California se ha hecho notar, gracias a los médicos y especialistas capacitados y certificados. Así mismo la tecnología con la que cuentan las clínicas y hospitales de la ciudad es de primera.</p>
-                <p>El Turismo de Salud y Médico en Baja California ofrece calidad, costo accesible, pero sobre todo un excelente servicio por parte de nuestros médicos especialistas y sub especialistas en las diferentes áreas de la medicina, tanto medica como quirúrgica. El sector Médico y de Salud en Baja California siempre ha estado al pendiente de los miles de pacientes que mes con mes son atendidos con los estándares más altos de calidad y servicio.</p>
+                <p>Baja California is characterized as a modern and dynamic city, houses sites full of history, museums, hotels and restaurants. In addition to hospitals of the highest quality in infrastructure and certified by health authorities.</p>
+                <p>In recent years, the quality of medical services in Baja California has been noted, thanks to trained and certified physicians and specialists. Likewise the technology with which the clinics and hospitals of the city count is first.</p>
+                <p>Health and medical Tourism in Baja California offers quality, affordable cost, but above all an excellent service by our medical specialists and sub specialists in the different areas of medicine, both medical and surgical. The medical and health sector in Baja California has always been on the lookout for the thousands of patients who month by month are treated with the highest standards of quality and service.</p>
               </div>
               <div className='sub-text md-col-9 sd-col-12' />
             </div>
@@ -165,7 +165,7 @@ const landing = () => (
           <div className='topClr' />
           <div className='wrapper'>
             <div className='col-12 text-center title-block mb0'>
-              <h2>Encuentra tu médico ahora</h2>
+              <h2>Find your doctor now:</h2>
             </div>
             <div className='text-center col-12'>
               <form className='subscribe-form'>
@@ -209,37 +209,12 @@ const landing = () => (
             </ul>
           </div>
         </div>
-        <div className='container count-block-main' id='achievement'>
-          <div className='wrapper'>
-            <div className='row text-center'>
-              <div className='col-3 md-col-6'>
-                <span className='icon-ic_download ficon' />
-                <span className='count counter'>649</span>
-                <em>Downloaded</em>
-              </div>
-              <div className='col-3 md-col-6'>
-                <span className='icon-ic_apple ficon' />
-                <span className='count counter'>628</span>
-                <em>iOs users</em>
-              </div>
-              <div className='col-3 md-col-6'>
-                <span className='icon-ic_android ficon' />
-                <span className='count counter'>247</span>
-                <em>Android users</em>
-              </div>
-              <div className='col-3 md-col-6'>
-                <span className='icon-ic_windows ficon' />
-                <span className='count counter'>325</span>
-                <em>Windows users</em>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className='container team-block-main parallax' id='our-team'>
           <div className='wrapper'>
             <div className='title-block'>
               <h2>Categorías</h2>
-              <span className='sub-title'>Todo lo que puedes encontrar en Healthcare Baja</span>
+              <span className='sub-title'>All you can find at healthcare Baja</span>
               <i className='sep-line'>&nbsp;</i>
             </div>
           </div>
@@ -252,7 +227,7 @@ const landing = () => (
                     <Link href='/doctors'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
-                <span className='name'>Doctores</span>
+                <span className='name'>DOCTORS</span>
               </li>
               <li>
                 <div className='team-photo'>
@@ -261,7 +236,7 @@ const landing = () => (
                     <Link href='/hospitals'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
-                <span className='name'>Hospitales</span>
+                <span className='name'>HOSPITALS</span>
               </li>
               <li>
                 <div className='team-photo'>
@@ -270,7 +245,7 @@ const landing = () => (
                     <Link href='/clinics'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
-                <span className='name'>Clínicas</span>
+                <span className='name'>CLINICS</span>
               </li>
               <li>
                 <div className='team-photo'>
@@ -279,7 +254,7 @@ const landing = () => (
                     <Link href='/laboratories'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
-                <span className='name'>Laboratorios</span>
+                <span className='name'>LABORATORIES</span>
               </li>
               <li>
                 <div className='team-photo'>
@@ -288,7 +263,7 @@ const landing = () => (
                     <Link href='/pharmacies'><a><i className='fa fa-search fa-2x' /></a></Link>
                   </span>
                 </div>
-                <span className='name'>Farmacias</span>
+                <span className='name'>PHARMACIES</span>
               </li>
             </ul>
           </div>
@@ -297,7 +272,7 @@ const landing = () => (
           <div className='topClr' />
           <div className='wrapper'>
             <div className='title-block'>
-              <h2>Descarga nuestra App</h2>
+              <h2>Download our APP</h2>
               <i className='sep-line'>&nbsp;</i>
             </div>
             <div className='downlod-main'>
@@ -305,11 +280,11 @@ const landing = () => (
                 <a href='/' className='btn btn-primary'><i className='fa fa-download' aria-hidden='true' />&nbsp;&nbsp;Obtener App</a>
               </div>
               <div className='title-block mb05'>
-                <h3>Suscríbete a nuestro boletín</h3>
+                <h3>Subscribe to our Newsletter</h3>
               </div>
               <div className='text-center'>
                 <form className='subscribe-form'>
-                  <input className='email' placeholder='Agrega tu email...' type='text' /><input className='submit-btn' type='submit' name='lastname' />
+                  <input className='email' placeholder='Add your email...' type='text' /><input className='submit-btn' type='submit' name='lastname' />
                 </form>
               </div>
             </div>
@@ -318,8 +293,8 @@ const landing = () => (
         <div className='container contact-block-main contact-dark' id='contact'>
           <div className='wrapper'>
             <div className='title-block b-b b-danger '>
-              <h2>Contáctanos</h2>
-              <span className='sub-title mb50'>Favor de llenar la forma siguiente</span>
+              <h2>Contact</h2>
+              <span className='sub-title mb50'>Please fill out the following form:</span>
             </div>
             <div className='row'>
               <div className='md-col-12 ld-col-6 col-5 offset-xld-1'>
@@ -327,17 +302,17 @@ const landing = () => (
                   <form className='contact-form'>
                     <div className='form-row'>
                       <div className='col-5'>
-                        <input placeholder='Nombre completo' type='text' />
+                        <input placeholder='Name' type='text' />
                       </div>
                       <div className='col-5'>
                         <input placeholder='Email' type='text' />
                       </div>
                     </div>
                     <div className='form-row'>
-                      <input placeholder='Teléfono' type='text' />
+                      <input placeholder='Phone' type='text' />
                     </div>
                     <div className='form-row'>
-                      <textarea placeholder='Mensaje...' />
+                      <textarea placeholder='Message...' />
                     </div>
                     <div className='form-row'>
                       <div className='col-5'>
