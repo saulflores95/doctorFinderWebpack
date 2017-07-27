@@ -340,22 +340,6 @@ const landing = () => (
                   </div>
                   <div className='row'>
                     <div className='col-2'>
-                      <img src='/static/landing-contact-icon-tel.png' />
-                    </div>
-                    <div className='col-10'>
-                      <p>(664) 208.1720</p>
-                    </div>
-                  </div>
-                  <div className='row'>
-                    <div className='col-2'>
-                      <img src='/static/landing-contact-icon-mobile.png' />
-                    </div>
-                    <div className='col-10'>
-                      <p>(664) 364.5124</p>
-                    </div>
-                  </div>
-                  <div className='row'>
-                    <div className='col-2'>
                       <img src='/static/landing-contact-icon-mail.png' />
                     </div>
                     <div className='col-10'>

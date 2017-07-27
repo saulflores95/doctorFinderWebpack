@@ -1,6 +1,7 @@
 import React from 'react'
 import UpperNavigationFilter from '../MainLayout/UpperNavigation/UpperNavigationFilter'
 import BottomNavigationComponent from '../MainLayout/BottomNavigation/BottomNavigation'
+import ReactGa from 'react-ga'
 import Head from 'next/head'
 
 const App = (props) => (
@@ -22,6 +23,9 @@ const App = (props) => (
       <link rel='manifest' href='/static/manifest.json' />
       <link rel='shortcut icon' type='image/png' href='/static/favicon-16x16.png' />
       <link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' />
+      <script>
+        ReactGA.initialize('UA-102871628-1', { debug: true });
+      </script>
       <style>
         {`.leaflet-container {
           height: 100%;
