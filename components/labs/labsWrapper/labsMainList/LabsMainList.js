@@ -12,7 +12,11 @@ const imageChooser = (props) => {
   }
   if (props === 'Gamboa') {
     return 'https://pbs.twimg.com/profile_images/705493262472056832/i_GpO3EZ.jpg'
-  } else {
+  }
+  if (props === 'Imagen Radiológica Integral') {
+    return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/IRI.jpg'
+  }
+  else {
     console.log('No tag fits the choosen image')
   }
 }
