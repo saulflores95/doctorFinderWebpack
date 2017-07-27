@@ -213,7 +213,7 @@ const landing = () => (
         <div className='container team-block-main parallax' id='our-team'>
           <div className='wrapper'>
             <div className='title-block'>
-              <h2>Categorías</h2>
+              <h2>Categories</h2>
               <span className='sub-title'>All you can find at healthcare Baja</span>
               <i className='sep-line'>&nbsp;</i>
             </div>

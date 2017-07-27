@@ -24,7 +24,7 @@ const App = (props) => (
       <link rel='shortcut icon' type='image/png' href='/static/favicon-16x16.png' />
       <link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' />
       <script>
-        ReactGA.initialize('UA-102871628-1', { debug: true });
+        ReactGA.initialize('UA-102871628-1')
       </script>
       <style>
         {`.leaflet-container {

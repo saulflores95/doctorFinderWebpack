@@ -74,7 +74,7 @@ const imageChooser = (props) => {
       return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/Urologist.jpg'
     case 'Veterinarian':
       return '../../../../static/Veterinarian.jpg'
-    case 'Otorrinolaringologista':
+    case 'Otorhinolaryngologist':
       return '../../../../static/Otorhinolaryngologist.jpg'
     case 'Gastroenterologist':
       return '../../../../static/Gastroenterologist.jpg'
