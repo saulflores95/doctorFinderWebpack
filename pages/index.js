@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import ReactGa from 'react-ga'
 
 const landing = () => (
   <div>
@@ -14,6 +15,10 @@ const landing = () => (
       <link href='/static/animate.css' rel='stylesheet' />
       <link rel='stylesheet' href='/static/owl.carousel.min.css' />
       <link rel='stylesheet' href='/static/owl.theme.default.min.css' />
+      <script>
+        ReactGA.initialize('UA-102871628-1')
+        ReactGA.pageview('/');
+      </script>
     </Head>
     <div id='site-main'>
       <header id='main-header'>

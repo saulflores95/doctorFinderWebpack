@@ -25,6 +25,7 @@ const App = (props) => (
       <link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' />
       <script>
         ReactGA.initialize('UA-102871628-1')
+        ReactGA.pageview('/doctors');
       </script>
       <style>
         {`.leaflet-container {
