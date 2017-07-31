@@ -30,7 +30,7 @@ const landing = () => (
                 <nav id='main-menu'>
                   <ul className='main-top-menu'>
                     <li><a href='#about'>About us</a></li>
-                    <li><a href='#!'>Online Magazine</a></li>
+                    <li><a target='_blank' href='https://issuu.com/guiacomercialtijuana2/docs/hcbj-001/1?ff=true&e=25782513/51560412'>Online Magazine</a></li>
                     <li><a href='#features'>Services</a></li>
                     <li><a href='/doctors'>Directory</a></li>
                     <li><a href='#contact'>Contact</a></li>
@@ -344,6 +344,14 @@ const landing = () => (
                     </div>
                     <div className='col-10'>
                       <p>info@healthcarebaja.com</p>
+                    </div>
+                  </div>
+                  <div className='row'>
+                    <div className='col-2'>
+                      <img src='/static/contact-icon-text.png' />
+                    </div>
+                    <div className='col-10'>
+                      <a href='/terms' className='terms'>Terms & Conditions</a>
                     </div>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ import TermsConditions from '../components/terms'
 
 const terms = () => (
   <App>
-    <div>
+    <div style={{paddingBottom: 135}}>
       <TermsConditions />
     </div>
   </App>
