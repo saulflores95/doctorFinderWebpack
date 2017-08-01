@@ -214,6 +214,7 @@ export default class DoctorRegistrationForm extends Component {
                           <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
                           <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
                           <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
+                          <MenuItem value={'Neumologist'} primaryText='Neumologist' />
                           <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
                           <MenuItem value={'Neurologist'} primaryText='Neurologist' />
                           <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />

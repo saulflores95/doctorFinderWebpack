@@ -65,6 +65,7 @@ export default class LabRegistrationForm extends Component {
     var name = this.refs.clinicName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var email = this.refs.email.getValue()
     var tag = this.refs.tag.getValue()
     var description = this.refs.description.getValue()
     var categories = [
@@ -94,6 +95,7 @@ export default class LabRegistrationForm extends Component {
         phone: lab.phone,
         position: lab.position,
         tag: lab.tag,
+        email: email,
         insurance: insurance,
         description: lab.description,
         categories: lab.categories
@@ -232,6 +234,12 @@ export default class LabRegistrationForm extends Component {
                           ref='phone'
                           fullWidth={false}
                         />
+                        <Col sm={6} md={6} lg={6}>
+                          <TextField
+                            hintText='Email'
+                            ref='email'
+                            fullWidth={false}
+                          />
                       </Col>
                       <Col sm={2}>
                         <RaisedButton

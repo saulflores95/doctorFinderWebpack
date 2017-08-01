@@ -21,7 +21,7 @@ const PharmacieDetail = ({pharmacie}) => {
             </Col>
             <Col xs={12} sm={12} md={6} lg={6}>
               <div style={{marginTop: 15}}>
-                <GeneralContactForm />
+                <GeneralContactForm phone={pharmacie[0].phone} email={pharmacie[0].email}/>
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6}>
