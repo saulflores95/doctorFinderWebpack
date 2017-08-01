@@ -23,7 +23,8 @@ export default class App extends Component {
           <meta name='apple-mobile-web-app-title' content='HCB' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='blue' />
-          <script src='/sw-installer.js' />
+        {//  <script src='/sw-installer.js' />
+        } 
           <meta name='theme-color' content='white' />
           <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
           <link rel='manifest' href='/static/manifest.json' />

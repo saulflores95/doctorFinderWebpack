@@ -15,7 +15,6 @@ export default class PharmacieEditForm extends React.Component {
     super()
     this.state = {
       toogleState: false,
-      value: 'Podologia',
       position: [32, 100],
       url: ''
     }
@@ -26,6 +25,19 @@ export default class PharmacieEditForm extends React.Component {
       time: 5000,
       transition: 'scale'
     }
+  }
+
+  componentDidMount () {
+    console.log(this.props.pharmacie)
+    this.handleChangeProps(this.props.pharmacie)
+  }
+
+  handleChangeProps (props) {
+    this.setState({
+      position: props.position[0],
+      value: props.specialty,
+      url: props.img
+    })
   }
 
   handleImageChange (url) {
@@ -136,6 +148,7 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='Pharmacie Name'
                           ref='clinicName'
                           fullWidth
+                          defaultValue={this.props.pharmacie.name}
                         />
                       </Col>
                     </Row>
@@ -147,6 +160,7 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='Specific Speaciality'
                           ref='specificOne'
                           fullWidth
+                          defaultValue={this.props.pharmacie.categories[0]}
                         />
                       </Col>
                       <Col sm={6}>
@@ -154,6 +168,7 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='Specific Speaciality 2'
                           ref='specificTwo'
                           fullWidth
+                          defaultValue={this.props.pharmacie.categories[1]}
                         />
                       </Col>
                     </Row>
@@ -163,6 +178,7 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='Specific Speaciality 3'
                           ref='specificThree'
                           fullWidth
+                          defaultValue={this.props.pharmacie.categories[2]}
                         />
                       </Col>
                       <Col sm={6}>
@@ -170,6 +186,7 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='Specific Speaciality 4'
                           ref='specificFour'
                           fullWidth
+                          defaultValue={this.props.pharmacie.categories[3]}
                         />
                       </Col>
                       <div style={styles.formMessageDivisor}>
@@ -180,6 +197,7 @@ export default class PharmacieEditForm extends React.Component {
                           multiLine
                           rows={3}
                           rowsMax={6}
+                          defaultValue={this.props.pharmacie.description}
                         />
                       </div>
                     </Row>
@@ -193,6 +211,7 @@ export default class PharmacieEditForm extends React.Component {
                         <TextField
                           hintText='tag'
                           ref='tag'
+                          defaultValue={this.props.pharmacie.tag}
                           fullWidth
                         />
                       </Col>
@@ -202,6 +221,7 @@ export default class PharmacieEditForm extends React.Component {
                         <TextField
                           hintText='Phone Number'
                           ref='phone'
+                          defaultValue={this.props.pharmacie.phone}
                           fullWidth={false}
                         />
                       </Col>

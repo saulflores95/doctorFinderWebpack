@@ -29,6 +29,7 @@ routes.put('/doctor-edit/:id', doctorController.put)
 routes.put('/clinic-edit/:id', clinicController.put)
 routes.put('/hospital-edit/:id', hospitalController.put)
 routes.put('/laboratories-edit/:id', labController.put)
+routes.put('/pharmacie-edit/:id', pharmacieController.put)
 
 //  Get data rouetes
 routes.get('/doctors', doctorController.getAll)

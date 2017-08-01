@@ -133,7 +133,7 @@ export default class HospitalEditForm extends React.Component {
         width: '95%'
       }
     }
-    const hospital  = this.props.hospital
+    const hospital = this.props.hospital
     return (
       <div>
         <MuiThemeProvider>

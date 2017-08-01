@@ -50,11 +50,13 @@ phrmacieController.put = (req, res) => {
     description,
     insurance,
     phone,
+    address,
     tag,
     email,
     userId
   } = req.body
 
+  let id = req.params.id
   db.Pharmacie.findById(id, function (err, pharmacie) {
     if (err) {
       console.log(err)
@@ -82,6 +84,7 @@ phrmacieController.put = (req, res) => {
       })
     }
   })
+
 }
 
 
