@@ -84,7 +84,7 @@ export default class labEditForm extends React.Component {
 
   editLab (event) {
     event.preventDefault()
-    var name = this.refs.clinicName.getValue()
+    var name = this.refs.labName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
     var tag = this.refs.tag.getValue()
@@ -106,6 +106,7 @@ export default class labEditForm extends React.Component {
       description: description,
       categories: categories
     }
+    console.log(lab)
     if (lab) {
       axios.put(`/api/laboratories-edit/${this.props.lab._id}`, {
         name: lab.name,
