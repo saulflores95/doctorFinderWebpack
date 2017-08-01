@@ -55,6 +55,8 @@ labController.put = (req, res) => {
     userId
   } = req.body
 
+  let id = req.params.id
+  console.log('Hello')
   db.Lab.findById(id, function (err, lab) {
     if (err) {
       console.log(err)

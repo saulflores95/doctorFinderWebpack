@@ -106,7 +106,6 @@ export default class labEditForm extends React.Component {
       description: description,
       categories: categories
     }
-    console.log(lab)
     if (lab) {
       axios.put(`/api/laboratories-edit/${this.props.lab._id}`, {
         name: lab.name,

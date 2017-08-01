@@ -28,7 +28,7 @@ routes.post('/lab-registration', labController.post)
 routes.put('/doctor-edit/:id', doctorController.put)
 routes.put('/clinic-edit/:id', clinicController.put)
 routes.put('/hospital-edit/:id', hospitalController.put)
-routes.put('/lab-edit/:id', labController.put)
+routes.put('/laboratories-edit/:id', labController.put)
 
 //  Get data rouetes
 routes.get('/doctors', doctorController.getAll)
