@@ -52,8 +52,7 @@ phrmacieController.put = (req, res) => {
     phone,
     address,
     tag,
-    email,
-    userId
+    email
   } = req.body
 
   let id = req.params.id
@@ -84,9 +83,7 @@ phrmacieController.put = (req, res) => {
       })
     }
   })
-
 }
-
 
 phrmacieController.getAll = (req, res) => {
   db.Pharmacie.find({}).populate({

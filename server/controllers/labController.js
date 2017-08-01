@@ -51,8 +51,7 @@ labController.put = (req, res) => {
     insurance,
     phone,
     tag,
-    email,
-    userId
+    email
   } = req.body
 
   let id = req.params.id
@@ -83,8 +82,6 @@ labController.put = (req, res) => {
     }
   })
 }
-
-
 
 labController.getAll = (req, res) => {
   db.Lab.find({}).populate({

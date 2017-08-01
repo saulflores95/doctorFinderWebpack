@@ -234,11 +234,12 @@ export default class LabRegistrationForm extends Component {
                           ref='phone'
                           fullWidth={false}
                         />
-                        <Col sm={6} md={6} lg={6}>
-                          <TextField
-                            hintText='Email'
-                            ref='email'
-                            fullWidth={false}
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Email'
+                          ref='email'
+                          fullWidth={false}
                           />
                       </Col>
                       <Col sm={2}>

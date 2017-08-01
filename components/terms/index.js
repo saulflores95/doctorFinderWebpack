@@ -34,7 +34,7 @@ const termsConditions = () => (
         text-align: center;
       }
     `}</style>
-    </div>
+  </div>
 )
 
 export default termsConditions

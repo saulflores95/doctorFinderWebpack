@@ -15,8 +15,7 @@ const imageChooser = (props) => {
   }
   if (props === 'Imagen Radiológica Integral') {
     return 'https://s3-us-west-1.amazonaws.com/healthcarebaja/IRI.jpg'
-  }
-  else {
+  } else {
     console.log('No tag fits the choosen image')
   }
 }

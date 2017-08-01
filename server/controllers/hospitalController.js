@@ -49,8 +49,7 @@ hospitalController.put = (req, res) => {
     insurance,
     phone,
     address,
-    email,
-    userId
+    email
   } = req.body
   let id = req.params.id
   db.Hospital.findById(id, function (err, hospital) {

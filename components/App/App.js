@@ -5,11 +5,11 @@ import ReactGA from 'react-ga'
 import Head from 'next/head'
 
 export default class App extends Component {
-  componentDidMount() {
+  componentDidMount () {
     ReactGA.initialize('UA-102871628-1')
     ReactGA.pageview(document.location.pathname)
   }
-  render() {
+  render () {
     return (
       <div className='wrapperHeight'>
         <Head>
