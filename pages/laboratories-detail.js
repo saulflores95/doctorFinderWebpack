@@ -2,6 +2,7 @@ import React from 'react'
 import App from '../components/App/App'
 import LabsDetail from '../components/labs/labsDetail/LabsDetail'
 import fetch from 'isomorphic-unfetch'
+import Ogtags from '../components/MainLayout/OgTags/OgTags.js'
 
 export default class extends React.Component {
   static async getInitialProps ({ req, query: { id } }) {
@@ -20,6 +21,7 @@ export default class extends React.Component {
     return (
       <div>
         <App>
+          <Ogtags props={lab[0]} />
           <div className='container'>
             <LabsDetail lab={lab} />
           </div>

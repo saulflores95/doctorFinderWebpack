@@ -41,8 +41,6 @@ export default class GeneralContactForm extends Component {
   }
 
   render () {
-    {console.log(this.props.phone)}
-    {console.log(this.props.email)}
     return (
       <div>
         <MuiThemeProvider>
