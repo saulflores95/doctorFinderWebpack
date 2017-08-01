@@ -52,7 +52,7 @@ hospitalController.put = (req, res) => {
     email,
     userId
   } = req.body
-
+  let id = req.params.id
   db.Hospital.findById(id, function (err, hospital) {
     if (err) {
       console.log(err)
@@ -66,7 +66,6 @@ hospitalController.put = (req, res) => {
       hospital.insurance = insurance
       hospital.categories = categories
       hospital.email = email
-      hospital.specialty = specialty
       hospital.phone = phone
       hospital.address = address
       hospital.position = position
