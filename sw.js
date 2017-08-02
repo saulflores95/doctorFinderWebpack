@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.5.1'
+const CACHE_VERSION = '0.1.5.4.3.4'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -45,6 +45,34 @@ self.addEventListener('activate', (event) => {
 */
 self.addEventListener('fetch', (event) => {
   console.log('[ServiceWorker] fetching..')
+  let url = event.request.url
+  let requestUrlCatcher = [
+    'edit',
+    'login',
+    'register',
+    'email',
+    'logout',
+    'registration',
+    'image',
+    'dev',
+    'api'
+  ]
+  let requestValidator = url.indexOf(requestUrlCatcher[0]) !== -1
+  /*
+  let url = event.request.url
+
+
+  for(let i = 0; i < requestUrlCatcher.length; i++) {
+    console.log(requestUrlCatcher[i])
+    var requestValidator = url.indexOf(requestUrlCatcher[i]) !== -1
+    if(requestValidator === true){
+      console.log('Cache ignored')
+      event.respondWith(fetch(event.request))
+      i = requestUrlCatcher.length + 1
+    }
+  }
+
+  */
   if (event.request.url === `http://localhost:3000/login`) {
     console.log('Login cache ignored')
     event.respondWith(fetch(event.request))
@@ -85,8 +113,8 @@ self.addEventListener('fetch', (event) => {
     console.log('local host registration cache ignored')
     event.respondWith(fetch(event.request))
   }
-  if (event.request.url === 'http://localhost:3000/doctor-edit/:id') {
-    console.log('localhost image upload ignored')
+  if (requestValidator === true) {
+    console.log('localhost edit ignored')
     event.respondWith(fetch(event.request))
   }
   if (event.request.url === 'http://localhost:3000/api/image-upload') {
@@ -103,7 +131,7 @@ self.addEventListener('fetch', (event) => {
         // If not in cache, request it over the network and add it to current cache
         fetch(event.request).then(response => {
           const isChromeExtension = event.request.url.startsWith('chrome-extension')
-
+          console.log('fetching confirmation')
           if (!isChromeExtension) {
             caches.open(CACHE_NAME)
               .then(cache => cache.put(event.request, response.clone()))
