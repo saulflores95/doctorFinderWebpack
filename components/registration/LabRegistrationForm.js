@@ -120,15 +120,11 @@ export default class LabRegistrationForm extends Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
-      },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
+        marginTop: 30
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
@@ -171,64 +167,62 @@ export default class LabRegistrationForm extends Component {
                       </Col>
                     </Row>
                   </div>
-                  <div style={styles.formDivisor}>
+                  <Row>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality'
+                        ref='specificOne'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 2'
+                        ref='specificTwo'
+                        fullWidth
+                      />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 3'
+                        ref='specificThree'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 4'
+                        ref='specificFour'
+                        fullWidth
+                      />
+                    </Col>
+                    <div style={styles.formMessageDivisor}>
+                      <TextField
+                        hintText='Describe yourself or experience(do not be shy)'
+                        ref='description'
+                        fullWidth
+                        multiLine
+                        rows={3}
+                        rowsMax={6}
+                      />
+                    </div>
+                  </Row>
+                  <div style={{marginTop: 15}}>
                     <Row>
-                      <Col sm={12} md={12} lg={12}>
+                      <Col sm={12} md={6} lg={6}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                      <Col sm={12} md={12} lg={12}>
+                      <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='tag'
                           ref='tag'
-                          fullWidth
+                          fullWidth={false}
                         />
                       </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality'
-                          ref='specificOne'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 2'
-                          ref='specificTwo'
-                          fullWidth
-                        />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 3'
-                          ref='specificThree'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 4'
-                          ref='specificFour'
-                          fullWidth
-                        />
-                      </Col>
-                      <div style={styles.formMessageDivisor}>
-                        <TextField
-                          hintText='Describe yourself or experience(do not be shy)'
-                          ref='description'
-                          fullWidth
-                          multiLine
-                          rows={3}
-                          rowsMax={6}
-                        />
-                      </div>
-                    </Row>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Email'
@@ -243,7 +237,7 @@ export default class LabRegistrationForm extends Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.addLab.bind(this)}

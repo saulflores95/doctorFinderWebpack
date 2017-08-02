@@ -145,7 +145,7 @@ export default class DoctorRegistrationForm extends Component {
       paper: {
         width: '100%',
         paddingBottom: 35,
-        marginTop: '50px'
+        marginTop: 30
       },
       img: {
         borderRadius: '50%',
@@ -177,7 +177,6 @@ export default class DoctorRegistrationForm extends Component {
                       <Col sm={12} md={6} lg={6}>
                         <img style={styles.img} src={this.state.url} />
                       </Col>
-
                       <Col sm={12} md={6} lg={6}>
                         <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
@@ -288,21 +287,6 @@ export default class DoctorRegistrationForm extends Component {
                       </Col>
                     </Row>
                   </div>
-                  <Row>
-                    <Col sm={12} md={12} lg={12}>
-                      <NoSSR onSSR={<div>Map Loading...</div>} >
-                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                      </NoSSR>
-                    </Col>
-                    <Col sm={12} md={12} lg={12}>
-                      <TextField
-                        hintText='Direccion'
-                        ref='address'
-                        fullWidth
-                        multiLine
-                      />
-                    </Col>
-                  </Row>
                   <div style={styles.formMessageDivisor}>
                     <TextField
                       hintText='Describe yourself or experience(do not be shy)'
@@ -313,36 +297,43 @@ export default class DoctorRegistrationForm extends Component {
                       rowsMax={6}
                     />
                   </div>
-                  <div style={styles.formDivisor}>
-                    <Checkbox
-                      label='USA insurance?'
-                      onClick={this.toggleChecked.bind(this)}
-                    />
-                    <Row>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='E-mail'
-                          ref='email'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='Phone Number'
-                          ref='phone'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <RaisedButton
-                          label='Register'
-                          onClick={this.addDoctor.bind(this)}
-                          className='button-submit'
-                          primary
-                        />
-                      </Col>
-                    </Row>
-                  </div>
+                  <Row>
+                    <Col sm={12} md={6} lg={6}>
+                      <NoSSR onSSR={<div>Map Loading...</div>} >
+                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                      </NoSSR>
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='Direccion'
+                        ref='address'
+                        style={{width: '75%'}}
+                        multiLine
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='E-mail'
+                        ref='email'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='Phone Number'
+                        ref='phone'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
+                      <RaisedButton
+                        label='Register'
+                        onClick={this.addDoctor.bind(this)}
+                        className='button-submit'
+                        primary
+                      />
+                    </Col>
+                  </Row>
                 </form>
               </Container>
             </Paper>
