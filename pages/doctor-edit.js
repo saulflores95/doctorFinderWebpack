@@ -4,10 +4,13 @@ import fetch from 'isomorphic-unfetch'
 import DoctorEditForm from '../components/edit/doctorEditForm'
 
 export default class extends React.Component {
-  static async getInitialProps ({ req, query: { id } }) {
+  static async getInitialProps ({ req, res, query: { id } }) {
     const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : ''
-    const res = await fetch(baseUrl + '/api/doctors')
-    const json = await res.json()
+    const data = await fetch(baseUrl + '/api/doctors')
+    const json = await data.json()
+    if (!req.user) {
+      return res.redirect('/login')
+    }
     return {
       id,
       docs: json.data

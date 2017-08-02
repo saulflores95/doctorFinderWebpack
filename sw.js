@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.5'
+const CACHE_VERSION = '0.1.5.1'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -83,6 +83,10 @@ self.addEventListener('fetch', (event) => {
   }
   if (event.request.url === 'http://localhost:3000/doctor-registration' || event.request.url === `http://localhost:3000/lab-registration` || event.request.url === `http://localhost:3000/pharmacie-registration` || event.request.url === `http://localhost:3000/hospital-registration` || event.request.url === `http://localhost:3000/clinic-registration`) {
     console.log('local host registration cache ignored')
+    event.respondWith(fetch(event.request))
+  }
+  if (event.request.url === 'http://localhost:3000/doctor-edit/:id') {
+    console.log('localhost image upload ignored')
     event.respondWith(fetch(event.request))
   }
   if (event.request.url === 'http://localhost:3000/api/image-upload') {

@@ -8,6 +8,9 @@ export default class extends React.Component {
     const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : ''
     const res = await fetch(baseUrl + '/api/clinics')
     const json = await res.json()
+    if (!req.user) {
+      return res.redirect('/login')
+    }
     return {
       id,
       clinics: json.data
