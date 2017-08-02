@@ -178,62 +178,72 @@ export default class DoctorRegistrationForm extends Component {
                         <img style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <TextField
-                          hintText='Agrega una doctor'
-                          ref='doctorName'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <SelectField
-                          floatingLabelText='Specialty'
-                          value={this.state.value}
-                          onChange={this.handleChange.bind(this)}
-                        >
-                          <MenuItem value={'Audiologist'} primaryText='Audiologist' />
-                          <MenuItem value={'Allergist'} primaryText='Allergist' />
-                          <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
-                          <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
-                          <MenuItem value={'Dentist'} primaryText='Dentist' />
-                          <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
-                          <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
-                          <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
-                          <MenuItem value={'Family Medicine'} primaryText='Family Medicine' />
-                          <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
-                          <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
-                          <MenuItem value={'General Medicine'} primaryText='General Medicine' />
-                          <MenuItem value={'Hematologist'} primaryText='Hematologist' />
-                          <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
-                          <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
-                          <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
-                          <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
-                          <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
-                          <MenuItem value={'Neumologist'} primaryText='Neumologist' />
-                          <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
-                          <MenuItem value={'Neurologist'} primaryText='Neurologist' />
-                          <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
-                          <MenuItem value={'Oncologist'} primaryText='Oncologist' />
-                          <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
-                          <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
-                          <MenuItem value={'Otorhinolaryngologist'} primaryText='Otorhinolaryngology' />
-                          <MenuItem value={'Emergency Medicine'} primaryText='Emergency Medicine' />
-                          <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
-                          <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
-                          <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
-                          <MenuItem value={'Podiatrist'} primaryText='Podiatrist' />
-                          <MenuItem value={'Psychiatrist'} primaryText='Psychiatrist' />
-                          <MenuItem value={'Radiologist'} primaryText='Radiologist' />
-                          <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
-                          <MenuItem value={'Surgeon'} primaryText='Surgeon' />
-                          <MenuItem value={'Traumatologist'} primaryText='Traumatologist' />
-                          <MenuItem value={'Urologist'} primaryText='Urologist' />
-                          <MenuItem value={'Veterinarian'} primaryText='Veterinarian' />
-                        </SelectField>
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col  md={6} lg={4} style={{marginRight: 40, paddingTop: 4}}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={6} lg={6}>
+                              <SelectField
+                                floatingLabelText='Specialty'
+                                value={this.state.value}
+                                onChange={this.handleChange.bind(this)}
+                              >
+                                <MenuItem value={'Audiologist'} primaryText='Audiologist' />
+                                <MenuItem value={'Allergist'} primaryText='Allergist' />
+                                <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
+                                <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
+                                <MenuItem value={'Dentist'} primaryText='Dentist' />
+                                <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
+                                <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
+                                <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
+                                <MenuItem value={'Family Medicine'} primaryText='Family Medicine' />
+                                <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
+                                <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
+                                <MenuItem value={'General Medicine'} primaryText='General Medicine' />
+                                <MenuItem value={'Hematologist'} primaryText='Hematologist' />
+                                <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
+                                <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
+                                <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
+                                <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
+                                <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
+                                <MenuItem value={'Neumologist'} primaryText='Neumologist' />
+                                <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
+                                <MenuItem value={'Neurologist'} primaryText='Neurologist' />
+                                <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
+                                <MenuItem value={'Oncologist'} primaryText='Oncologist' />
+                                <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
+                                <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
+                                <MenuItem value={'Otorhinolaryngologist'} primaryText='Otorhinolaryngology' />
+                                <MenuItem value={'Emergency Medicine'} primaryText='Emergency Medicine' />
+                                <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
+                                <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
+                                <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
+                                <MenuItem value={'Podiatrist'} primaryText='Podiatrist' />
+                                <MenuItem value={'Psychiatrist'} primaryText='Psychiatrist' />
+                                <MenuItem value={'Radiologist'} primaryText='Radiologist' />
+                                <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
+                                <MenuItem value={'Surgeon'} primaryText='Surgeon' />
+                                <MenuItem value={'Traumatologist'} primaryText='Traumatologist' />
+                                <MenuItem value={'Urologist'} primaryText='Urologist' />
+                                <MenuItem value={'Veterinarian'} primaryText='Veterinarian' />
+                              </SelectField>
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Agrega una doctor'
+                                ref='doctorName'
+                                fullWidth
+                              />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 15}}>
+                              <Checkbox
+                                label='USA insurance?'
+                                onClick={this.toggleChecked.bind(this)}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
                   </div>
