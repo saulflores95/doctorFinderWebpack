@@ -51,6 +51,7 @@ export default class PharmacieRegistrationForm extends Component {
     var name = this.refs.clinicName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var email = this.refs.email.getValue()
     var tag = this.refs.tag.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
@@ -67,6 +68,7 @@ export default class PharmacieRegistrationForm extends Component {
       description,
       img,
       phone,
+      email,
       position: this.state.position,
       tag
     }
@@ -80,6 +82,7 @@ export default class PharmacieRegistrationForm extends Component {
         insurance: pharmacie.insurance,
         categories: pharmacie.categories,
         phone: pharmacie.phone,
+        email: pharmacie.email,
         position: pharmacie.position,
         tag: pharmacie.tag
       })
@@ -110,14 +113,14 @@ export default class PharmacieRegistrationForm extends Component {
         padding: '0 0 30px 0'
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
       },
       container: {
-        paddingTop: 35,
-        paddingBottom: 90
+        paddingBottom: 150
       },
       img: {
         paddingTop: 25,
@@ -142,7 +145,7 @@ export default class PharmacieRegistrationForm extends Component {
                       <Col sm={12} md={6} lg={6}>
                         <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
-                      <Col sm={6}>
+                      <Col sm={6} style={{marginTop: 25}}>
                         <TextField
                           hintText='Pharmacie Name'
                           ref='clinicName'
@@ -194,21 +197,19 @@ export default class PharmacieRegistrationForm extends Component {
                         />
                       </div>
                     </Row>
-                    <Row>
+                    <Row style={{marginTop: 15}}>
                       <Col sm={6} md={6} lg={6}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                      <Col sm={12} md={12} lg={12}>
+                      <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='tag'
                           ref='tag'
-                          fullWidth
+                          fullWidth={false}
                         />
                       </Col>
-                    </Row>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Phone Number'
@@ -216,16 +217,23 @@ export default class PharmacieRegistrationForm extends Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='E-mail'
+                          ref='email'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.addPharmacie.bind(this)}
                           className='button-submit'
                           primary
                         />
-                      </Col>
-                    </Row>
-                  </div>
+                     </Col>
+                   </Row>
+                 </div>
                 </form>
               </Container>
               <div>

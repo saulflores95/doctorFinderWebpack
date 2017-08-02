@@ -79,6 +79,7 @@ export default class LabRegistrationForm extends Component {
       name: name,
       img: img,
       phone: phone,
+      email: email,
       position: this.state.position,
       tag: tag,
       insurance: insurance,
@@ -95,8 +96,8 @@ export default class LabRegistrationForm extends Component {
         phone: lab.phone,
         position: lab.position,
         tag: lab.tag,
-        email: email,
-        insurance: insurance,
+        email: lab.email,
+        insurance: lab.insurance,
         description: lab.description,
         categories: lab.categories
       })
@@ -230,17 +231,17 @@ export default class LabRegistrationForm extends Component {
                     <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
-                          hintText='Phone Number'
-                          ref='phone'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
                           hintText='Email'
                           ref='email'
                           fullWidth={false}
                           />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Phone Number'
+                          ref='phone'
+                          fullWidth={false}
+                        />
                       </Col>
                       <Col sm={2}>
                         <RaisedButton

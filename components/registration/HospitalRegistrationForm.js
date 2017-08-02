@@ -65,6 +65,7 @@ export default class HospitalRegistrationForm extends Component {
     var name = this.refs.hospitalName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var email = this.refs.email.getValue()
     var description = this.refs.description.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
@@ -77,6 +78,7 @@ export default class HospitalRegistrationForm extends Component {
       name: name,
       img: img,
       phone: phone,
+      email: email,
       position: this.state.position,
       insurance: insurance,
       description: description,
@@ -88,8 +90,9 @@ export default class HospitalRegistrationForm extends Component {
         name: hospital.name,
         img: hospital.img,
         phone: hospital.phone,
+        email: hospital.email,
         position: hospital.position,
-        insurance: insurance,
+        insurance: hospital.insurance,
         description: hospital.description,
         categories: hospital.categories
       })
@@ -120,10 +123,17 @@ export default class HospitalRegistrationForm extends Component {
         padding: '0 0 30px 0'
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
+      },
+      img: {
+        paddingTop: 25,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'block'
       }
     }
 
@@ -142,23 +152,21 @@ export default class HospitalRegistrationForm extends Component {
                       <Col sm={12} md={6} lg={6}>
                         <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <TextField
                           hintText='Hospital Name'
                           ref='hospitalName'
                           fullWidth
                         />
                       </Col>
-                      <Col sm={6}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <Checkbox
                           label='USA insurance?'
                           onClick={this.toggleChecked.bind(this)}
                         />
                       </Col>
                     </Row>
-                    <Row>
+                    <Row style={{marginTop: 20}}>
                       <Col sm={6}>
                         <TextField
                           hintText='Specific Speaciality'
@@ -200,16 +208,12 @@ export default class HospitalRegistrationForm extends Component {
                         />
                       </div>
                     </Row>
-                    <Row>
-                      <Col sm={12} md={12} lg={12}>
+                    <Row style={{marginTop: 20}}>
+                      <Col sm={6} md={6} lg={6}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Phone Number'
@@ -217,7 +221,14 @@ export default class HospitalRegistrationForm extends Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='E-mail'
+                          ref='email'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           type='submit'
