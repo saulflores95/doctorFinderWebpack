@@ -48,7 +48,7 @@ export default class PharmacieRegistrationForm extends Component {
   }
 
   addPharmacie () {
-    var name = this.refs.clinicName.getValue()
+    var name = this.refs.pharmacieName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
     var email = this.refs.email.getValue()
@@ -105,12 +105,7 @@ export default class PharmacieRegistrationForm extends Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
-      },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
+        marginTop: 30
       },
       formMessageDivisor: {
         paddingLeft: 15,
@@ -136,7 +131,7 @@ export default class PharmacieRegistrationForm extends Component {
           <Container>
             <Paper style={styles.paper} zDepth={3}>
               <Container>
-                <form className='new-doctor'>
+                <form>
                   <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
@@ -148,7 +143,7 @@ export default class PharmacieRegistrationForm extends Component {
                       <Col sm={6} style={{marginTop: 25}}>
                         <TextField
                           hintText='Pharmacie Name'
-                          ref='clinicName'
+                          ref='pharmacieName'
                           fullWidth
                         />
                       </Col>

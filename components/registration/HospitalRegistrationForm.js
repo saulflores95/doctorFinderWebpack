@@ -115,7 +115,7 @@ export default class HospitalRegistrationForm extends Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
+        marginTop: 30
       },
       formStyle: {
       },

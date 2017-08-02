@@ -69,6 +69,7 @@ export default class HospitalEditForm extends React.Component {
     var name = this.refs.hospitalName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var email = this.refs.email.getValue()
     var description = this.refs.description.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
@@ -81,6 +82,7 @@ export default class HospitalEditForm extends React.Component {
       name: name,
       img: img,
       phone: phone,
+      email: email,
       position: this.state.position,
       insurance: insurance,
       description: description,
@@ -91,8 +93,9 @@ export default class HospitalEditForm extends React.Component {
         name: hospital.name,
         img: hospital.img,
         phone: hospital.phone,
+        email: hospital.email,
         position: hospital.position,
-        insurance: insurance,
+        insurance: hospital.insurance,
         description: hospital.description,
         categories: hospital.categories
       })
@@ -119,18 +122,20 @@ export default class HospitalEditForm extends React.Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
-      },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
+        marginTop: 30
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
+      },
+      img: {
+        paddingTop: 25,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        display: 'block'
       }
     }
     const hospital = this.props.hospital
@@ -149,9 +154,7 @@ export default class HospitalEditForm extends React.Component {
                       <Col sm={12} md={6} lg={6}>
                         <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <TextField
                           hintText='Hospital Name'
                           ref='hospitalName'
@@ -159,14 +162,14 @@ export default class HospitalEditForm extends React.Component {
                           defaultValue={hospital.name}
                         />
                       </Col>
-                      <Col sm={6}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <Checkbox
                           label='USA insurance?'
                           onClick={this.toggleChecked.bind(this)}
                         />
                       </Col>
                     </Row>
-                    <Row>
+                    <Row style={{marginTop: 20}}>
                       <Col sm={6}>
                         <TextField
                           hintText='Specific Speaciality'
@@ -213,16 +216,12 @@ export default class HospitalEditForm extends React.Component {
                         />
                       </div>
                     </Row>
-                    <Row>
-                      <Col sm={12} md={12} lg={12}>
+                    <Row style={{marginTop: 15}}>
+                      <Col sm={6} md={6} lg={6} style={{marginBottom: 30}}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Phone Number'
@@ -231,7 +230,15 @@ export default class HospitalEditForm extends React.Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='E-mail'
+                          ref='email'
+                          defaultValue={hospital.email}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           type='submit'

@@ -60,9 +60,10 @@ export default class PharmacieEditForm extends React.Component {
   }
 
   editPharmacie () {
-    var name = this.refs.clinicName.getValue()
+    var name = this.refs.pharmacieName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
+    var email = this.refs.email.getValue()
     var tag = this.refs.tag.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
@@ -79,6 +80,7 @@ export default class PharmacieEditForm extends React.Component {
       description,
       img,
       phone,
+      email,
       position: this.state.position,
       tag
     }
@@ -90,6 +92,7 @@ export default class PharmacieEditForm extends React.Component {
         insurance: pharmacie.insurance,
         categories: pharmacie.categories,
         phone: pharmacie.phone,
+        email: pharmacie.email,
         position: pharmacie.position,
         tag: pharmacie.tag
       })
@@ -107,15 +110,11 @@ export default class PharmacieEditForm extends React.Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
-      },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
+        marginTop: 30
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
@@ -143,17 +142,17 @@ export default class PharmacieEditForm extends React.Component {
                       <Col sm={12} md={6} lg={6}>
                         <Uploader handle={this.handleImageChange.bind(this)} />
                       </Col>
-                      <Col sm={6}>
+                      <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
                         <TextField
                           hintText='Pharmacie Name'
-                          ref='clinicName'
+                          ref='pharmacieName'
                           fullWidth
                           defaultValue={this.props.pharmacie.name}
                         />
                       </Col>
                     </Row>
                   </div>
-                  <div style={styles.formDivisor}>
+                  <div style={{marginTop: 20}}>
                     <Row>
                       <Col sm={6}>
                         <TextField
@@ -201,22 +200,20 @@ export default class PharmacieEditForm extends React.Component {
                         />
                       </div>
                     </Row>
-                    <Row>
-                      <Col sm={6} md={6} lg={6}>
+                    <Row style={{marginTop: 15}}>
+                      <Col sm={6} md={6} lg={6} style={{marginBottom: 30}}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                      <Col sm={12} md={12} lg={12}>
+                      <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='tag'
                           ref='tag'
                           defaultValue={this.props.pharmacie.tag}
-                          fullWidth
+                          fullWidth={false}
                         />
                       </Col>
-                    </Row>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Phone Number'
@@ -225,7 +222,15 @@ export default class PharmacieEditForm extends React.Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='E-mail'
+                          ref='email'
+                          defaultValue={this.props.pharmacie.email}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.editPharmacie.bind(this)}
