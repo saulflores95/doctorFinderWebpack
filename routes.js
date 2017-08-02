@@ -18,7 +18,7 @@ routes.add('clinic-registration', '/clinic-registration')
 routes.add('clinic-edit', '/clinic-edit/:id')
 
 //  Laboratories Related routes
-routes.add('laboratories-map', '/laboratories-map/:id')
+routes.add('laboratorie', '/laboratorie/:id')
 routes.add('laboratories-detail', '/laboratories-detail/:id')
 routes.add('laboratories-registration', '/laboratories-registration')
 routes.add('laboratories-edit', '/laboratories-edit/:id')

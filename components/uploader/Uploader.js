@@ -34,9 +34,6 @@ export default class Uploader extends React.Component {
 
   render () {
     let styles = {
-      form: {
-        paddingTop: 50
-      },
       img: {
         padding: 50,
         borderRadius: '50%'

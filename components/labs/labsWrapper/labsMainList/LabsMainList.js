@@ -24,7 +24,7 @@ const LabsMainList = ({lab}) => (
   <div>
     <MuiThemeProvider>
       <List style={{padding: 0}}>
-        <Link prefetch href={`/laboratories-map?id=${lab}`} as={`/laboratories-map/${lab}`}>
+        <Link prefetch href={`/laboratorie?id=${lab}`} as={`/laboratorie/${lab}`}>
           <ListItem
             leftAvatar={<Avatar className='avatar' src={imageChooser(lab)} />}
             primaryText={<div className='label'>{lab}</div>}

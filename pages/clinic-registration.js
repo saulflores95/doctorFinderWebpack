@@ -7,7 +7,7 @@ export default class extends React.Component {
     return (
       <div>
         <App>
-          <div className='container' style={{paddingBottom: 130}}>
+          <div className='container' style={{paddingBottom: 135}}>
             <ClinicRegistrationForm />
           </div>
         </App>

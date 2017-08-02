@@ -1,8 +1,10 @@
 import React from 'react'
 import App from '../components/App/App'
-import LabsGeneralMap from '../components/labs/labsMap/LabsGeneralMap'
+import LabsListWrapper from '../components/labs/labsListWrapper/LabsListWrapper'
 import NoSSR from 'react-no-ssr'
 import fetch from 'isomorphic-unfetch'
+import Transition from 'react-motion-ui-pack'
+import {spring} from 'react-motion'
 
 export default class extends React.Component {
   static async getInitialProps ({ req, query: { id } }) {
@@ -22,11 +24,23 @@ export default class extends React.Component {
     return (
       <div className='container'>
         <App className='container'>
-          <div className='container'>
-            <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...'</div>}>
-              <LabsGeneralMap labs={lab} />
-            </NoSSR>
-          </div>
+          <Transition
+            component={false}
+            enter={{
+              translateX: spring(0, {stiffness: 400, damping: 25}),
+              opacity: 1
+            }}
+            leave={{
+              translateX: 350,
+              opacity: 0
+            }}
+            >
+            <div className='container'>
+              <NoSSR onSSR={<div>'Hi Human, I am working to bring the data...'</div>}>
+                <LabsListWrapper labs={lab} />
+              </NoSSR>
+            </div>
+          </Transition>
         </App>
         <style jsx>
           {`

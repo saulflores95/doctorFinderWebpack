@@ -126,15 +126,11 @@ export default class ClinicRegistrationForm extends Component {
       paper: {
         width: '100%',
         padding: '0 0 0 0',
-        marginTop: '50px'
-      },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
+        marginTop: 30
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddingRight: 15
       },
       customWidth: {
         width: '95%'
@@ -154,48 +150,52 @@ export default class ClinicRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <img width='250' height='200' style={styles.img} src={this.state.url} />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Clinic Name'
-                          ref='clinicName'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <Checkbox
-                          label='USA insurance?'
-                          onClick={this.toggleChecked.bind(this)}
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <SelectField
-                          floatingLabelText='Specialty'
-                          value={this.state.value}
-                          onChange={this.handleChange.bind(this)}
-                        >
-                          <MenuItem value={'Dermatology'} primaryText='Dermatology' />
-                          <MenuItem value={'Dental'} primaryText='Dental ' />
-                          <MenuItem value={'Hair Transplant'} primaryText='Hair Transplant  ' />
-                          <MenuItem value={'Foot'} primaryText='Foot ' />
-                          <MenuItem value={'Oncology'} primaryText='Oncology ' />
-                          <MenuItem value={'Fertility Control '} primaryText='Fertility Control  ' />
-                          <MenuItem value={'Eye'} primaryText='Eye ' />
-                          <MenuItem value={'SPA '} primaryText='SPA  ' />
-                          <MenuItem value={'Pediatric'} primaryText='Pediatric ' />
-                          <MenuItem value={'Plastic Surgery'} primaryText='Plastic Surgery  ' />
-                        </SelectField>
-                      </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
+                  <Row>
+                    <Col sm={6} md={6} lg={6}>
+                      <img width='250' height='200' style={styles.img} src={this.state.url} />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <div style={{marginTop: 30}}>
+                        <Row>
+                          <Col sm={12} md={6} lg={4} style={{marginRight: 40, paddingTop: 4}}>
+                            <Uploader handle={this.handleImageChange.bind(this)} />
+                          </Col>
+                          <Col sm={12} md={6} lg={6}>
+                            <SelectField
+                              floatingLabelText='Specialty'
+                              value={this.state.value}
+                              onChange={this.handleChange.bind(this)}
+                            >
+                              <MenuItem value={'Dermatology'} primaryText='Dermatology' />
+                              <MenuItem value={'Dental'} primaryText='Dental ' />
+                              <MenuItem value={'Hair Transplant'} primaryText='Hair Transplant  ' />
+                              <MenuItem value={'Foot'} primaryText='Foot ' />
+                              <MenuItem value={'Oncology'} primaryText='Oncology ' />
+                              <MenuItem value={'Fertility Control '} primaryText='Fertility Control  ' />
+                              <MenuItem value={'Eye'} primaryText='Eye ' />
+                              <MenuItem value={'SPA '} primaryText='SPA  ' />
+                              <MenuItem value={'Pediatric'} primaryText='Pediatric ' />
+                              <MenuItem value={'Plastic Surgery'} primaryText='Plastic Surgery  ' />
+                            </SelectField>
+                          </Col>
+                          <Col sm={12} md={12} lg={12} style={{marginTop: 15}}>
+                            <TextField
+                              hintText='Clinic Name'
+                              ref='clinicName'
+                              fullWidth
+                            />
+                          </Col>
+                          <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                            <Checkbox
+                              label='USA insurance?'
+                              onClick={this.toggleChecked.bind(this)}
+                            />
+                          </Col>
+                        </Row>
+                      </div>
+                    </Col>
+                  </Row>
+                  <div style={{marginTop: 20}}>
                     <Row>
                       <Col sm={6}>
                         <TextField
@@ -238,16 +238,12 @@ export default class ClinicRegistrationForm extends Component {
                         />
                       </div>
                     </Row>
-                    <Row>
-                      <Col sm={12} md={12} lg={12}>
+                    <Row style={{marginTop: 10}}>
+                      <Col sm={6} md={6} lg={6} style={{marginBottom: 30}}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='E-mail'
@@ -262,12 +258,13 @@ export default class ClinicRegistrationForm extends Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6}>
                         <RaisedButton
                           label='Register'
                           onClick={this.addClinic.bind(this)}
                           className='button-submit'
                           primary
+                          style={{marginTop: 20, marginBottom: 20}}
                         />
                       </Col>
                     </Row>

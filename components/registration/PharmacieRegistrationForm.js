@@ -193,7 +193,7 @@ export default class PharmacieRegistrationForm extends Component {
                       </div>
                     </Row>
                     <Row style={{marginTop: 15}}>
-                      <Col sm={6} md={6} lg={6}>
+                      <Col sm={6} md={6} lg={6} style={{marnBottom: 30}}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
