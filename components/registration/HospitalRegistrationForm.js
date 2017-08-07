@@ -117,11 +117,6 @@ export default class HospitalRegistrationForm extends Component {
         padding: '0 0 0 0',
         marginTop: 30
       },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
-      },
       formMessageDivisor: {
         paddingLeft: 15,
         paddingRight: 15
@@ -144,7 +139,7 @@ export default class HospitalRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor' onSubmit={this.addHospital.bind(this)}>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img width='200px' height='200px' style={styles.img} src={this.state.url} />

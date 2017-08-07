@@ -146,27 +146,33 @@ export default class HospitalEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor' onSubmit={this.editHospital.bind(this)}>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img width='200px' height='200px' style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
-                        <TextField
-                          hintText='Hospital Name'
-                          ref='hospitalName'
-                          fullWidth
-                          defaultValue={hospital.name}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
-                        <Checkbox
-                          label='USA insurance?'
-                          onClick={this.toggleChecked.bind(this)}
-                        />
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col sm={12} md={12} lg={12}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Hospital Name'
+                                ref='hospitalName'
+                                fullWidth
+                                defaultValue={hospital.name}
+                              />
+                            </Col>
+                            <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
+                              <Checkbox
+                                label='USA insurance?'
+                                onClick={this.toggleChecked.bind(this)}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
                     <Row style={{marginTop: 20}}>

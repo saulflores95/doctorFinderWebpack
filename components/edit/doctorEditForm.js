@@ -141,7 +141,7 @@ export default class DoctorEditForm extends React.Component {
       paper: {
         width: '100%',
         paddingBottom: 35,
-        marginTop: '50px'
+        marginTop: 30
       },
       img: {
         borderRadius: '50%',
@@ -168,70 +168,82 @@ export default class DoctorEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col sm={12} md={4} lg={4} style={{marginRight: 40, paddingTop: 4}}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={6} lg={6}>
+                              <SelectField
+                                floatingLabelText='Specialty'
+                                value={this.state.value}
+                                defaultValue={doctor.specialty}
+                                onChange={this.handleChange.bind(this)}
+                              >
+                                <MenuItem value={'Audiologist'} primaryText='Audiologist' />
+                                <MenuItem value={'Allergist'} primaryText='Allergist' />
+                                <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
+                                <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
+                                <MenuItem value={'Dentist'} primaryText='Dentist' />
+                                <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
+                                <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
+                                <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
+                                <MenuItem value={'Family Medicine'} primaryText='Family Medicine' />
+                                <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
+                                <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
+                                <MenuItem value={'General Medicine'} primaryText='General Medicine' />
+                                <MenuItem value={'Hematologist'} primaryText='Hematologist' />
+                                <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
+                                <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
+                                <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
+                                <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
+                                <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
+                                <MenuItem value={'Neumologist'} primaryText='Neumologist' />
+                                <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
+                                <MenuItem value={'Neurologist'} primaryText='Neurologist' />
+                                <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
+                                <MenuItem value={'Oncologist'} primaryText='Oncologist' />
+                                <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
+                                <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
+                                <MenuItem value={'Otorhinolaryngologist'} primaryText='Otorhinolaryngology' />
+                                <MenuItem value={'Emergency Medicine'} primaryText='Emergency Medicine' />
+                                <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
+                                <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
+                                <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
+                                <MenuItem value={'Podiatrist'} primaryText='Podiatrist' />
+                                <MenuItem value={'Psychiatrist'} primaryText='Psychiatrist' />
+                                <MenuItem value={'Radiologist'} primaryText='Radiologist' />
+                                <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
+                                <MenuItem value={'Surgeon'} primaryText='Surgeon' />
+                                <MenuItem value={'Traumatologist'} primaryText='Traumatologist' />
+                                <MenuItem value={'Urologist'} primaryText='Urologist' />
+                                <MenuItem value={'Veterinarian'} primaryText='Veterinarian' />
+                              </SelectField>
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Agrega una doctor'
+                                ref='doctorName'
+                                defaultValue={doctor.name}
+                                fullWidth
+                              />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <Checkbox
+                                label='USA insurance?'
+                                onClick={this.toggleChecked.bind(this)}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <TextField
-                          hintText='Agrega una doctor'
-                          ref='doctorName'
-                          defaultValue={doctor.name}
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <SelectField
-                          floatingLabelText='Specialty'
-                          value={this.state.value}
-                          defaultValue={doctor.specialty}
-                          onChange={this.handleChange.bind(this)}
-                        >
-                          <MenuItem value={'Audiologist'} primaryText='Audiologist' />
-                          <MenuItem value={'Allergist'} primaryText='Allergist' />
-                          <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
-                          <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
-                          <MenuItem value={'Dentist'} primaryText='Dentist' />
-                          <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
-                          <MenuItem value={'Endocrinologist'} primaryText='Endocrinologist' />
-                          <MenuItem value={'Epidemiologist'} primaryText='Epidemiologist' />
-                          <MenuItem value={'Gynecologist'} primaryText='Gynecologist' />
-                          <MenuItem value={'Gastroenterologist'} primaryText='Gastroenterologist' />
-                          <MenuItem value={'General Medicine'} primaryText='General Medicine' />
-                          <MenuItem value={'Hematologist'} primaryText='Hematologist' />
-                          <MenuItem value={'Infectious Disease Specialist'} primaryText='Infectious Disease Specialist' />
-                          <MenuItem value={'Internal Medicine Specialist'} primaryText='Internal Medicine Specialist' />
-                          <MenuItem value={'Medical Geneticist'} primaryText='Medical Geneticist' />
-                          <MenuItem value={'Microbiologist'} primaryText='Microbiologist' />
-                          <MenuItem value={'Neonatologist'} primaryText='Neonatologist' />
-                          <MenuItem value={'Nephrologist'} primaryText='Nephrologist' />
-                          <MenuItem value={'Neurologist'} primaryText='Neurologist' />
-                          <MenuItem value={'Obstetrician'} primaryText='Obstetrician' />
-                          <MenuItem value={'Oncologist'} primaryText='Oncologist' />
-                          <MenuItem value={'Ophthalmologists'} primaryText='Ophthalmologists' />
-                          <MenuItem value={'Orthopedic Surgeon'} primaryText='Orthopedic Surgeon' />
-                          <MenuItem value={'Otorrinolaringologista'} primaryText='Otorrinolaringologista' />
-                          <MenuItem value={'ENT Specialist'} primaryText='ENT Specialist' />
-                          <MenuItem value={'Pediatrician'} primaryText='Pediatrician' />
-                          <MenuItem value={'Plastic Surgeon'} primaryText='Plastic Surgeon' />
-                          <MenuItem value={'Podiatrist'} primaryText='Podiatrist' />
-                          <MenuItem value={'Psychiatrist'} primaryText='Psychiatrist' />
-                          <MenuItem value={'Radiologist'} primaryText='Radiologist' />
-                          <MenuItem value={'Rheumatologist'} primaryText='Rheumatologist' />
-                          <MenuItem value={'Surgeon'} primaryText='Surgeon' />
-                          <MenuItem value={'Urologist'} primaryText='Urologist' />
-                          <MenuItem value={'Veterinarian'} primaryText='Veterinarian' />
-                        </SelectField>
-                      </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={6}>
                         <TextField
@@ -286,40 +298,32 @@ export default class DoctorEditForm extends React.Component {
                         />
                       </Col>
                     </Row>
-                  </div>
-                  <Row>
-                    <Col sm={12} md={12} lg={12}>
-                      <NoSSR onSSR={<div>Map Loading...</div>} >
-                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                      </NoSSR>
-                    </Col>
-                    <Col sm={12} md={12} lg={12}>
+                    <div style={styles.formMessageDivisor}>
                       <TextField
-                        hintText='Direccion'
-                        ref='address'
+                        hintText='Describe yourself or experience(do not be shy)'
+                        ref='description'
+                        defaultValue={doctor.description}
                         fullWidth
-                        defaultValue={doctor.address}
                         multiLine
+                        rows={3}
+                        rowsMax={6}
                       />
-                    </Col>
-                  </Row>
-                  <div style={styles.formMessageDivisor}>
-                    <TextField
-                      hintText='Describe yourself or experience(do not be shy)'
-                      ref='description'
-                      defaultValue={doctor.description}
-                      fullWidth
-                      multiLine
-                      rows={3}
-                      rowsMax={6}
-                    />
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Checkbox
-                      label='USA insurance?'
-                      onClick={this.toggleChecked.bind(this)}
-                    />
+                    </div>
                     <Row>
+                      <Col sm={12} md={6} lg={6}>
+                        <NoSSR onSSR={<div>Map Loading...</div>} >
+                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                        </NoSSR>
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Direccion'
+                          ref='address'
+                          style={{width: '75%'}}
+                          defaultValue={doctor.address}
+                          multiLine
+                        />
+                      </Col>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='E-mail'
@@ -336,7 +340,7 @@ export default class DoctorEditForm extends React.Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={12} md={6} lg={6}>
+                      <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.editDoctor.bind(this)}

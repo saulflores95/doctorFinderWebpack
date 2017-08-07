@@ -172,7 +172,7 @@ export default class DoctorRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img style={styles.img} src={this.state.url} />
@@ -246,9 +246,7 @@ export default class DoctorRegistrationForm extends Component {
                         </div>
                       </Col>
                     </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
+                    <Row style={{marginTop: 15}}>
                       <Col sm={6}>
                         <TextField
                           hintText='Work experience 1'
@@ -296,54 +294,54 @@ export default class DoctorRegistrationForm extends Component {
                         />
                       </Col>
                     </Row>
-                  </div>
-                  <div style={styles.formMessageDivisor}>
-                    <TextField
-                      hintText='Describe yourself or experience(do not be shy)'
-                      ref='description'
-                      fullWidth
-                      multiLine
-                      rows={3}
-                      rowsMax={6}
-                    />
-                  </div>
-                  <Row>
-                    <Col sm={12} md={6} lg={6}>
-                      <NoSSR onSSR={<div>Map Loading...</div>} >
-                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                      </NoSSR>
-                    </Col>
-                    <Col sm={6} md={6} lg={6}>
+                    <div style={styles.formMessageDivisor}>
                       <TextField
-                        hintText='Direccion'
-                        ref='address'
-                        style={{width: '75%'}}
+                        hintText='Describe yourself or experience(do not be shy)'
+                        ref='description'
+                        fullWidth
                         multiLine
+                        rows={3}
+                        rowsMax={6}
                       />
-                    </Col>
-                    <Col sm={6} md={6} lg={6}>
-                      <TextField
-                        hintText='E-mail'
-                        ref='email'
-                        fullWidth={false}
-                      />
-                    </Col>
-                    <Col sm={6} md={6} lg={6}>
-                      <TextField
-                        hintText='Phone Number'
-                        ref='phone'
-                        fullWidth={false}
-                      />
-                    </Col>
-                    <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
-                      <RaisedButton
-                        label='Register'
-                        onClick={this.addDoctor.bind(this)}
-                        className='button-submit'
-                        primary
-                      />
-                    </Col>
-                  </Row>
+                    </div>
+                    <Row>
+                      <Col sm={12} md={6} lg={6}>
+                        <NoSSR onSSR={<div>Map Loading...</div>} >
+                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                        </NoSSR>
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Direccion'
+                          ref='address'
+                          style={{width: '75%'}}
+                          multiLine
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='E-mail'
+                          ref='email'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Phone Number'
+                          ref='phone'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
+                        <RaisedButton
+                          label='Register'
+                          onClick={this.addDoctor.bind(this)}
+                          className='button-submit'
+                          primary
+                        />
+                      </Col>
+                    </Row>
+                  </div>
                 </form>
               </Container>
             </Paper>
