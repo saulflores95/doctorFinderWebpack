@@ -117,11 +117,6 @@ export default class HospitalRegistrationForm extends Component {
         padding: '0 0 0 0',
         marginTop: 30
       },
-      formStyle: {
-      },
-      formDivisor: {
-        padding: '0 0 30px 0'
-      },
       formMessageDivisor: {
         paddingLeft: 15,
         paddingRight: 15
@@ -144,106 +139,104 @@ export default class HospitalRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor' onSubmit={this.addHospital.bind(this)}>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <img width='200px' height='200px' style={styles.img} src={this.state.url} />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <div style={{marginTop: 30}}>
-                          <Row>
-                            <Col sm={12} md={12} lg={12}>
-                              <Uploader handle={this.handleImageChange.bind(this)} />
-                            </Col>
-                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
-                              <TextField
-                                hintText='Hospital Name'
-                                ref='hospitalName'
-                                fullWidth
-                              />
-                            </Col>
-                            <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
-                              <Checkbox
-                                label='USA insurance?'
-                                onClick={this.toggleChecked.bind(this)}
-                              />
-                            </Col>
-                          </Row>
-                        </div>
-                      </Col>
-                    </Row>
-                    <Row style={{marginTop: 20}}>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality'
-                          ref='specificOne'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 2'
-                          ref='specificTwo'
-                          fullWidth
-                        />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 3'
-                          ref='specificThree'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 4'
-                          ref='specificFour'
-                          fullWidth
-                        />
-                      </Col>
-                      <div style={styles.formMessageDivisor}>
-                        <TextField
-                          hintText='Describe yourself or experience(do not be shy)'
-                          ref='description'
-                          fullWidth
-                          multiLine
-                          rows={3}
-                          rowsMax={6}
-                        />
+                  <Row>
+                    <Col sm={12} md={6} lg={6}>
+                      <img width='200px' height='200px' style={styles.img} src={this.state.url} />
+                    </Col>
+                    <Col sm={12} md={6} lg={6}>
+                      <div style={{marginTop: 30}}>
+                        <Row>
+                          <Col sm={12} md={12} lg={12}>
+                            <Uploader handle={this.handleImageChange.bind(this)} />
+                          </Col>
+                          <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                            <TextField
+                              hintText='Hospital Name'
+                              ref='hospitalName'
+                              fullWidth
+                            />
+                          </Col>
+                          <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
+                            <Checkbox
+                              label='USA insurance?'
+                              onClick={this.toggleChecked.bind(this)}
+                            />
+                          </Col>
+                        </Row>
                       </div>
-                    </Row>
-                    <Row style={{marginTop: 20}}>
-                      <Col sm={6} md={6} lg={6}>
-                        <NoSSR onSSR={<div>Map Loading...</div>} >
-                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                        </NoSSR>
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='Phone Number'
-                          ref='phone'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='E-mail'
-                          ref='email'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
-                        <RaisedButton
-                          label='Register'
-                          type='submit'
-                          className='button-submit'
-                          primary
-                        />
-                      </Col>
-                    </Row>
-                  </div>
+                    </Col>
+                  </Row>
+                  <Row style={{marginTop: 20}}>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality'
+                        ref='specificOne'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 2'
+                        ref='specificTwo'
+                        fullWidth
+                      />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 3'
+                        ref='specificThree'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 4'
+                        ref='specificFour'
+                        fullWidth
+                      />
+                    </Col>
+                    <div style={styles.formMessageDivisor}>
+                      <TextField
+                        hintText='Describe yourself or experience(do not be shy)'
+                        ref='description'
+                        fullWidth
+                        multiLine
+                        rows={3}
+                        rowsMax={6}
+                      />
+                    </div>
+                  </Row>
+                  <Row style={{marginTop: 20}}>
+                    <Col sm={6} md={6} lg={6}>
+                      <NoSSR onSSR={<div>Map Loading...</div>} >
+                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                      </NoSSR>
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='Phone Number'
+                        ref='phone'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='E-mail'
+                        ref='email'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
+                      <RaisedButton
+                        label='Register'
+                        type='submit'
+                        className='button-submit'
+                        primary
+                      />
+                    </Col>
+                  </Row>
                 </form>
               </Container>
             </Paper>

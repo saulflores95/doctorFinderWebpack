@@ -132,103 +132,105 @@ export default class PharmacieRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <img width='250' height='200' style={styles.img} src={this.state.url} />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6} style={{marginTop: 25}}>
-                        <TextField
-                          hintText='Pharmacie Name'
-                          ref='pharmacieName'
-                          fullWidth
-                        />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality'
-                          ref='specificOne'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 2'
-                          ref='specificTwo'
-                          fullWidth
-                        />
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 3'
-                          ref='specificThree'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Specific Speaciality 4'
-                          ref='specificFour'
-                          fullWidth
-                        />
-                      </Col>
-                      <div style={styles.formMessageDivisor}>
-                        <TextField
-                          hintText='Describe yourself or experience(do not be shy)'
-                          ref='description'
-                          fullWidth
-                          multiLine
-                          rows={3}
-                          rowsMax={6}
-                        />
+                  <Row>
+                    <Col sm={12} md={6} lg={6}>
+                      <img width='250' height='200' style={styles.img} src={this.state.url} />
+                    </Col>
+                    <Col sm={12} md={6} lg={6}>
+                      <div style={{marginTop: 30}}>
+                        <Row>
+                          <Col sm={12} md={12} lg={12}>
+                            <Uploader handle={this.handleImageChange.bind(this)} />
+                          </Col>
+                          <Col sm={12} md={12} lg={12} style={{marginTop: 25}}>
+                            <TextField
+                              hintText='Pharmacie Name'
+                              ref='pharmacieName'
+                              fullWidth
+                            />
+                          </Col>
+                        </Row>
                       </div>
-                    </Row>
-                    <Row style={{marginTop: 15}}>
-                      <Col sm={6} md={6} lg={6} style={{marnBottom: 30}}>
-                        <NoSSR onSSR={<div>Map Loading...</div>} >
-                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                        </NoSSR>
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='tag'
-                          ref='tag'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='Phone Number'
-                          ref='phone'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6}>
-                        <TextField
-                          hintText='E-mail'
-                          ref='email'
-                          fullWidth={false}
-                        />
-                      </Col>
-                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
-                        <RaisedButton
-                          label='Register'
-                          onClick={this.addPharmacie.bind(this)}
-                          className='button-submit'
-                          primary
-                        />
-                     </Col>
-                   </Row>
-                 </div>
+                    </Col>
+                  </Row>
+                  <Row style={{marginTop: 20}}>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality'
+                        ref='specificOne'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 2'
+                        ref='specificTwo'
+                        fullWidth
+                      />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 3'
+                        ref='specificThree'
+                        fullWidth
+                      />
+                    </Col>
+                    <Col sm={6}>
+                      <TextField
+                        hintText='Specific Speaciality 4'
+                        ref='specificFour'
+                        fullWidth
+                      />
+                    </Col>
+                    <div style={styles.formMessageDivisor}>
+                      <TextField
+                        hintText='Describe yourself or experience(do not be shy)'
+                        ref='description'
+                        fullWidth
+                        multiLine
+                        rows={3}
+                        rowsMax={6}
+                      />
+                    </div>
+                  </Row>
+                  <Row style={{marginTop: 15}}>
+                    <Col sm={6} md={6} lg={6} style={{marginBottom: 30}}>
+                      <NoSSR onSSR={<div>Map Loading...</div>} >
+                        <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                      </NoSSR>
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='tag'
+                        ref='tag'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='Phone Number'
+                        ref='phone'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6}>
+                      <TextField
+                        hintText='E-mail'
+                        ref='email'
+                        fullWidth={false}
+                      />
+                    </Col>
+                    <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
+                      <RaisedButton
+                        label='Register'
+                        onClick={this.addPharmacie.bind(this)}
+                        className='button-submit'
+                        primary
+                      />
+                   </Col>
+                 </Row>
                 </form>
               </Container>
               <div>

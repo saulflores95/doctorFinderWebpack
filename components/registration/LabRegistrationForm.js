@@ -62,7 +62,7 @@ export default class LabRegistrationForm extends Component {
 
   addLab (event) {
     event.preventDefault()
-    var name = this.refs.clinicName.getValue()
+    var name = this.refs.labName.getValue()
     var img = this.state.url
     var phone = this.refs.phone.getValue()
     var email = this.refs.email.getValue()
@@ -144,30 +144,34 @@ export default class LabRegistrationForm extends Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-doctor'>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={12} md={6} lg={6}>
-                        <img width='250' height='200' style={styles.img} src={this.state.url} />
-                      </Col>
-                      <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Laboratory Name'
-                          ref='clinicName'
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <Checkbox
-                          label='USA insurance?'
-                          onClick={this.toggleChecked.bind(this)}
-                        />
-                      </Col>
-                    </Row>
-                  </div>
                   <Row>
+                    <Col sm={12} md={6} lg={6}>
+                      <img width='250' height='200' style={styles.img} src={this.state.url} />
+                    </Col>
+                    <Col sm={12} md={6} lg={6}>
+                      <div style={{marginTop: 30}}>
+                        <Row>
+                          <Col sm={12} md={12} lg={12}>
+                            <Uploader handle={this.handleImageChange.bind(this)} />
+                          </Col>
+                          <Col sm={12} md={12} lg={12}  style={{marginTop: 20}}>
+                            <TextField
+                              hintText='Laboratory Name'
+                              ref='labName'
+                              fullWidth
+                            />
+                          </Col>
+                          <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
+                            <Checkbox
+                              label='USA insurance?'
+                              onClick={this.toggleChecked.bind(this)}
+                            />
+                          </Col>
+                        </Row>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{marginTop: 20}}>
                     <Col sm={6}>
                       <TextField
                         hintText='Specific Speaciality'
@@ -211,7 +215,7 @@ export default class LabRegistrationForm extends Component {
                   </Row>
                   <div style={{marginTop: 15}}>
                     <Row>
-                      <Col sm={12} md={6} lg={6}>
+                      <Col sm={12} md={6} lg={6} style={{marginBottom: 30}}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>

@@ -8,7 +8,7 @@ const check = (user) => {
 }
 
 const login = ({user}) => (
-  <div>
+  <div className='body' style={{marginTop: -8, marginLeft: -8, marginRight: -8}}>
     {check(user)}
   </div>
 )

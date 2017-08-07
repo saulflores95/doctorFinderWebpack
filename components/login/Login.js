@@ -60,7 +60,7 @@ export default class UserRegistration extends Component {
           {`
             body{
               padding:0;
-              margin:0;
+              margin:0 !important;
             }
             .vid-container{
               position:relative;
