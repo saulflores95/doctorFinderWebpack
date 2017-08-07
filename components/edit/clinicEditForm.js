@@ -138,7 +138,7 @@ export default class ClinicEditForm extends React.Component {
       paper: {
         width: '100%',
         paddingBottom: 35,
-        marginTop: '50px'
+        marginTop: 30
       },
       img: {
         borderRadius: '50%',
@@ -150,11 +150,12 @@ export default class ClinicEditForm extends React.Component {
         width: '250px',
         height: '250px'
       },
-      formMessageDivisor: {
-        padding: '0 0 10px 0'
-      },
       formStyle: {
         color: 'white'
+      },
+      formMessageDivisor: {
+        paddingLeft: 15,
+        paddingRight: 15
       }
     }
     const clinic = this.props.clinic
@@ -166,49 +167,53 @@ export default class ClinicEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-clinic'>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img width='250' height='200' style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Clinic Name'
-                          ref='clinicName'
-                          defaultValue={clinic.name}
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <Checkbox
-                          label='USA insurance?'
-                          onClick={this.toggleChecked.bind(this)}
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <SelectField
-                          floatingLabelText='Specialty'
-                          value={this.state.value}
-                          onChange={this.handleChange.bind(this)}
-                        >
-                          <MenuItem value={'Dermatology'} primaryText='Dermatology' />
-                          <MenuItem value={'Dental'} primaryText='Dental ' />
-                          <MenuItem value={'Hair Transplant'} primaryText='Hair Transplant  ' />
-                          <MenuItem value={'Foot'} primaryText='Foot ' />
-                          <MenuItem value={'Oncology'} primaryText='Oncology ' />
-                          <MenuItem value={'Fertility Control '} primaryText='Fertility Control  ' />
-                          <MenuItem value={'Eye'} primaryText='Eye ' />
-                          <MenuItem value={'SPA '} primaryText='SPA  ' />
-                          <MenuItem value={'Pediatric'} primaryText='Pediatric ' />
-                          <MenuItem value={'Plastic Surgery'} primaryText='Plastic Surgery  ' />
-                        </SelectField>
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col sm={12} md={4} lg={4} style={{marginRight: 40, paddingTop: 4}}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={6} lg={6}>
+                              <SelectField
+                                floatingLabelText='Specialty'
+                                value={this.state.value}
+                                onChange={this.handleChange.bind(this)}
+                              >
+                                <MenuItem value={'Dermatology'} primaryText='Dermatology' />
+                                <MenuItem value={'Dental'} primaryText='Dental ' />
+                                <MenuItem value={'Hair Transplant'} primaryText='Hair Transplant  ' />
+                                <MenuItem value={'Foot'} primaryText='Foot ' />
+                                <MenuItem value={'Oncology'} primaryText='Oncology ' />
+                                <MenuItem value={'Fertility Control '} primaryText='Fertility Control  ' />
+                                <MenuItem value={'Eye'} primaryText='Eye ' />
+                                <MenuItem value={'SPA '} primaryText='SPA  ' />
+                                <MenuItem value={'Pediatric'} primaryText='Pediatric ' />
+                                <MenuItem value={'Plastic Surgery'} primaryText='Plastic Surgery  ' />
+                              </SelectField>
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Clinic Name'
+                                ref='clinicName'
+                                defaultValue={clinic.name}
+                                fullWidth
+                              />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <Checkbox
+                                label='USA insurance?'
+                                onClick={this.toggleChecked.bind(this)}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
                     <Row>
                       <Col sm={6}>
                         <TextField
@@ -256,16 +261,12 @@ export default class ClinicEditForm extends React.Component {
                         />
                       </div>
                     </Row>
-                    <Row>
-                      <Col sm={12} md={12} lg={12}>
+                    <Row style={{marginTop: 20}}>
+                      <Col sm={12} md={6} lg={6}>
                         <NoSSR onSSR={<div>Map Loading...</div>} >
                           <RegistrationMap center={this.state.position} position={this.state.position} mapClick={this.mapClick.bind(this)} />
                         </NoSSR>
                       </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='E-mail'
@@ -282,7 +283,7 @@ export default class ClinicEditForm extends React.Component {
                           fullWidth={false}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.editClinic.bind(this)}

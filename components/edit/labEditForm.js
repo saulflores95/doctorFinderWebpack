@@ -138,7 +138,8 @@ export default class labEditForm extends React.Component {
         padding: '0 0 30px 0'
       },
       formMessageDivisor: {
-        padding: '0 0 10px 0'
+        paddingLeft: 15,
+        paddinRight: 15
       },
       customWidth: {
         width: '95%'
@@ -159,45 +160,34 @@ export default class labEditForm extends React.Component {
             <Paper style={styles.paper} zDepth={3}>
               <Container>
                 <form className='new-lab'>
-                  <div style={styles.formDivisor}>
+                  <div>
                     <Row>
                       <Col sm={12} md={6} lg={6}>
                         <img width='250' height='200' style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={6}>
-                        <TextField
-                          hintText='Laboratory Name'
-                          ref='labName'
-                          defaultValue={lab.name}
-                          fullWidth
-                        />
-                      </Col>
-                      <Col sm={6}>
-                        <Checkbox
-                          label='USA insurance?'
-                          onClick={this.toggleChecked.bind(this)}
-                          defaultValue={lab.insurance}
-                        />
-                      </Col>
-                    </Row>
-                  </div>
-                  <div style={styles.formDivisor}>
-                    <Row>
-                      <Col sm={12} md={12} lg={12}>
-                        <NoSSR onSSR={<div>Map Loading...</div>} >
-                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
-                        </NoSSR>
-                      </Col>
-                      <Col sm={12} md={12} lg={12}>
-                        <TextField
-                          hintText='tag'
-                          ref='tag'
-                          fullWidth
-                          defaultValue={lab.tag}
-                        />
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col sm={12} md={12} lg={12}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Laboratory Name'
+                                ref='labName'
+                                defaultValue={lab.name}
+                                fullWidth
+                              />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 15}}>
+                              <Checkbox
+                                label='USA insurance?'
+                                onClick={this.toggleChecked.bind(this)}
+                                defaultValue={lab.insurance}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
                     <Row>
@@ -247,7 +237,20 @@ export default class labEditForm extends React.Component {
                         />
                       </div>
                     </Row>
-                    <Row>
+                    <Row style={{marginTop: 20}}>
+                      <Col sm={12} md={6} lg={6} style={{marginBottom: 30}}>
+                        <NoSSR onSSR={<div>Map Loading...</div>} >
+                          <RegistrationMap position={this.state.position} mapClick={this.mapClick.bind(this)} />
+                        </NoSSR>
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='tag'
+                          ref='tag'
+                          fullWidth={false}
+                          defaultValue={lab.tag}
+                        />
+                      </Col>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
                           hintText='Phone Number'
@@ -256,7 +259,7 @@ export default class labEditForm extends React.Component {
                           defaultValue={lab.phone}
                         />
                       </Col>
-                      <Col sm={2}>
+                      <Col sm={6} md={6} lg={6} style={{marginTop: 20}}>
                         <RaisedButton
                           label='Register'
                           onClick={this.editLab.bind(this)}

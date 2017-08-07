@@ -140,15 +140,21 @@ export default class PharmacieEditForm extends React.Component {
                         <img width='250' height='200' style={styles.img} src={this.state.url} />
                       </Col>
                       <Col sm={12} md={6} lg={6}>
-                        <Uploader handle={this.handleImageChange.bind(this)} />
-                      </Col>
-                      <Col sm={12} md={6} lg={6} style={{marginTop: 20}}>
-                        <TextField
-                          hintText='Pharmacie Name'
-                          ref='pharmacieName'
-                          fullWidth
-                          defaultValue={this.props.pharmacie.name}
-                        />
+                        <div style={{marginTop: 30}}>
+                          <Row>
+                            <Col sm={12} md={12} lg={12}>
+                              <Uploader handle={this.handleImageChange.bind(this)} />
+                            </Col>
+                            <Col sm={12} md={12} lg={12} style={{marginTop: 20}}>
+                              <TextField
+                                hintText='Pharmacie Name'
+                                ref='pharmacieName'
+                                fullWidth
+                                defaultValue={this.props.pharmacie.name}
+                              />
+                            </Col>
+                          </Row>
+                        </div>
                       </Col>
                     </Row>
                   </div>
