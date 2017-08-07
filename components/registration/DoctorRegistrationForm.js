@@ -180,7 +180,7 @@ export default class DoctorRegistrationForm extends Component {
                       <Col sm={12} md={6} lg={6}>
                         <div style={{marginTop: 30}}>
                           <Row>
-                            <Col  md={6} lg={4} style={{marginRight: 40, paddingTop: 4}}>
+                            <Col md={6} lg={4} style={{marginRight: 40, paddingTop: 4}}>
                               <Uploader handle={this.handleImageChange.bind(this)} />
                             </Col>
                             <Col sm={12} md={6} lg={6}>

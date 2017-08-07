@@ -226,9 +226,9 @@ export default class PharmacieRegistrationForm extends Component {
                           className='button-submit'
                           primary
                         />
-                     </Col>
-                   </Row>
-                 </div>
+                      </Col>
+                    </Row>
+                  </div>
                 </form>
               </Container>
               <div>

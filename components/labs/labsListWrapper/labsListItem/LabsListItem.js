@@ -13,7 +13,7 @@ const LabsListItem = (lab) => (
         <List style={{padding: 0}}>
           <ListItem
             leftAvatar={<Avatar className='img-labSingle' src={lab.img} />}
-            rightIcon={<ActionInfo className='icon-pharmacie' style={{color: '#ef726f', fill: '#ef726f'}}/>}
+            rightIcon={<ActionInfo className='icon-pharmacie' style={{color: '#ef726f', fill: '#ef726f'}} />}
             primaryText={<div className='lab-primaryText'>{lab.name}</div>}
             style={{marginTop: 10, marginBottom: 10}}
           />

@@ -61,7 +61,6 @@ self.addEventListener('fetch', (event) => {
   /*
   let url = event.request.url
 
-
   for(let i = 0; i < requestUrlCatcher.length; i++) {
     console.log(requestUrlCatcher[i])
     var requestValidator = url.indexOf(requestUrlCatcher[i]) !== -1
