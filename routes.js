@@ -29,4 +29,6 @@ routes.add('pharmacie-detail', '/pharmacie-detail/:id')
 routes.add('pharmacie-registration', '/pharmacie-registration')
 routes.add('pharmacie-edit', '/pharmacie-edit/:id')
 
+routes.add('currency-value', '/currency-value')
+
 routes.add('dev', '/dev')

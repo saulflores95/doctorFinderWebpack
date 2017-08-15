@@ -191,7 +191,7 @@ export default class DoctorRegistrationForm extends Component {
                               >
                                 <MenuItem value={'Audiologist'} primaryText='Audiologist' />
                                 <MenuItem value={'Allergist'} primaryText='Allergist' />
-                                <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
+                                <MenuItem value={'Anaesthesiologist'} primaryText='Anaesthesiologist' />
                                 <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
                                 <MenuItem value={'Dentist'} primaryText='Dentist' />
                                 <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />
