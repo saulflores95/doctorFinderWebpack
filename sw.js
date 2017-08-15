@@ -1,7 +1,7 @@
 /*
 ** CONFIG
 */
-const CACHE_VERSION = '0.1.5.4.3.4'
+const CACHE_VERSION = '0.1.5.5'
 const CACHE_NAME = `healthcare-baja-v${CACHE_VERSION}`
 const CACHED_ASSETS = [
   /* [PLACEHOLDER_FOR_FILES] */
@@ -48,6 +48,7 @@ self.addEventListener('fetch', (event) => {
   let url = event.request.url
   let requestUrlCatcher = [
     'edit',
+    'contact',
     'login',
     'register',
     'email',
@@ -58,6 +59,8 @@ self.addEventListener('fetch', (event) => {
     'api'
   ]
   let requestValidator = url.indexOf(requestUrlCatcher[0]) !== -1
+  let requestValidatorContact = url.indexOf(requestUrlCatcher[1]) !== -1
+
   /*
   let url = event.request.url
 
@@ -112,8 +115,8 @@ self.addEventListener('fetch', (event) => {
     console.log('local host registration cache ignored')
     event.respondWith(fetch(event.request))
   }
-  if (requestValidator === true) {
-    console.log('localhost edit ignored')
+  if (requestValidator === true || requestValidatorContact === true) {
+    console.log('localhost edit or  Contact ignored')
     event.respondWith(fetch(event.request))
   }
   if (event.request.url === 'http://localhost:3000/api/image-upload') {
