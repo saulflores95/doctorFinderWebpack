@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
 import axios from 'axios'
+import { Col, Row } from 'react-grid-system'
 
 export default class BorderWaitTime extends Component {
   constructor () {
@@ -93,25 +94,44 @@ export default class BorderWaitTime extends Component {
     console.log('San Ysidro:', sanYsidroBorder);
     return (
       <div className='borderTimes'>
-        <h1>Otay - Car</h1>
-        <h2>Standard: {otayBorder.car.standard}</h2>
-        <h2>Readylane: {otayBorder.car.readyLane}</h2>
-        <h2>Sentri: {otayBorder.car.sentri}</h2>
-        <h1>Otay - Pedestrian</h1>
-        <h2>Standard: {otayBorder.ped.standard}</h2>
-        <h2>Readylane: {otayBorder.ped.readyLane}</h2>
-        <h1>San Ysidro - Car</h1>
-        <h2>Standard: {sanYsidroBorder.car.standard}</h2>
-        <h2>Readylane: {sanYsidroBorder.car.readyLane}</h2>
-        <h2>Sentri: {sanYsidroBorder.car.sentri}</h2>
-        <h1>San Ysidro - Pedestrian</h1>
-        <h2>Standard: {sanYsidroBorder.ped.standard}</h2>
-        <h2>Readylane: {sanYsidroBorder.ped.readyLane}</h2>
-        <h2>Sentri: {sanYsidroBorder.ped.sentri}</h2>
-
+        <Row>
+          <Col md={6} lg={6} xl={6}>
+            <h1 className='title'>Otay - Car</h1>
+            <div className='times'>
+              <h2>Standard: {otayBorder.car.standard}</h2>
+              <h2>Readylane: {otayBorder.car.readyLane}</h2>
+            </div>
+            <h2>Sentri: {otayBorder.car.sentri}</h2>
+            <div className='times'>
+              <h1 className='title'>Otay - Pedestrian</h1>
+              <h2>Standard: {otayBorder.ped.standard}</h2>
+              <h2>Readylane: {otayBorder.ped.readyLane}</h2>
+            </div>
+          </Col>
+          <Col md={6} lg={6} xl={6}>
+            <h1 className='title'>San Ysidro - Car</h1>
+            <div className='times'>
+              <h2>Standard: {sanYsidroBorder.car.standard}</h2>
+              <h2>Readylane: {sanYsidroBorder.car.readyLane}</h2>
+              <h2>Sentri: {sanYsidroBorder.car.sentri}</h2>
+            </div>
+            <h1 className='title'>San Ysidro - Pedestrian</h1>
+            <div className='times'>
+              <h2>Standard: {sanYsidroBorder.ped.standard}</h2>
+              <h2>Readylane: {sanYsidroBorder.ped.readyLane}</h2>
+              <h2>Sentri: {sanYsidroBorder.ped.sentri}</h2>
+            </div>
+          </Col>
+        </Row>
         <style jsx>{`
           .borderTimes {
             margin-bottom: 300px;
+          }
+          .title {
+            text-align: center;
+          }
+          .times {
+            text-align: justify;
           }
         `}</style>
       </div>

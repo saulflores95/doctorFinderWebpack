@@ -4,13 +4,20 @@ import ContactForm from '../components/contact/ContactForm'
 import BorderWaitTime from '../components/border/borderWaitTime'
 import fetch from 'isomorphic-unfetch'
 import CurrencyValue from '../components/border/CurrencyValue'
+import { Col, Row } from 'react-grid-system'
 
 const contact = ({ borderWaitTimeJSON, currency }) => (
   <div>
     <App>
-      <ContactForm />
-      <CurrencyValue currency={currency} />
-      <BorderWaitTime times={ borderWaitTimeJSON }/>
+      <Row>
+        <Col md={6} lg={6} xl={6}>
+          <ContactForm />
+        </Col>
+        <Col md={6} lg={6} xl={6}>
+          <CurrencyValue currency={currency} />
+          <BorderWaitTime times={ borderWaitTimeJSON }/>
+        </Col>
+      </Row>
     </App>
   </div>
 )

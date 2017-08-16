@@ -16,9 +16,14 @@ export default class CurrencyValue extends Component {
     let day = result[4].replace('-', ' ')
     console.log(pesos, year, month, day)
     return (
-      <div>
-        <p>Total de pesos por 1 dollar: {pesos}</p>
-        <p>fecha : {year}/{month}/{day}</p>
+      <div className='currency'>
+        <h1>1 DLLS : {pesos} MXN</h1>
+        <h3>fecha : {year}/{month}/{day}</h3>
+        <style jsx>{`
+          .currency {
+            text-align: center;
+          }
+        `}</style>
       </div>
     )
   }
