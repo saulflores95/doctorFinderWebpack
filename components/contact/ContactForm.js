@@ -6,13 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 const ContactForm = (email, phone) => (
   <div className='wrapper'>
-    <div className='img-container'>
-      <img className='img' src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
-    </div>
-    <div className='text-container'>
-      <h2 className='text'>Contact us</h2>
-      <h2 className='text'>It is our pleasure!</h2>
-    </div>
     <Container className='contactForm'>
       <MuiThemeProvider>
         <div>
@@ -53,44 +46,14 @@ const ContactForm = (email, phone) => (
           padding-bottom: 140px;
         }
 
-        .text{
-          text-align: center;
-          color: #2d517b;
-          font-size: 16px;
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-          font-family: 'Montserrat', sans-serif;
-        }
-
         .label {
           color: #2d517b !important;
           background-image: none !important;
           font-family: 'Montserrat', sans-serif;
         }
 
-        .img-container {
-          margin-right: auto;
-          display: block;
-          width: 128px;
-          height: 128px;
-          margin-left: auto;
-        }
-
         .contactForm {
           padding-top: 15px;
-        }
-
-        .img {
-          margin-left: auto;
-          margin-right: auto;
-          display: bock;
-        }
-
-        .text-container {
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
         }
 
         .button-form {

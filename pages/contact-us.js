@@ -9,6 +9,12 @@ import { Col, Row } from 'react-grid-system'
 const contact = ({ borderWaitTimeJSON, currency }) => (
   <div>
     <App>
+      <div className='img-container'>
+        <img className='img' src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
+      </div>
+      <div className='text-container'>
+        <h2 className='text'>Services</h2>
+      </div>
       <Row>
         <Col md={6} lg={6} xl={6}>
           <ContactForm />
@@ -19,6 +25,39 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
         </Col>
       </Row>
     </App>
+    <style jsx>{`
+
+      .img-container {
+        margin-right: auto;
+        display: block;
+        width: 128px;
+        height: 128px;
+        margin-left: auto;
+      }
+
+      .text{
+        text-align: center;
+        color: #2d517b;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .text-container {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      .img {
+        margin-left: auto;
+        margin-right: auto;
+        display: bock;
+      }
+
+    `}</style>
   </div>
 )
 
