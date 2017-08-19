@@ -19,7 +19,7 @@ export default class DoctorRegistrationForm extends Component {
     super()
     this.state = {
       toogleState: false,
-      value: 'Podologia',
+      value: 'Podologist',
       count: 0,
       position: [32, 100],
       url: 'https://s3-us-west-1.amazonaws.com/healthcarebaja/9.png'
