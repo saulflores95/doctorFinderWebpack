@@ -20,7 +20,7 @@ const LabsDetail = ({lab}) => (
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div style={{marginTop: 15}}>
-              <GeneralContactForm phone={lab[0].phone} email={lab[0].email toName={lab[0].name}} />
+              <GeneralContactForm phone={lab[0].phone} email={lab[0].email} toName={lab[0].name} />
             </div>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
