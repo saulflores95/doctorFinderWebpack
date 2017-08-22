@@ -58,35 +58,27 @@ export default class BorderWaitTime extends Component {
     let otayDataCar = this.props.times[0].description
     let otayDataPed = this.props.times[1].description
     /* Car Data    */
-    let otayStandardUnfilteredCar = otayDataCar.substring(otayDataCar.lastIndexOf('Standard') + 1, otayDataCar.lastIndexOf('Ready'))
-    let otayStandardFilterCar = otayStandardUnfilteredCar.substring(otayStandardUnfilteredCar.lastIndexOf('Standard') + 1, otayStandardUnfilteredCar.lastIndexOf('Ready'))
-    let otayStandardCar = otayStandardFilterCar.substring(otayStandardFilterCar.lastIndexOf('PDT') + 3, otayStandardFilterCar.lastIndexOf('delay'))
-    console.log('Otay Standard Car:', otayStandardCar)
-    let otayReadylaneUnfilteredCar = otayDataCar.substring(otayDataCar.lastIndexOf('ReadyLane') + 1, otayDataCar.lastIndexOf('Sentri'))
-    let otayReadylaneFilterCar = otayReadylaneUnfilteredCar.substring(otayReadylaneUnfilteredCar.lastIndexOf('Readylane: At') + 1, otayReadylaneUnfilteredCar.lastIndexOf('open'))
-    let otayReadylaneCar = otayReadylaneFilterCar.substring(otayReadylaneFilterCar.lastIndexOf('PDT,') + 4, otayReadylaneFilterCar.lastIndexOf('delay'))
-    console.log('Otay Ready Lane Car:', otayReadylaneCar)
-    let otaySentriUnfilteredCar = otayDataCar.substring(otayDataCar.lastIndexOf('Sentri Lanes') + 1, otayDataCar.lastIndexOf('open Maximum'))
-    let otaySentriCar = otaySentriUnfilteredCar.substring(otaySentriUnfilteredCar.lastIndexOf('PDT') + 3, otaySentriUnfilteredCar.lastIndexOf('lane') - 2)
-    console.log('Otay Sentri Car:', otaySentriCar)
+    let otayCarFilter = this.validator(otayDataCar.match(/([00-99])\w mi\w/g))
+    let otayCarStandard = this.validator(otayCarFilter[0])
+    let otayCarReadylane = this.validator(otayCarFilter[1])
+    let otayCarSentri = this.validator(otayCarFilter[2])
+
     /* Ped  Data    */
-    let otayPedStandard = otayDataPed.substring(otayDataPed.lastIndexOf('Standard Lanes:') + 32, otayDataPed.lastIndexOf('lane(s) open  Readylane') - 2)
-    console.log('Otay Standard Ped:', otayPedStandard)
-    let otayPedReadylane = otayDataPed.substring(otayDataPed.lastIndexOf('Readylane: At') + 28, otayDataPed.lastIndexOf('lane(s)') - 4)
-    console.log('Otay Readlane Ped:', otayPedReadylane)
+    let otayPedFilter = this.validator(otayDataPed.match(/([00-99])\w mi\w/g))
+    let otayPedStandard = this.validator(otayPedFilter[0])
+    let otayPedReadylane = this.validator(otayPedFilter[1])
 
     let OtayBorderTimes = {
       car: {
-        standard: otayStandardCar,
-        readyLane: otayReadylaneCar,
-        sentri: otaySentriCar
+        standard: otayCarStandard,
+        readyLane: otayCarReadylane,
+        sentri: otayCarSentri
       },
       ped: {
         standard: otayPedStandard,
         readyLane: otayPedReadylane
       }
     }
-
     return OtayBorderTimes
   }
 
