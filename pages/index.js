@@ -73,7 +73,7 @@ export default class landing extends Component {
                     <nav id='main-menu'>
                       <ul className='main-top-menu'>
                         <li><a href='#about'>About us</a></li>
-                        <li><a target='_blank' href='https://issuu.com/guiacomercialtijuana2/docs/hcbj-001/1?ff=true&e=25782513/51560412'>Online Magazine</a></li>
+                        <li><a target='_blank' href='https://issuu.com/guiacomercialtijuana2/docs/hcbj-002__1_/1?ff=true&e=25782513/51560412'>Online Magazine</a></li>
                         <li><a href='#features'>Services</a></li>
                         <li><a href='/doctors'>Directory</a></li>
                         <li><a href='#contact'>Contact</a></li>
