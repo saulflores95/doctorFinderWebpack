@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer')
 const mailController = {}
 
 mailController.post = (req, res) => {
-  const { name, email, message, to } = req.body
+  const { name, email, message, to, toName } = req.body
   let transporter = nodemailer.createTransport(smtpTransport({
     host: 'a2plcpnl0950.prod.iad2.secureserver.net',
     port: 465,
@@ -25,6 +25,7 @@ mailController.post = (req, res) => {
         ${message} </br>
         Contact me back at: <b>${email}</b>
         <p>Do not respond this email as it is an automated message, thank you!</p>
+        <p>This message was sent from ${toName} detail page</p>
         <img src='https://media.tenor.com/images/1e0a8c05fa4735cbfc94c8fa337b305c/tenor.gif' />
       </div>` // You can choose to send an HTML body instead
   }

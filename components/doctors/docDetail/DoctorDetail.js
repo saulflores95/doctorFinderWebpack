@@ -33,7 +33,7 @@ const DoctorDetail = (doctor) => (
           <Row>
             <Col xs={12} sm={12} md={6} lg={6}>
               <div style={{marginTop: 15}}>
-                <GeneralContactForm phone={doctor.doctor[0].phone} email={doctor.doctor[0].email} />
+                <GeneralContactForm phone={doctor.doctor[0].phone} email={doctor.doctor[0].email} toName={doctor.doctor[0].name} />
               </div>
             </Col>
             <Col xs={12} sm={12} md={6} lg={6}>

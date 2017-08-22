@@ -30,7 +30,8 @@ export default class GeneralContactForm extends Component {
       name: Name,
       email: Email,
       message: Message,
-      to: clientEmail
+      to: clientEmail,
+      toName: this.props.toName
     })
     .then(function (response) {
       console.log(response)
