@@ -1,9 +1,13 @@
 module.exports = {
-  webpack: function (c) {
-    if (c.resolve.alias) {
-      delete c.resolve.alias['react']
-      delete c.resolve.alias['react-dom']
-    }
-    return c
+  webpack(cfg) {
+    cfg.plugins = cfg.plugins.filter(plugin => {
+      if (plugin.constructor.name === 'UglifyJsPlugin') {
+        return false;
+      } else {
+        return true;
+      }
+    });
+
+    return cfg;
   }
-}
+};
