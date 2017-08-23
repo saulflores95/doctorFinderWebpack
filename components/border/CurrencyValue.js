@@ -11,17 +11,24 @@ export default class CurrencyValue extends Component {
     let patt = /[+-]?\d+(\.\d+)?/g
     let result = currency.match(patt)
     let pesos = result[0]
-    let year = result[2]
-    let month = result[3].replace('-', ' ')
-    let day = result[4].replace('-', ' ')
-    console.log(pesos, year, month, day)
+    //  let year = result[2]
+    //  let month = result[3].replace('-', ' ')
+    //  let day = result[4].replace('-', ' ')
     return (
       <div className='currency'>
-        <h1>1 DLLS : {pesos} MXN</h1>
-        <h3>fecha : {year}/{month}/{day}</h3>
+        <h3>Currency Exchange</h3>
+        <p>1 DLLS : {pesos} MXN</p>
         <style jsx>{`
           .currency {
             text-align: center;
+          }
+          p {
+            color: #2d517b !important;
+            font-family: 'Montserrat', sans-serif;
+          }
+          h3 {
+            color: #2d517b !important;
+            font-family: 'Montserrat', sans-serif;
           }
         `}</style>
       </div>
