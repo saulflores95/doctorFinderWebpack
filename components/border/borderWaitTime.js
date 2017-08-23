@@ -87,31 +87,32 @@ export default class BorderWaitTime extends Component {
     let sanYsidroBorder = this.sanYsidroBorderTimes()
     return (
       <div className='borderTimes'>
+        <h3 className='border-text'>Border Wait</h3>
         <Row>
           <Col md={6} lg={6} xl={6}>
-            <h1 className='title'>Otay - Car</h1>
+            <h3 className='title'>Otay - Car</h3>
             <div className='times'>
-              <h2>Standard: {otayBorder.car.standard}</h2>
-              <h2>Readylane: {otayBorder.car.readyLane}</h2>
-              <h2>Sentri: {otayBorder.car.sentri}</h2>
+              <p>Standard: {otayBorder.car.standard}</p>
+              <p>Readylane: {otayBorder.car.readyLane}</p>
+              <p>Sentri: {otayBorder.car.sentri}</p>
             </div>
             <div className='times'>
-              <h1 className='title'>Otay - Pedestrian</h1>
-              <h2>Standard: {otayBorder.ped.standard}</h2>
-              <h2>Readylane: {otayBorder.ped.readyLane}</h2>
+              <h3 className='title'>Otay - Pedestrian</h3>
+              <p>Standard: {otayBorder.ped.standard}</p>
+              <p>Readylane: {otayBorder.ped.readyLane}</p>
             </div>
           </Col>
           <Col md={6} lg={6} xl={6}>
-            <h1 className='title'>San Ysidro - Car</h1>
+            <h3 className='title'>San Ysidro - Car</h3>
             <div className='times'>
-              <h2>Standard: {sanYsidroBorder.car.standard}</h2>
-              <h2>Readylane: {sanYsidroBorder.car.readyLane}</h2>
-              <h2>Sentri: {sanYsidroBorder.car.sentri}</h2>
+              <p>Standard: {sanYsidroBorder.car.standard}</p>
+              <p>Readylane: {sanYsidroBorder.car.readyLane}</p>
+              <p>Sentri: {sanYsidroBorder.car.sentri}</p>
             </div>
-            <h1 className='title'>San Ysidro - Pedestrian</h1>
-            <h2>Standard: {sanYsidroBorder.ped.standard}</h2>
-            <h2>Readylane: {sanYsidroBorder.ped.readyLane}</h2>
-            <h2>Sentri: {sanYsidroBorder.ped.sentri}</h2>
+            <h3 className='title'>San Ysidro - Pedestrian</h3>
+            <p>Standard: {sanYsidroBorder.ped.standard}</p>
+            <p>Readylane: {sanYsidroBorder.ped.readyLane}</p>
+            <p>Sentri: {sanYsidroBorder.ped.sentri}</p>
           </Col>
         </Row>
         <style jsx>{`
@@ -119,10 +120,21 @@ export default class BorderWaitTime extends Component {
             margin-bottom: 300px;
           }
           .title {
-            text-align: center;
+            text-align: left;
+            color: #2d517b !important;
+            font-family: 'Montserrat', sans-serif;
           }
           .times {
             text-align: justify;
+          }
+          p {
+            color: #2d517b !important;
+            font-family: 'Montserrat', sans-serif;
+          }
+          .border-text {
+            text-align: center;
+            color: #2d517b !important;
+            font-family: 'Montserrat', sans-serif;
           }
         `}</style>
       </div>

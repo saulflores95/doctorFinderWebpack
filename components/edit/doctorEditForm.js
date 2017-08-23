@@ -19,7 +19,7 @@ export default class DoctorEditForm extends React.Component {
     super()
     this.state = {
       toogleState: false,
-      value: 'Podologia',
+      value: 'Podiatrist',
       count: 0,
       position: [32, 100],
       url: ''

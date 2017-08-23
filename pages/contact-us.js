@@ -9,18 +9,24 @@ import { Col, Row } from 'react-grid-system'
 const contact = ({ borderWaitTimeJSON, currency }) => (
   <div>
     <App>
-      <div className='img-container'>
-        <img className='img' src='https://s3-us-west-1.amazonaws.com/healthcarebaja/undefined/CategoryIcons/splashscreen.png' />
-      </div>
-      <div className='text-container'>
-        <h2 className='text'>Services</h2>
-      </div>
       <Row>
         <Col md={6} lg={6} xl={6}>
+          <div className='img-container'>
+            <img className='img' src='../static/contactUs.png' />
+          </div>
+          <div className='text-container'>
+            <h2 className='text'>Contact us</h2>
+          </div>
           <ContactForm />
         </Col>
-        <Col md={6} lg={6} xl={6}>
+        <Col md={6} lg={6} xl={6} style={{marginTop: 17}}>
+          <div className='img-container'>
+            <img className='img' src='../static/currency.png' />
+          </div>
           <CurrencyValue currency={currency} />
+          <div className='img-container'>
+            <img className='img' src='../static/border.png' />
+          </div>
           <BorderWaitTime times={borderWaitTimeJSON} />
         </Col>
       </Row>
