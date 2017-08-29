@@ -33,7 +33,7 @@ const ContactForm = (email, phone) => (
               labelPosition='before'
               primary={false}
               backgroundColor='#2d517b'
-              style={{marginLeft: 'auto', marginRight: 'auto', display: 'block', width: 300, marginTop: 20, marginBottom: 20}}
+              style={{marginLeft: 'auto', marginRight: 'auto', display: 'block', width: 290, marginTop: 20, marginBottom: 20}}
           />
           </div>
         </div>
@@ -43,7 +43,6 @@ const ContactForm = (email, phone) => (
       {`
         .wrapper{
           padding-top: 15px;
-          padding-bottom: 140px;
         }
 
         .label {

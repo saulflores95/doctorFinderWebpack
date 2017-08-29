@@ -10,7 +10,7 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
   <div>
     <App>
       <Row>
-        <Col md={6} lg={6} xl={6}>
+        <Col md={12} lg={12} xl={12} style={{marginTop: 15}}>
           <div className='img-container'>
             <img className='img' src='../static/contactUs.png' />
           </div>
@@ -19,11 +19,13 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
           </div>
           <ContactForm />
         </Col>
-        <Col md={6} lg={6} xl={6} style={{marginTop: 17}}>
+        <Col md={12} lg={12} xl={12} style={{marginTop: 30}}>
           <div className='img-container'>
             <img className='img' src='../static/currency.png' />
           </div>
           <CurrencyValue currency={currency} />
+        </Col>
+        <Col md={12} lg={12} xl={12} style={{marginTop: 17}}>
           <div className='img-container'>
             <img className='img' src='../static/border.png' />
           </div>
@@ -36,8 +38,8 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
       .img-container {
         margin-right: auto;
         display: block;
-        width: 128px;
-        height: 128px;
+        width: 100px;
+        height: 100px;
         margin-left: auto;
       }
 
@@ -63,6 +65,10 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
         display: bock;
       }
 
+      img {
+        width: 100%;
+        height: 100%;
+      }
     `}</style>
   </div>
 )
