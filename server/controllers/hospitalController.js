@@ -51,7 +51,8 @@ hospitalController.put = (req, res) => {
     insurance,
     phone,
     address,
-    email
+    email,
+    facebook
   } = req.body
   let id = req.params.id
   db.Hospital.findById(id, function (err, hospital) {
@@ -70,7 +71,7 @@ hospitalController.put = (req, res) => {
       hospital.phone = phone
       hospital.address = address
       hospital.position = position
-
+      hospital.facebook = facebook
       hospital.save(function (err) {
         if (err) {
           console.log('error in updating collection')

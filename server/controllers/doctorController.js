@@ -53,6 +53,7 @@ doctorController.put = (req, res) => {
     insurance,
     curriculum,
     email,
+    facebook,
     specialty,
     phone,
     address,
@@ -72,11 +73,11 @@ doctorController.put = (req, res) => {
       doctor.insurance = insurance
       doctor.curriculum = curriculum
       doctor.email = email
+      doctor.facebook = facebook
       doctor.specialty = specialty
       doctor.phone = phone
       doctor.address = address
       doctor.position = position
-
       doctor.save(function (err) {
         if (err) {
           console.log('error in updating collection')

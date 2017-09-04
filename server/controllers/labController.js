@@ -53,7 +53,9 @@ labController.put = (req, res) => {
     insurance,
     phone,
     tag,
-    email
+    email,
+    facebook
+
   } = req.body
 
   let id = req.params.id
@@ -73,7 +75,7 @@ labController.put = (req, res) => {
       lab.tag = tag
       lab.phone = phone
       lab.position = position
-
+      lab.facebook = facebook
       lab.save(function (err) {
         if (err) {
           console.log('error in updating collection')

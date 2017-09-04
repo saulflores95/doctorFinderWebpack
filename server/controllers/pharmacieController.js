@@ -54,7 +54,8 @@ phrmacieController.put = (req, res) => {
     phone,
     address,
     tag,
-    email
+    email,
+    facebook
   } = req.body
 
   let id = req.params.id
@@ -75,7 +76,7 @@ phrmacieController.put = (req, res) => {
       pharmacie.phone = phone
       pharmacie.address = address
       pharmacie.position = position
-
+      pharmacie.facebook = facebook
       pharmacie.save(function (err) {
         if (err) {
           console.log('error in updating collection')

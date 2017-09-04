@@ -54,6 +54,7 @@ clinicController.put = (req, res) => {
     specialty,
     phone,
     address,
+    facebook,
     position
   } = req.body
   let id = req.params.id
@@ -74,6 +75,7 @@ clinicController.put = (req, res) => {
       clinic.specialty = specialty
       clinic.phone = phone
       clinic.address = address
+      clinic.facebook = facebook
       clinic.position = position
 
       clinic.save(function (err) {
