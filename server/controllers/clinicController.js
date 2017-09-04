@@ -6,6 +6,7 @@ clinicController.post = (req, res) => {
   const {
     name,
     email,
+    facebook,
     description,
     phone,
     address,
@@ -19,6 +20,7 @@ clinicController.post = (req, res) => {
   const clinic = new db.Clinic({
     name,
     email,
+    facebook,
     description,
     phone,
     img,

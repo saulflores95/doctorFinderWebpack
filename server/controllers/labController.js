@@ -13,6 +13,7 @@ labController.post = (req, res) => {
     phone,
     tag,
     email,
+    facebook,
     userId
   } = req.body
 
@@ -26,6 +27,7 @@ labController.post = (req, res) => {
     phone,
     tag,
     email,
+    facebook,
     _creator: userId
   })
 

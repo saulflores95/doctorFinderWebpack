@@ -13,6 +13,7 @@ phrmacieController.post = (req, res) => {
     phone,
     tag,
     email,
+    facebook,
     userId
   } = req.body
 
@@ -26,6 +27,7 @@ phrmacieController.post = (req, res) => {
     phone,
     tag,
     email,
+    facebook,
     _creator: userId
   })
 

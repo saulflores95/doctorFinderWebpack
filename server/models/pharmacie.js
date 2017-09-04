@@ -14,6 +14,7 @@ const pharmacieSchema = new Schema({
   tag: String,
   createdAt: { type: Date, default: Date.now },
   email: String,
+  facebook: {type: String, default: 'https://www.facebook.com/healthcarebaja/'},
   _creator: { type: Schema.ObjectId, ref: 'User' },
   isDeleted: { type: Boolean, default: false }
 })

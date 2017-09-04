@@ -12,6 +12,7 @@ const hospitalSchema = new Schema({
   categories: { type: Array, default: ['Categories not available'] },
   phone: String,
   email: String,
+  facebook: {type: String, default: 'https://www.facebook.com/healthcarebaja/'},
   createdAt: { type: Date, default: Date.now },
   _creator: { type: Schema.ObjectId, ref: 'User' },
   isDeleted: { type: Boolean, default: false }

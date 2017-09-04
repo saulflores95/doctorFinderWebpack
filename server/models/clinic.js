@@ -5,6 +5,7 @@ mongoose.Promise = global.Promise
 const clinicSchema = new Schema({
   name: { type: String, reqired: true },
   email: String,
+  facebook: {type: String, default: 'https://www.facebook.com/healthcarebaja/'},
   description: String,
   img: { type: String, reqired: true },
   address: String,

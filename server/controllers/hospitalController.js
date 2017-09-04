@@ -12,6 +12,7 @@ hospitalController.post = (req, res) => {
     insurance,
     phone,
     email,
+    facebook,
     userId
   } = req.body
 
@@ -24,6 +25,7 @@ hospitalController.post = (req, res) => {
     insurance,
     phone,
     email,
+    facebook,
     _creator: userId
   })
 
