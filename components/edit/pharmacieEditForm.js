@@ -65,6 +65,7 @@ export default class PharmacieEditForm extends React.Component {
     var phone = this.refs.phone.getValue()
     var email = this.refs.email.getValue()
     var tag = this.refs.tag.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -82,7 +83,8 @@ export default class PharmacieEditForm extends React.Component {
       phone,
       email,
       position: this.state.position,
-      tag
+      tag,
+      facebook
     }
     if (pharmacie) {
       axios.put(`/api/pharmacie-edit/${this.props.pharmacie._id}`, {
@@ -94,7 +96,8 @@ export default class PharmacieEditForm extends React.Component {
         phone: pharmacie.phone,
         email: pharmacie.email,
         position: pharmacie.position,
-        tag: pharmacie.tag
+        tag: pharmacie.tag,
+        facebook: pharmacie.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -233,6 +236,14 @@ export default class PharmacieEditForm extends React.Component {
                           hintText='E-mail'
                           ref='email'
                           defaultValue={this.props.pharmacie.email}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Facebook'
+                          ref='facebook'
+                          defaultValue={this.props.pharmacie.facebook}
                           fullWidth={false}
                         />
                       </Col>

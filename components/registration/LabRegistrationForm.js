@@ -68,6 +68,7 @@ export default class LabRegistrationForm extends Component {
     var email = this.refs.email.getValue()
     var tag = this.refs.tag.getValue()
     var description = this.refs.description.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -84,7 +85,8 @@ export default class LabRegistrationForm extends Component {
       tag: tag,
       insurance: insurance,
       description: description,
-      categories: categories
+      categories: categories,
+      facebook: facebook
     }
 
     let _self = this
@@ -99,7 +101,8 @@ export default class LabRegistrationForm extends Component {
         email: lab.email,
         insurance: lab.insurance,
         description: lab.description,
-        categories: lab.categories
+        categories: lab.categories,
+        facebook: lab.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -239,6 +242,13 @@ export default class LabRegistrationForm extends Component {
                           <TextField
                             hintText='Phone Number'
                             ref='phone'
+                            fullWidth={false}
+                          />
+                        </Col>
+                        <Col sm={6} md={6} lg={6}>
+                          <TextField
+                            hintText='Facebook'
+                            ref='facebook'
                             fullWidth={false}
                           />
                         </Col>

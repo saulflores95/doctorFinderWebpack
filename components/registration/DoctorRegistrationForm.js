@@ -113,7 +113,6 @@ export default class DoctorRegistrationForm extends Component {
       facebook: facebook
     }
 
-
     console.log('Doctor: ', doctor)
     let _self = this
 

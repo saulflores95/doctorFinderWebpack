@@ -20,7 +20,7 @@ const ClinicDetail = ({clinic}) => (
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>
             <div style={{marginTop: 15}}>
-              <GeneralContactForm phone={clinic[0].phone} email={clinic[0].email} facebook={clinic[0].facebook}/>
+              <GeneralContactForm phone={clinic[0].phone} email={clinic[0].email} facebook={clinic[0].facebook} />
             </div>
           </Col>
           <Col xs={12} sm={12} md={6} lg={6}>

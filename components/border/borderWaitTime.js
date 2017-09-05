@@ -118,10 +118,6 @@ export default class BorderWaitTime extends Component {
           </div>
         </Row>
         <style jsx>{`
-          .borderTimes {
-            margin-bottom: 150px;
-          }
-
           .div-row {
             margin-left: auto;
             margin-right: auto;

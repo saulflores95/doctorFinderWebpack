@@ -31,6 +31,13 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
           </div>
           <BorderWaitTime times={borderWaitTimeJSON} />
         </Col>
+        <Col md={12} lg={12} xl={12} style={{marginTop: 17, marginBottom: 150}}>
+          <a href='https://www.facebook.com/healthcarebaja/' target='_blank'>
+            <div style={{textAlign: 'center'}}>
+              <img src='../../static/facebook.png' alt='facebook' height='30' width='30' style={{marginTop: 5}} />
+            </div>
+          </a>
+        </Col>
       </Row>
     </App>
     <style jsx>{`
@@ -63,9 +70,6 @@ const contact = ({ borderWaitTimeJSON, currency }) => (
         margin-left: auto;
         margin-right: auto;
         display: bock;
-      }
-
-      img {
         width: 100%;
         height: 100%;
       }

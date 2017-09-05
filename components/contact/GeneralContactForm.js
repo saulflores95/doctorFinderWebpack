@@ -42,21 +42,21 @@ export default class GeneralContactForm extends Component {
     })
   }
 
-  facebook_checker () {
-    if(this.props.facebook) {
+  facebookChecker () {
+    if (this.props.facebook) {
       let facebook = this.props.facebook
       return (
         <Col xs={4} sm={2} md={3} lg={3} xl={2}>
           <a href={facebook} target='_blank'>
             <div>
-              <img src='../../static/facebook.png' alt='facebook' height='40' width='40' />
+              <img src='../../static/facebook.png' alt='facebook' height='30' width='30' style={{marginTop: 5}} />
             </div>
           </a>
         </Col>
       )
-    }
-    else
+    } else {
       return null
+    }
   }
 
   render () {
@@ -105,7 +105,7 @@ export default class GeneralContactForm extends Component {
                   onClick={() => window.open(`tel:${this.props.phone}`)}
                 />
               </Col>
-              {this.facebook_checker()}
+              {this.facebookChecker()}
             </Row>
           </form>
         </MuiThemeProvider>
