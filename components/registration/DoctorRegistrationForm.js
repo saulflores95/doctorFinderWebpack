@@ -22,7 +22,8 @@ export default class DoctorRegistrationForm extends Component {
       value: 'Podologist',
       count: 0,
       position: [32, 100],
-      url: 'https://s3-us-west-1.amazonaws.com/healthcarebaja/9.png'
+      url: 'https://s3-us-west-1.amazonaws.com/healthcarebaja/9.png',
+      facebook: ''
     }
     this.alertOptions = {
       offset: 14,
@@ -97,6 +98,7 @@ export default class DoctorRegistrationForm extends Component {
     var email = this.refs.email.getValue()
     var phone = this.refs.phone.getValue()
     var address = this.refs.address.getValue()
+    var facebook = this.refs.facebook.getValue()
     var doctor = {
       name: name,
       img: img,
@@ -107,8 +109,10 @@ export default class DoctorRegistrationForm extends Component {
       specialty: specialty,
       phone: phone,
       address: address,
-      position: this.state.position
+      position: this.state.position,
+      facebook: facebook
     }
+
 
     console.log('Doctor: ', doctor)
     let _self = this
@@ -124,7 +128,8 @@ export default class DoctorRegistrationForm extends Component {
         phone: doctor.phone,
         specialty: doctor.specialty,
         address: doctor.address,
-        position: doctor.position
+        position: doctor.position,
+        facebook: doctor.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -329,6 +334,13 @@ export default class DoctorRegistrationForm extends Component {
                         <TextField
                           hintText='Phone Number'
                           ref='phone'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Facebook'
+                          ref='facebook'
                           fullWidth={false}
                         />
                       </Col>

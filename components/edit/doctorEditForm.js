@@ -51,6 +51,7 @@ export default class DoctorEditForm extends React.Component {
     var position = this.state.position
     var insurance = this.state.toogleState
     var specialty = this.state.value
+    var facebook = this.refs.address.getValue()
     var curriculum = {
       one: this.refs.curriculumOne.getValue(),
       two: this.refs.curriculumTwo.getValue(),
@@ -70,7 +71,8 @@ export default class DoctorEditForm extends React.Component {
       insurance: insurance,
       curriculum: curriculum,
       email: email,
-      specialty: specialty
+      specialty: specialty,
+      facebook: facebook
     }
 
     if (doctor) {
@@ -84,7 +86,8 @@ export default class DoctorEditForm extends React.Component {
         phone: doctor.phone,
         specialty: doctor.specialty,
         address: doctor.address,
-        position: doctor.position
+        position: doctor.position,
+        facebook: doctor.facebook
       }).then(function (response) {
         console.log(response)
       }).catch(function (err) {
@@ -337,6 +340,14 @@ export default class DoctorEditForm extends React.Component {
                           hintText='Phone Number'
                           ref='phone'
                           defaultValue={doctor.phone}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Fhacebook'
+                          ref='facebook'
+                          defaultValue={doctor.facebook}
                           fullWidth={false}
                         />
                       </Col>
