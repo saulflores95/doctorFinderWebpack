@@ -3,6 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
+import FaFacebook from 'react-icons/lib/fa/facebook'
+import FaApple from 'react-icons/lib/fa/apple'
 import axios from 'axios'
 
 export default class GeneralContactForm extends Component {
@@ -42,6 +44,9 @@ export default class GeneralContactForm extends Component {
   }
 
   render () {
+    let facebook = this.props.facebook
+    console.log(facebook)
+    console.log('hola')
     return (
       <div>
         <MuiThemeProvider>
@@ -81,6 +86,16 @@ export default class GeneralContactForm extends Component {
               icon={<FaPhone className='label-icon' />}
               onClick={() => window.open(`tel:${this.props.phone}`)}
             />
+            <a href={facebook} target='_blank'>
+              <div>
+                <RaisedButton
+                  labelPosition='before'
+                  primary={false}
+                  backgroundColor='#2d517b'
+                  icon={<FaFacebook style={{color: 'white'}} />}
+                />
+              </div>
+            </a>
           </form>
         </MuiThemeProvider>
         <style jsx>
