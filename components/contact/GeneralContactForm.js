@@ -3,9 +3,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
 import FaPhone from 'react-icons/lib/fa/phone'
-import FaFacebook from 'react-icons/lib/fa/facebook'
-import FaApple from 'react-icons/lib/fa/apple'
 import axios from 'axios'
+import {Row, Col} from 'react-grid-system'
 
 export default class GeneralContactForm extends Component {
   constructor () {
@@ -43,9 +42,24 @@ export default class GeneralContactForm extends Component {
     })
   }
 
+  facebook_checker () {
+    if(this.props.facebook) {
+      let facebook = this.props.facebook
+      return (
+        <Col xs={4} sm={2} md={3} lg={3} xl={2}>
+          <a href={facebook} target='_blank'>
+            <div>
+              <img src='../../static/facebook.png' alt='facebook' height='40' width='40' />
+            </div>
+          </a>
+        </Col>
+      )
+    }
+    else
+      return null
+  }
+
   render () {
-    let facebook = this.props.facebook
-    console.log(facebook)
     console.log('hola')
     return (
       <div>
@@ -74,28 +88,25 @@ export default class GeneralContactForm extends Component {
               rows={2}
               rowsMax={4}
             />
-            <RaisedButton
-              label={<span className='label-text'>Send</span>}
-              backgroundColor='#2d517b'
-              type='submit'
-            />
-            <RaisedButton
-              label={<span style={{color: '#2d517b'}}>Call</span>}
-              labelPosition='before'
-              primary={false}
-              icon={<FaPhone className='label-icon' />}
-              onClick={() => window.open(`tel:${this.props.phone}`)}
-            />
-            <a href={facebook} target='_blank'>
-              <div>
+            <Row>
+              <Col xs={4} sm={2} md={3} lg={3} xl={2}>
                 <RaisedButton
+                  label={<span className='label-text'>Send</span>}
+                  backgroundColor='#2d517b'
+                  type='submit'
+                />
+              </Col>
+              <Col xs={4} sm={2} md={3} lg={3} xl={2}>
+                <RaisedButton
+                  label={<span style={{color: '#2d517b'}}>Call</span>}
                   labelPosition='before'
                   primary={false}
-                  backgroundColor='#2d517b'
-                  icon={<FaFacebook style={{color: 'white'}} />}
+                  icon={<FaPhone className='label-icon' />}
+                  onClick={() => window.open(`tel:${this.props.phone}`)}
                 />
-              </div>
-            </a>
+              </Col>
+              {this.facebook_checker()}
+            </Row>
           </form>
         </MuiThemeProvider>
         <style jsx>

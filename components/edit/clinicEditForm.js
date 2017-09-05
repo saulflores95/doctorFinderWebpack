@@ -48,6 +48,7 @@ export default class ClinicEditForm extends React.Component {
     var description = this.refs.description.getValue()
     var specialty = this.state.value
     var phone = this.refs.phone.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -65,7 +66,8 @@ export default class ClinicEditForm extends React.Component {
       email: email,
       phone: phone,
       position: this.state.position,
-      specialty: specialty
+      specialty: specialty,
+      facebook: facebook
     }
 
     if (clinic) {
@@ -78,7 +80,8 @@ export default class ClinicEditForm extends React.Component {
         email: clinic.email,
         phone: clinic.phone,
         position: clinic.position,
-        specialty: clinic.specialty
+        specialty: clinic.specialty,
+        facebook: clinic.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -280,6 +283,14 @@ export default class ClinicEditForm extends React.Component {
                           hintText='Phone Number'
                           ref='phone'
                           defaultValue={clinic.phone}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Facebook'
+                          ref='facebook'
+                          defaultValue={clinic.facebook}
                           fullWidth={false}
                         />
                       </Col>

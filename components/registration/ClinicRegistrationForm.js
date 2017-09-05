@@ -75,6 +75,7 @@ export default class ClinicRegistrationForm extends Component {
     var description = this.refs.description.getValue()
     var specialty = this.state.value
     var phone = this.refs.phone.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -92,7 +93,8 @@ export default class ClinicRegistrationForm extends Component {
       email: email,
       phone: phone,
       position: this.state.position,
-      specialty: specialty
+      specialty: specialty,
+      facebook: facebook
     }
     let _self = this
     if (clinic) {
@@ -105,7 +107,8 @@ export default class ClinicRegistrationForm extends Component {
         email: clinic.email,
         phone: clinic.phone,
         position: clinic.position,
-        specialty: clinic.specialty
+        specialty: clinic.specialty,
+        facebook: clinic.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -256,6 +259,13 @@ export default class ClinicRegistrationForm extends Component {
                           <TextField
                             hintText='Phone Number'
                             ref='phone'
+                            fullWidth={false}
+                          />
+                        </Col>
+                        <Col sm={6} md={6} lg={6}>
+                          <TextField
+                            hintText='Facebook'
+                            ref='facebook'
                             fullWidth={false}
                           />
                         </Col>

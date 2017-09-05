@@ -67,6 +67,7 @@ export default class HospitalRegistrationForm extends Component {
     var phone = this.refs.phone.getValue()
     var email = this.refs.email.getValue()
     var description = this.refs.description.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -82,7 +83,8 @@ export default class HospitalRegistrationForm extends Component {
       position: this.state.position,
       insurance: insurance,
       description: description,
-      categories: categories
+      categories: categories,
+      facebook: facebook
     }
     let _self = this
     if (hospital) {
@@ -94,7 +96,8 @@ export default class HospitalRegistrationForm extends Component {
         position: hospital.position,
         insurance: hospital.insurance,
         description: hospital.description,
-        categories: hospital.categories
+        categories: hospital.categories,
+        facebook: hospital.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -226,6 +229,13 @@ export default class HospitalRegistrationForm extends Component {
                         <TextField
                           hintText='E-mail'
                           ref='email'
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Facebook'
+                          ref='facebook'
                           fullWidth={false}
                         />
                       </Col>

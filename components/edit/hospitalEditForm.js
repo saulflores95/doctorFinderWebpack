@@ -71,6 +71,7 @@ export default class HospitalEditForm extends React.Component {
     var phone = this.refs.phone.getValue()
     var email = this.refs.email.getValue()
     var description = this.refs.description.getValue()
+    var facebook = this.refs.facebook.getValue()
     var categories = [
       this.refs.specificOne.getValue(),
       this.refs.specificTwo.getValue(),
@@ -86,7 +87,8 @@ export default class HospitalEditForm extends React.Component {
       position: this.state.position,
       insurance: insurance,
       description: description,
-      categories: categories
+      categories: categories,
+      facebook: facebook
     }
     if (hospital) {
       axios.put(`/api/hospital-edit/${this.props.hospital._id}`, {
@@ -97,7 +99,8 @@ export default class HospitalEditForm extends React.Component {
         position: hospital.position,
         insurance: hospital.insurance,
         description: hospital.description,
-        categories: hospital.categories
+        categories: hospital.categories,
+        facebook: hospital.facebook
       })
       .then(function (response) {
         console.log(response)
@@ -241,6 +244,14 @@ export default class HospitalEditForm extends React.Component {
                           hintText='E-mail'
                           ref='email'
                           defaultValue={hospital.email}
+                          fullWidth={false}
+                        />
+                      </Col>
+                      <Col sm={6} md={6} lg={6}>
+                        <TextField
+                          hintText='Facebook'
+                          ref='facebook'
+                          defaultValue={hospital.facebook}
                           fullWidth={false}
                         />
                       </Col>
