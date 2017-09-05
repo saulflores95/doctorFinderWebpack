@@ -78,6 +78,7 @@ doctorController.put = (req, res) => {
       doctor.phone = phone
       doctor.address = address
       doctor.position = position
+      console.log(doctor.facebook)
       doctor.save(function (err) {
         if (err) {
           console.log('error in updating collection')

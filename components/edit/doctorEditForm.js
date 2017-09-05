@@ -51,7 +51,7 @@ export default class DoctorEditForm extends React.Component {
     var position = this.state.position
     var insurance = this.state.toogleState
     var specialty = this.state.value
-    var facebook = this.refs.address.getValue()
+    var facebook = this.refs.facebook.getValue()
     var curriculum = {
       one: this.refs.curriculumOne.getValue(),
       two: this.refs.curriculumTwo.getValue(),
@@ -345,7 +345,7 @@ export default class DoctorEditForm extends React.Component {
                       </Col>
                       <Col sm={6} md={6} lg={6}>
                         <TextField
-                          hintText='Fhacebook'
+                          hintText='Facebook'
                           ref='facebook'
                           defaultValue={doctor.facebook}
                           fullWidth={false}
