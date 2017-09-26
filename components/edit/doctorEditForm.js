@@ -192,6 +192,8 @@ export default class DoctorEditForm extends React.Component {
                                 <MenuItem value={'Audiologist'} primaryText='Audiologist' />
                                 <MenuItem value={'Allergist'} primaryText='Allergist' />
                                 <MenuItem value={'Anesthesiologist'} primaryText='Anesthesiologist' />
+                                <MenuItem value={'Angiologist'} primaryText='Angiologist' />
+                                <MenuItem value={'Bariatric Surgeon'} primaryText='Bariatric Surgeon' />
                                 <MenuItem value={'Cardiologist'} primaryText='Cardiologist' />
                                 <MenuItem value={'Dentist'} primaryText='Dentist' />
                                 <MenuItem value={'Dermatologist'} primaryText='Dermatologist' />

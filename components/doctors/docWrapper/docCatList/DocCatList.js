@@ -94,6 +94,10 @@ const imageChooser = (props) => {
       return '../../../../static/emergency.jpg'
     case 'Neumologist':
       return '../../../../static/Neumologist.jpg'
+    case 'Angiologist':
+      return '../../../../static/Angiologist.jpg'
+    case 'Bariatric Surgeon':
+      return '../../../../static/Bariatric.jpg'
     default:
       return null
   }
