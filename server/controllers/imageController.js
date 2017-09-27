@@ -3,8 +3,8 @@ const fs = require('fs')
 const S3FS = require('s3fs')
 
 var s3fsImpl = new S3FS('healthcarebaja', {
-  accessKeyId: process.env.AKI,
-  secretAccessKey: process.env.SAK,
+  accessKeyId: process.env.AWS_ACCESS_KEY,
+  secretAccessKey: process.env.AWS_SECRET_KEY,
   subregion: 'us-west-2'
 })
 
