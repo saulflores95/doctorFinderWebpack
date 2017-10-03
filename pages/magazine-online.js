@@ -10,6 +10,10 @@ export default class extends React.Component {
           <div style={{paddingBottom: 100}}>
             <Row>
               <Col xs={12} sm={12} md={6} lg={4}>
+                <p>September</p>
+                <iframe style={{width: '100%', height: 480, maxWidth: 400, marginLeft: 'auto', marginRight: 'auto', display: 'block'}} src='//e.issuu.com/embed.html#25782513/53939486' frameborder='0' allowfullscreen />
+              </Col>
+              <Col xs={12} sm={12} md={6} lg={4}>
                 <p>August</p>
                 <iframe style={{width: '100%', height: 480, maxWidth: 400, marginLeft: 'auto', marginRight: 'auto', display: 'block'}} src='//e.issuu.com/embed.html#25782513/52395244' frameborder='0' allowfullscreen />
               </Col>
